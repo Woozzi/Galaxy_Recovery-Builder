@@ -1,0 +1,1227 @@
+CALYPSO
+
+   Opce 6
+   Characteristic IN
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2761512
+Obsah
+              Předmluva
+
+                O tomto návodu k obsluze ............................. Předmluva 1
+
+                Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 Characteristic IN (opce)
+
+                Úvod: Characteristic IN (opce)....................................... 1-2
+
+                Základní údaje pro opci Characteristic IN .................... 1-3
+                   Moduly Characteristic IN ................................................................... 1-3
+                   Vývojový diagram pro import a export............................................... 1-4
+
+                Generování plánu měření z CAD dat ............................. 1-6
+                   Kroky při generování plánu měření z CAD dat ................................... 1-6
+                   Připravit generování plánu měření z CAD dat .................................... 1-7
+                   Nově definovat plán měření z CAD dat.............................................. 1-8
+                   Průběh automatického generování plánu měření ............................ 1-10
+                   Upravit plán měření generovaný z dat CAD ..................................... 1-13
+                   Určit základní systém pro plán měření generovaný z dat CAD ......... 1-13
+                   Definovat bezpečnostní kvádr pro plán měření generovaný z dat CAD ....
+                   1-13
+                   Přiřadit snímače v generovaném plánu měření ................................ 1-14
+                   Otestovat a uložit plán měření generovaný z dat CAD ..................... 1-15
+
+                Generování plánu měření z dat Agipp......................... 1-16
+                   Kroky při generování plánu měření z dat Agipp ............................... 1-16
+                   Připravit generování plánu měření z dat Agipp ................................ 1-17
+                   Vytvořit nebo rozšířit plán měření z dat Agipp ................................ 1-19
+                   Upravit plán měření generovaný z dat Agipp ................................... 1-21
+                   Otestovat plán měření generovaný z dat Agipp ............................... 1-22
+                   Prohlédnout data XML a rozhraní Agipp.......................................... 1-22
+
+
+
+              61212-2761512                  CALYPSO 2018                                          Obsah    11
+           Rejstřík
+
+
+
+
+22 Obsah   61212-2761512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2761512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2761512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2761512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2761512          CALYPSO 2018
+Characteristic IN (opce)
+
+
+
+
+                           Kapitola
+
+                           1    Characteristic IN (opce)
+
+                              Tato kapitola obsahuje:
+                              Úvod: Characteristic IN (opce) .................................................................... 1-2
+                              Základní údaje pro opci Characteristic IN.................................................... 1-3
+                              Generování plánu měření z CAD dat .......................................................... 1-6
+                              Generování plánu měření z dat Agipp ...................................................... 1-16
+
+
+
+
+                             61212-2761512                     CALYPSO 2018                                              1-1
+Úvod: Characteristic IN (opce)
+
+
+
+
+Úvod: Characteristic IN (opce)
+                         S opcí Characteristic IN můžete z vhodných dat CAD automaticky
+                         generovat více méně kompletní CALYPSO-plán měření. Přebírají se
+                         informace o geometrie, tolerance a reference z dat CAD modelu.
+                         Také z dat pro výrobní úseky podle rozhraní Agipp (Automated
+                         Generation for In-Process Parts) můžete vytvořit fungující plán měření.
+                         Proveditelný plán měření můžete poslat na počítač měřicího stroje nebo
+                         exportovat pomocí opce DMIS CNC DATA OUT do formátu DMIS.
+                         Společně s opcí Characteristic IN použitelné opce Simulace a modul
+                         snímačů a DMIS export jsou další doplňkové opce programu CALYPSO.
+                         Jsou popsány v samostatných návodech.
+
+
+
+
+1-2                      61212-2761512           CALYPSO 2018
+                                               Základní údaje pro opci Characteristic IN
+
+
+
+
+Základní údaje pro opci Characteristic IN
+                       Moduly Characteristic IN
+                       Opce Characteristic IN se skládá z těchto modulů:
+
+Modul                  Funkce
+Q-DAS konvertor        Převádí data charakteristik ve formátu Q-DAS na charakteristiky
+                       CALYPSO plánu měření.
+STEP AP 203            Načte data CAD modelu pro převedení na měřené elementy a pro
+                       zobrazení v programu CALYPSO.
+Agipp konvertor        Konvertuje soubory XML ve formátu Agipp na CALYPSO plán
+                       měření.
+
+                       CALYPSO tak může z dat charakteristik, z dat CAD nebo výrobních úseků
+                       vytvořit plány měření.
+
+                       Předpoklady pro převod z dat CAD
+                       Konstrukci součásti musí provést systém CAD a modul PE-Inspect nebo
+                       BCT-Inspector musí při generování výkresu automaticky očíslovat
+                       všechny charakteristiky součásti. Tím je každá charakteristika
+                       jednoznačně označena.
+
+                       Oznámení
+                       Pokud se při konstrukci variant zadají pro stejné charakteristiky identická
+                       čísla, je tím dán základ pro jednotné plánování měření a tvorbu měřicích
+                       programů i na různých pracovištích jednoho podniku.
+
+Požadavky na vstupní   Aby mohla být pomocí opce Characteristic IN převedena data
+data                   charakteristik a CAD modelů na prvky CALYPSO plánu měření, musí být
+                       splněny následující předpoklady:
+                       – Data musí být vytvořena pomocí CAD systému ProE nebo UG
+                         (Unigraphics) a musí být převedena na soubor STEP ve formátu AP
+                         203 nebo AP 214.
+                       – Potřebná data charakteristik musí být k dispozici jako data ASCII ve
+                         formátu Q-DAS.
+                          Formátování je třeba provést podle specifikace WEPROM. Data Q-
+                          DAS musí být upravena programem PE-Inspect firmy PTC nebo
+                          programem BCT-Inspector firmy BCT.
+                       Pouze když vaše vstupní data splňují tyto požadavky, může se použít
+                       opce Characteristic IN.
+
+
+
+                       61212-2761512            CALYPSO 2018                              1-3
+Základní údaje pro opci Characteristic IN
+
+
+
+
+                         Vývojový diagram pro import a export
+                         Následující schéma znázorňuje funkci a účel použití rozhraní
+                         Characteristic IN. Na jedné straně vidíte různá vstupní data, na druhé
+                         straně možné formy výstupu.
+
+
+                                                           ProE
+                                                         CAD systém
+
+
+                                                         PE-Inspect
+
+
+                                                            1
+
+                                   DMIS          STEP               Q-DAS            Agipp
+                              program měření    AP 203               data            data
+
+                          7                                                      2
+
+                                                                                             simulace snímačů
+                                                                      3
+                                                  Calypso                                           4
+
+                                                                   ofﬂine                    modul snímačů
+
+
+
+
+                                   DMIS                             Calypso
+                              program měření                       plán měření
+
+                          8                                                      5
+
+                             jiný software                         Calypso
+                          pro souř.měř.stroje                    na měřicím stroji
+
+
+                                                                                 6
+
+                                                                    Q-DAS
+                                                                    data
+
+                                                                   výsledky
+
+
+
+
+                                                                statistický systém
+
+
+
+
+                         Data a programová struktura
+                         – (1) CAD systémy ProE a UG vytvoří podle výkresu součásti a
+                           konstrukce modelu pomocí doplňkového programu PE-Inspect resp.
+                           BCT-Inspector datovou větu STEP a Q-DAS ve formátu ASCII:
+                              – Data STEP-AP-203 nebo STEP-AP-214 s označením atributu
+                              – Data Q-DAS s informacemi o charakteristice: jmenovitý rozměr,
+                                tolerance a reference
+
+
+1-4                      61212-2761512              CALYPSO 2018
+                       Základní údaje pro opci Characteristic IN
+
+
+
+– (2) Přes rozhraní Agipp se dají načíst Agipp soubory XML, které
+  odpovídají např. výrobním fázím.
+– (3) Option Characteristic IN umožňuje následující:
+   – Z ASCII datových vět z (1) a (2) vytvoří tělo programu ve tvaru
+     CALYPSO plánu měření. S programem CALYPSO na měřicím stroji
+     nebo s CALYPSO Generátor (Planner) je možné tento plán měření
+     dále editovat.
+   – Z Agipp souboru XML je vytvořen téměř kompletní CALYPSO plán
+     měření.
+– (4) Opce Simulace slouží pro doplnění plánů měření vytvořených
+  mimo měřicí stroj pomocí generátoru programu CALYPSO.
+– (5) Vytvoření plány měření můžete předávat přímo do programu
+  CALYPSO na měřicím stroji.
+– (6) Po měření s programem CALYPSO je v případě potřeby k dispozici
+  výstupní rozhraní Q-DAS. S ním vytvořená data jsou dostupná pro
+  další zpracování ve statistických programech.
+– (7) Existující DMIS-měřicí program z externího programu může být
+  načten pomocí opce DMIS Input Postprocesor. Také z těchto dat
+  může být vytvořen CALYPSO plán měření.
+– (8) Vytvořený měřicí program může být pomocí DMIS preprocesoru
+  (opce DMIS CNC DATA OUT) převeden na formát DMIS-ASCII.
+   Uživatelé jiných systémů mohou s těmito datovými větami generovat
+   a provádět své vlastní měřicí programy, je-li k dispozici DMIS-
+   procesor (od verze 3.0).
+
+Oznámení
+Simulace a modul snímačů a DMIS export jsou další doplňkové opce
+programu CALYPSO. Jsou popsány v samostatných návodech.
+
+
+
+
+61212-2761512          CALYPSO 2018                            1-5
+Generování plánu měření z CAD dat
+
+
+
+
+Generování plánu měření z CAD dat
+                       Kroky při generování plánu měření z
+                       CAD dat
+                       S opcí Characteristic IN můžete z vhodných dat CAD automaticky
+                       generovat více méně kompletní CALYPSO-plán měření.
+                       Kompletnost výsledného plánu měření a rozsah manuálních úprav
+                       závisejí na rozsahu a obsahu konvertovaných dat.
+Převést válce na       Bez zvláštních opatření jsou všechny hřídele a otvory obsažené v datech
+kružnice               CAD zachyceny v plánu měření jako válce. Často je ale takové měření
+                       příliš pracné pro daný kontrolní cíl a tudíž ne příliš vhodné.
+                       Před generováním můžete proto určit, které válce z dat CAD mají být v
+                       plánu měření zachyceny jako kružnice. Po generování můžete tento
+                       seznam editovat a spustit převedení na kružnice.
+Standardní strategie   Před generováním můžete pro typ měřených elementů přímka, rovina,
+měření                 kružnice, válec a kužel definovat standardní strategii měření.
+
+                       Oznámení
+                       Tím zároveň stanovíte předvolby technologie pro různé plány měření v
+                       programu CALYPSO.
+
+Q-DAS konformita       Podle obsahu polí K2001 a K2002 můžete také danou charakteristiku
+                       načíst z K2002 a přiřadit K2001 jako „název znaku“.
+Postup                 Aby byl vytvořen plán měření z dat CAD, postupujte v tomto pořadí:
+                       – Připravit generování plánu měření tj.:
+                          – Zadat pravidla pro převedení válců na kružnice
+                          – Určit standardní strategie měření
+                          – Specifikovat seznam charakteristik a CAD soubor STEP
+                       – Spustit generování (první etapa):
+                       – Modifikovat načtený CAD model a případně definovat základní
+                         souřadný systém
+                       – Pokračovat v generování (druhá etapa):
+                          – Převést válce na kružnice
+                       – Doplnit plán měření:
+                          – Doplnit charakteristiky
+                          – Definovat startovní / základní systém (pokud jste ještě neprovedli
+                            po načtení CAD modelu)
+                          – Určit bezpečnostní kvádr
+
+
+1-6                    61212-2761512            CALYPSO 2018
+                                                          Generování plánu měření z CAD dat
+
+
+
+                               – Přiřadit snímače měřeným elementům
+                               – Otestovat a uložit plán měření
+                               – Přidat informace k plánu měření
+
+
+                            Připravit generování plánu měření z CAD
+                            dat
+                            Před načtením dat pomocí rozhraní Characteristic Input musíte v
+                            programu CALYPSO zkontrolovat toto nastavení:
+                            – CALYPSO funguje v provozním režimu „Simulace“.
+                            Aby byla pro generování plánu měření k dispozici všechna data a
+                            nastavení, musíte nastavit CALYPSO na režim „Simulace“.
+
+                            CALYPSO nastavit na režim „Simulace“
+                            1 Zvolte menu Doplňky " Nastavení " Stroj.
+                              Otevře se nastavení Měřicí stroj se stránkou Řízení.
+                            2 Klikněte na záložku Simulace a na tlačítko Vytvořit spojení.
+                              Tím jsou CALYPSO i generátor plánu měření přepnuty na režim
+                              „Simulace“.
+                              Informace: Nesmí být aktivní žádné jiné spojení s měřicím strojem.
+                              Pokud ještě existuje nějaké spojení, zrušte je tím, že zavřete okno se
+                              semaforem.
+Vytvořit snímací systém Pro pozdější simulaci CNC průběhu jsou potřebná data snímačů
+                        snímacího systému, se kterým se má součást měřit. Pro získání dat
+                        snímačů máte dvě možnosti:
+                            – Exportujete data snímačů z programu CALYPSO na měřicím stroji do
+                              programu CALYPSO „offline“ (režim Simulace).
+                               Otevřete Správu dat snímačů, v sekci navigace označíte příslušný
+                               snímací systém a v sekci Funkce snímacího systému klikněte na
+                               tlačítko Exportovat. Tato data snímačů uložíte dočasně na pevný
+                               disk (např. do adresáře C:\Temp).
+                               Potom zrušíte spojení s měřicím strojem. Nyní vytvoříte spojení s
+                               měřicím strojem „Simulace“ (jak je výše popsáno), otevřete správu
+                               snímacích systémů a importujete dočasně uložená data.
+                            – Data snímačů vytvoříte pomocí modulu snímačů.
+                               Viz návod k obsluze pro opci Simulace oddíl Simulace (opce).
+
+
+
+
+                            61212-2761512           CALYPSO 2018                              1-7
+Generování plánu měření z CAD dat
+
+
+
+                       Pomocí správy snímacích systémů se může v programu CALYPSO
+                       vybrat snímací systém použitelný pro měření. V katalogu správy
+                       snímacích systémů je aktuální snímací systém k dispozici, musí se
+                       vybrat dvojklikem.
+
+
+                       Nově definovat plán měření z CAD dat
+                       Po provedení všech příprav v programu CALYPSO můžete založit tento
+                       plán měření a načíst data charakteristik a soubor STEP.
+
+                       Založit nově plán měření a načíst data charakteristik
+                       1 Zvolte menu Generátor " Generovat plán měření " ...z dat
+                         CAD.
+                         Ukáže se dialogové okno Generovat plán měření, karta
+                         Generování je vpředu.
+
+
+
+
+1-8                    61212-2761512          CALYPSO 2018
+                               Generování plánu měření z CAD dat
+
+
+
+       Generovat plán měření
+
+     Generování Pravidla Technologie-default
+
+     Označení plánu měření
+      Testplan
+
+       Q-DAS konformní
+
+     Seznam charakteristik                       Najít...
+
+      C \Zeiss\Daten\UEBUNGSWUERFEL.DFD
+
+
+     Soubor STEP                                 Najít...
+      C \Zeiss\Daten\uebungswuerfel_1. stp
+
+      Generování
+       Stav programu
+
+
+
+
+        Generovat plán měření                     Zavřít
+
+2 Zadejte název pro nový plán měření.
+3 Aktivujte zaškrtávací políčko Q-DAS konformní, pokud se má název
+  charakteristiky načíst z pole K2002 a obsah pole K2001 přiřadit dané
+  charakteristice jako atribut „název znaku“.
+  Když je zaškrtávací políčko Q-DAS konformní deaktivováno, pro
+  název charakteristiky se použije obsah pole K2001.
+4 V sekci Seznam charakteristik zadejte cestu pro soubor Q-DAS
+  nebo klikněte na tlačítko Najít a ve standardním dialogu pro
+  Windows vyberte potřebný soubor.
+5 V sekci Soubor STEP zadejte cestu pro soubor STEP-AP-203 resp.
+  STEP-AP-214 nebo klikněte na tlačítko Najít a ve standardním
+  dialogu pro Windows vyberte potřebný soubor.
+
+
+61212-2761512           CALYPSO 2018                          1-9
+Generování plánu měření z CAD dat
+
+
+
+                       6 Aktivujte kartu Pravidla a zadejte zde kritéria, podle kterých se mají
+                         z CAD dat převzít válce do seznamu pro převedení válců na kružnice.
+                         Když aktivujete jednu či více navrhovaných charakteristik, jsou do
+                         seznamu převzaty všechny válce, pro jsou které v plánu měření
+                         určeny pouze tyto charakteristiky.
+                         Navíc můžete uvést geometrické pravidlo, podle kterého jsou dále
+                         specifikovány válce, které mají být zahrnuty do seznamu.
+                       7 Aktivujte kartu Technologie-předvolby.
+                       8 Aktivujte zaškrtávací políčka pro typy měřených elementů, pro něž
+                         chcete určitou strategii předvolit jako výchozí, a pokaždé klikněte na
+                         tlačítko Nastavení.
+                       9 V dialogovém okně Strategie, které se otevře, specifikujte potom
+                         standardní strategii měření, podle které se mají elementy příslušného
+                         typu změřit.
+                         Informace: Tím zároveň stanovíte předvolby technologie pro různé
+                         plány měření v programu CALYPSO. Pro všechny neaktivované typy
+                         měřených elementů se použijí stávající předvolby technologie
+                         CALYPSO.
+                         Informace: Jestliže se má určitý element změřit jinou než standardní
+                         měřicí strategií, musíte po automatickém generování zadat pro daný
+                         element tuto strategii.
+                       10 Jsou-li všechna zadání správná, klikněte na tlačítko Generovat plán
+                          měření.
+                          Generátor plánu měření nejprve načte příslušný CAD model, potom
+                          se zastaví.
+                       11 V případě potřeby modifikujte CAD model a definujte základní
+                          systém.
+                       12 Pokračujte pomocí tlačítka Pokračovat v generování.
+                          Generátor plánu měření definuje charakteristiky a měřené elementy.
+                          Po generování se na kartě Generování ukáže v poli Stav
+                          programu, kolik elementů a charakteristik bylo vytvořeno a kolik z
+                          nich je kompletně definováno.
+
+
+                       Průběh automatického generování plánu
+                       měření
+                       Během načítání můžete na obrazovce sledovat následující procesy:
+                       – Nejprve je CAD model načten a zobrazen v okně CAD.
+                          Poté se generování plánu měření pozastaví a máte příležitost
+                          modifikovat CAD model a definovat základní systém na CAD modelu.
+
+
+
+1-10                   61212-2761512           CALYPSO 2018
+                                             Generování plánu měření z CAD dat
+
+
+
+                – Po pokračování generování plánu je vytvořen seznam měřených
+                  elementů z elementů v souboru STEP s nastavenými měřicími
+                  technologiemi.
+                – Z charakteristik v souboru Q-DAS je vytvořen seznam charakteristik
+                  jako tělo programu.
+Převést válce   Během druhé etapy generování se otevře dialogové okno Vybrané
+                válce se převedou na kružnice.
+
+                  Vybrané válce se převedou na kružnice
+                 1115
+                 781
+                 276
+                 361
+                 313
+                 178
+                 817
+                 1117
+                 505
+                 63
+                 763
+                 274
+                 45
+                 799
+                 839
+                 857
+                 436
+                 379
+
+
+
+
+                                                 OK           Storno
+
+
+                V seznamu jsou uvedeny všechny válce z dat CAD. Označení válců
+                (Identifier) jsou převzata ze souboru dat STEP ze systému CAD.
+
+
+
+
+                61212-2761512          CALYPSO 2018                        1-11
+Generování plánu měření z CAD dat
+
+
+
+                       Pokud jste zadali pravidla pro převod válců na kružnice, jsou vybrány
+                       válce odpovídající těmto pravidlům. V okně CAD jsou vybrané válce
+                       označené fialovou barvou.
+                       Pomocí vícenásobného výběru (držet stisknutou klávesu Ctrl) je možné
+                       označit další válce nebo určité válce z převodu vyjmout. V okně CAD
+                       můžete sledovat příslušné změny. Tlačítkem OK výběr potvrdíte.
+                       Všechny vybrané válce na tmavém podkladě budou v plánu měření
+                       převedeny na kružnice.
+Výsledek               Po generování se na kartě Generování ukáže v poli Stav programu,
+                       kolik elementů a charakteristik bylo vytvořeno a kolik z nich je kompletně
+                       definováno.
+                       Plán měření potom obsahuje seznam charakteristik, ze kterého jsou
+                       patrné elementy, které nemohou být kompletně provedeny. Tento
+                       seznam charakteristik je interaktivně strukturován a umožňuje přímé
+                       zadávání chybějících částí dat.
+                       Dále použijete pouze toto tělo plánu měření pro definování souřadných
+                       systémů a bezpečnostního kvádru, jakož i pro automatické přiřazení
+                       snímačů.
+
+                       Načtení měřených elementů
+                       Po načtení souboru STEP je na obrazovce vidět součást jako drátový
+                       model. Jakmile kliknete na tlačítko Stínování, zobrazí se stínovaný
+                       model.
+                       Z dat geometrie souboru STEP se pomocí jádra CADu automaticky
+                       vytvoří měřené elementy plánu měření. Poté jsou všechny měřené
+                       elementy uvedeny v seznamu. Označení měřených elementů (Identifier)
+                       jsou převzata ze souboru dat STEP ze systému CAD.
+                       Jakmile v seznamu navolíte určitý element, zobrazí se tento element v
+                       okně CAD na barevném podkladě – a obráceně.
+
+                       Načtení charakteristik
+                       Z dat charakteristik ve formátu Q-DAS ze systému CAD jsou automaticky
+                       vytvořeny charakteristiky pro plán měření. Poté je ukázán seznam
+                       charakteristik.
+                       Charakteristiky a příslušné reference jsou automaticky generovány přes
+                       soubor Q-DAS ze systému CAD.
+                       Jakmile v seznamu navolíte určitou charakteristiku, zobrazí se v okně
+                       CAD příslušné reference na barevném podkladě.
+
+
+
+
+1-12                   61212-2761512           CALYPSO 2018
+                              Generování plánu měření z CAD dat
+
+
+
+
+Upravit plán měření generovaný z dat
+CAD
+Generátor plánu měření vybudoval automaticky tělo plánu měření, které
+již obsahuje charakteristiky a měřené elementy i případné reference.
+Po načtení vidíte seznam generovaných charakteristik. Jejich kompletnost
+závisí na rozsahu dat a obsahu dat rozhraní: Pokud byla načtená data Q-
+DAS kompletní, nemusíte již dodatečně zadávat reference, jmenovité
+rozměry a tolerance.
+1 Zkontrolujte seznam charakteristik.
+  Charakteristiky, které jsou v seznamu na šedém podkladě, jsou
+  kompletně definovány.
+  Všechny charakteristiky, které mají jen barvu pozadí, nejsou
+  kompletně definovány.
+2 Postupně otevřete neúplně definované charakteristiky.
+  Reference zapsaná jako měřený element je v okně CAD na barevném
+  podkladě.
+3 Zadejte potřebné reference, jmenovité rozměry a tolerance.
+Aby byl plán měření kompletní, potřebujete ještě souřadný systém,
+bezpečnostní kvádr a snímače.
+
+
+Určit základní systém pro plán měření
+generovaný z dat CAD
+Oznámení
+Z dat CAD a charakteristik nemůže CALYPSO generovat souřadný
+systém. Základní systém musíte tedy nastavit sami.
+
+Pokud jste nedefinovali základní systém v průběhu generování plánu
+měření po načtení CAD modelu, musíte ho definovat nyní po generování
+těla plánu měření.
+Viz základní návod oddíl Definovat základní/startovní systém.
+
+
+Definovat bezpečnostní kvádr pro plán
+měření generovaný z dat CAD
+Z dat CAD negeneruje CALYPSO bezpečnostní kvádr. Proto musíte
+bezpečnostní kvádr definovat sami.
+1 V sekci plánu měření na kartě Plán měření klikněte na tlačítko
+  Bezpečnostní kvádr.
+
+
+61212-2761512           CALYPSO 2018                            1-13
+Generování plánu měření z CAD dat
+
+
+
+                          - nebo -
+                          Zvolte menu Příprava " Plán měření " Bezpečnostní kvádr.
+                          Otevře se okno Bezpečnostní kvádr. Bližší informace o tomto okně
+                          najdete v oddílu Bezpečnostní kvádr v přehledu dialogů v online
+                          nápovědě programu CALYPSO.
+                       2 Klikněte na tlačítko Bezpečnostní kvádr z CAD modelu, zadejte
+                         požadovanou vzdálenost (offset) a potvrďte tlačítkem OK.
+                         Definice bezpečnostního kvádru se automaticky vypočte z rozměrů
+                         CAD modelu.
+                       3 Zavřete okno tlačítkem OK.
+
+
+                       Přiřadit snímače v generovaném plánu
+                       měření
+                       Konfigurace snímačů musí být stejná v generovaném plánu měření i na
+                       měřicím stroji. Příslušná data snímacího systému musí být exportována
+                       nebo vytvořena pomocí modulu snímačů a importována do plánu
+                       měření. Na souřadnicovém měřicím stroji se musí nacházet reálný
+                       snímací systém (konfigurace snímačů).
+
+                       Nechat automaticky přiřadit a opravit snímače
+                       Podmínky
+                         – Je nasazena konfigurace snímačů určená pro měřené elementy
+                           aktuálního plánu měření.
+                       1 Zvolte menu Příprava " Snímač " Automatické přiřazení
+                         snímačů.
+                         Otevře se dialogové okno Automatické přiřazení snímačů.
+                         CALYPSO určí automaticky nejvhodnější snímač aktuálně nasazené
+                         konfigurace pro každý měřený element.
+                         Měřené elementy, pro které byl určen odlišný nový snímač, jsou
+                         zvýrazněny červeně.
+                       2 Zkontrolujte automaticky přiřazené snímače.
+                         Kliknutím do příslušné buňky můžete výběr změnit.
+                         Oznámení: Pokud se má jeden nebo několik měřených elementů
+                         měřit s jinou než aktuálně nasazenou konfigurací snímačů, musíte
+                         rovněž upravit údaje v buňkách "Nový snímací systém" a "Nový
+                         snímač".
+                         Upravené měřené elementy jsou zvýrazněny zeleně.
+
+
+
+
+1-14                   61212-2761512          CALYPSO 2018
+                             Generování plánu měření z CAD dat
+
+
+
+
+Otestovat a uložit plán měření
+generovaný z dat CAD
+Po přidání dat o základním souřadném systému, snímači a
+bezpečnostním kvádru je generovaný plán měření kompletní. Můžete ho
+uložit do paměti a otestovat.
+Při testování probíhá zdánlivě všechno jako na měřicím stroji, ale
+neprovádějí se žádné skutečné pojezdy a snímání. Vidíte však hlášení
+jako při skutečném snímání.
+
+Uložit plán měření
+1 Zvolte menu Soubor " Uložit.
+  Plán měření se uloží pod názvem, který jste zadali v dialogovém okně
+  Generovat plán měření.
+
+Testovat plán měření
+1 Vytvořte spojení se simulovaným měřicím strojem tím, že zvolíte
+  menu Doplňky " Nastavení " Stroj a kliknete na tlačítko
+  Vytvořit spojení.
+2 Pro nastavení simulace snímačů pro plán měření zvolte položku
+  menu Generátor " Simulace snímacího systému.
+  Bližší informace o simulaci snímačů viz návod k obsluze pro opci
+  Simulace oddíl Simulace snímačů.
+3 Zvolte menu CNC " CNC start " CNC start.
+  Plán měření se provede.
+  Uvidíte rovněž hlášení o chybách nebo nebezpečí kolize.
+4 Vyhodnotíte hlášení a plán měření upravíte potřebným způsobem.
+5 Potom opakujte krok 3 a 4.
+Poté co odstraníte případné chyby v plánu měření, můžete plán uložit a
+zpřístupnit pro další použití.
+Plán měření můžete nechat provést např. na souřadnicovém měřicím
+stroji s programem CALYPSO nebo ho konvertovat přes DMIS export na
+DMIS-měřicí program, který funguje na všech měřicích strojích s DMIS.
+
+
+
+
+61212-2761512           CALYPSO 2018                         1-15
+Generování plánu měření z dat Agipp
+
+
+
+
+Generování plánu měření z dat Agipp
+                       Kroky při generování plánu měření z dat
+                       Agipp
+Výrobní úseky          V praxi se nekontrolují jen zcela hotové součásti, pro které je k dispozici
+                       kompletní CAD model, nýbrž také určité mezistupně s výkresy z určitého
+                       výrobního úseku.
+                       Když jsou data daného výrobního úseku upravena podle popisu rozhraní
+                       Agipp (Agipp = Automated Generation for In-Process Parts), může z nich
+                       CALYPSO pomocí opce Characteristic IN generovat plán měření nebo
+                       rozšířit či aktualizovat existující plán měření.
+                       Kompletnost výsledného plánu měření a rozsah ručně prováděných
+                       úprav závisí na rozsahu a obsahu konvertovaných dat.
+                       Data Agipp jsou k dispozici ve formě souboru XML. Soubor XML můžete
+                       také dodatečně editovat a vložit do něho další elementy.
+Možnosti v souboru     V dodaném souboru šablony Agipp.xsd jsou popsány všechny prvky
+Agipp                  plánu měření, které jsou možné v programu CALYPSO, které mohou být
+                       načteny ze souboru Agipp a převedeny do plánu měření. Jedná se o
+                       měřené elementy, konstrukce, charakteristiky a další prvky plánu měření,
+                       jako jsou podmínky, skupiny charakteristik atd.
+                       Pro každý měřený element se může v souboru Agipp separátně určit, zda
+                       se do vytvářeného plánu měření má převzít samotný element nebo
+                       definované charakteristiky (případně obojí).
+
+                       Soubory Agipp a plány měření
+                       Opce Characteristic IN programu CALYPSO poskytuje následující
+                       možnosti:
+                       – Ze souboru Agipp můžete generovat nový plán měření.
+                       – Existující plán měření můžete rozšířit o elementy ze souboru Agipp.
+                       – Starší elementy existujícího plánu měření můžete aktualizovat pomocí
+                         novějších dat Agipp.
+                       Při aktualizaci budou elementy se stejným názvem přepsány a nové
+                       elementy budou připojeny na konec plánu měření.
+Možnosti při           Při generování nebo rozšíření plánu měření máte tyto možnosti:
+generování
+
+
+
+
+1-16                   61212-2761512            CALYPSO 2018
+                                     Generování plánu měření z dat Agipp
+
+
+
+         – Do plánu měření můžete převzít pouze měřené elementy, nebo
+           pouze charakteristiky ze souboru Agipp. Tím je možné průběh
+           měření časově optimalizovat.
+         – Můžete seskupit charakteristiky podle měřeného elementu, na který
+           se vztahují.
+         – Můžete definovat měřené elementy koule a kužel.
+         – Můžete definovat konstrukce kolmice, řez a symetrie.
+         – Ve kterémkoli místě plánu měření můžete umístit textový prvek.
+         – Pro každý měřený element můžete nastavit mezipolohu.
+         – Můžete definovat bezpečnostní kvádr.
+         – Můžete vytvořit PCM vzorce.
+
+         Oznámení
+         V programu CALYPSO si můžete prohlédnout tyto soubory:
+         Soubor šablony Agipp_ln.xsd se syntaxí a základní strukturou souboru
+         XML
+         Excel soubor popisu Agipp_ln.xls s vysvětleními k elementům souboru
+         XML
+         („ln“ v názvu souboru označuje zkratku jazyka; de = němčina)
+
+Průběh   Aby byl vytvořen nebo rozšířen plán měření z výrobních úseků,
+         postupujte v tomto pořadí:
+         – Připravit generování plánu měření tj.:
+            – Určit rozšířená nastavení
+            – Určit standardní strategie měření (volitelně)
+            – Specifikovat soubor XML
+         – Spustit generování
+         – Doplnit plán měření (je-li třeba)
+         – Otestovat a uložit plán měření
+         – Přidat informace k plánu měření
+
+
+         Připravit generování plánu měření z dat
+         Agipp
+         Před načtením dat pomocí opce Characteristic IN musíte v programu
+         CALYPSO zkontrolovat splnění těchto předpokladů:
+         – CALYPSO funguje v provozním režimu „Simulace“.
+         – Je instalován snímací systém (konfigurace snímačů)
+
+
+         61212-2761512           CALYPSO 2018                           1-17
+Generování plánu měření z dat Agipp
+
+
+
+                       – Pro rozšíření stávajícího plánu měření: Plán měření je otevřený
+
+                       Nastavit režim simulace
+                       Aby byla pro generování plánu měření k dispozici všechna data a
+                       nastavení, musíte nastavit CALYPSO na režim „Simulace“.
+                       1 Zvolte menu Doplňky " Nastavení " Stroj.
+                         Otevře se nastavení Měřicí stroj se stránkou Řízení.
+                         Informace: Nesmí být aktivní žádné jiné spojení s měřicím strojem.
+                         Pokud ještě existuje nějaké spojení, zrušte je tím, že zavřete okno se
+                         semaforem.
+                       2 Klikněte na záložku Simulace a na tlačítko Vytvořit spojení.
+                         Tím jsou CALYPSO i generátor plánu měření přepnuty na režim
+                         „Simulace“.
+
+                       Vytvořit snímací systém
+                       Pro pozdější simulaci CNC průběhu jsou potřebná data snímačů
+                       snímacího systému, se kterým se má součást měřit. Pro získání dat
+                       snímačů máte dvě možnosti:
+                       – Exportujete data snímačů z programu CALYPSO na měřicím stroji do
+                         programu CALYPSO „offline“ (režim Simulace).
+                          Otevřete Správu dat snímačů, v sekci navigace označíte příslušný
+                          snímací systém a v sekci Funkce snímacího systému klikněte na
+                          tlačítko Exportovat. Tato data snímačů uložíte dočasně na pevný
+                          disk (např. do adresáře C:\Temp).
+                          Potom zrušíte spojení s měřicím strojem. Nyní vytvoříte spojení s
+                          měřicím strojem „Simulace“ (jak je výše popsáno), otevřete správu
+                          dat snímačů a importujete dočasně uložená data.
+                       – Data snímačů vytvoříte pomocí modulu snímačů.
+                          Viz návod k obsluze pro opci Simulace oddíl Modul snímačů.
+                       Pomocí správy dat snímačů aktivujete snímač pro měření v programu
+                       CALYPSO. V sekci navigace kliknete pravým tlačítkem myši na <název
+                       sním.systému> nebo na jiný libovolný sním.systém a v kontextovém
+                       menu zvolíte položku Aktivovat.
+
+                       Načíst plán měření, který se má rozšířit
+                       Jestliže nedefinujete nový plán měření, nýbrž chcete rozšířit či
+                       aktualizovat některý již existující plán měření, musíte tento plán otevřít.
+
+
+
+
+1-18                   61212-2761512            CALYPSO 2018
+                               Generování plánu měření z dat Agipp
+
+
+
+
+Vytvořit nebo rozšířit plán měření z dat
+Agipp
+Po provedení všech příprav v programu CALYPSO můžete načíst Agipp
+soubor XML a generovat resp. rozšířit plán měření.
+1 Zvolte menu Generátor " Generovat plán měření " ...pro
+  výrobní úseky.
+  Ukáže se dialogové okno Generovat plán měření se soubory
+  Agipp XML, karta Generování je vpředu.
+
+       Generovat plán měření s tabulkami AGIPP
+     Generování    Nastavení      Technologie-default
+
+                                 Otevřít         Načíst data
+     Vybrané soubory:
+     C \Zeiss\Daten\Agipp-Daten\Zeiss Cube xml
+
+
+
+
+      Generování
+       Stav programu
+
+
+
+
+      Generovat plán měření                             Zavřít
+
+2 Klikněte na tlačítko Načíst data a v okně pro výběr souboru vyberte
+  příslušný soubor XML.
+
+
+61212-2761512           CALYPSO 2018                             1-19
+Generování plánu měření z dat Agipp
+
+
+
+                          V okně se ukáže tlačítko Otevřít. Soubor XML můžete otevřít a
+                          prohlédnout.
+                       3 Pouze v případě, že nechcete použít strategie měření obsažené v
+                         souboru XML: Aktivujte kartu Technologie-předvolby a aktivujte
+                         zaškrtávací políčka pro typy měřených elementů, pro něž chcete
+                         určitou strategii předvolit jako výchozí.
+                       4 Pokaždé klikněte na tlačítko Nastavení a v dialogovém okně
+                         Strategie specifikujte potom standardní strategii měření, podle
+                         které se mají elementy příslušného typu změřit.
+                         Tyto předvolby technologie se použijí jen, pokud v souboru XML
+                         nebyla pro daný element definována vlastní technologie.
+                         Informace: Tím zároveň stanovíte předvolby technologie pro různé
+                         plány měření v programu CALYPSO. Pro všechny neaktivované typy
+                         měřených elementů se použijí stávající předvolby technologie
+                         CALYPSO.
+                       5 Aktivujte kartu Nastavení a zde aktivujte požadovaná zaškrtávací
+                         políčka:
+                           Body: Obsahuje-li soubor XML jak data pro scanning, tak i pro
+                            snímání jednotlivých bodů, zvolte pomocí tohoto políčka měření
+                            bodů.
+                           Seskupit charakteristiky pro každý element: V plánu měření
+                            se pro každý element založí vlastní skupina s příslušnými
+                            charakteristikami.
+                           Použít název elementu pro charakteristiku: Všechny
+                            charakteristiky, které nemají v souboru XML vlastní název,
+                            dostanou jako předponu názvu název příslušného měřeného
+                            elementu.
+                           Použít default-názvy pro charakteristiky: Všechny
+                            charakteristiky dostanou standardní názvy definované v programu
+                            CALYPSO, i když mají v souboru XML vlastní název.
+                           Vytvořit nový plán měření (standardně aktivováno) : Z dat
+                            Agipp je založen nový plán měření. Má-li se jen stávající plán
+                            rozšířit, deaktivujte toto zaškrtávací políčko a otevřete plán
+                            měření, který se má rozšířit.
+                           Generovat měřené elementy (standardně aktivováno) :
+                            Generuje měřené elementy obsažené v souboru Agipp.
+                           Generovat charakteristiky (standardně aktivováno) : Generuje
+                            charakteristiky obsažené v souboru Agipp.
+                           Aktualizovat plán měření: Všechny elementy v aktuálně
+                            otevřeném plánu měření jsou přepsány elementy ze souboru
+                            Agipp, pokud jsou tyto elementy novějšího data.
+
+
+1-20                   61212-2761512          CALYPSO 2018
+                            Generování plánu měření z dat Agipp
+
+
+
+   Informace: Na této kartě je možné otevřít a prohlížet soubor šablony
+   pro načtení souboru XML i popis k němu.
+6 Jsou-li všechna zadání správná, klikněte na tlačítko Generovat plán
+  měření.
+  Generátor plánu měření načte data a založí plán měření. Existuje-li již
+  název obsažený v souboru XML, je možné nechat tento plán měření
+  rozšířit či aktualizovat nebo uložit nový plán měření pod jiným
+  názvem.
+  Poté se vytvoří měřené elementy, charakteristiky a případně základní
+  systém. Nakonec je aktualizováno okno CAD.
+  Po generování se na kartě Generování ukáže v poli Stav
+  programu, kolik elementů a charakteristik bylo vytvořeno a kolik z
+  nich je kompletně definováno.
+7 Zavřete opět toto dialogové okno.
+Plán měření potom obsahuje seznam charakteristik, ze kterého jsou
+patrné elementy, které nemohou být kompletně provedeny. Tento
+seznam charakteristik je interaktivně strukturován a umožňuje přímé
+zadávání eventuálně chybějících částí dat.
+Máte tak k dispozici plán měření v programu CALYPSO, který je více
+méně kompletní a vyžaduje už jen drobné úpravy.
+
+
+Upravit plán měření generovaný z dat
+Agipp
+Generátor plánu měření vytvořil automaticky plán měření, který už
+obsahuje téměř vše potřebné.
+Po načtení vidíte seznam generovaných charakteristik. Jejich kompletnost
+závisí na rozsahu dat a obsahu dat rozhraní: Pokud byl načtený soubor
+XML úplný, nemusíte již dodatečně zadávat reference, jmenovité
+rozměry a tolerance.
+1 Zkontrolujte seznam charakteristik.
+  Charakteristiky, které jsou v seznamu na šedém podkladě, jsou
+  kompletně definovány.
+  Všechny charakteristiky, které mají jen barvu pozadí, nejsou
+  kompletně definovány.
+2 Postupně otevřete neúplně definované charakteristiky.
+  Reference zapsaná jako měřený element je v okně CAD na barevném
+  podkladě.
+3 Zadejte potřebné reference, jmenovité rozměry a tolerance.
+Tím je plán měření kompletní. Nyní jej můžete otestovat.
+
+
+
+61212-2761512           CALYPSO 2018                          1-21
+Generování plánu měření z dat Agipp
+
+
+
+
+                       Otestovat plán měření generovaný z dat
+                       Agipp
+                       Při testování doplněného plánu měření probíhá všechno jako na měřicím
+                       stroji, ale neprovádějí se žádné skutečné pojezdy a snímání. Vidíte však
+                       hlášení jako při skutečném snímání.
+                       1 Vytvořte spojení se simulovaným měřicím strojem tím, že zvolíte
+                         menu Doplňky " Nastavení " Stroj a kliknete na tlačítko
+                         Vytvořit spojení.
+                       2 Pro nastavení simulace snímačů pro plán měření zvolte položku
+                         menu Generátor " Simulace snímacího systému.
+                         Bližší informace o simulaci snímačů viz návod k obsluze pro opci
+                         Simulace oddíl Simulace snímačů.
+                       3 Zvolte menu CNC " CNC start " CNC start.
+                         Plán měření se provede.
+                         Uvidíte rovněž hlášení o chybách nebo nebezpečí kolize.
+                       4 Vyhodnotíte hlášení a plán měření upravíte potřebným způsobem.
+                       5 Potom opakujte krok 3 a 4.
+                       Poté co odstraníte případné chyby v plánu měření, můžete plán uložit a
+                       zpřístupnit pro další použití.
+                       Plán měření můžete nechat provést např. na souřadnicovém měřicím
+                       stroji s programem CALYPSO nebo ho konvertovat přes DMIS export na
+                       DMIS měřicí program, který funguje na všech měřicích strojích s DMIS.
+
+
+                       Prohlédnout data XML a rozhraní Agipp
+                       V programu CALYPSO si můžete prohlédnout soubor XML s daty Agipp,
+                       rozhraní Agipp a jeho popis.
+                       Pomocí menu Generátor " Generovat plán měření " ... pro
+                       výrobní úseky otevřete okno Generovat plán měření se soubory
+                       Agipp XML.
+                       Zde máte následující možnosti:
+
+Karta             Dialogový prvek           Funkce
+Generování        Otevřít                   Otevře uvedený soubor XML (výrobní úsek) v
+                                            programu, který je pro tyto soubory nastaven
+                                            ve Windows.
+
+
+
+
+1-22                   61212-2761512           CALYPSO 2018
+                                                         Generování plánu měření z dat Agipp
+
+
+
+Karta                    Dialogový prvek           Funkce
+Nastavení                Otevřít                   Otevře Agipp specifikaci Agipp_ln.xsd* v
+                                                   příslušném programu nastaveném ve
+                                                   Windows.
+                         Popis                     Otevře soubor Agipp_ln.xls*, ve kterém je
+                                                   popsáno,jak jsou jednotlivé elementy souboru
+                                                   XML převedeny do programu CALYPSO.
+*
+    „ln“ v názvu souboru znamená kód jazyka: de = němčina.
+
+
+
+
+                               61212-2761512          CALYPSO 2018                            1-23
+Generování plánu měření z dat Agipp
+
+
+
+
+1-24                   61212-2761512   CALYPSO 2018
+Rejstřík
+           A
+           Agipp
+               vytvořit plán měření 1-16
+           Agipp data prohlédnout 1-22
+           Agipp rozhraní
+               prohlédnout 1-22
+           Aktualizovat plán měření
+               z dat Agipp 1-20
+
+
+           C
+           CAD data
+               generovat plán měření 1-6
+
+
+           G
+           Generovat charakteristiky
+               z dat Agipp 1-20
+           Generovat měř.elementy
+               z dat Agipp 1-20
+
+
+           H
+           Characteristic IN
+               požadavky na vstupní data 1-3
+               vývojový diagram 1-4
+               Základní údaje 1-3
+           Characteristic IN (opce) 1-2
+
+
+           P
+           Plán měření
+               z CAD dat generovat 1-6
+               z dat Agipp generovat 1-16
+
+
+           V
+           Vytvořit nový plán měření
+               z dat Agipp 1-20
+           Vývojový diagram
+               Characteristic IN 1-4
+
+
+           X
+           XML soubor s daty Agipp 1-22
+
+
+
+
+           61212-2761512                   CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2761512   CALYPSO 2018
+

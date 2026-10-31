@@ -1,0 +1,2639 @@
+CALYPSO
+
+   Opce 13
+   Metrotomografie
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2831512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 Metrotomografie (opce)
+
+               Úvod: Metrotomografie (opce) ....................................... 1-2
+
+               Základní údaje o metrotomografii ................................. 1-3
+                  Základní princip metrotomografie ..................................................... 1-3
+                  Měřit CT množinu dat se softwarem CALYPSO .................................. 1-4
+                  Základní pojmy a parametry .............................................................. 1-5
+                  Vizualizace CT množiny dat ............................................................... 1-9
+                  Vyrovnání CT množiny dat............................................................... 1-10
+
+               Příprava měření CT množiny dat ................................. 1-11
+                  Připravit měření CT množiny dat...................................................... 1-11
+                  Přípravy v programu CALYPSO ........................................................ 1-12
+                  Načíst CAD data.............................................................................. 1-15
+                  Načtení a úprava CT množiny dat .................................................... 1-16
+                  Vizualizovat množinu CT dat ........................................................... 1-21
+                  Vyrovnat CT množinu dat................................................................ 1-24
+
+               Měření na CT množině dat............................................ 1-37
+                  Možnosti měření ............................................................................. 1-37
+                  Zobrazit barevně odchylky............................................................... 1-37
+                  Měření v rovinách řezu.................................................................... 1-44
+                  Vytvořit plán měření........................................................................ 1-48
+                  Měření a vyhodnocení v CNC průběhu ............................................ 1-49
+
+
+
+             Rejstřík
+
+             61212-2831512                  CALYPSO 2018                                            Obsah    11
+22 Obsah   61212-2831512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2831512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2831512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2831512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2831512          CALYPSO 2018
+Metrotomografie (opce)
+
+
+
+
+                         Kapitola
+
+                         1    Metrotomografie (opce)
+
+                            Tato kapitola obsahuje:
+                            Úvod: Metrotomografie (opce)................................................................... 1-2
+                            Základní údaje o metrotomografii .............................................................. 1-3
+                            Příprava měření CT množiny dat ............................................................... 1-11
+                            Měření na CT množině dat....................................................................... 1-37
+
+
+
+
+                           61212-2831512                    CALYPSO 2018                                            1-1
+Úvod: Metrotomografie (opce)
+
+
+
+
+Úvod: Metrotomografie (opce)
+                       Na přístroji METROTOM je pro měření součástí aplikována metoda
+                       počítačové tomografie známá z lékařství.
+                       Opce Metrotomografie programu CALYPSO umožňuje měření a kontrolu
+                       CT dat, která byla zaznamenána přístrojem METROTOM.
+
+
+
+
+1-2                    61212-2831512         CALYPSO 2018
+                                                         Základní údaje o metrotomografii
+
+
+
+
+Základní údaje o metrotomografii
+                         Základní princip metrotomografie
+                         S měřicím přístrojem ZEISSMETROTOM jsou součásti prosvíceny pod
+                         různými úhly rentgenovými paprsky a je změřena absorpce paprsků. Jako
+                         při počítačové tomografii známé z lékařství se potom z naměřených
+                         hodnot vytvoří trojrozměrný model součásti.
+Pixel a voxel            Prostor je rozložen na krychličky, voxely. Voxel (volume element –
+                         objemový prvek) je trojrozměrný ekvivalent plošného pixelu (picture
+                         element – obrazový prvek).
+
+
+
+
+                                     Pixel                                      Voxel
+
+
+                         Každému voxelu je podle naměřených hodnot přiřazen určitá „hodnota
+                         šedi“ – míra propustnosti voxelu pro rentgenové paprsky. Z různých
+                         hodnot šedi voxelů se zjistí geometrie a materiálové vlastnosti dané
+                         součásti.
+Získání voxelových dat   Na přístroji METROTOM je součást umístěna na otočném stole, zatímco
+                         rentgenová lampa a detektor jsou pevně přimontovány. Součást je
+                         otáčena pomocí otočného stolu, pro všechny úhlové polohy jsou
+                         zachycovány snímky.
+                         Rozlišení detektoru a poloha otočného stolu při měření určují velikost
+                         jednotlivého voxelu. Podle velikosti voxelu je možné realizovat různá
+                         rozlišení a různé přesnosti měření.
+Použití CALYPSO          Pro ovládání měřicího přístroje METROTOM a pro rekonstrukci voxelů z
+                         rentgenových snímků se používají samostatné programy. CALYPSO
+                         použijete poté jen pro metrologické vyhodnocení voxelových dat.
+
+
+
+
+                         61212-2831512           CALYPSO 2018                             1-3
+Základní údaje o metrotomografii
+
+
+
+                       S programem CALYPSO kontrolujete geometrii voxelových dat. Téměř
+                       všechny možnosti vyhodnocení z programu CALYPSO můžete aplikovat
+                       také na voxelová data.
+                       Vyhodnocení se tedy provádí nepřímo a současně u stroje. Měření a
+                       vyhodnocení je vzájemně odděleno a může probíhat na různých
+                       počítačích.
+Postup CALYPSO         V programu CALYPSO je měření na voxelech jako měření se zvláštním
+                       měřicím strojem: CALYPSO se spojí se „strojem“, který dodává k určitým
+                       jmenovitým bodům příslušné naměřené body.
+                       Tento postup je srovnatelný se simulací v programu CALYPSO: Také zde
+                       musíte vytvořit spojení s „virtuálním“, strojem, který v tomto případě
+                       funguje v režimu simulace.
+
+                        Oznámení
+                        I když nemáte měřicí přístroj typu METROTOM, můžete pomocí této
+                        opce načíst a vyhodnotit externě vytvořené záznamy ve formátu
+                        METROTOM v programu CALYPSO.
+
+
+                       Měřit CT množinu dat se softwarem
+                       CALYPSO
+                       Až na několik málo výjimek (např. krok se snímáním) můžete všechny
+                       technologie měření ze softwaru CALYPSO použít také při měření na CT
+                       datech. Doporučujeme používat vysokou hustotu dat:
+                       – Jednotlivé body jsou zatíženy relativně silným šumem, takže velké
+                         množství bodů přispěje ke zlepšení výsledku. Měření velkého
+                         množství bodů netrvá ve většině případů o mnoho déle než měření
+                         malého počtu bodů.
+                       – Snímání jednotlivého bodu technologií „snímaný bod“ dává rovněž
+                         výsledek zatížený šumem, takže i pro měření bodu se doporučuje
+                         vyšší hustota bodů.
+                       Se softwarem CALYPSO měříte CT množiny dat, které byly získány na
+                       souřadnicovém měřicím stroji typu METROTOM. Sestavíte jako obvykle
+                       plán měření a necháte ho proběhnout.
+                       Na rozdíl od měření s normálním měřicím strojem je v tomto případě
+                       řízen pouze „virtuální“ souřadnicový měřicí stroj. Měření na měřicím
+                       stroji je simulováno a CT soubor dat přitom představuje virtuální součást
+                       existující pouze v datech.
+
+
+
+
+1-4                    61212-2831512           CALYPSO 2018
+                                Základní údaje o metrotomografii
+
+
+
+Oznámení
+Když použijete plán měření, který neodpovídá přesně měřené součásti, a
+v důsledku toho se velká část jmenovitých bodů nenachází v blízkosti
+součásti, nýbrž „ve vzduchu“, mohou být výsledky měření nesprávné.
+
+Předvolby
+Aby se mohlo měřit na CT datech, musíte v softwaru CALYPSO provést
+některá přednastavení:
+1 Jako typ stroje zvolte METROTOM.
+2 Určete metodu měření: Dynamická prahová hodnota nebo
+  Statická prahová hodnota (STL).
+3 Zadejte další parametry v okně CT Nastavení, které otevřete z karty
+  Plán měření.
+
+Obecný průběh
+Další průběh je:
+– Kalibrovat snímače
+– Načíst CAD model, je-li k dispozici
+– Načíst a vizualizovat CT množinu dat
+– Vyrovnat CT množinu dat
+– Dále upravit plán měření
+– měřit a vyhodnotit
+
+
+Základní pojmy a parametry
+Přehled základních pojmů a parametrů
+Při měření na CT datech jsou důležité následující základní pojmy a
+parametry:
+– ➤ Měření s dynamickou prahovou hodnotou [⇨ 1-6]
+– ➤ Měření se statickou prahovou hodnotou [⇨ 1-6]
+– ➤ Parametr Gradient-práh [⇨ 1-7]
+– ➤ Parametr Oblast vyhlazení [⇨ 1-7]
+– ➤ Parametr Vyhledávací dráha [⇨ 1-8]
+– ➤ Parametr Shoda směru (dynamicky) [⇨ 1-8]
+– ➤ Parametr shoda směru (staticky) [⇨ 1-8]
+– ➤ Parametr Měřítko [⇨ 1-9]
+
+
+
+61212-2831512           CALYPSO 2018                             1-5
+Základní údaje o metrotomografii
+
+
+
+                        Měření s dynamickou prahovou hodnotou
+                        Měření s dynamickou prahovou hodnotou poskytuje na současném
+                        stavu vývoje nejvyšší přesnost při měření na datech CT. Pro měření se
+                        používají voxely vypočtené zařízením CT.
+Soubory s CT daty       Počítačový tomograf poskytuje soubor v některém z následujících
+                        formátů:
+
+Přípona názvu souboru   Význam
+*.uint16_scv            uint16 = unsigned integer 16 bit; scv = signed CALYPSO Volume
+*.zvi                   = soubor AxioVision Image
+
+                        Soubor vyberete v dialogu CT Nastavení. CALYPSO načte tento soubor.
+                        Pro měření na voxelech jsou potřebné následující parametry:
+                        – ➤ Parametr Gradient-práh [⇨ 1-7]
+                        – ➤ Parametr Oblast vyhlazení [⇨ 1-7]
+                        – ➤ Parametr Vyhledávací dráha [⇨ 1-8]
+                        – ➤ Parametr Shoda směru (dynamicky) [⇨ 1-8]
+                        – ➤ Parametr Měřítko [⇨ 1-9]
+
+                        Oznámení
+                        Doporučujeme měnit přednastavené parametry pouze v odůvodněných
+                        případech.
+
+                        Měření se statickou prahovou hodnotou
+                        S programem CALYPSO můžete měřit také s použitím metody statická
+                        prahová hodnota. Pro měření se zde nepoužívají voxely, nýbrž plocha
+                        součásti znázorněná trojúhelníky.
+                        Soubor je obvykle k dispozici ve formátu STL.
+
+                        Oznámení
+                        Pro extrakci plochy z voxelových dat se mohou použít různé programy.
+                        Přesnost měření s programem CALYPSO závisí do značné míry na
+                        algoritmu, který se použil při vytvoření trojúhelníků.
+
+                        Trojúhelníky se vypočtou pomocí statické prahové hodnoty. Všechny
+                        voxely, jejichž odstíny šedé jsou nad prahovou hodnotou, jsou
+                        považovány za materiál a všechny voxely, jejichž odstíny šedé jsou pod
+                        touto hranicí, jsou považovány za okolní prostředí.
+                        Při měření uvádí CALYPSO nejblíže ležící rohový bod jako naměřený bod.
+
+
+
+1-6                     61212-2831512           CALYPSO 2018
+                                Základní údaje o metrotomografii
+
+
+
+Soubor s daty plochy vyberete v dialogu CT Nastavení. CALYPSO načte
+tento soubor.
+Pro měření na datech plochy jsou potřebné následující parametry:
+– ➤ Parametr shoda směru (staticky) [⇨ 1-8]
+– ➤ Parametr měřítko [⇨ 1-9]
+
+Parametr gradient-práh
+Oznámení
+Tento parametr je potřebný pouze pro měření s dynamickou prahovou
+hodnotou.
+
+Při měření mraku CT bodů vypočte CALYPSO gradienty odstínů šedi v
+určených směrech. Kde je gradient maximální, předpokládá se hranice
+přechodu materiálu do vzduchu.
+Vzhledem k šumu, zvýšení pronikavosti svazku a podobným efektům
+obsahuje ale voxelová matice zkreslující rozdíly odstínů šedé, kterým
+neodpovídá žádná plocha. Aby se vyloučilo chybné přiřazení, udává se
+pevný práh pro hodnotu gradientu, od kterého se má předpokládat
+hranice přechodu.
+Práh se udává jako podíl z absolutního maxima odstínu šedé mezi 0 a 1;
+default nastavení je 0,25. Je-li aktivována Automatická definice
+parametrů, zjištuje se práh gradientu automaticky. Pro většinu měřicích
+úloh to postačuje.
+
+Parametr oblast vyhlazení
+Oznámení
+Tento parametr je potřebný pouze pro měření s dynamickou prahovou
+hodnotou.
+
+Odstíny šedi voxelů jsou zatížené šumem, takže také extrahovaný profil
+odstínu šedi ve specifikované přímce je překryt určitým šumem. Dále se
+mohou vyskytnout ještě jiné poruchy např. tzv. vytvrzování svazku, které
+zkreslují přechod hustoty.
+Pro zohlednění šumu při měření je specifikována oblast vyhlazení. Oblast
+vyhlazení udává, která dráha – měřeno ve voxelech – se použije pro
+vyhlazení dat.
+Oblast vyhlazení je v milimetrech přednastavena na cca 2 voxely. Je to
+empirická hodnota pro získání nejlepších výsledků. V případě větší oblasti
+vyhlazení se eventuálně zahrne také velmi blízko ležící druhé maximum
+gradientu, což vede k přesunutí vypočteného maxima gradientu.
+
+
+
+61212-2831512           CALYPSO 2018                             1-7
+Základní údaje o metrotomografii
+
+
+
+                       Je-li aktivována Automatická definice parametrů, zjištuje se oblast
+                       vyhlazení automaticky. Pro většinu měřicích úloh to postačuje.
+
+                       Parametr Vyhledávací dráha
+                        Oznámení
+                        Tento parametr je potřebný pouze pro měření s dynamickou prahovou
+                        hodnotou.
+
+                       Vyhledávací dráha je vzdálenost od jmenovitého bodu, ve které se hledá
+                       maximum gradientu. Analogicky jako při reálném měření očekává
+                       CALYPSO plochu ve směru jmenovité normály. Vyhledává se jak v
+                       kladném, tak i v záporném směru. Není-li nalezena plocha v rámci
+                       vyhledávací dráhy, není do CALYPSO poskytnut naměřený bod.
+                       V nejnepříznivějším případě chybí v plánu měření celý element. Jestliže
+                       při určování základního systému nemůže být vypočten měřený element,
+                       průběh se přeruší.
+                       Pro jednotlivé měřené elementy můžete nastavit vyhledávací dráhu
+                       specificky v editoru elementů plánu měření.
+                       Standardně je tato vyhledávací dráha, udávaná v milimetrech, nastavena
+                       na délku 20 voxelů. Pro většinu měřicích úloh to postačuje. U dílců
+                       s velkou odchylkou může být vhodné tuto vyhledávací oblast zvětšit.
+
+                       Parametr shoda směru (dynamicky)
+                       Po určení průsečíku specifikované přímky (směru jmenovitého vektoru) s
+                       „virtuální“ plochou ve voxelovém prostoru je na nejbližším voxelu
+                       aproximován směr reálné přímky z hodnot bezprostředně sousedících
+                       voxelů.
+                       Parametr Shoda směru udává limit pro odchylku mezi reálnou přímkou a
+                       specifikovanou přímkou v rovině dané těmito dvěma přímkami. Tento
+                       parametr se udává ve stupních (˚). Při překročení limitu není nalezený
+                       bod uváděn jako měřený bod.
+                       Tento parametr je standardně nastaven na 30˚.
+
+                        Oznámení
+                        Doporučujeme nastavit tento parametr, aby již před vyhodnocením byly
+                        eliminovány chybné nebo nechtěné body.
+
+                       Parametr shoda směru (staticky)
+                       Po určení nejblíže ležícího bodu trojúhelníku ke specifikovanému
+                       jmenovitému bodu je zjištěn normovaný vektor tohoto bodu z
+                       příslušných trojúhelníků. Parametr Shoda směru udává limit pro odchylku
+                       specifikované přímky (směru jmenovitého vektoru) ke směru reálného
+
+
+1-8                    61212-2831512          CALYPSO 2018
+                                Základní údaje o metrotomografii
+
+
+
+normovaného vektoru v rovině jimi vytvořené. Tento parametr se udává
+ve stupních (˚). Při překročení limitu není nalezený bod uváděn jako
+měřený bod. Standardně není tento parametr nastaven.
+
+                                        určená rovina
+   měřený bod
+
+
+
+
+                                j
+
+
+
+                                              speciﬁkující přímka
+
+
+
+
+Oznámení
+Doporučujeme nastavit tento parametr, aby již před vyhodnocením byly
+eliminovány chybné nebo nechtěné body.
+
+Parametr měřítko
+U některých CT zařízení musí být výsledky dodatečně zvětšeny resp.
+zmenšeny o určitý faktor. Souvisí to s polohou otočného stolu relativně k
+rentgenové lampě a k detektoru.
+Poloha otočného stolu má vliv na velikost voxelu, odlišná poloha vede k
+odchylné velikosti voxelu a tím k systematické chybě.
+Tato chyba může být odstraněna dodatečnou změnou velikosti voxelu.
+Při faktoru měřítka > 1 model součásti zvětšen, při faktoru < 1 je model
+zmenšen.
+
+Oznámení
+Faktor měřítka neroven 1 změní výsledek měření. Přístroj METROTOM je
+koncipován tak, aby byl faktor měřítka nastaven vždy na 1.
+
+
+Vizualizace CT množiny dat
+Po načtení CT množiny dat je možné zobrazit tato data v okně CAD.
+Vizualizace může trvat několik minut, podle počítače.
+
+Oznámení
+Při měření s dynamickou prahovou hodnotou slouží vizualizovaná
+množina dat pouze pro kontrolu a pro vyrovnání dat oproti CAD
+modelu. Měří se na přesnější matici voxelů.
+
+
+
+61212-2831512           CALYPSO 2018                                1-9
+Základní údaje o metrotomografii
+
+
+
+                       Při měření se statickou prahovou hodnotou neexistuje matice voxelů;
+                       měří se na datech plochy. Data jsou standardně zobrazena jako
+                       trojúhelníčky.
+                       – Můžete také přepnout na zobrazení v jednotlivých bodech.
+                       – Vizualizovaná data můžete uložit ve formátu FCT.
+                       – Vizualizaci můžete skrýt deaktivací CT mrak bodů v menu CAD "
+                         Zobrazení.
+                       S vizualizovaným mrakem bodů se může pracovat podobně jako se
+                       součástí na měřicím stroji. Kliknutím na mrak bodů můžete vytvořit
+                       naměřené body, podobně jako snímáním na měřicím stroji. Také
+                       manuální vyrovnání můžete provádět kliknutím na vizualizovaná data.
+
+
+                       Vyrovnání CT množiny dat
+                       Před měřením na CT mraku bodů musí být data jednou manuálně
+                       vyrovnána.
+                       Nulový bod mraku bodů se zpravidla neshoduje s nulovým bodem
+                       jmenovitých hodnot. Když měříte s dynamickou prahovou hodnotou,
+                       když tedy byla množina CT dat načtena jako matice voxelů, nachází se
+                       nulový bod obvykle v rohu matice. Také osové směry se většinou
+                       neshodují se jmenovitými hodnotami.
+                       Aby se mohlo měřit na datech, musí se provést předběžné manuální
+                       vyrovnání jako na měřicím stroji.
+
+
+
+
+1-10                   61212-2831512          CALYPSO 2018
+                                                         Příprava měření CT množiny dat
+
+
+
+
+Příprava měření CT množiny dat
+                       Připravit měření CT množiny dat
+Zvláštnosti plánu      Sestavení plánu měření pro CT množinu bodů se odlišuje od tvorby
+měření                 normálního plánu měření v následujících bodech:
+                       – Nemusíte se starat o objezdové dráhy.
+                       – Nemusíte definovat bezpečnostní kvádr.
+                       – Můžete pracovat s velkou hustotou bodů a průběh měření netrvá
+                         přitom výrazně delší dobu.
+                       – Musíte pracovat s vyšším počtem měřených bodů. Bod musí být také
+                         při CT měření zprůměrován z více měřených bodů, protože jednotlivý
+                         snímaný bod je překryt relativně vysokým šumem.
+Způsoby použití        CALYPSO můžete použít různým způsobem pro měření CT množiny dat:
+                       – S CAD modelem
+                          Můžete načíst CAD model součásti a z něho vytvořit plán měření
+                          nebo použít již existující plán měření.
+                       – Bez CAD modelu
+                          Plán měření můžete vytvořit také bez CAD modelu metodou
+                          programování teach in. V tom případě kliknete na vizualizovaný CT
+                          mrak bodů a CALYPSO bude podle toho snímat měřené elementy.
+                          CNC průběh spustíte potom bez zvláštních příprav.
+Měření na CT množině   Mají-li se v softwaru CALYPSO měřit CT data, postupujte v následujících
+bodů                   krocích:
+                       1 ➤ Přípravy v programu CALYPSO [⇨ 1-12]
+                       2 V případě potřeby ➤ načíst CAD data [⇨ 1-15]
+                       3 ➤ Načíst CT množinu dat [⇨ 1-16]
+                       4 ➤ Vizualizovat CT množinu dat v okně CAD [⇨ 1-21]
+                       5 ➤ Vyrovnat CT množinu dat [⇨ 1-24]
+                       6 Případně ➤ zobrazit barevně odchylky [⇨ 1-37]
+                       7 Případně ➤ vytvořit a měřit elementy řezu [⇨ 1-44]
+                       8 V případě potřeby ➤ Vytvořit plán měření [⇨ 1-48]
+                       9 ➤ Měření a vyhodnocení v CNC průběhu [⇨ 1-49]
+
+
+
+
+                       61212-2831512           CALYPSO 2018                         1-11
+Příprava měření CT množiny dat
+
+
+
+Rychlý přístup                 Jestliže pracujete často s daty CT, můžete postup zjednodušit. Vložte
+                               ikony pro rychlý přístup do panelu nástrojů (viz Upravit panel nástrojů
+                               v základním návodu). Když na ikony kliknete, automaticky se provedou
+                               výše uvedené kroky 3 až 5. K dispozici jsou dvě ikony s odlišnou funkcí
+                               vyrovnání:
+                               – Definovat manuální vyrovnání kliknutím
+                               – Definovat manuální vyrovnání pomocí přesunutí
+
+
+                               Přípravy v programu CALYPSO
+                               Ikony v sekci plánu měření a barevné proužky vedle mají při virtuálním
+                               měření tento význam:
+
+Symbol        Název            Funkce
+Karta Stroj
+              Nastavení        Referenční bod stroje nemá pro vyhodnocení CT dat žádný význam.
+              stroje           CALYPSO sleduje provozní stav systému a zobrazuje ho v okně se
+                               semaforem.
+              Snímací systém   Červený pruh: Plán měření vyžaduje jiné snímače
+                               Zelený pruh: Snímače jsou v pořádku
+Karta Plán měření
+              CT Nastavení     Červený pruh: není načtena množina CT dat
+                               Zelený pruh: CT množina dat je načtena
+              Základní/        Červený pruh: Není definován základní systém
+              startovní        Zelený pruh: Základní systém je definován
+              systém
+              Bezpečnostní     Červený pruh: Bezpečnostní kvádr není definován
+              kvádr            Viz Bezpečnostní kvádr v základním návodu k obsluze.
+                               Zelený pruh: Bezpečnostní kvádr je definován
+              Editor pro       Tímto tlačítkem vyvoláte editor plánu měření pro měřené elementy
+              měřené           (viz Pracovat s editory plánu měření v základním návodu k obsluze).
+              elementy plánu
+              měření
+              Teplotní         Tímto tlačítkem se zadá teplota součásti Teplotní kompenzace
+              kompenzace       v základním návodu k obsluze).
+
+                               Aby se mohlo měřit s daty CT, musíte nejprve provést několik nastavení
+                               v softwaru CALYPSO:
+
+
+
+
+1-12                           61212-2831512           CALYPSO 2018
+                                   Příprava měření CT množiny dat
+
+
+
+Systémová nastavení
+Než vytvoříte nebo otevřete plán měření, vyberte virtuální stroj a snímací
+hlavu a vytvořte spojení s řízením. Tato nastavení se provádějí pouze
+jednou.
+Provést systémová nastavení:
+1 Zvolte menu Doplňky " Nastavení " Stroj.
+2 Jestliže ještě neexistuje skupina zařízení pro CT měření, založte novou
+  skupinu zařízení.
+    Otevřete stránku Měř.systémy.
+    Zadejte název nové skupiny zařízení do vstupního pole, např.
+     „CT“.
+    Klikněte na tlačítko Úpravy a potom na Přidat.
+3 Na stránce Měř.přístroj vyberte jako typ přístroje „METROTOM“.
+4 Na stránce Sním.hlava v sekci Senzory zvolte „VAST“.
+5 Otevřete stránku Řízení.
+6 Vyberte požadovanou metodu měření (datové rozhraní):
+    Dynamickáprahová hodnota pro data vytvořená s METROTOM
+    Statická prahová hodnota pro STL data
+7 Aktivujte funkci Obnovit spojení při startu systému.
+8 Uložte nastavení tlačítkem Převzít.
+9 Klikněte na tlačítko Vytvořit spojení.
+Nyní můžete vytvořit, resp. otevřít plán pro měření s daty CT.
+
+Definovat snímací systém
+Při měření na CT datech vlastně nepotřebujete snímače. Ale přesto
+musíte formálně definovat nějaký snímací systém. Pro virtuální snímání
+definujte snímač s poloměrem nula.
+Definovat snímač:
+1 V sekci plánu měření na kartě Plán měření klikněte na ikonu
+  Snímací systém.
+  Otevře se okno Kalibrace snímacího systému.
+2 Zvolte Refer.snímač a klikněte na tlačítko Poloha kal.koule.
+
+
+
+
+61212-2831512           CALYPSO 2018                             1-13
+Příprava měření CT množiny dat
+
+
+
+
+                           Směr nástavce kal.koule
+
+
+
+
+                             Naklop.
+
+
+                             Otočení :
+
+
+                                  Určení RSH dří ku
+
+
+
+
+                                                                               OK                 Storno
+
+
+
+                       3 Potvrďte tlačítkem OK.
+
+                              Simulace
+
+
+
+
+                           Standardní měřicí síla pro
+                                                                                200                        mN
+                           kalibraci snímacího systému
+
+
+                           Dynamické snímání v %                                100%
+
+
+
+                                              OK                                         Storno
+
+
+                       4 Potvrďte tlačítkem OK.
+                       5 Klikněte na tlačítko Definovat nový snímací systém.
+
+                           Snímací systém
+
+                                                          novy snimacisystem
+
+
+                                                        Snímač                                Snímač. č.
+
+                                                                                              1
+
+
+
+
+                                                        OK                          Storno
+
+
+
+
+                       6 Pro Snímací systém i Snímač zvolte „CT“ pro Snímač č. „1“.
+                       7 Potvrďte tlačítkem OK.
+
+
+1-14                   61212-2831512                  CALYPSO 2018
+                                                    Příprava měření CT množiny dat
+
+
+
+8 Klikněte na tlačítko Kalibrovat.
+9 Potvrďte několikrát tlačítkem OK.
+Ikona Snímací systém má nyní zelenou barvu. Snímací systém je
+definován.
+
+Teplotní kompenzace
+Pro měření na CT datech můžete v okně pro teplotní kompenzaci zadat
+pouze teplotu součásti. Je to teplota součásti během počítačové
+tomografie.
+
+  Temperatur-Kompensation
+
+   Temperatur-Kompensation ein/aus
+
+   Temperaturantastung ein/aus
+
+ Werkstücktemp. von Fühler...
+
+    1+2                                                     ...
+
+
+   Temperatur         Koeffizient         Korr.wert <µ/m>
+ Werkstück
+
+      20,0000             12,00               0,000000
+
+ X-Maßstab
+      20,0000             7,80                0,0000000
+
+ Y-Maßstab
+      20,0000             7,80                0,0000000
+
+ Z-Maßstab
+      20,0000             7,80                0,0000000
+
+   Warnung, wenn Werkstücktemp.
+
+    über        25,0000      oder unter           15,0000
+
+   Warnung, wenn Unterschied zwischen
+   Werkstücktemp. und Einmesstemp. der
+   verwendeten Taster größer als...
+                                                  5,0
+
+
+      OK        Rücksetzen
+
+
+
+Tím jsou přípravy dokončeny.
+
+
+Načíst CAD data
+Jestliže je pro součást k dispozici CAD model, použijte tato data. Můžete
+využít již existující plán měření s měřenými elementy nebo extrahovat
+elementy plánu z CAD modelu.
+1 Otevřete plán měření.
+2 Zvolte menu CAD " CAD soubor " Načíst.
+  Otevře se okno Otevřít CAD soubor.
+3 Vyberte požadované soubory a potvrďte tlačítkem Otevřít.
+
+
+61212-2831512                       CALYPSO 2018                         1-15
+Příprava měření CT množiny dat
+
+
+
+                          Soubory jsou načteny.
+                       Nyní můžete extrahovat měřené elementy a případně také charakteristiky
+                       z CAD modelu. Více informací viz Získat měřené elementy ze souborů
+                       CAD v základním návodu k obsluze.
+                       Aby se mohlo s načteným CAD modelem měřit, musíte součást, tedy CT
+                       množinu dat vyrovnat.
+
+
+                       Načtení a úprava CT množiny dat
+                       Načíst CT množinu dat
+                       Načtením sady dat dostane CALYPSO data pro simulované měření
+                       formou virtuální součásti.
+                       Upozornění: I když nemáte měřicí přístroj typu METROTOM, můžete
+                       pomocí této opce načíst a vyhodnotit externě vytvořené záznamy ve
+                       formátu METROTOM.
+                       Dokud nejsou načtena data, má tlačítko CT Nastavení na kartě Plán
+                       měření červenou barvu.
+                       Upozornění: CT data vytvořená s vysokou přesností mohou být načtena
+                       pouze na počítači s dostatečně velkou operační pamětí (minimálně
+                       2 GByte).
+                       1 Na kartě Plán měření klikněte na tlačítko CT Nastavení.
+                         Otevře se okno CT Nastavení.
+
+
+
+
+1-16                   61212-2831512          CALYPSO 2018
+                                      Příprava měření CT množiny dat
+
+
+
+       CT Nastavení
+
+     CT-množina dat
+      Název souboru
+
+
+
+
+      CNC start
+
+          Načíst CT množinu dat
+          Připasování (best fit)
+
+
+
+      Měření               Vizualizace                   Analýza
+
+
+
+
+          Automatická deﬁnice parametrů
+
+               Ignorovat nelogické body
+
+       Gradient-práh                                       0,2500
+
+       Oblast vyhlazení                          mm        1,5000
+
+       Vyhledávací dráha                         mm        20,0000
+
+          Shoda směru                           Úhel       30,00
+
+          Zamezit převzorkování
+
+          Kontrola hodnot šedi
+
+
+
+
+                       Vizualizovat CT množinu dat
+
+
+         OK             Reset
+
+
+2 Klikněte na ikonu Otevřít soubor a vyberte vhodný typ souboru.
+  Na výběr jsou následující typy souboru:
+
+Měření                                    Typy souborů
+s dynamickou prahovou                     *.uint16_scv, *.zvi
+hodnotou
+se statickou prahovou hodnotou            *.stl, *.fct
+
+
+
+61212-2831512              CALYPSO 2018                              1-17
+Příprava měření CT množiny dat
+
+
+
+                       3 Je-li soubor velmi velký: Klikněte na tlačítko Oříznutí a zadejte cestu
+                         a název pro pozdější uložení, aby sada dat byla zmenšena beze ztráty
+                         důležitých informací. Viz ➤ Oříznout množinu CT dat [⇨ 1-18].
+                         Upozornění: Oříznutím množiny CT dat se značně odlehčí operační
+                         paměť počítače při načítání a vizualizaci CT dat, systém pracuje
+                         výrazně rychleji.wird deutlich schneller.
+                         Upozornění: Když je množina dat příliš velká pro kapacitu paměti
+                         vašeho počítače, je funkce Oříznutí automaticky aktivována.
+                         Upozornění: Po oříznutí se CALYPSO automaticky vrátí do tohoto
+                         dialogu.
+                       4 Vyberte adresář a soubor a klikněte na Otevřít.
+                         Načtení dat může trvat několik minut. Po načtení se ukáže hlášení
+                         „Načtena CT množina dat“.
+                         Při měření s dynamickou prahovou hodnotou se CT množina dat
+                         uloží jako 3-rozměrné pole do matice voxelů.
+                         Jestliže se předtím musela vymazat již načtená množina dat, ukáže se
+                         hlášení s určitou prodlevou.
+                       5 Má-li být vybraná sada dat automaticky načtena a vizualizována při
+                         příštím CNC startu, aktivujte zaškrtávací políčko Načíst CT množinu
+                         dat.
+                         Upozornění: Když ve specifikovaném adresáři neexistuje žádná
+                         datová sada se zadaným názvem souboru, bude načten soubor se
+                         stejnou příponou a s nejnovějším datem změny v tomto adresáři.
+                       6 Proveďte nastavení pro CT data.
+
+                       Oříznout množinu CT dat
+                       Velké soubory dat můžete před načtením do počítače nechat oříznout,
+                       tj. zmenšit o nadbytečná data.
+                       Když je množina dat příliš velká pro kapacitu paměti vašeho počítače, je
+                       funkce Oříznutí automaticky aktivována.
+                       Pro oříznutí se otevře program Clip Volume:
+
+
+
+
+1-18                   61212-2831512           CALYPSO 2018
+                                  Příprava měření CT množiny dat
+
+
+
+
+Pro libovolnou hodnotu v Z ukáže odstíny šedi voxelů v rovině X-Y.
+1 Pomocí posuvného pruhu procházejte vrstvy ve směru Z zdola
+  nahoru. Zapamatujte si souřadnice v Z pro začátek a konec
+  zobrazeného tělesa.
+2 Přidejte nejméně 20 vrstev jako rezervu v každém směru a zadejte
+  tyto hodnoty vlevo nahoře pro Z Start a Z End a klikněte na Set.
+  - nebo -
+  Umístěte posuvný pruh na příslušné vrstvy a klikněte na Set.
+3 Pomocí posuvného pruhu procházejte pomalu vrstvami tělesa a
+  zapamatujte si maximální a minimální hodnoty X a Y zobrazeného
+  tělesa.
+4 K těmto extrémním hodnotám přidejte vždy ještě 20 voxelů a v
+  libovolné vrstvě roztáhněte myší obdélník s těmito rozměry kolem
+  daného tělesa.
+5 Zkontrolujte všechna zadání a potvrďte tlačítkem OK.
+
+
+
+
+61212-2831512           CALYPSO 2018                         1-19
+Příprava měření CT množiny dat
+
+
+
+                       Z matice voxelů je vyříznut kvádr, ve kterém je zobrazené těleso
+                       kompletně obsaženo. Tento kvádr je uložen jako nová množina CT dat
+                       ve formátu zvi a je nyní automaticky načten. Program Clip Volume se
+                       ukončí a CALYPSO se vrátí do okna CT Nastavení.
+
+                       Nastavení pro CT data
+                       Nastavené hodnoty platí pro celou součást, tj. pro všechny měřené
+                       elementy součásti. Tato nastavení se neukládají automaticky do plánu
+                       měření. Klikněte na Uložit nastavení v plánu měření.
+
+Možnost nastavení      Význam
+Automatická definice   (pouze pro dynamickou prahovou hodnotu) Automaticky nastaví
+parametrů              optimálně parametry Gradient-práh a Oblast vyhlazení
+                       (standardně: aktivováno).
+Ignorovat nelogické    (pouze pro dynamickou prahovou hodnotu) Vynechá odlehlé (silně
+body                   se vychylující) hodnoty a evidentně nesprávné body.
+Gradient-práh          (pouze pro dynamickou prahovou hodnotu) Standardně: 0,25
+                       Je-li aktivována Automatická definice parametrů, je práh
+                       gradientu automaticky nastaven na vhodnou hodnotu mezi 0 a 1.
+                       Viz také ➤ Parametr Gradient-práh [⇨ 1-7]
+Oblast vyhlazení       (pouze pro dynamickou prahovou hodnotu) Standardně: cca 2
+                       voxely
+                       Je-li aktivována Automatická definice parametrů, zjištuje se
+                       oblast vyhlazení automaticky.
+                       Viz také ➤ Parametr Oblast vyhlazení [⇨ 1-7]
+Vyhledávací dráha      (pouze pro dynamickou prahovou hodnotu) Standardně: 20 voxelů
+                       Definuje vzdálenost od jmenovitého bodu, ve které se hledá
+                       maximum gradientu.
+                       Pro jednotlivé měřené elementy můžete nastavit vyhledávací dráhu
+                       specificky v editoru elementů plánu měření.
+                       Viz také ➤ Parametr Vyhledávací dráha [⇨ 1-8]
+Shoda směru            Parametr Shoda směru udává limit pro odchylku jmenovitého
+                       vektoru od naměřeného vektoru. Při překročení limitu není
+                       nalezený bod uváděn jako měřený bod.
+                       Není-li funkce aktivována, jsou zohledněny všechny body.
+                       Viz také ➤ Parametr Shoda směru (dynamicky) [⇨ 1-8] nebo ➤
+                       Parametr Shoda směru (staticky) [⇨ 1-8]
+
+
+
+
+1-20                   61212-2831512          CALYPSO 2018
+                                                         Příprava měření CT množiny dat
+
+
+
+Možnost nastavení      Význam
+Měřítko                Změna měřítka může být potřebná u dat, která nebyla změřena na
+                       přístroji METROTOM. Zohledňují se tím systematické chyby CT
+                       zařízení.
+                       Všechny naměřené polohy se násobí faktorem měřítka, např.
+                       hodnotou 1,0002.
+                       Pozor!
+                       Faktor měřítka není uveden v protokolu. Výsledky jsou pouze ve
+                       vaší zodpovědnosti.
+                       Viz také ➤ Parametr Měřítko [⇨ 1-9]
+Eliminovat             Zajistí adekvátní vyhodnocení množiny CT dat a eliminuje příliš
+převzorkování          vysoká rozlišení při měření.
+Kontrola hodnot šedi   (nur für dynamischen Schwellwert) Při automatickém určení
+                       parametrů zkontroluje vypočtenou hodnotu šedi a zabrání tím
+                       chybným měřením se „snímáními ve vzduchu“.
+                       Předpokladem je, že soubor CT dat je vizualizován a skládá se jen
+                       z jednoho materiálu.
+
+
+                       Vizualizovat množinu CT dat
+                       Podobně jako CAD model můžete v okně CAD nechat zobrazit také
+                       množinu CT dat. Na rozdíl od CAD modelu však nemůžete z množiny CT
+                       dat extrahovat měřené elementy.
+                       Aby byl vytvořen plán měření pomocí množiny CT dat, potřebujete v
+                       okně CAD vizualizovanou množinu CT dat, na které provádíte snímání.
+                       Pomocí funkce Vizualizovat množinu CT dat je součást ukázána a
+                       zobrazena vedle CAD modelu. Výsledkem vizualizace je aproximovaná
+                       triangulace povrchu.
+
+                       Oznámení
+                       Pokud je CT model zobrazen v režimu „Body“, nemůžete provádět
+                       snímání myší.
+                       1 V okně CT Nastavení klikněte na kartu Vizualizace.
+
+
+
+
+                       61212-2831512           CALYPSO 2018                          1-21
+Příprava měření CT množiny dat
+
+
+
+                             CT Nastavení
+
+                             CT množina dat
+                             Název souboru
+
+                              C:\data\ZEISS\CALYPSO\Getriebe.uint16_scv
+
+                                                                              Oříznutí
+
+                             CNC start
+
+                                 Načíst CT množinu dat
+                                 Připasování (best ﬁt)
+
+
+
+                             Měření         Vizualizace        Vlastnosti          Analýza
+
+
+
+
+                              Barva
+
+                                 Body                                                 100%
+
+                                 Vyhlazeno
+
+                              Počet materiálů                                  1
+
+                              Počet trojúhelníků                Optimální      200000
+
+                              Prahová hod.                      Optimální      1,00
+
+                              Faktor pro redukci bodů                          1
+
+
+                                                        Voxelviewer
+
+
+
+
+                                                Vizualizovat CT množinu dat
+
+
+                                 OK             Reset
+
+
+                          Jak pro voxelová data, tak i pro data ploch:
+                       2 Vyberte barvu pro zobrazení v okně CAD.
+                       3 Určete způsob zobrazení:
+                           Body: jako mrak bodů s nastavením hustoty bodů
+                           Vyhlazeno: jako těleso s plochami
+                          Pouze pro konverzi voxelových dat na data ploch:
+                       4 Zadejte počet materiálů dané součásti.
+
+
+1-22                   61212-2831512               CALYPSO 2018
+                                                                                                                                   Příprava měření CT množiny dat
+
+
+
+                                                                        5 Pro trojúhelníkové zobrazení určete Počet trojúhelníků nebo
+                                                                          nechte CALYPSO vypočítat optimální hodnotu.
+                                                                        6 Specifikujte prahovou hodnotu nebo nechte CALYPSO vypočítat
+                                                                          optimální hodnotu.
+                                                                        7 Zadejte faktor pro redukci bodů.
+                                                                          Pro výpočet plochy se použije jen každý n-tý voxel a vizualizace
+                                                                          množiny CT dat proběhne tudíž rychleji.
+                                                                        8 Klikněte na tlačítko Vizualizovat množinu CT dat.
+
+                                                                        Oznámení
+                                                                        Pro přepočet voxelových dat na data plochy potřebuje CALYPSO určitý
+                                                                        čas daný rozsahem množiny dat a kapacitou operační paměti.
+
+                                                                        Poté co software CALYPSOCALYPSO ukončil vizualizaci, vidíte součást
+                                                                        v okně CAD.
+
+  Calypso Of ine Planne r - Metrotom
+Soubor     Úpravy   Pohled   Pří prava Elementy      Konstrukce   Rozměry   Tvar-Poloha   CNC   CAD Doplňky Planner Okno   ?
+
+
+
+
+Základní stav: navolit funkci nebo sní mat
+
+
+
+   Stroj        Plánf měře   Charakteristiky   Měř.elementy
+
+
+
+
+                    CT Nastavení
+
+
+
+                    Základní /start.systém
+
+                      Metrotom
+
+
+
+                    Bezpečnostní kvádr
+
+
+
+
+                    Ví cenásobný protokol
+
+
+
+
+                    Editor plánu měření - elementy
+
+
+
+
+                    Teplotní kompenzace
+
+
+
+
+                                                                        Není-li daná součást vidět, zoomujte zobrazení tak dlouho, až se součást
+                                                                        dostane do viditelné oblasti.
+
+
+                                                                        61212-2831512                                      CALYPSO 2018                 1-23
+Příprava měření CT množiny dat
+
+
+
+                       Oznámení
+                       Zobrazení v okně CAD má hrubší rozlišení, než by bylo s danými daty
+                       možné. Při měření použije CALYPSO přesná voxelová data.
+
+                       Nastavení Barva, Body a Vyhlazeno nepůsobí na konverzi voxelových
+                       dat, nýbrž jen na zobrazení konvertovaných dat. Můžete je tedy i po
+                       vizualizaci ještě změnit.
+
+
+                       Vyrovnat CT množinu dat
+                       Možnosti vyrovnání
+                       Podle toho, jak byla originální součást vyrovnána na otočném stole při
+                       CT zaznamenávání, je CT množina dat více či méně šikmo v základním
+                       souřadném systému softwaru CALYPSO. Množina CT dat má obvykle jiné
+                       úhly k souřadným osám než CAD model. Přímé porovnání geometrie
+                       není možné.
+                       Stejně jako při „opravdovém“ snímání musí být součást vyrovnána na
+                       CAD modelu. Klikněte buď na relevantní body na CT mraku bodů nebo
+                       přesuňte a otočte CT mrak bodů relativně k CAD modelu.
+
+                       Vyrovnání kliknutím
+                       Manuální vyrovnání kliknutím předpokládá, že je definován základní
+                       systém. Můžete použít aktuální základní souřadný systém nebo ho
+                       změnit nebo nastavit nový základní systém. Základní systém může být
+                       nastaven pomocí standardní metody a metod „3D připasování“, „RPS“ a
+                       „6 bodů“.
+                       Pro vyrovnání kliknutím klikněte v CT mraku bodů na snímané body
+                       měřeného elementu, které se použijí pro definici základního systému.
+
+                       Oznámení
+                       I při velmi pečlivém výběru manuálně nastavených snímaných bodů na
+                       CT mraku bodů nemůžete dosáhnout optimální přesnosti.
+                       Je proto nezbytně nutné opakovat vyrovnání v CNC režimu.
+                       Doporučujeme nastavit při automatickém vyrovnání čítač smyček, a to
+                       na 3 smyčky.
+
+                       Vyrovnání otáčením a přesunutím
+                       Pro vyrovnání otáčením a posunutím nemusí být základní systém ještě
+                       definován. Po otáčení a posunutí je základní systém automaticky určen
+                       standardní metodou.
+
+
+
+
+1-24                   61212-2831512          CALYPSO 2018
+                                                          Příprava měření CT množiny dat
+
+
+
+                        Podle dané součásti zadejte hodnoty pro otáčení a posun nebo aplikujte
+                        metody připasování Best fit, 3-2-1 nebo Vyrovnání ploch. Tyto
+                        metody můžete také vzájemně kombinovat.
+Připasování (BestFit)   Metodou Best fit vyrovná CALYPSO automaticky CT mrak bodů na CAD
+                        modelu pomocí výpočetního algoritmu. Nejprve spustíte hrubé vyrovnání
+                        a poté jemné vyrovnání. Pro jemné vyrovnání můžete určit požadovanou
+                        přesnost (jemnost bodového rastru).
+                        Best fit je velmi rychlá metoda vyrovnání. Všechny body ploch CT
+                        množiny dat jsou zahrnuty do výsledku. Nevhodné geometrické tvary,
+                        odlehlé hodnoty a chyby záznamu dat mohou však výsledek zkreslit.
+                        Pro připasování Best fit musí být CAD model a množina CT dat
+                        kompletní.
+3-2-1                   Pro vyrovnání 3-2-1 definujete kliknutím na vhodné body primární
+                        referenci (3 body na rovině), sekundární referenci (2 body v přímce) a
+                        nulový bod (počátek souřadnic) základního systému CT mraku bodů.
+                        CALYPSO zjistí polohu součásti v prostoru a vyrovná CT mrak bodů na
+                        CAD modelu.
+                        3-2-1 je metoda preferovaná pro většinu případů. Pomocí vyrovnání
+                        3-2-1 docílíte velmi přesného výsledku. Do výpočtu se nezahrnují
+                        všechny body CT množiny dat, nepřihlíží se tedy k odlehlým hodnotám a
+                        chybám.
+                        CAD model ani CT množina dat nemusí být kompletní. 3-2-1 se ale hodí
+                        jen pro měřené i nebo jejich části, které mají rovinu a přímku.
+Vyrovnání ploch         Pomocí vyrovnání ploch vzájemně vyrovnáte dané plochy. Označte
+                        plochy na CAD modelu a CALYPSO vyrovná CT mrak bodů iterativně na
+                        CAD modelu. Můžete stanovit přesnost.
+                        Použijte metodu Vyrovnání ploch, když CAD model a CT množina dat
+                        obsahují jen části součásti nebo když je součást na CAD modelu a v CT
+                        množině dat odlišně dimenzovaná.
+
+                        Rychlý přístup k funkcím vyrovnání
+                        Jestliže pracujete často s daty CT, můžete postup zjednodušit. Vložte
+                        ikony pro rychlý přístup do panelu nástrojů (viz Upravit panel nástrojů
+                        v základním návodu). Když na ikony kliknete, jste vedeni přes přípravné
+                        kroky až k vyrovnání. K dispozici jsou dvě ikony s odlišnou funkcí
+                        vyrovnání:
+                        – Definovat manuální vyrovnání kliknutím
+                        – Definovat manuální vyrovnání pomocí přesunutí
+
+
+
+
+                        61212-2831512           CALYPSO 2018                         1-25
+Příprava měření CT množiny dat
+
+
+
+                       Kromě toho je v CT nastaveních k dispozici nastavení Připasování
+                       (best fit). Je-li aktivováno, při CNC startu se automaticky provádí toto
+                       připasování. Použije se přitom přesnost, která byla nastavena při
+                       posledním manuálním připasování.
+
+
+
+                       Manuálně vyrovnat CT mrak bodů kliknutím
+                       Pro vyrovnání klikněte na CAD modelu a CT mraku bodů na příslušné
+                       body.
+                       Podmínky
+                          – ➤ CAD model je načten [⇨ 1-15].
+                          – ➤ CT množina bodů je načtena [⇨ 1-16] a CT mrak bodů je
+                            zobrazen.
+                       1 V sekci plánu měření na kartě Plán měření klikněte na ikonu
+                         Základní/startovní systém.
+                         Je-li základní systém již definován, je ikona zelená.
+                         Otevře se okno Základní systém načíst / nastavit nebo změnit.
+
+                              Základní systém načíst, nastavit nebo změnit
+
+                            Zákl.systém Start.systém   Teplotní komp. pro zákl.systém
+
+
+                                  Nastavit nový základní systém
+
+                                 Standardní metoda
+                             nebo
+
+                                  Změnit aktuální základní systém
+
+                             nebo
+                                  Načíst uložený základní systém
+
+                                 Testblok
+
+
+                                                              Smyčka
+
+
+                                                                              OK        Storno
+
+                       2 Vyberte požadovanou možnost, např. Změnit aktuální
+                         zákl.systém.
+                       3 Pro dosažení vyšší přesnosti proveďte početní vyrovnání souřadného
+                         systému součásti iterativně.
+                         Klikněte na tlačítko Smyčka a zadejte parametry smyčky.
+
+
+1-26                   61212-2831512              CALYPSO 2018
+                                       Příprava měření CT množiny dat
+
+
+
+   Více informací viz Příklad: Upravit iterativně základní systém s
+   podmínkou přerušení v návodu k obsluze pro základní modul.
+4 Potvrďte tlačítkem OK.
+  Otevře se okno Základní systém.
+
+       Základní systém
+
+                                                  Speciální
+                Testblok2-BS
+
+                Testblok                           Komentář
+
+
+                  PRIMÁRNÍ (prostor)           Osa +Z
+
+                  CyITopCe
+
+
+                  SEKUNDÁRNÍ (rovina)          Osa -Y
+
+                  PlaFron
+
+
+
+                 TERCIÁRNÍ (nulový bod X)
+
+                  CyITopCe
+
+
+                 TERCIÁRNÍ (nulový bod Y)
+
+                  CyITopCe
+
+
+                 TERCIÁRNÍ (nulový bod Z)
+
+                  PointTop
+
+
+       Manuální vyrovnání                      Nyní
+    Provést v CNC průběhu:                     manuálně
+       Automatický průběh
+                                               nastavit
+       Vynulovat zákl.systém
+
+          OK             Reset
+
+
+5 Proveďte nastavení pro základní souřadný systém.
+  Více informací viz Nastavit nový základní/startovní systém v
+  základním návodu k obsluze.
+6 V dolní části okna klikněte na tlačítko Nyní manuálně nastavit.
+  Otevře se okno Režim pro manuální vyrovnání.
+7 Zvolte možnost Definovat manuální vyrovnání kliknutím a
+  potvrďte tlačítkem OK.
+
+
+61212-2831512               CALYPSO 2018                       1-27
+Příprava měření CT množiny dat
+
+
+
+                                              Otevře se okno Manuální vyrovnání.
+                                              V sekci Počet sním.bodů vidíte, kolik bodů prvního měřeného
+                                              elementu pro základní systém na CT mraku bodů najdete a musíte
+                                              kliknutím vybrat (Jmen.hod.). První bod, na který se má kliknout, je
+                                              na CAD modelu označen žlutou šipkou.
+
+  Manuelle Ausrichtung
+
+             Ebene1
+
+ Kommentar        Streuung
+
+
+
+
+Tastersystem                 CZReferenztaster
+
+Taster                       #1     1
+
+ Anzahl Antastpunkte
+ Sollwert                    lstwert
+
+
+
+
+    Sollpunkte ändern ...         Antastpunkt löschen
+
+ Element                     Steuerung
+                              Weiter im automat. Ablauf
+
+            OK                    CNC-Ablauf abbrechen
+
+
+
+
+                                                              Jmen                           Měř
+                                                          v CAD-modelu                  v CT mraku bodů
+                                         8 V CAD ikonách zvolte režim Definovat snímané body.
+                                         9 Klikněte na CT mraku bodů na bod označený na CAD modelu.
+                                           CALYPSO označí na CAD modelu příští snímaný bod.
+                                         10 Pokračujte, až jsou na CT mraku bodů kliknutím označeny všechny
+                                            snímané body měřeného elementu.
+                                            Když chcete začít od začátku, klikněte na tlačítko Vymazat
+                                            snímaný bod.
+                                            CALYPSO vymaže všechny snímané body nastavené pro tento
+                                            měřený element.
+                                         11 Jakmile je sejmut první měřený element základního systému na CT
+                                            mraku bodů, vyzve vás CALYPSO ke kliknutí na body dalšího
+                                            měřeného elementu.
+
+
+
+1-28                                     61212-2831512              CALYPSO 2018
+                                  Příprava měření CT množiny dat
+
+
+
+Poté co byly snímány všechny měřené elementy základního systému,
+vyrovná CALYPSO CT mrak bodů na CAD modelu. CAD model a CT mrak
+bodů se shodují, pokud jste správně snímali všechny body.
+Upozornění: I při velmi pečlivém výběru manuálně nastavených
+snímaných bodů na CT mraku bodů nemůžete dosáhnout optimální
+přesnosti.
+Je proto nezbytně nutné opakovat vyrovnání v CNC režimu.
+Doporučujeme nastavit při automatickém vyrovnání čítač smyček, a to
+na 3 smyčky.
+
+Oznámení
+Jestliže pracujete často s daty CT, můžete postup zjednodušit. Vložte
+ikonu Definovat manuální vyrovnání kliknutím              pro rychlý
+přístup do panelu nástrojů (viz Upravit panel nástrojů v základním
+návodu k obsluze). Pomocí této ikony spustíte postup, který vás vede
+přes přípravné kroky až k vyrovnání.
+
+
+
+Vyrovnat CT mrak bodů otáčením a posunutím
+Pomocí různých metod otáčíte a posouváte CT mrak bodů, až se kryje se
+zobrazením CAD modelu.
+Podmínky
+  – ➤ CAD model je načten [⇨ 1-15]
+  – ➤ CT množina bodů je načtena [⇨ 1-16] a CT mrak bodů je
+    zobrazen.
+1 V sekci plánu měření na kartě Plán měření klikněte na ikonu
+  Základní/startovní systém.
+  Otevře se okno Základní systém načíst / nastavit nebo změnit.
+
+
+
+
+61212-2831512           CALYPSO 2018                         1-29
+Příprava měření CT množiny dat
+
+
+
+                              Základní systém načíst, nastavit nebo změnit
+
+                            Zákl.systém Start.systém   Teplotní komp. pro zákl.systém
+
+
+                                  Nastavit nový základní systém
+
+                                 Standardní metoda
+                            nebo
+
+                                  Změnit aktuální základní systém
+
+                            nebo
+                                  Načíst uložený základní systém
+
+                                 Testblok
+
+
+                                                              Smyčka
+
+
+                                                                              OK        Storno
+
+                       2 Zvolte možnost Nastavit nový základní systém pomocí
+                         standardní metody a potvrďte tlačítkem OK.
+                         Otevře se okno Základní systém.
+                       3 V dolní části okna klikněte na tlačítko Nyní manuálně nastavit.
+                         Otevře se okno Režim pro manuální vyrovnání.
+                       4 Zvolte možnost Definovat manuální vyrovnání pomocí
+                         přesunutí a potvrďte tlačítkem OK.
+                         Otevře se okno Manuální vyrovnání.
+
+
+
+
+1-30                   61212-2831512              CALYPSO 2018
+                                                     Příprava měření CT množiny dat
+
+
+
+      Deﬁnovat manuální vyrovnání
+
+    Zákl.systém
+
+    Offset v X                             0.00000
+
+    Offset v Y                             0.00000
+
+    Offset v Z                             0.00000
+
+    Otáčení kolem X                          0.00000
+
+    Otáčení kolem Y                          0.00000
+
+    Otáčení kolem Z                          0.00000
+
+
+     Předb.vyrovnání         Bestﬁt        3-2-1 Vyrovn.ploch
+
+
+
+                        Vynulovat zákl.systém
+
+
+                               Vystředit
+
+
+                      Vyrovnání-osa setrvačnosti
+
+
+
+
+                        OK              Reset           Převzít
+
+
+
+5 Pro manuální otáčení a posunutí CT mraku bodů zadejte v horní části
+  okna hodnoty pro Posun a Otáčení, vztažené na aktuálně platné
+  vyrovnání.
+  Pokud používáte myš s kolečkem, zvýšíte nebo snížíte hodnotu v poli
+  otáčením kolečka myši. Zobrazení v okně CAD je okamžitě
+  aktualizováno.
+  - nebo -
+  Použijte jinou metodu pro automatické vyrovnání CT mraku bodů na
+  CAD modelu:
+    ➤ Vyrovnat CT mrak bodů pomocí best fit [⇨ 1-32]
+    ➤ Vyrovnat CT mrak bodů metodou 3-2-1 [⇨ 1-33]
+    ➤ Vyrovnat CT mrak bodů pomocí vyrovnání ploch (face fit)
+      [⇨ 1-35]
+   Upozornění: Tyto metody můžete také vzájemně kombinovat. Pro
+   uložení průběžného výsledku klikněte na tlačítko Provést.
+6 Chcete-li začít od začátku, klikněte na kartě Předb.vyrovnání na
+  tlačítko Vynulovat zákl.systém.
+  Základní systém bude vynulován.
+  Více informací viz Vynulovat základní systém v základním návodu k
+  obsluze.
+
+
+
+
+61212-2831512                         CALYPSO 2018                        1-31
+Příprava měření CT množiny dat
+
+
+
+                       7 Aby se střed voxelové krychle použil jako nulový bod (jen při měření s
+                         dynamickou prahovou hodnotou), klikněte na kartě
+                         Předb.vyrovnání na tlačítko Vystředit.
+                       8 Když se CT mrak bodů a CAD model v CAD se shodují, zavřete okno
+                         tlačítkem OK.
+
+                       Oznámení
+                       Jestliže pracujete často s daty CT, můžete postup zjednodušit. Vložte
+                       ikonu Definovat manuální vyrovnání pomocí přesunutí                 pro
+                       rychlý přístup do panelu nástrojů (viz Upravit panel nástrojů v základním
+                       návodu). Pomocí této ikony spustíte postup, který vás vede
+                       přes přípravné kroky až k vyrovnání.
+
+                       Vyrovnat CT mrak bodů pomocí best fit
+                       Metodou připasování Best fit vyrovná CALYPSO automaticky CT mrak
+                       bodů na CAD modelu pomocí výpočetního algoritmu.
+                       1 V okně Definovat manuální vyrovnání přejděte na kartu
+                         Připasování.
+
+                            Předb.vyrovnání      Bestﬁt       3-2-1 Vyrovn.ploch
+
+
+
+                                                            Hrubé vyrovnání
+                                 Gauss
+                                                          Připasování (best fit)
+                                 Čebyšev
+
+                           Přesnost
+
+                                                                          1,0000
+
+
+
+
+                       2 Klikněte na tlačítko Hrubé vyrovnání.
+                         CALYPSO provede hrubé vyrovnání CT mraku bodů na CAD modelu
+                         mimo jiné pomocí různých algoritmů.
+                       3 Zvolte typ připasování.
+                         Oznámení: Připasování podle Čebyševa se provádí do
+                         triangulovaného CAD modelu a je tudíž ovlivněno nastaveními
+                         kvality zobrazení CAD modelu.
+
+
+
+
+1-32                   61212-2831512           CALYPSO 2018
+                                 Příprava měření CT množiny dat
+
+
+
+4 Pro nastavení bodového rastru pro jemné vyrovnání použijte
+  posuvník Přesnost nebo zadejte požadovanou hodnotu do
+  vedlejšího vstupního pole.
+5 Klikněte na tlačítko Připasování (best fit).
+  CALYPSO optimalizuje připasování se zohledněním několika
+  referenčních ploch.
+6 Zkontrolujte výsledek v okně CAD.
+7 V případě potřeby ještě dolaďte vyrovnání pomocí jiných metod:
+    Zadejte hodnoty pro Posunutí a Otáčení, aby se CT mrak bodů
+     posunul, resp. otočil.
+    Použijte Vyrovnání ploch, aby se CT mrak bodů vyrovnal za
+     určitou plochu.
+
+Příklad použití
+Následující obrázky znázorňují vyrovnání pomocí otáčení a posunutí.
+CAD model je zobrazen bílou barvou a CT mrak bodů růžovou.
+– Obrázek 1 ukazuje výsledek po načtení.
+– Obrázek 2 ukazuje výsledek po hrubém vyrovnání.
+   Plochy, u kterých se CT mrak bodů a CAD model neshodují, jsou bílé,
+   např. roh a část válce.
+– Obrázek 3 ukazuje výsledek po jemném (přesném) vyrovnání.
+   Zabarvení ukazuje, že vyrovnání bylo zlepšeno. Roh CT mraku bodů
+   se ale ještě nekryje s CAD modelem.
+– Roh je ale důležitou částí součásti, proto je CT mrak bodů vyrovnán
+  pomocí Vyrovnání ploch přesně na šikmou polohu (viz obrázek 4).
+   V důsledku „zdvižení“ CT mraku bodů se teď už ale neshodují dolní
+   plochy.
+
+
+
+
+       (1)               (2)               (3)               (4)
+
+
+
+Vyrovnat CT mrak bodů vyrovnáním 3-2-1
+Při vyrovnání 3-2-1 definujete kliknutím na vhodné body základní systém
+součásti v prostoru. CALYPSO podle toho vyrovná CT mrak bodů na CAD
+modelu.
+
+
+61212-2831512          CALYPSO 2018                         1-33
+Příprava měření CT množiny dat
+
+
+
+                       1 V okně Definovat manuální vyrovnání přejděte na kartu 3-2-1.
+
+
+                           Předb.vyrovnání     Bestﬁt       3-2-1 Vyrovn.ploch
+
+
+
+                                               Deﬁnice bodů
+
+
+                                                  Výpočet
+
+
+
+
+                       2 Klikněte na tlačítko Definice bodů.
+                         Okno CAD se rozdělí. CAD model je zobrazen vlevo a CT mrak bodů
+                         vpravo. V těchto dvou oknech operujete nezávisle.
+                       3 Na CAD modelu klikněte postupně na tyto body:
+                           3 body pro definování roviny. Tato rovina definuje primární
+                            referenci základního souřadného systému. Body jsou označeny
+                            modrými šipkami.
+                           2 body podél přímky. Tato přímka definuje sekundární referenci
+                            základního souřadného systému. Body jsou označeny zelenými
+                            šipkami.
+                           1 bod. Tento bod definuje nulový bod základního souřadného
+                            systému. Je označen červenou šipkou.
+
+
+
+
+1-34                   61212-2831512         CALYPSO 2018
+                                  Příprava měření CT množiny dat
+
+
+
+4 Na CT mraku bodů označte stejným počtem kliknutí shodující se
+  elementy: rovinu 3 kliknutími, přímku dvěma kliknutími a nulový bod.
+5 Klikněte na tlačítko Výpočet.
+  CALYPSO vyrovná CT mrak bodů na CAD modelu. Vybrané elementy
+  jsou optimálně srovnány.
+6 Chcete-li začít od začátku, deaktivujte Definice bodů a poté ji opět
+  aktivujte.
+
+Vyrovnat CT mrak bodů vyrovnáním ploch
+Pomocí vyrovnání ploch vzájemně vyrovnáte dané plochy. Označte
+plochy na CAD modelu a CALYPSO vyrovná CT mrak bodů iterativně na
+CAD modelu.
+Následující obrázky ukazují vyrovnání před a po Vyrovnání ploch. CT
+mrak bodů (růžová) byl vyrovnán za sražený roh CAD modelu (bílá).
+
+
+
+
+1 V okně Definovat manuální vyrovnání přejděte na kartu
+  Vyrovnání ploch.
+
+
+    Předb.vyrovnání      Bestﬁt       3-2-1 Vyrovn.ploch
+
+
+
+                         Deﬁnice ploch
+
+                        Všechny plochy
+
+    Přesnost
+
+                                                    0,01000
+
+
+                            Výpočet
+
+
+
+
+2 Klikněte na tlačítko Definice ploch.
+
+
+61212-2831512          CALYPSO 2018                           1-35
+Příprava měření CT množiny dat
+
+
+
+                       3 Klikněte na CAD modelu na relevantní plochu (vícenásobný výběr
+                         s klávesou CTRL).
+                         Plocha je na CAD modelu barevně zvýrazněna.
+                       4 Aby se nastavila Přesnost, použijte posuvník nebo zadejte
+                         požadovanou hodnotu do příslušného vstupního pole.
+                         Přesnost definuje maximální odchylku mezi souřadnými systémy. Čím
+                         vyšší je přesnost, tím vyšší je počet iterací a tím delší doba trvání
+                         procesu.
+                       5 Klikněte na tlačítko Výpočet.
+                       CALYPSO otáčí a posouvá iterativně CT mrak bodů tak, aby vybraná
+                       plocha CAD modelu a CT mraku bodů ležely na sobě.
+                       Upozornění:Při výběru plochy může pomoci dočasně skrýt CT mrak
+                       bodů. Funkce pro skrytí a zobrazení najdete v kontextovém menu okna
+                       CAD.
+                       Upozornění: Chcete-li CT mrak bodů vyrovnat za všechny plochy CAD
+                       modelu, klikněte při výběru ploch na tlačítko Všechny plochy. Tato
+                       funkce má smysl jen, když jsou CT mrak bodů a CAD model kompletní a
+                       stejně velké.
+
+
+
+
+1-36                   61212-2831512          CALYPSO 2018
+                                                     Měření na CT množině dat
+
+
+
+
+Měření na CT množině dat
+            Možnosti měření
+            Na načtené množině CT dat můžete v softwaru CALYPSO provádět různá
+            měření:
+            – Můžete barevně vizualizovat odchylky mezi jmenovitými a
+              naměřenými hodnotami, tím získáte ihned přehled o kvalitě
+              kontrolované součásti.
+            – Množinu CT dat můžete v libovolném místě protnout a v této rovině
+              řezu manuálně měřit, jakož i vytvořit elementy řezu.
+            – Pomocí šablon je možné velmi snadno zjištovat výsledky měření.
+            – Můžete definovat měřené elementy a charakteristiky a vytvořit tak
+              plán měření.
+
+
+            Zobrazit barevně odchylky
+            Porovnání jmenovitých a měřených hodnot na CT
+            souboru dat
+            Když je načtena množina CT dat i příslušný CAD model, můžete
+            porovnáním jmenovitých a naměřených hodnot zvýraznit odchylky mezi
+            CAD modelem a množinou CT dat pomocí pseudobarevného zobrazení.
+            Odchylky mohou být zbarveny podle různých kritérií.
+            Například hodnoty mimo toleranci mohou být zobrazeny zvláštní barvou.
+            Tím jsou vizuálně zvýrazněna vadná místa a velmi rychle zjistíte, zda jsou
+            na měřené součásti dodrženy přesné rozměry.
+            Množinu CT dat můžete také odlišně zabarvovat podle velikosti
+            odchylek. Umožní vám to ještě přesnější posouzení odchylek.
+            Různé způsoby zobrazení lze rychle střídat, toleranční rozsahy a přiřazení
+            barev můžete kdykoliv změnit.
+
+            Vypočítat odchylku
+            Podmínky
+               – CAD data a množina CT dat jsou načteny.
+               – CT množina dat je zobrazená. Upozornění: Při měření s
+                 dynamickou prahovou hodnotou je třeba vizualizaci ručně
+                 inicializovat.
+
+
+
+
+            61212-2831512           CALYPSO 2018                           1-37
+Měření na CT množině dat
+
+
+
+                           – Množina CT dat je vyrovnána na CAD modelu – přesně tak jako
+                             pro obvyklé měření. Upozornění: Chyby vyplývající z chybného
+                             vyrovnání jsou plně zahrnuty do porovnání jmenovitých a
+                             měřených hodnot.
+                      1 V okně CT Nastavení přejděte na kartu Porovnání jm/měř.
+
+                              CT Nastavení
+
+                              CT množina dat
+                              Název souboru
+
+                               C:\data\ZEISS\CALYPSO\Getriebe.uint16_scv
+
+                                                                               Oříznutí
+
+                              CNC start
+
+                                  Načíst CT množinu dat
+                                  Připasování (best ﬁt)
+
+
+
+                              Vlastnosti                          Analýza
+
+                              Měření              Vizualizace          Porovnání jmen/měř
+
+                              Výpočet odchylek
+
+                                   Výpočet                 Tolerance                0,50000
+
+                                 Přesně                    Úhel                 180,00000
+
+                                 Použít dynamickou prahovou hodnotu
+                              Pohled
+
+                                                           Zvětšení             0
+
+                                 Vlastnosti...
+
+
+                                Zobrazit jen body mimo toler.rozsah
+
+                                Spojit naměřené a jmenovité body
+
+
+
+
+                                                 Vizualizovat CT množinu dat
+
+
+                                  OK             Reset
+
+
+                      2 V sekci Výpočet odchylek definujte požadovanou toleranci a
+                        parametry pro výpočet a zobrazení.
+
+
+1-38                  61212-2831512                 CALYPSO 2018
+                                                                                                                                     Měření na CT množině dat
+
+
+
+                                                                        Více informací o parametrech najdete v online nápovědě CT
+                                                                        Nastavení.
+                                                               3 Klikněte na tlačítko Výpočet.
+                                                                 Odchylky CT množiny dat jsou vypočteny a barevně zobrazeny.
+                                                                 Barevná stupnice na pravém okraji okna CAD ukazuje, která barva je
+                                                                 přiřazena určité odchylce.
+                                                               4 Přejíždějte myší přes vizualizaci v okně CAD, abyste si prohlédli
+                                                                 jednotlivé odchylky.
+                                                                 Podrobné informace, jako je poloha a velikost odchylky, jsou
+                                                                 uvedeny v levém horním rohu okna CAD.
+                                                                 Když je v okně CAD aktivováno Definovat snímaný bod, můžete
+                                                                 kliknutím myši nastavit praporek pro údaj odchylky určitého bodu.
+                                                               5 Je-li třeba, změňte v sekci Pohled nastavení pro vizualizaci odchylek.
+                                                                 Jestliže chcete zbarvit odchylky podle jiných kritérií, použijte
+                                                                 příslušnou tabulku barev z kontextového menu barevné stupnice.
+                                                                 Pomocí tlačítka Vlastnosti můžete změnit tabulku barev.
+                                                                 Vaše změny budou ihned vidět v okně CAD.
+
+  Calypso Of ine Planner - Metrotom
+Soubor        Úpravy     Pohled      Pří prava   Elementy Konstrukce    Rozměry   Tvar-Poloha   CNC   CAD   Doplňky Planner   Okno   ?
+
+
+
+
+Základní stav: navolit funkci nebo sní mat
+  CT Nastavení
+
+CT množina dat
+
+ Název souboru
+  C:\Documents and Settings\AllUsers\Dokumenty\
+
+
+                                                            Oří znutí
+
+Nastavení
+
+  Měření               Vizualizace          Vlastnosti        Analýza
+
+
+
+
+     Automatická de nice parametrů
+
+              Ignorovat nelogické body
+
+  Gradient-práh
+
+  Oblast vyhlazení                                 mm
+
+  Vyhled. dráha                                    mm
+
+
+     Shoda směru                                   Úhel
+
+     Zamezit převzorkování
+
+
+
+
+                           Vizualizovat CT množinu dat
+
+
+
+         OK               Reset
+
+
+
+
+                                                               61212-2831512                           CALYPSO 2018                                 1-39
+Měření na CT množině dat
+
+
+
+                      6 Přesouvejte zobrazený objekt pomocí tlačítek myši, zoomujte a
+                        otáčejte ho ve třech rozměrech.
+                        Takto si můžete každý detail, který vás zajímá, přesně prohlédnout.
+
+
+
+
+                      7 Klikněte na tlačítko OK, aby se uložilo aktuální porovnání jmen-měř.
+                        Jako typ souboru zvolte „SES“ (CALYPSO Session).
+                        Tento soubor si můžete potom prohlížet také v prohlížeči CALYPSO
+                        Viewer na libovolném počítači.
+                      8 Pokud už porovnání jmen-měř nepotřebujete: Klikněte na tlačítko
+                        Vymazat CT množinu dat v okně CAD, aby se okno CAD
+                        vyprázdnilo.
+
+                      Porovnání měřených a měřených hodnot na CT
+                      souboru dat
+                      Kromě porovnání součásti s ideálním CAD modelem může být také
+                      užitečné porovnat CT množinu dat s jinou součástí. CALYPSO umožňuje
+                      toto porovnání také v okně CT Nastavení.
+                      Když je načtena množina CT dat a soubor bodů jako příslušný referenční
+                      model, můžete porovnáním naměřených a naměřených hodnot – stejně
+                      jako při porovnání jmenovitých a měřených hodnot - zvýraznit odchylky
+                      mezi referenčním modelem a množinou CT dat. Odchylky mohou být
+                      zbarveny podle různých kritérií.
+
+
+
+
+1-40                  61212-2831512          CALYPSO 2018
+                                      Měření na CT množině dat
+
+
+
+Při porovnání měřených a naměřených hodnot máte v zásadě stejné
+možnosti jako při porovnání jmenovitých a měřených hodnot;
+nepotřebné nebo nepřípustné funkce a zadání jsou zablokovány.
+
+Vypočítat odchylku
+Podmínky
+  – Soubor STL nebo jiný soubor bodů s referenčním modelem je
+    načten (CAD " CAD soubor " Načíst soubory bodů).
+  – CT množina dat je načtena. Upozornění: Referenční model
+    dostane zelenou barvu.
+  – CT množina dat je zobrazená. Upozornění: Při měření s
+    dynamickou prahovou hodnotou je třeba vizualizaci ručně
+    inicializovat.
+  – Množina CT dat je vyrovnána na referenčním modelu – přesně tak
+    jako pro obvyklé měření. Upozornění: Chyby vyplývající z
+    chybného vyrovnání jsou plně zahrnuty do porovnání měř-měř.
+1 V okně CT Nastavení přejděte na kartu Porovnání měř/měř.
+
+
+
+
+61212-2831512         CALYPSO 2018                       1-41
+Měření na CT množině dat
+
+
+
+                            CT Nastavení
+
+                            CT množina dat
+                            Název souboru
+
+                             C:\data\ZEISS\CALYPSO\Getriebe.uint16_scv
+
+                                                                            Oříznutí
+
+                            CNC start
+
+                                Načíst CT množinu dat
+                                Připasování (best ﬁt)
+
+
+
+                            Vlastnosti                         Analýza
+
+                            Měření             Vizualizace          Porovnání měř/měř
+
+                            Výpočet odchylek
+
+                                Výpočet                 Tolerance                 0,50000
+
+                               Přesně                   Úhel                  180,00000
+
+                               Použít dynamickou prahovou hodnotu
+                            Pohled
+
+                                                         Zvětšení             0
+
+                              Vlastnosti...
+
+
+                              Zobrazit jen body mimo toler.rozsah
+
+                              Spojit naměřené a jmenovité body
+
+
+
+
+                                              Vizualizovat CT množinu dat
+
+
+                                OK            Reset
+
+
+                      2 V sekci Výpočet odchylek definujte požadovanou toleranci a
+                        parametry pro výpočet a zobrazení.
+                        Více informací o parametrech najdete v online nápovědě CT
+                        Nastavení.
+                      3 Klikněte na tlačítko Výpočet.
+                        Odchylky CT množiny dat jsou vypočteny a barevně zobrazeny.
+                        Barevná stupnice na pravém okraji okna CAD ukazuje, která barva je
+                        přiřazena určité odchylce.
+
+
+1-42                  61212-2831512              CALYPSO 2018
+                                        Měření na CT množině dat
+
+
+
+4 Přejíždějte myší přes vizualizaci v okně CAD, abyste si prohlédli
+  jednotlivé odchylky.
+  Podrobné informace, jako je poloha a velikost odchylky, jsou
+  uvedeny v levém horním rohu okna CAD.
+  Když je v okně CAD aktivováno Definovat snímaný bod, můžete
+  kliknutím myši nastavit praporek pro údaj odchylky určitého bodu.
+5 Je-li třeba, změňte v sekci Pohled nastavení pro vizualizaci odchylek.
+  Jestliže chcete zbarvit odchylky podle jiných kritérií, použijte
+  příslušnou tabulku barev z kontextového menu barevné stupnice.
+  Pomocí tlačítka Vlastnosti můžete změnit tabulku barev.
+  Vaše změny budou ihned vidět v okně CAD.
+6 Přesouvejte zobrazený objekt pomocí tlačítek myši, zoomujte a
+  otáčejte ho ve třech rozměrech.
+  Takto si můžete každý detail, který vás zajímá, přesně prohlédnout.
+
+
+
+
+7 Klikněte na tlačítko OK, aby se uložilo aktuální porovnání měř-měř.
+  Jako typ souboru zvolte „SES“ (CALYPSO Session).
+  Tento soubor si můžete potom prohlížet také v prohlížeči CALYPSO
+  Viewer na libovolném počítači.
+8 Pokud už porovnání měř-měř nepotřebujete: Klikněte na tlačítko
+  Vymazat CT množinu dat v okně CAD, aby se okno CAD
+  vyprázdnilo.
+
+
+
+
+61212-2831512           CALYPSO 2018                         1-43
+Měření na CT množině dat
+
+
+
+
+                      Měření v rovinách řezu
+                      Vytvořit rovinu řezu
+                      Pomocí speciálního elementu Elementy řezu můžete protnout množinu
+                      CT dat a v rovině řezu provádět měření.
+                      1 Pomocí menu Elementy " Speciální elementy " Elementy řezu
+                        vložte do plánu měření speciální element Elementy řezu.
+                        Tento speciální element se objeví v seznamu měřených elementů.
+                      2 Otevřete předlohu pro definici.
+                        Předloha pro definici obsahuje tři karty. Na kartě Řez definujte
+                        rovinu řezu.
+
+
+                             Měřené elementy
+
+
+                                            Elementy řezu1
+
+
+                           Řez                     Vytvořit                   Vyhodnocení...
+
+                                                                                Souř.systém
+
+                                 Komentář                                        (Zákl.systém)
+
+                           Řez
+
+                                                                                 Rovina XY
+
+                            Vzdálenost
+
+                            Vyhled.vzdálenost
+
+                            Hustota bodů
+
+
+                                                      Vypočítat křivku řezu
+
+
+
+                              Ukázat rovinu řezu
+
+
+                              Aktivovat ořezávací rovinu
+
+
+                              Ukázat použité body
+
+                              Ukázat všechny body
+
+
+                              Ukázat jmenovité
+
+                              Zobrazení řezu
+
+
+                              Grafika
+
+
+                                 OK                Reset
+
+
+
+
+1-44                  61212-2831512                 CALYPSO 2018
+                                         Měření na CT množině dat
+
+
+
+3 Definujte referenční souřadný systém, souřadnou rovinu a vzdálenost
+  roviny řezu k souřadné rovině.
+4 Stanovte vyhledávací vzdálenost a hustotu bodů v křivce řezu a
+  klikněte na tlačítko Vypočítat křivku řezu.
+  CALYPSO vypočte křivku řezu a zobrazí ji v okně CAD.
+  Zaškrtávací políčka v dolní části karty slouží pro úpravu zobrazení v
+  okně CAD.
+5 Aktivujte zaškrtávací políčko Zobrazení řezu, aby byl zobrazen řez.
+
+
+
+
+   Upozornění: Tento pohled nemůžete otáčet, je možné ho jen
+   zoomovat a posouvat.
+6 Má-li se v CNC průběhu ukázat zakreslení CAD pohledu, aktivujte
+  zaškrtávací políčko Grafika.
+  Do seznamu charakteristik je vložena příslušná charakteristika
+  Grafika-Elementy řezu.
+7 Na kartě Vyhodnocení definujte pro zobrazení odchylek v
+  pseudobarvách Tolerance, Barevné odstíny, Barevný přechod
+  atd.
+
+Měřit na řezu
+Na křivce řezu CT množiny dat můžete přímo měřit. Vytvoříte si k tomu
+2D měřené elementy nebo charakteristiky.
+1 Aktivujte kartu Vytvořit.
+
+
+
+
+61212-2831512           CALYPSO 2018                          1-45
+Měření na CT množině dat
+
+
+
+                             Měřené elementy
+
+
+                                                Elementy řezu1
+
+
+                           Řez                      Vytvořit        Vyhodnocení.
+
+                           Měření
+
+                                    Dotykový bod
+
+                                    Dotykový bod
+
+                                    Kružnice
+
+                                    2D přímka
+
+                                    Obdélník
+
+                                    2D křivka
+
+                                    Vzdálenost polární 2D
+
+                                    Vzdálenost křivek
+
+                                    Úhel mezi elementy
+
+                                    Kruhovitost
+
+                                    Přímost
+
+                                    Tvar
+
+
+
+
+                                 OK                Reset
+
+
+
+                      2 V sekci Měření zvolte požadovaný měřený element.
+                        V sekci pod tím vidíte, co musíte teď snímat.
+                      3 V okně CAD proveďte myší snímání na křivce řezu.
+                      4 V plánu měření je založen měřený element a ihned vyplněn
+                        měřenými hodnotami.
+
+                      Měřit pomocí šablon
+                      Pro jednoduché manuální měření na křivce řezu je k dispozici měření se
+                      šablonami.
+                      Upozornění: Jestliže plán měření obsahuje měřené elementy nebo
+                      charakteristiky se šablonou, přeruší CALYPSO CNC průběh, abyste mohli
+                      ručně optimálně umístit šablonu. Poté CNC průběh pokračuje.
+
+
+1-46                  61212-2831512                  CALYPSO 2018
+                                                     Měření na CT množině dat
+
+
+
+          1 Aktivujte kartu Vytvořit.
+
+
+                 Měřené elementy
+
+
+                                 Elementy řezu1
+
+
+               Řez                   Vytvořit        Vyhodnocení...
+
+               Měření
+
+                     Dotykový bod
+
+
+               Měřené elementy
+
+
+               Bod
+
+
+
+
+               Šablony
+
+
+
+
+                     OK              Reset
+
+
+
+          2 Klikněte na některý symbol šablony a potom do řezu.
+
+Šablona   Funkce
+          Šablona bodu (nitkový kříž)
+          Určí polohu v X, Y, Z.
+          Šablona pro kružnici s vnitřním a vnějším tolerančním pásmem
+          Určí střed, D, R, tvar, horní a dolní odchylku.
+          Šablona kružnice bez tolerančních pásem
+          Určí střed, D1, D2, R1 a R2.
+
+
+
+
+          61212-2831512               CALYPSO 2018                    1-47
+Měření na CT množině dat
+
+
+
+Šablona                Funkce
+                       Obdélníková šablona
+                       Určí X, Y, Z, L1, L2 a úhel.
+                       Úhlová šablona
+                       Určí ze dvou přímek vrchol a úhly W1, W2.
+                       Šablona přímky s tolerančními pásmy
+                       Určí X, Y, Z, W1, tvar, horní a dolní odchylku.
+
+                           Na řezu je ukázána modrá šablona.
+
+
+
+
+                      3 Posouvejte a zoomujte elementy šablony tak, aby se šablona
+                        dotýkala bodů nebo zahrnovala body, které chcete měřit.
+                      4 V kontextovém menu zvolte položku Vytvořit, aby se vytvořil
+                        měřený element.
+                        Pomocí položky Vymazat v kontextovém menu opět šablonu
+                        odstraníte.
+
+
+                      Vytvořit plán měření
+                      Možnosti definování měřených elementů
+                      S doplňkovou opcí Metrotomografie máte stejné možnosti definování
+                      měřených elementů jako jinde v programu CALYPSO:
+                      1 Nově založíte měřený element a definujete ho pomocí jeho
+                        jmenovitých hodnot.
+                      2 Je-li načten CAD model, můžete v okně CAD definovat měřené
+                        elementy kliknutím na CAD model.
+
+
+
+
+1-48                  61212-2831512             CALYPSO 2018
+                                                                    Měření na CT množině dat
+
+
+
+                        Opce Metrotomografie kromě toho umožňuje vytvořit měřené elementy
+                        snímáním bodů na množině CT dat a tím definovat příslušné
+                        charakteristiky.
+
+                        Měřené elementy ze snímání na množině CT dat
+                        Je-li načtena a vizualizována množina CT dat, můžete měřené elementy
+                        vytvořit snímáním bodů na množině CT dat a tím definovat příslušné
+                        charakteristiky.
+                        Aby se mohly vytvořit snímané body na množině CT dat, musí být zvolen
+                        způsob zobrazení CT mrak bodů.
+
+                               Text
+                               Zobrazit siluetu
+                               Body
+                               CT mrak bodů
+
+                               CAD modeI
+                               Zobrazit bezpečnostní kvádr
+                               Zobrazit vybraný/é element(y)
+                               Zobrazit plochy z obou stran
+                               Skrýt CAD pohled
+                               Zobrazit souřadnice modelu
+                               Zobrazit osový kříž
+                               Zobrazit tvar a polohu
+
+
+                        V případě skryté množiny CT dat jsou snímané body vytvořeny na CAD
+                        modelu.
+
+                        Oznámení
+                        Vytvoření prostorové geometrie a jiných geometrických elementů z
+                        množiny CT dat není možné.
+
+
+                        Měření a vyhodnocení v CNC průběhu
+                        Na načtené a vizualizované množině CT dat může proběhnout plán
+                        měření stejně jako na jakékoli jiné součásti.
+
+                        Zvláštnosti při CNC průběhu
+Žádné objezdy při CNC   Standardně vypočítává CALYPSO objezdové dráhy při měření
+                        jednotlivých elementů automaticky. V kombinaci programu CALYPSO s
+                        opcí Metrotomografie nejsou ale objezdy potřebné. Proto můžete
+                        automatický výpočet objezdových drah při CNC průběhu potlačit.
+                        Provádí se to při startu CNC průběhu v okně Start plánu měření.
+                        1 Zvolte menu CNC " CNC start.
+                          Otevře se okno Start plánu měření.
+
+
+                        61212-2831512                CALYPSO 2018                  1-49
+Měření na CT množině dat
+
+
+
+                       2 V sekci Pojezd mezi elementy zvolte položku Bez generování.
+                       3 Alternativně můžete vybrat požadované měřené elementy nebo
+                         charakteristiky a v kontextovém menu zvolit položku Provést nyní!
+                         nebo stisknout klávesu F9. Plán měření nyní proběhne se
+                         standardními předvolbami vhodnými pro měření CT množiny dat.
+Elementy se šablonou   Jestliže plán měření obsahuje měřené elementy nebo charakteristiky se
+                       šablonou, přeruší CALYPSO CNC průběh, abyste mohli ručně optimálně
+                       umístit šablonu. Poté CNC průběh pokračuje.
+
+
+
+
+1-50                   61212-2831512          CALYPSO 2018
+Rejstřík
+                                                           CT mrak bodů
+           Numerics
+                                                               vyrovnání 3-2-1 1-33
+           3-2-1
+                                                               vyrovnat kliknutím 1-26
+               Použít 1-33
+                                                               vyrovnat na CAD modelu 1-24
+                                                               vyrovnat otáčením a posunutím 1-29
+           B                                                   vyrovnat pomocí best fit 1-32
+           Best fit                                            vyrovnat pomocí vyrovnání ploch 1-35
+               Použít 1-32
+                                                           D
+           C                                               dynamická prahová hodnota 1-6
+           CT data
+               CT mrak bodů 1-24                           G
+               dynamická prahová hodnota 1-6
+                                                           Gradient-práh
+               Měření se šablonou 1-46
+                                                               Metrotomografie 1-7, 1-20
+               měření, průběh 1-11
+               měřit a vyhodnotit 1-49
+                                                           K
+               měřit s Calypso 1-4
+                                                           Kontrola hodnot šedi
+               načíst 1-16
+                                                               Metrotomografie 1-20
+               Nastavení 1-20
+               Parametr 1-5
+               Porovnání jmenovitých a naměřených          M
+               hodnot 1-37                                 Měření
+               porovnání měřených a měřených                   na CT datech 1-11
+               hodnot 1-40
+                                                               zvláštnosti CT dat 1-49
+               vizualizovat 1-21
+                                                           Měření se šablonou
+               Vyhledávací dráha 1-8
+                                                               na CT souboru dat 1-46
+               vyrovnat 1-24
+                                                           Měřítko
+               Základní údaje 1-3
+                                                               Metrotomografie 1-9, 1-20
+           CT množina dat
+                                                           METROTOM 1-3
+               Gradient-práh 1-7
+               Měřítko 1-9
+               Oblast vyhlazení 1-7
+               oříznout 1-18
+               Shoda směru (dynamicky) 1-8
+               Shoda směru (staticky) 1-8
+               snímané body vytvořit 1-48
+               Statická prahová hodnota 1-6
+               vizualizovat 1-9
+               vyrovnat 1-10
+
+
+
+
+           61212-2831512                    CALYPSO 2018                                 Rejstřík   11
+              Metrotomografie
+                                                             V
+                  CT data vyrovnat 1-24
+                                                             Vyhledávací dráha
+                  CT data-vizualizovat 1-21
+                                                                 Metrotomografie 1-8, 1-20
+                  CT množinu dat snímat 1-48
+                                                             Vyrovnání
+                  Měření se šablonou 1-46
+                                                                 CT množina dat 1-10
+                  Načíst CAD data 1-16
+                                                             Vyrovnání ploch
+                  Nastavení 1-20
+                                                                 Použít 1-35
+                  Parametr 1-5
+                  Porovnání jmenovitých a měřených
+                  hodnot na CT souboru dat 1-37              Z
+                  Porovnání měřených a měřených              Základní údaje
+                  hodnot na CT souboru dat 1-40
+                                                                 Metrotomografie 1-3
+                  Přípravy 1-12
+                  Vizualizace 1-9
+                  Základní údaje 1-3
+
+
+              N
+              Nastavení
+                  CT data 1-20
+
+
+              O
+              Oblast vyhlazení
+                  Metrotomografie 1-7, 1-20
+
+
+              P
+              Počítačová tomografie
+                  pro souřadnicová měření 1-3
+              Porovnání jmenovitých a měřených
+              hodnot na CT souboru dat 1-37
+              Porovnání měřených a měřených hodnot
+              na CT souboru dat 1-40
+              Prahová hodnota
+                  dynamická 1-6
+                  statická 1-6
+
+
+              S
+              Shoda směru
+                  Metrotomografie 1-20
+              Shoda směru (dynamicky)
+                  Metrotomografie 1-8
+              Shoda směru (staticky)
+                  Metrotomografie 1-8
+              Statická prahová hodnota 1-6
+
+
+
+
+22 Rejstřík   61212-2831512                   CALYPSO 2018
+

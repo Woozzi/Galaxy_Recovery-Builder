@@ -1,0 +1,628 @@
+CALYPSO
+
+   Opce 10
+   Automatizace
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2801512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 Automatizace (opce)
+
+               Základní údaje o automatizaci ....................................... 1-2
+
+               Použití rozhraní AAI ........................................................ 1-3
+                  Kroky při použití rozhraní AAI............................................................ 1-3
+                  Konfigurovat rozhraní AAI................................................................. 1-3
+                  Aktivovat rozhraní AAI ...................................................................... 1-5
+                  Spustit rozhraní AAI .......................................................................... 1-6
+                  Manuální režim a automatický režim ................................................. 1-6
+                  Zastavit rozhraní AAI ......................................................................... 1-8
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2801512                  CALYPSO 2018                                             Obsah    11
+22 Obsah   61212-2801512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2801512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2801512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2801512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2801512          CALYPSO 2018
+Automatizace (opce)
+
+
+
+
+                      Kapitola
+
+                      1    Automatizace (opce)
+
+                         Tato kapitola obsahuje:
+                         Základní údaje o automatizaci .................................................................... 1-2
+                         Použití rozhraní AAI ................................................................................... 1-3
+
+
+
+
+                        61212-2801512                      CALYPSO 2018                                                 1-1
+Základní údaje o automatizaci
+
+
+
+
+Základní údaje o automatizaci
+                        Opce Automatizace umožňuje (spolu s opcí CMM-OS) použití programu
+                        CALYPSO v automatizačních projektech.
+CALYPSO a FACS          V automatizovaném projektu je program CALYPSO řízen externími
+                        signály, které jsou např. z nadřazeného flexibilního automatizačního a
+                        řídícího systému (FACS = Flexible Automation and Control System)
+                        posílány do programu CALYPSO.
+                        Tímto způsobem je možné integrovat CALYPSO do automatizovaného
+                        měřicího řetězce s přísunem obrobků, měřením a vyhodnocením.
+Rozhraní AAI            Řízení programu CALYPSO pomocí systému FACS a zpětná hlášení
+                        programu CALYPSO do systému FACS probíhají přes rozhraní AAI, které
+                        musí být k tomu konfigurováno a spuštěno.
+                        Po startu rozhraní AAI je CALYPSO v režimu, který jste předtím nastavili:
+                        v automatickém nebo manuálním.
+                        – V manuálním režimu můžete CALYPSO ovládat obvyklým způsobem.
+                          Program CALYPSO může být ale přes rozhraní AAI přepnut na
+                          automatiku.
+                        – Jakmile je CALYPSO v automatickém režimu , může být CALYPSO
+                          řízen zvnějšku, ovládání operátorem je omezeno.
+                           Zpětně přepnout na manuální režim se může jak povelem z FACS, tak
+                           i manuálně uživatelem.
+
+
+
+
+1-2                     61212-2801512           CALYPSO 2018
+                                                              Použití rozhraní AAI
+
+
+
+
+Použití rozhraní AAI
+             Kroky při použití rozhraní AAI
+             Spustit rozhraní AAI
+             Aby se program CALYPSO mohl použít v automatizovaném projektu, je
+             třeba rozhraní AAI
+             – ➤ konfigurovat [⇨ 1-3],
+             – ➤ aktivovat [⇨ 1-5] a
+             – ➤ spustit [⇨ 1-6].
+
+             Manuální režim a automatický režim
+             Po startu rozhraní AAI je CALYPSO v režimu, který jste předtím nastavili:
+             v ➤ automatickém nebo manuálním [⇨ 1-6].
+             – V manuálním režimu můžete CALYPSO ovládat obvyklým způsobem.
+               V případě potřeby se CALYPSO přes rozhraní AAI přepne na
+               automatiku.
+             – Jakmile je CALYPSO v automatickém režimu, je program CALYPSO
+               řízen zvnějšku. V případě potřeby se CALYPSO povelem ze systému
+               FACS nebo manuálně uživatelem přepne zpět do manuálního režimu.
+
+             Zastavit rozhraní AAI
+             Když rozhraní AAI už není potřebné, můžete je ➤ deaktivovat a zastavit
+             [⇨ 1-8].
+             Přečtěte si pokyny v následujících oddílech.
+
+
+             Konfigurovat rozhraní AAI
+             Aby rozhraní AAI fungovalo požadovaným způsobem, musíte je před
+             prvním spuštěním konfigurovat.
+             1 Zvolte menu Doplňky " Nastavení " Stroj a klikněte na záložku
+               AAI.
+
+
+
+
+             61212-2801512           CALYPSO 2018                              1-3
+Použití rozhraní AAI
+
+
+
+                            Systémová nastavení
+                          Soubor   Stránky
+
+
+                                                             Měřicí stroj
+
+
+                                                                                                             Ří zení
+                                                         AAI - start spojení
+                                                                                                             Měř.pří stroj
+                                      Nastavení
+                                                                                                             Dvoustojan
+                                       Režim po startu
+                                                                                                             Sní m.hlava
+                                                         Automatický režim
+                                                                                                             Sní m.systém
+                                                         Manuální režim
+                                                                                                             Otočný stůl
+                                       Režim pro otevření plánů měření přes AAI
+                                                                                                             Ovlád.panel
+                                                         Otevří t na pracovní plo
+                                                                                še Calypso
+                                                                                                             Teplota
+                                                         Otevří t na pozadí
+                                                                                                             Interface
+                                                                Max. počet otevřených plánů
+                                                                                                             Světel.signál
+
+                                                                                                       AAI
+                                       Host-název                     localhost
+                                                                                                           Měř.systémy
+                                       Port-čí slo                    8888                                 Pojezdy
+
+                                       Společná cesta
+
+
+
+
+                                                               Přepnout na Manuálně
+
+
+                                   Prismo    Simulace
+
+
+
+
+                                                                                             OK   Storno             Převzí t
+
+
+
+                       2 Zvolte Režim po startu:
+                           Automatický režim: CALYPSO je po spuštění AAI rozhraní v ➤
+                            automatickém režimu [⇨ 1-6].
+                           Manuální režim: CALYPSO je po spuštění AAI rozhraní v ➤
+                            manuálním režimu [⇨ 1-6].
+                       3 Aby se přes AAI otevřel plán měření, který se jako obvykle ukáže na
+                         obrazovce, zvolte pro Režim pro otevření plánů měření přes
+                         AAI možnost Otevřít na pracovní ploše CALYPSO.
+                       4 Aby se přes AAI otevřel plán měření, který probíhá jen na pozadí,
+                         ovládací plocha programu se na obrazovce neukáže, zvolte pro
+                         Režim pro otevření plánů měření přes AAI možnost Otevřít na
+                         pozadí.
+                         Výhodou tohoto režimu je, že procesy mohou probíhat rychleji.
+                         Navíc můžete pomocí údaje Max.počet otevřených plánů určit,
+                         kolik (naposledy otevřených) plánů měření má CALYPSO ponechat
+                         otevřených v automatickém režimu. Když se má přejít do některého z
+                         těchto plánů měření, ušetří se doba potřebná na opětovné otevření.
+                         Informace: Při nastavení Otevřít na pozadí nefunguje výstup CAD
+                         zobrazení jako grafiky.
+
+
+
+1-4                    61212-2801512                      CALYPSO 2018
+                                                                            Použití rozhraní AAI
+
+
+
+5 V případě potřeby změňte předdefinovaná nastavení (Host-název,
+  Port-číslo, Společná cesta) pro propojení.
+6 Klikněte na tlačítko Převzít nebo OK.
+
+
+Aktivovat rozhraní AAI
+Aby se při startu spojení s měřicím strojem spustilo také rozhraní AAI,
+musíte je aktivovat.
+1 Zvolte menu Doplňky " Nastavení " Stroj a klikněte na záložku
+  AAI.
+
+      Systémová nastavení
+    Soubor   Stránky
+
+
+                                       Měřicí stroj
+
+
+                                                                                           Ří zení
+                                   AAI - start spojení
+                                                                                           Měř.pří stroj
+                Nastavení
+                                                                                           Dvoustojan
+                 Režim po startu
+                                                                                           Sní m.hlava
+                                   Automatický režim
+                                                                                           Sní m.systém
+                                   Manuální režim
+                                                                                           Otočný stůl
+                 Režim pro otevření plánů měření přes AAI
+                                                                                           Ovlád.panel
+                                   Otevří t na pracovní plo
+                                                          še Calypso
+                                                                                           Teplota
+                                   Otevří t na pozadí
+                                                                                           Interface
+                                          Max. počet otevřených plánů
+                                                                                           Světel.signál
+
+                                                                                     AAI
+                 Host-název                     localhost
+                                                                                         Měř.systémy
+                 Port-čí slo                    8888                                     Pojezdy
+
+                 Společná cesta
+
+
+
+
+                                         Přepnout na Manuálně
+
+
+             Prismo    Simulace
+
+
+
+
+                                                                       OK       Storno             Převzí t
+
+
+
+2 Zkontrolujte případně nastavení.
+3 Aktivujte zaškrtávací políčko AAI - start spojení.
+4 Klikněte na tlačítko Převzít nebo OK.
+  Jakmile teď vytvoříte spojení s měřicím strojem, spustí se také ➤
+  rozhraní AAI s provedenými nastaveními [⇨ 1-6].
+  V okně Události to můžete kontrolovat.
+
+
+
+
+61212-2801512                       CALYPSO 2018                                                     1-5
+Použití rozhraní AAI
+
+
+
+
+                       Spustit rozhraní AAI
+                       Aby mohl být program CALYPSO řízen zvnějšku, musíte spustit rozhraní
+                       AAI.
+                       Podmínky
+                          – Předpoklad: V systémových nastaveních je aktivováno rozhraní
+                            AAI, tj. políčko AAI - start spojení je aktivováno. Rozhraní AAI
+                            spustíte tím, že vytvoříte spojení s měřicím strojem.
+                       1 Zvolte menu Doplňky " Nastavení " Stroj a klikněte na záložku
+                         Řízení.
+                       2 Klikněte na tlačítko Vytvořit spojení.
+                         Otevře se okno se semaforem, vytvoří se spojení. Rozhraní AAI se
+                         spustí s příslušnými nastaveními – podle nastaveného režimu po
+                         startu je CALYPSO nyní v automatickém resp. v manuálním režimu.
+                       Jakmile je spuštěno rozhraní AAI, může CALYPSO přijímat signály
+                       zvenku.
+
+
+                       Manuální režim a automatický režim
+                       Chování při startu
+                       Pokud je tak program CALYPSO v systémových nastaveních
+                       konfigurován, spustí se při spojení s měřicím strojem rozhraní AAI.
+
+                       Oznámení
+                       Rozhraní AAI se může spustit jen společně se spojením s měřicím
+                       strojem.
+
+                       Podle nastavení zůstává CALYPSO po vytvoření AAI spojení jako obvykle
+                       v manuálním režimu nebo ihned přejde do automatického režimu.
+
+                       Automatický režim
+                       Automatický režim slouží k externímu řízení programu CALYPSO přes
+                       rozhraní AAI (pomocí systému FACS). Ovládání uživatelem je v
+                       automatickém režimu značně omezeno.
+                       V automatickém režimu můžete ovládat pouze následující okna:
+                       – Okno se semaforem
+                       – Systémová nastavení
+                       – Pracovní protokol
+                       – Prezentační protokol
+
+
+
+
+1-6                    61212-2801512            CALYPSO 2018
+                                                                        Použití rozhraní AAI
+
+
+
+                       Všechna ostatní okna se nedají ovládat a jsou při přechodu na
+                       automatický režim minimalizována.
+Přepnutí na manuální   CALYPSO přepne z automatického režimu na manuální:
+režim                  – když systém FACS pošle příslušný povel přes rozhraní AAI.
+                       – když se vytvoří nové spojení s měřicím strojem (je-li v systémových
+                         nastaveních jako Režim po startu nastaven Manuální režim).
+                       – když je narušeno spojení přes rozhraní AAI.
+                          Vydává se chybové hlášení.
+                       – když v systémových nastaveních (stránka AAI) kliknete na tlačítko
+                         Přepnout na Manuálně.
+                          CALYPSO vyzve k zadání hesla administrátora (Master).
+                       Přepnutím na manuální režim se opět aktivuje plocha programu
+                       CALYPSO pro přihlášeného uživatele. Okno programu je obnoveno na
+                       původní velikost.
+
+                       Manuální režim
+                       V manuálním režimu se dá CALYPSO ovládat bez omezení a nemůže být
+                       (s jednou výjimkou) řízeno externě.
+                       Jediný povel zvnějšku, který je akceptován, je příkaz pro přepnutí na
+                       automatický režim.
+Přepnutí na            CALYPSO přejde z manuálního režimu do automatického:
+automatický režim      – když systém FACS pošle příslušný povel přes rozhraní AAI.
+                       – vytvořením nového spojení s měřicím strojem (je-li v systémových
+                         nastaveních jako Režim po startu nastaven Automatický
+                         režim).
+                       Při přepnutí na automatický režim se zavřou případně otevřená dialogové
+                       okna a plány měření.
+
+                       Oznámení
+                       Při přechodu na automatický režim zavře CALYPSO plány měření bez
+                       uložení do paměti. Tím se ztratí všechny změny od posledního uložení.
+
+                       Oznámení
+                       Provádí-li se právě některý plán měření v CNC průběhu, nemůže
+                       CALYPSO přepnout režim z Manuální na Automatický.
+
+
+
+
+                       61212-2801512           CALYPSO 2018                              1-7
+Použití rozhraní AAI
+
+
+
+
+                       Zastavit rozhraní AAI
+                       1 Zvolte menu Doplňky " Nastavení " Prostředí a klikněte na
+                         záložku AAI.
+
+                            Systémová nastavení
+                          Soubor   Stránky
+
+
+                                                             Měřicí stroj
+
+
+                                                                                                             Ří zení
+                                                         AAI - start spojení
+                                                                                                             Měř.pří stroj
+                                      Nastavení
+                                                                                                             Dvoustojan
+                                       Režim po startu
+                                                                                                             Sní m.hlava
+                                                         Automatický režim
+                                                                                                             Sní m.systém
+                                                         Manuální režim
+                                                                                                             Otočný stůl
+                                       Režim pro otevření plánů měření přes AAI
+                                                                                                             Ovlád.panel
+                                                         Otevří t na pracovní plo
+                                                                                še Calypso
+                                                                                                             Teplota
+                                                         Otevří t na pozadí
+                                                                                                             Interface
+                                                                Max. počet otevřených plánů
+                                                                                                             Světel.signál
+
+                                                                                                       AAI
+                                       Host-název                     localhost
+                                                                                                           Měř.systémy
+                                       Port-čí slo                    8888                                 Pojezdy
+
+                                       Společná cesta
+
+
+
+
+                                                               Přepnout na Manuálně
+
+
+                                   Prismo    Simulace
+
+
+
+
+                                                                                             OK   Storno             Převzí t
+
+
+
+                       2 Deaktivujte zaškrtávací políčko AAI - start spojení.
+                       3 Klikněte na tlačítko Převzít nebo OK.
+                       4 Klikněte na záložku Řízení a potom na tlačítko Vytvořit spojení.
+                         Spojení s měřicím strojem se obnoví, aniž se otevře rozhraní AAI.
+
+
+
+
+1-8                    61212-2801512                      CALYPSO 2018
+Rejstřík
+           A
+           AAI, základní údaje 1-2
+           Automatický režim (AAI) 1-6
+           Automatický režim, automatizace 1-6
+           Automatizace
+               manuální režim 1-7
+               Základní údaje 1-2
+
+
+           K
+           Konfigurace
+               Rozhraní AAI 1-3
+
+
+           M
+           Manuální režim (AAI) 1-6
+           Manuální režim, automatizace 1-7
+
+
+           R
+           Rozhraní AAI
+               aktivovat 1-5
+               konfigurovat 1-3
+               Režim 1-6
+               spustit 1-6
+               zastavit 1-8
+
+
+
+
+           61212-2801512               CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2801512   CALYPSO 2018
+

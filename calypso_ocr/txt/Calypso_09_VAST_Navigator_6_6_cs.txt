@@ -1,0 +1,1445 @@
+CALYPSO
+
+   Opce 9
+   VAST Navigator
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2791512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 VAST Navigator (opce)
+
+               Úvod: VAST Navigator (opce) ........................................ 1-2
+
+               Základní údaje pro VAST Navigator .............................. 1-3
+                  Co je VAST Navigator? ...................................................................... 1-3
+                  Co umí VAST Navigator 1? ................................................................ 1-3
+                  Co umí VAST Navigator 2? ................................................................ 1-4
+                  VAST parametry v editoru pro elementy plánu měření ....................... 1-4
+
+               Optimální rychlost scanningu........................................ 1-7
+                  Základní údaje pro optimální rychlost scanningu................................ 1-7
+                  Scanovat s optimální rychlostí ........................................................... 1-8
+
+               Dynamická kalibrace snímačů ..................................... 1-11
+                  Základní údaje o dynamické kalibraci snímačů ................................. 1-11
+                  Pracovat s virtuálními kalibračními koulemi ...................................... 1-12
+                  Provádět dynamickou kalibraci snímačů........................................... 1-14
+                  Pojezdové dráhy při dynamické kalibraci.......................................... 1-16
+
+               Tangenciální snímání.................................................... 1-18
+                  Základní údaje o tangenciálním snímání .......................................... 1-18
+                  Aktivovat tangenciální snímání ........................................................ 1-19
+
+               Generování spirálové dráhy......................................... 1-22
+                  Základní údaje pro generování spirálové dráhy ................................ 1-22
+                  Snímat válce po spirálové dráze....................................................... 1-22
+
+               Zaoblení rohů ................................................................ 1-25
+
+             61212-2791512                  CALYPSO 2018                                          Obsah    11
+                Základní údaje o zaoblení rohů........................................................ 1-25
+                Aktivovat zaoblení rohů .................................................................. 1-26
+
+
+
+           Rejstřík
+
+
+
+
+22 Obsah   61212-2791512                 CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2791512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2791512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2791512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2791512          CALYPSO 2018
+VAST Navigator (opce)
+
+
+
+
+                        Kapitola
+
+                        1    VAST Navigator (opce)
+
+                           Tato kapitola obsahuje:
+                           Úvod: VAST Navigator (opce) ..................................................................... 1-2
+                           Základní údaje pro VAST Navigator ............................................................ 1-3
+                           Optimální rychlost scanningu ..................................................................... 1-7
+                           Dynamická kalibrace snímačů................................................................... 1-11
+                           Tangenciální snímání................................................................................ 1-18
+                           Generování spirálové dráhy ...................................................................... 1-22
+                           Zaoblení rohů .......................................................................................... 1-25
+
+
+
+
+                          61212-2791512                       CALYPSO 2018                                                 1-1
+Úvod: VAST Navigator (opce)
+
+
+
+
+Úvod: VAST Navigator (opce)
+                       S opcí VAST Navigator můžete při scanování válcových elementů (otvory
+                       a hřídele) podstatně rychleji a snadněji zaznamenávat měřené hodnoty.
+                       Pohyby snímačů a metody snímání jsou rychlejší a harmoničtější, zároveň
+                       se díky součinnosti snímacího systému, řídící techniky, metod a softwaru
+                       dosáhne velmi vysoké přesnosti.
+                       VAST Navigator má dvě úrovně, VAST Navigator 1 a VAST Navigator 2.
+                       Podle stavu firmwaru pro řízení souřadnicového měřicího stroje zvolí
+                       CALYPSO automaticky příslušnou použitelnou verzi.
+
+                       Oznámení
+                       Když je v tomto návodu k obsluze uvedeno něco, co se týká VAST
+                       Navigator, platí to jak pro VAST Navigator 1, tak i pro VAST Navigator 2.
+
+
+
+
+1-2                    61212-2791512           CALYPSO 2018
+                                           Základní údaje pro VAST Navigator
+
+
+
+
+Základní údaje pro VAST Navigator
+             Co je VAST Navigator?
+             VAST Navigator představuje další zdokonalení známého scanování
+             válcových dílců.
+             Poskytuje výhody vyšší pojezdové dynamiky a rychlosti měření bez jejich
+             nevýhod. Dosahuje se toho promyšleným systémem přístrojové techniky,
+             senzoriky, řídící techniky a softwaru.
+
+             Oznámení
+             S použitím opce VAST Navigator můžete při zachování stejné přesnosti
+             výrazně snížit měřicí časy – nebo ve stejném čase podstatně zvýšit
+             spolehlivost měření.
+
+Verze        VAST Navigator má dvě úrovně, VAST Navigator 1 a VAST Navigator 2.
+             Podle stavu firmwaru pro řízení souřadnicového měřicího stroje zvolí
+             CALYPSO automaticky příslušnou použitelnou verzi.
+             Máte také možnost nastavit verzi VAST Navigatoru, která se má použít v
+             daném plánu měření, v editoru elementů plánu měření.
+
+             Oznámení
+             Abyste mohli využívat funkce VAST Navigatoru, musíte vytvořit spojení
+             se souřadnicovým měřicím strojem nebo nastavit simulační provoz
+             (semafor).
+
+
+             Co umí VAST Navigator 1?
+             Pokud používáte CALYPSO s opcí VAST Navigator 1, máte při měření
+             hřídelí a otvorů navíc následující možnosti:
+             – ➤ Optimální rychlost scanningu [⇨ 1-7]
+                VAST Navigator 1 vypočte v závislosti na různých parametrech
+                automaticky optimální rychlost scanování a zajistí její dodržení.
+             – ➤ Dynamická kalibrace snímačů [⇨ 1-11]
+                Pomocí dynamické kalibrace snímačů se získají data snímačů, která
+                umožňují scanovat vyšší rychlostí s dodržením potřebné přesnosti
+             – ➤ Tangenciální snímání [⇨ 1-18]
+                Při tangenciálním snímání přechází snímací hlava ke snímání bez
+                náhlého zastavení a opětovného najetí z objezdové dráhy.
+
+
+
+
+             61212-2791512           CALYPSO 2018                              1-3
+Základní údaje pro VAST Navigator
+
+
+
+                       – ➤ Generování spirálové dráhy [⇨ 1-22]
+                          Scanováním po spirálové dráze (šroubovice) je možné snímat plynule
+                          válec po spirále a případně po několika kruhových dráhách.
+                       – ➤ Zaoblení objezdů [⇨ 1-25]
+                          Díky zaoblení objezdových drah je pohyb snímací hlavy plynulejší.
+                          Snižuje se tím doba pojezdu mezi měřenými elementy.
+
+
+                       Co umí VAST Navigator 2?
+                       Když používáte CALYPSO s opcí VAST Navigator 2, máte ještě navíc další
+                       možnosti v porovnání s opcí VAST Navigator 1:
+                       – ➤ Optimální rychlost scanningu závislá na tolerancích [⇨ 1-7]
+                          Můžete stanovit, že VAST Navigator 2 bude při určování optimální
+                          rychlosti navíc zohledňovat toleranci. Větší tolerance umožňují vyšší
+                          rychlosti scanování.
+                       – Kalibrace malých snímačů
+                          S použitím opce VAST Navigator 2 můžete kalibrovat také malé
+                          snímače s krátkými dříky. Pro VAST Navigator 2 neplatí omezení
+                          (kalibračních etalonů) na koule o průměru 30 mm.
+                       – Integrace snímací hlavy VAST XT gold
+
+
+                       VAST parametry v editoru pro elementy
+                       plánu měření
+                       Když používáte opci VAST Navigator, můžete v editoru elementů
+                       prohlížet a změnit další nastavení. Zvolte menu Příprava " Editor
+                       plánu měření Elementy.
+
+
+
+
+1-4                    61212-2791512           CALYPSO 2018
+                                                              Základní údaje pro VAST Navigator
+
+
+
+                           Editor plánu měření - Měřené elementy
+                          Snímač                               ** = Z nadřazeného nastavení (plán měření/skupina)
+                                                                                                           /
+                                                          •
+                                                               !! = Není na tomto systému k dispozici
+                               Pojezdy
+
+                               Snímání                               tento plán měření              vybrané elementy
+
+                               Sním.systém
+                               Jednotky                                  Nastavit na
+                           1                                  Tangenciální snímání
+                               VAST Navigator                                                              ??     (default)
+                                                              Rychlost                                     ??     (default)
+                               Maskování bodů                 Krok                                         ??     (default)
+                               Režim MAN-CNC                  Počet bodů                                   ??     (default)
+                               Tiskárna                       Zaoblení rohů v elementech                   ??     (default)
+                                                                                     .
+                                                              Zaoblení rohů mezi elementy
+                                                                                                           ??
+                                                                                                           .      (default)
+                               Parametry stroje                                                            ??     (default)
+                                                              Zobrazit sním.systém a bezp.skupinu
+                               Geometrie                                                                   ??     (default)
+                                                              Scanning s malými odchylkami
+                                                                                                           ??     (default)
+                                                              Navigator verze
+                        CircTopFroLe                                                                       ??     (default)
+                        CircTopFroRi                          Sledování tolerance                          ??     (default)
+                        CylFrcCe                                            Válec                   #2     ??     (hvezda)
+                        CylFroRiDow                                         Válec                   #2     ??     (default)
+                        CylFroRe                                            Válec                   #2     ??     (default)
+                        CylRiCe                                             Válec                   #5     ??     (default)
+                        CircRi                                              Válec                          ??     (default)
+                        CircRiTop                                           Kružnice                #5     ??     (default)
+                        2—D LineBack                                        Kružnice                #5     ??     (default)
+                        PlaFroTop                                           2D přímka               #1     ??     (default)
+
+
+
+
+                                                                                         OK              Storno      Nápověda
+
+
+                       V menu VAST Navigator máte následující možnosti nastavení:
+
+Položka menu           Význam
+Tangenciální snímání   Zapnutí a vypnutí tangenciálního snímání.
+Rychlost               Zadání požadované rychlosti nebo nastavení automatického
+                       výpočtu optimální rychlosti.
+Krok                   Zadání požadované délky kroku nebo nastavení automatického
+                       výpočtu optimální délky kroku.
+Počet bodů             Zadání požadovaného počtu bodů nebo nastavení automatického
+                       výpočtu optimálního počtu bodů.
+Zaoblení rohů v        Nastaví zaoblení rohů při měření na hodnotu mezi 0 až 100.
+elementech
+Zaoblení rohů mezi     Nastaví zaoblení rohů při pojezdu mezi elementy na hodnotu mezi
+elementy               0 až 100.
+Ukázat sním.systém a   Pro každý měřený element ukáže přiřazený snímací systém a
+bezp.skupinu           bezpečnostní skupinu.
+Scanning s malými      Nastaví režim „Scanning s malými odchylkami“, který umožňuje
+odchylkami             vyšší rychlost scanování. Úchylky průměru, polohy a tvaru
+                       dohromady nesmějí překročit 0,1 mm.
+Verze Navigator        (Navíc pro Navigator 2) Nastaví verzi VAST Navigator pro tento plán
+                       měření.
+
+
+                       61212-2791512                 CALYPSO 2018                                                      1-5
+Základní údaje pro VAST Navigator
+
+
+
+Položka menu           Význam
+Sledování tolerance    (Navíc pro Navigator 2) Nastaví pro tento plán měření výpočet
+                       optimální rychlosti na Závisle na toleranci resp. Nezávisle na
+                       toleranci. Předvolba se přebírá ze systémových nastavení.
+
+
+
+
+1-6                    61212-2791512          CALYPSO 2018
+                                                                    Optimální rychlost scanningu
+
+
+
+
+Optimální rychlost scanningu
+                             Základní údaje pro optimální rychlost
+                             scanningu
+                             Máte-li k dispozici opce VAST Navigator, můžete nechat optimálně
+                             vypočítat rychlost, délku kroku a počet bodů.
+
+                             Oznámení
+                             Optimální rychlost scanningu smíte použít jen, když je snímač kalibrován
+                             v režimu tenzor nebo dynamicky.
+
+                             Maximální možná rychlost scanování válcového elementu závisí na
+                             různých faktorech:
+
+Navigator 1                                        Navigator 2
+Vyhodnocovaná charakteristika (tvar, rozměr,       Vyhodnocovaná charakteristika (tvar, rozměr,
+poloha)                                            poloha)
+Průměr měřeného elementu                           Průměr měřeného elementu
+Hmotnost konfigurace snímačů                       Hmotnost konfigurace snímačů
+Tuhost snímače                                     Tuhost snímače
+Způsob kalibrace (tenzor nebo dynamická)           Způsob kalibrace (tenzor nebo dynamická)
+                                                   Velikost tolerancí
+                                                   Vnitřní nebo vnější kružnice
+                                                   Metoda vyhodnocení (Gauss, max.vepsané)
+
+                             VAST Navigator přihlíží při volbě rychlosti k těmto faktorům:
+                             – Průměr, charakteristiku, metodu vyhodnocení (jen pro VAST
+                               Navigator 2) a tolerance (jen pro VAST Navigator 2) určíte sami.
+                             – Způsob kalibrace (tenzor nebo dynamická) je automaticky rozpoznán.
+                             – Konfigurace snímačů je při uchycení automaticky zvážena.
+                             – Tuhost snímače je určena při kalibraci snímačů v režimu Tenzor (viz
+                               Kalibrace snímačů v základním návodu k obsluze).
+
+
+
+
+                             61212-2791512           CALYPSO 2018                             1-7
+Optimální rychlost scanningu
+
+
+
+                        – Používáte-li VAST Navigator 2, můžete volitelně zohlednit také
+                          velikost tolerancí. Přednastavení pro různé plány měření provádíte
+                          pomocí menu Doplňky " Nastavení " Měření na stránce
+                          Navigator.
+                                Systémová nastavení
+                               Soubor Stránky
+
+                                                                Metody měření
+
+
+                                                  Nastavení pro VAST Navigator                                Pojezdy
+                                                                                                              Elementy
+                                       Nastavení pro optimální rychlost scanningu
+                                                                                                              Metody
+
+                                         Závisle na toleranci             Nezávisle na toleranci              Hustota bodů
+                                        Při výpočtu rychlosti            Rychlost scanningu je                Manuální body
+                                        scanningu se přihlíží            vypočtena tak, aby se
+                                                                                                              SCAN rozsahy
+                                        k tolerancím                     dosáhla nejvyšší přesnost.
+                                        charakteristik.                                                       Jmen.hodnota
+                                                                                                              Počát.úhel
+                                                                                                              Vytvoř.refer.
+                                        Velké tolerance umožňují
+                                        vyšší rychlosti scanningu.                                            MMC / LMC
+                                                                                                            Navigator
+                                                                                                            Simulace
+                                        Tato metoda je k dispozici
+                                        pouze s opcí                                                        Vstroj
+                                        „VAST Navigator 2".
+                                                                                                             Man. průběh
+
+
+
+
+                                      Simulace   Simulace RDS
+
+
+
+                                                                                    OK             Storno            Převzít
+
+
+
+                           V editoru elementů si můžete toto přednastavení ještě pro
+                           konkrétní plán měření změnit.
+                        Rychlost si můžete kdykoliv samozřejmě také volně vybrat.
+
+
+                        Scanovat s optimální rychlostí
+                        Použití optimální rychlosti scanování nastavíte v okně technologie pro
+                        generování dráhy. Aktivujete zaškrtávací políčka pro Automatický
+                        výpočet. CALYPSO potom v polích Rychlost, Krok a Počet bodů
+                        ukáže místo číselných hodnot text „Optimální“.
+
+
+
+
+1-8                     61212-2791512                   CALYPSO 2018
+                                              Optimální rychlost scanningu
+
+
+
+     Kruhová dráha
+
+                   CylFroCe
+
+   Přednastavení               Výpočet                  Reference
+
+                                                   Automatický
+                                                   výpočet
+  Rychlost                                         Optimální
+
+     Krok                                          Optimální
+
+     Počet bodů na řez                             Optimální
+
+  Snímač                                           #1    Stern_1
+
+
+
+  Jedn.body
+
+  Základní nastavení   Speciální nastavení
+
+
+  Počát.úhel                                   0,0000
+
+  Úhlový rozsah                                481,8800
+
+  Tangenciální snímání          (Default           ) Ano
+
+
+
+  Počát.výška                                  5,5000
+
+  Cíl.výška                                    0,0000
+
+  Počet řezů                                   1
+
+
+
+
+        OK             Reset
+
+
+CALYPSO vypočte a určí optimální rychlost teprve bezprostředně po
+startu CNC průběhu, protože teprve potom je definován rozsah kontroly
+(kontrolované charakteristiky).
+
+Výpočet optimální rychlosti
+CALYPSO zjistí, ve kterých charakteristikách se vyskytuje aktuální měřený
+element a které z nich jsou v aktuálním průběhu aktivní. Podle toho jsou
+pro danou konstelaci zvoleny optimální hodnoty pro rychlost, délku
+kroku a počet bodů.
+V dialogovém okně Reference jsou uvedeny všechny charakteristiky, ve
+kterých se použije daný element, s nastaveními rozhodujícími pro
+výpočet optimální rychlosti.
+
+
+
+61212-2791512                  CALYPSO 2018                         1-9
+Optimální rychlost scanningu
+
+
+
+                                             Okno Reference vyvoláte tak, že v předloze pro definici elementu
+                                             otevřete okno strategie, otevřete předlohu pro definici příslušné metody
+                                             generování dráhy a kliknete na tlačítko Reference.
+
+ Reference
+                                                              VAST Navigator Nastavení
+
+ Nastavení s charakteristikami
+
+                        Charakteristiky                  Tolerance          Filtr                Metoda vyhodnocení   Rychl.        Krok Počet
+
+                          Coaxiality1                     0,0600           Žádný ﬁltr              Element-Gauss      12,0000       6.7769    8
+
+                       Radial Runout1                     0.5000           Žádný ﬁltr              Element-Gauss      12,0000       6.7769    8
+
+
+
+
+  Nastavení bez charakteristik
+   Nastavení pro měř. element                                 Nastavení       Element-Gauss: Žádný ﬁltr
+
+   Rychl.: 12.0000                        Krok: 6,7769                        Počet: 8
+
+                                                                                                                               OK            Storno
+
+
+
+                                             V tomto okně můžete zkontrolovat a případně změnit nastavení
+                                             relevantní pro rychlost. Kliknete na daná tlačítka a změníte v následně
+                                             otevřeném okně dosud platné nastavení.
+                                             Používáte-li VAST Navigator 2 a aktivovali jste určení rychlosti v závislosti
+                                             na toleranci, můžete zde změnit toleranci a sledovat přímo následnou
+                                             změnu rychlosti.
+
+                                             Příliš vysoká rychlost
+                                             V určitých případech se může stát, že výsledky měření, pomocí kterých
+                                             se má určitá charakteristika vyhodnotit, byly získány s rychlostí příliš
+                                             vysokou, takže nelze dosáhnout požadované přesnosti.
+                                             Může k tomu dojít v následujících případech:
+                                             – Po již provedeném měření nově definujete určitou charakteristiku.
+                                             – Chcete vyhodnotit charakteristiku, která není zahrnuta v rozsahu
+                                               provedeného měření.
+                                             CALYPSO zkontroluje rychlost, se kterou bylo měření provedeno. Pokud
+                                             je pro novou charakteristiku příliš vysoká, ukáže se toto hlášení:
+                                             Použitá rychlost je pro toto vyhodnocení charakteristik
+                                             příliš vysoká! Změřte daný element ještě jednou!
+
+                                             V tomto případě musíte CNC průběh opakovat se zahrnutím dané
+                                             charakteristiky. Optimální rychlost je nově určena s přihlédnutím k dané
+                                             charakteristice.
+
+
+
+
+1-10                                         61212-2791512                          CALYPSO 2018
+                                                       Dynamická kalibrace snímačů
+
+
+
+
+Dynamická kalibrace snímačů
+                  Základní údaje o dynamické kalibraci
+                  snímačů
+                  Při běžné statické kalibraci snímačů se zaznamenává poloha, průměr a
+                  statický průhyb snímače. V režimu snímání jednotlivých bodů a při
+                  pomalém scanování se může s touto kalibrací měřit velice přesně.
+                  Při rychlém scanování se ale vyskytují přídavné dynamické jevy, které se
+                  dají kompenzovat jen, když je známo dynamické chování snímače.
+                  Z tohoto důvodu musíte po statické kalibraci provést navíc ještě
+                  dynamickou kalibraci snímačů. Zvolte režim Dyn. tenzor (viz Výběr
+                  kalibrační metody v základním návodu k obsluze).
+
+                  Zvláštnosti dynamické kalibrace
+                  Při dynamické kalibraci je kalibrační koule scanována snímačem se
+                  dvěma různými rychlostmi (pomalu a rychle).
+
+                  Oznámení
+                  Používáte-li VAST Navigator 1, potřebujete pro dynamickou kalibraci
+                  snímačů kalibrační kouli o průměru 30 mm. Jiné koule jsou přípustné
+                  pouze pro VAST Navigator 2.
+
+                  Kalibrační koule musí být umístěna tak, aby snímač mohl kouli objet
+                  kompletně po „rovníku“ (přičemž zde směr snímače určuje osu koule).
+                  To znamená, že pro protilehlé snímače musíte použít dvě různě umístěné
+                  kalibrační koule.
+
+
+
+
+        koule 1                                                   koule 2
+
+                     snímač 1                  snímač 2
+
+
+
+
+                  61212-2791512           CALYPSO 2018                          1-11
+Dynamická kalibrace snímačů
+
+
+
+                       Pro úplnou CNC kalibraci budete event. potřebovat dokonce ještě více
+                       kalibračních koulí – závisí to na počtu a uspořádání kalibrovaných
+                       snímačů. Při použití „virtuálních kalibračních koulí“ stačí ale jen jedna
+                       skutečná kalibrační koule (viz ➤ Pracovat s virtuálními kalibračními
+                       koulemi [⇨ 1-12]).
+Platnost               Dynamické parametry snímače platí, dokud není provedena mechanická
+                       změna snímače. Přesto se doporučuje pravidelná rekalibrace (cca každé
+                       tři měsíce).
+                       Dynamickou kalibraci není tedy třeba provádět při každé kalibraci
+                       snímače. Mají-li se kompenzovat změny geometrie (např. v důsledku
+                       změny teploty) zvolte při kalibraci režim Geometrie dodat.kalibrace
+                       resp. Tenzor dodat. kalibrace.
+                       Dynamickou kalibraci je možné provádět jako plán měření v CNC
+                       průběhu.
+
+
+                       Pracovat s virtuálními kalibračními
+                       koulemi
+                       Virtuální kalibrační koule
+Výhoda virtuální       Při dynamické kalibraci snímačů potřebujete někdy pro kompletní CNC
+kalibrační koule       kalibraci několik kalibračních koulí - závisí to na počtu a uspořádání
+                       kalibrovaných snímačů.
+                       Při použití metody „virtuální kalibrační koule“ ale vystačíte pouze s
+                       jednou reálnou kalibrační koulí.
+Co je virtuální        Metoda virtuální kalibrační koule spočívá v tom, že poloha kalibrační
+kalibrační koule?      koule při dynamické kalibraci nemusí být známa tak velice přesně jako při
+                       zjišťování geometrie snímače.
+                       Další kalibrační koule potřebné pro dynamickou kalibraci můžete tudíž
+                       nahradit „virtuálními“ koulemi, které definujete kopírováním ve Správě
+                       kalibračních koulí. Tam můžete také změnit směr dříku (➤ Definovat
+                       virtuální kalibrační kouli [⇨ 1-13]). Takto definované koule existují jen
+                       ve Správě kalibračních koulí, nikoli však reálně.
+Postup při kalibraci   Ve skutečnosti se musí reálná kalibrační koule postavit jako náhrada na
+snímačů                správné místo a natočit do směru, který odpovídá aktuální virtuální
+                       kalibrační kouli.
+                       Před dynamickou kalibrací musíte tedy nově ručně nastavit směr dříku
+                       reálné kalibrační koule, určit zhruba snímáním polohu virtuální koule a
+                       potom na základě těchto údajů o poloze provést dynamickou kalibraci.
+
+
+
+
+1-12                   61212-2791512            CALYPSO 2018
+                                                                                             Dynamická kalibrace snímačů
+
+
+
+Definovat virtuální kalibrační kouli
+1 V okně Kalibrace snímacího systému klikněte na ikonu Správa
+  kalibračních koulí.
+2 Otevře se Správa kalibračních koulí.
+
+     Správa kalibrační ch koulí
+
+
+
+                       Kalibrační koule
+
+
+                           Nastavení                                        Bezp.vzdálenost                                    Komponenty kalibrační koule
+                              Poloměr koule                                  -X
+
+                              Sériové č.                                     +X
+
+                              Poloha X                                       -Y
+
+                              Poloha Y                                       +Y
+
+                              Poloha Z                                       -Z
+
+                              Sigma                                          +Z
+
+                              Odchylka kruhov.                              Úhel naklopení a otočení
+
+                              Aktual.data sní mače Ne                        Úhel naklopení
+
+                              Poloměr dří ku                                 Úhel otočení
+
+                              Virt. kal.koule       Ne                            Úhel naklopení       Úhel otočení
+
+                              Datum                  31.1.2013
+
+                              Tepl.koef.
+                                      f
+
+                              Pos. platná            Ne
+
+                                                                                                                               Výška
+
+
+
+                          Funkce
+                                  Nový          Kopí rovat       Kopí rovat jako virtuální kal.kouli                  Určení RSH dří ku
+
+                              Vymazat           Aktivovat
+
+
+                                                                                                                                          Reset              Převzí t
+
+
+                                                                                                                                                                        Zavří t
+
+
+
+
+3 Vlevo zvolte číslo příslušné kalibrační koule a klikněte na tlačítko
+  Kopírovat jako virtuální kal.kouli.
+4 V dialogu zadejte číslo, pod kterým má být tato nová kalibrační koule
+  uložena.
+  Ve Správě kalibračních koulí se zapíše další kalibrační koule, v
+  řádku „Virtuální kal.koule“ je uvedeno Ano. V sekci Poloha X,Y,Z
+  jsou nejprve uvedena stejná data jako ve sloupci pro reálnou
+  kalibrační kouli.
+  Informace: Teprve během dynamické kalibrace se zde po snímání ze
+  směru dříku zapíše poloha, do které jste umístili reálnou kalibrační
+  kouli.
+5 Pro Úhel naklopení a Úhel otáčení zadejte správné úhly podle
+  požadovaného směru dříku a klikněte na tlačítko Převzít.
+6 Opakujte kroky 3 až 5, jestliže chcete definovat další virtuální
+  kalibrační koule pro další měřené polohy a směry dříku.
+Při použití virtuální kalibrační koule musíte tuto kouli snímat manuálně (i
+v CNC průběhu) ve směru dříku. Poloha koule bude poté během
+kalibrace automaticky nově zjištěna.
+
+
+
+
+61212-2791512                                               CALYPSO 2018                                                                                     1-13
+Dynamická kalibrace snímačů
+
+
+
+
+                      Provádět dynamickou kalibraci snímačů
+                      Dynamická kalibrace snímačů se musí provést navíc k obvyklé (statické)
+                      kalibraci (viz Kalibrace snímačů v základním návodu) a po ní.
+                      Ze zvláštních požadavků dynamické kalibrace na umístění kalibrační
+                      koule vyplývají následující případy použití:
+                      – Poloha a směr dříku kalibrační koule jsou vhodné pro dynamickou
+                        kalibraci.
+                         Obě kalibrace můžete provádět v jednom běhu (režim Dyn. tenzor)
+                         nebo také odděleně.
+                      – Poloha a směr dříku kalibrační koule nejsou vhodné pro dynamickou
+                        kalibraci.
+                         Statickou a dynamickou kalibraci musíte provést odděleně.
+                         – Nejprve určíte statický tenzor na kalibrační kouli – v případě více
+                           snímačů hned postupně pro všechny snímače.
+                         – Potom kalibrační kouli otočíte a posunete, bez kalibrace o ní
+                           podáte informace programu CALYPSO jako o virtuální kouli,
+                           provedete dynamickou kalibraci v režimu Dyn. tenzor dodat.
+                           kalibrace pro všechny příslušné snímače.
+
+                      Provádět dynamickou kalibraci snímačů
+                      1 V sekci plánu měření na kartě Stroj klikněte na tlačítko Snímací
+                        systém.
+                        Otevře se okno Kalibrace snímacího systému.
+                      2 Vyberte název tohoto snímacího systému v rozevíracím seznamu
+                        Sním.systém, pokud ještě není v poli uveden.
+                      3 Vyberte název snímače, který chcete kalibrovat, v rozevíracím
+                        seznamu Snímač: název/č.
+                        Automaticky se ukáží již zjištěné hodnoty pro poloměr snímače a
+                        poslední datum kalibrace.
+                        Předběžně přiděleno je aktuální číslo kalibrační koule.
+                        Informace: Používáte-li VAST Navigator 1, potřebujete pro
+                        dynamickou kalibraci snímačů kalibrační kouli o průměru 30 mm.
+                        Jiné koule jsou přípustné pouze pro VAST Navigator 2.
+                      4 V rozevíracím seznamu Geometrie zvolte jako tvar snímacího
+                        elementu Koule.
+                      5 V rozevíracím seznamu Režim zvolte Dynamický tenzor.
+                      6 Klikněte na tlačítko Kalibrovat snímač.
+                      7 Zadejte měřicí přítlačnou sílu v mN, se kterou chcete později tento
+                        snímač používat.
+
+
+1-14                  61212-2791512           CALYPSO 2018
+                                                          Dynamická kalibrace snímačů
+
+
+
+                        Když používáte velmi dlouhý a tenký snímač nebo chcete snímat
+                        měkčí materiál, zadejte dynamické snímání v %.
+                        Sníží se tím dynamika snímání jednotlivých bodů (při kalibraci i při
+                        pozdějších měřeních), například aby se tenké snímače nezlomily (jen
+                        pro VAST Navigator 2).
+                        Informace: Nastavení v tomto dialogovém okně nemají vliv na
+                        dynamickou kalibraci.
+                        Informace: Tyto údaje se ukládají s daty snímačů a v editoru pro
+                        elementy plánu měření je lze prohlížet a pro jednotlivé elementy
+                        přepsat.
+                     8 Podle výzvy snímejte ve směru dříku.
+                       CALYPSO provede statickou kalibraci.
+                       CALYPSO zkontroluje, zda při pojezdech během kalibrace nehrozí
+                       kolize s nástavcem kalibrační koule.
+                       Pokud by mohlo dojít ke kolizi, objeví se toto hlášení:
+                        „Aktuální snímač nemůže být dynamicky
+                        kalibrován v této poloze kalibrační koule. Otočte prosím
+                        kalibrační kouli tak,
+                        aby bylo možno bez kolize objet celý rovník.“
+
+
+                     9 V tomto případě zvolte jiné umístění kalibrační koule a znovu
+                       spusťte.
+                       - nebo -
+                       Změňte polohu kalibrační koule, jako kalibrační kouli zvolte
+                       příslušnou virtuální kouli a spusťte v režimu Dyn. tenzor dodat.
+                       kalibrace.
+                       CALYPSO kalibruje snímač podle nastaveného režimu. Výsledky se
+                       uloží do paměti.
+                       Informace: Pokud postupujete metodou virtuální kalibrační koule,
+                       kalibrujte nejprve všechny konfigurace snímačů staticky v jedné
+                       poloze kalibrační koule a teprve potom otočte kouli a proveďte
+                       dynamickou kalibraci. Jinak byste museli kalibrovat kouli pokaždé
+                       znovu.
+                     10 Klikněte na tlačítko OK, přejde se zpět na pracovní plochu.
+                     Snímač je nyní zkalibrován staticky i dynamicky. VAST Navigator může
+                     s daným snímačem docílit vyšší rychlosti scanování při zachování stejné
+                     přesnosti.
+
+                     Výsledky kalibrace snímačů
+Správa dat snímačů   Ve správě dat snímačů je uvedeno, že snímač byl kalibrován dynamicky.
+                     Navíc se ukáže statický a dynamický rozptyl.
+
+
+
+
+                     61212-2791512           CALYPSO 2018                          1-15
+Dynamická kalibrace snímačů
+
+
+
+                       Oznámení
+                       Příliš vysoký rozptyl upozorňuje na eventuální snímání dříkem při
+                       kalibraci nebo na ulpělou nečistotu.
+
+Měkké snímače         Je-li kalibrovaný snímač velmi poddajný (tuhost < 7 N/mm), ukáže se toto
+                      hlášení:
+                      Pozor!
+
+
+                      Používáte velmi měkký snímač s tuhostí XX,
+                      xx N/mm. Automaticky vypočtená optimální rychlost scanningu
+                      může být příliš rychlá.
+                      Další informace viz
+                      Návod k obsluze nebo stiskněte tlačítko F1.
+
+                      Dynamická korekce se uplatní i při měřeních s tímto snímačem a výsledky
+                      měření jsou výrazně lepší než bez dynamické korekce. Přesto by se měl
+                      tento snímač zkontrolovat.
+                      Proveďte např. pomalé (referenční) a rychlé měření scanováním na
+                      známém průměru a zkontrolujte, zda výsledek rychlého scanování
+                      vyhovuje vašim požadavkům na přesnost.
+                      Pokud nevyhovuje, musíte ručně snížit navrhovanou optimální rychlost
+                      scanningu tím, že deaktivujete optimální rychlost scanování a zadáte pro
+                      scanning pomalejší rychlost.
+
+                       Oznámení
+                       Jinou možností je také vyměnit tento snímač za nějaký tužší snímač.
+                       V tomto případě opět platí automaticky vypočtená optimální rychlost
+                       scanningu.
+
+
+                      Pojezdové dráhy při dynamické kalibraci
+                      Na začátku dynamické kalibrace proveďte snímání ve směru dříku
+                      snímače. CALYPSO určí ze snímání a z již známého směru dříku
+                      automaticky polohu kalibrační koule.
+                      Program CALYPSO poté samostatně provádí všechna potřebná snímání::
+                      – Snímač jede v půlkruhu od rovníku přes pól k rovníku.
+                      – Poté je rovník scanován s úhlem dráhy 450˚. Tím je dáno posunutí
+                        90˚ oproti počátečnímu bodu.
+                      – Dále se objede dalším půlkružnice přes pól koule.
+                      Obrázek ukazuje pojezdy scanování při dynamické kalibraci.
+
+
+
+
+1-16                  61212-2791512            CALYPSO 2018
+                                       Dynamická kalibrace snímačů
+
+
+
+     1. velká kružnice,                         2. velká kružnice,
+        poloviční                                  poloviční
+
+
+
+
+                                                   konec
+ 3. velká kružnice,
+    poloviční
+
+                                                 snímač
+
+
+                             počátek
+
+Po snímání nižší rychlostí scanningu se celé opakuje s vyšší rychlostí
+scanování.
+
+
+
+
+61212-2791512             CALYPSO 2018                          1-17
+Tangenciální snímání
+
+
+
+
+Tangenciální snímání
+                       Základní údaje o tangenciálním snímání
+                       Tangenciální snímání je snímání bez mezizastavení. To znamená, že
+                       rychlost objezdů se krátce před snímáním sníží přímo na zadanou nebo
+                       určenou rychlost scanování. Tím je optimalizováno najíždění a ušetří se
+                       čas díky minimalizaci zastavení.
+Jen pro kružnice       Tangenciální snímání je možné jen při měření kružnic a lze je volitelně
+                       zapnout/vypnout. Tangenciální snímání není možné:
+                       – při scanování s použitím otočného stolu
+                       – při měření jednotlivých bodů
+Ne pro segmenty!       Tangenciální snímání nesmí být zapnuto:
+                       – pro kruhové segmenty
+                       Důvod: CALYPSO CALYPSO automaticky zvětší úhlový rozsah na 380˚
+                       nebo více.
+
+                       Úhel dráhy
+                       Jelikož při najíždění a odjetí může docházet k nepřesnostem, scanuje
+                       VAST Navigator kruhové dráhy vždy s určitým přesahem. Velikost
+                       přesahu určuje VAST Navigator automaticky.
+                       – Pro vnější průměry (hřídele) je úhel dráhy vždy 450˚.
+                       – Pro vnitřní průměry (otvory) je úhel dráhy variabilní. Může být mezi
+                         380˚ u velkých průměrů a 500˚ u malých průměrů.
+                       Tím je přesah optimálně přizpůsoben vnitřnímu/vnějšímu elementu a
+                       průměru, dobu měření je u velkých průměrů zkrácena.
+Kontrola úhlového      Při zapnutí tangenciálního snímání kontroluje CALYPSO aktuální úhlový
+rozsahu                rozsah. Pokud je příliš malý, následuje dotaz:
+                       "Úhlový rozsah je pro tangenc.snímání příliš malý! Má se
+                       úhlový rozsah změnit
+                       ?" Ano/Ne
+
+                       Pokud na dotaz odpovíte Ano, vypočte a převezme se minimální úhlový
+                       rozsah z průměru kružnice. Pokud na dotaz odpovíte Ne, je tangenciální
+                       snímání opět vypnuto.
+
+                       Oznámení
+                       Pro eventuální pozdější měření bez tangenciálního snímání zůstává
+                       uložena původně zadaná hodnota úhlového rozsahu.
+
+
+
+
+1-18                   61212-2791512           CALYPSO 2018
+                                                Tangenciální snímání
+
+
+
+
+Aktivovat tangenciální snímání
+Pro aktivaci tangenciálního snímání máte dvě možnosti:
+– Tangenciální snímání aktivujete v editoru pro elementy pro
+  některé nebo všechny měřené elementy a v okně technologie
+  generování dráhy zvolíte Tangenc.snímání (default).
+– Tangenciální snímání aktivujete výhradně v okně technologie pro
+  generování dráhy.
+Aktivujte tangenciální snímání uvážlivě. Když aktivujete tangenciální
+snímání pro kruhový segment, nastaví se úhlový rozsah bez dalšího
+hlášení na 380˚ nebo více.
+
+
+Zapnout tangenciální snímání v editoru plánu měření:
+1 Zvolte menu Příprava " Editor plánu měření pro elementy.
+  Otevře se dialogové okno Editor plánu měření Elementy. Další
+  informace viz Editor pro elementy plánu měření v přehledu dialogů v
+  online nápovědě programu CALYPSO.
+2 Určete měřené elementy, pro které chcete aktivovat tangenciální
+  snímání (buď pro plán měření nebo pro vybrané elementy) a
+  vyberte případně příslušné měřené elementy.
+3 Zvolte v rozevíracím seznamu VAST Navigator " Tangenciální
+  snímání a nastavte na Zapnout.
+
+Aktivovat tangenciální snímání v okně technologie
+1 V předloze pro definici měřeného elementu klikněte na tlačítko
+  Strategie.
+2 Otevřete okno technologie pro generování dráhy kruhového
+  segmentu.
+
+
+
+
+61212-2791512           CALYPSO 2018                          1-19
+Tangenciální snímání
+
+
+
+                               Kruhová dráha
+
+                                             CylFroCe
+
+                             Přednastavení               Výpočet                Reference
+
+                                                                           Automatický
+                                                                           výpočet
+                            Rychlost                                       Optimální
+
+                               Krok                                        Optimální
+
+                               Počet bodů na řez                           Optimální
+
+                            Snímač                                         #1    Stern_1
+
+
+
+                            Jedn.body
+
+                            Základní nastavení   Speciální nastavení
+
+
+                            Počát.úhel                                 0,0000
+
+                            Úhlový rozsah                              481,8800
+
+                            Tangenciální snímání          (Default         ) Ano
+
+
+
+                            Počát.výška                                5,5000
+
+                            Cíl.výška                                  0,0000
+
+                            Počet řezů                                 1
+
+
+
+
+                                  OK             Reset
+
+
+                       3 Aktivujte zaškrtávací políčko Tangenc.snímání (default), jestliže
+                         chcete převzít nastavení z editoru pro elementy.
+                         Podle nastavení v editoru je nyní tangenciální snímání buď
+                         aktivováno či nikoli.
+                       4 Aktivujte zaškrtávací políčko Tangenc.snímání Ano, jestliže chcete
+                         tangenciální snímání aktivovat nezávisle na nastaveních v editoru
+                         pro elementy.
+                         Není-li nastavený úhlový rozsah pro tangenciální snímání dostatečný,
+                         jste dotázáni, zda se má změnit:
+
+
+
+
+1-20                   61212-2791512               CALYPSO 2018
+                                                         Tangenciální snímání
+
+
+
+   Dotaz
+
+            Úhlový rozsah je pro tangenciální snímání příliš malý!
+            Chcete úhlový rozsah změnit?
+
+
+                                  Ano             Ne
+
+
+
+5 Když kliknete na Ano, je úhlový rozsah automaticky přizpůsoben
+  potřebné velikosti.
+
+
+
+
+61212-2791512             CALYPSO 2018                               1-21
+Generování spirálové dráhy
+
+
+
+
+Generování spirálové dráhy
+                        Základní údaje pro generování spirálové
+                        dráhy
+                        Pomocí opce VAST Navigator můžete scanovat válce zvláštním
+                        způsobem po dráze šroubovice. Válec je plynule snímán po spirálové
+                        dráze probíhající nejprve dopředu a potom dozadu. Do tohoto plynulého
+                        snímání můžete také vložit dvě nebo čtyři kružnice.
+
+                                        Konvenční                      Scanování
+      Jednotlivé body                   scanování                      po spirále
+
+
+
+
+                        Při tomto postupu jsou snímané body rozloženy prostorově mnohem
+                        rovnoměrněji. CALYPSO může velmi rychle podat informace o průměru,
+                        tvaru a poloze válce.
+                        K dispozici jsou zde i další možnosti opce VAST Navigator:
+                        – Můžete nechat automaticky vypočítat optimální rychlost, délku kroku
+                          a počet bodů.
+                        – S dynamicky kalibrovaným snímačem můžete docílit vyšší rychlosti
+                          scanování.
+
+
+                        Snímat válce po spirálové dráze
+                        1 Otevřete předlohu pro definici válce a klikněte na tlačítko Strategie.
+                        2 V okně strategie klikněte na ikonu pro spirálovou dráhu.
+                          Do seznamu drah se vloží element „Spirála (Variabilní)“.
+                        3 Okno technologie pro spirálu otevřete dvojklikem nebo kliknutím na
+                          ikonu Editovat technologii.
+
+
+
+1-22                    61212-2791512           CALYPSO 2018
+                                               Generování spirálové dráhy
+
+
+
+       Spirála
+
+                     CylFroCe
+
+      Přednastavení              Výpočet                 Reference
+
+                                                  Automatický
+                                                  výpočet
+     Rychlost                                        Optimální
+
+        Krok                                         Optimální
+
+       Počet bodů                                    Optimální
+
+     Snímač                                          Auto1: Dřík po n
+
+
+
+
+    Základní nastavení   Speciální nastavení
+
+
+
+
+     Počát.výška                                 0,0000
+
+     Cíl.výška                                   11,0000
+     Počet otáček                                4
+
+     Gradient/Stoupání                           5,500
+     Počet kružnic                               0
+
+     Počát.úhel                                  0,0000
+
+     Směr otáčení                                    Vpravo
+
+
+
+          OK             Reset
+
+
+4 Proveďte nastavení pro Rychlost:
+  Určete rychlost nebo zvolte automatický výpočet.
+5 Proveďte nastavení pro Krok a Počet bodů:
+  Zvolte jednu z těchto dvou veličin nebo nechte automaticky vypočítat
+  optimální hodnotu.
+  Optimální počty bodů jsou zvoleny tak, že informace postačuje pro
+  daný režim a je omezen čas výpočtu pro vyhodnocení.
+  Informace: Když změníte údaje Průměr, Výška řezu, Počet
+  otáček nebo Počet kružnic, ovlivní to přes měřenou délku
+  optimální počet bodů.
+6 Proveďte nastavení pro Počet kružnic:
+  Určí počet navíc měřených kružnic. Výběr má tento účinek:
+
+
+
+61212-2791512              CALYPSO 2018                                 1-23
+Generování spirálové dráhy
+
+
+
+
+                             0: je scanována jen spirála
+                             2: scanuje se nahoře půlkružnice, dole kružnice, potom nahoře
+                             doplňující půlkružnice
+                             4: úplná kružnice v počáteční výšce, spirála dopředu až k cílové
+                             výšce, tam 2 kružnice, spirála zpět k počáteční výšce, tam opět úplná
+                             kružnice.
+                             Informace: Přídavné kružnice jsou vhodné hlavně u malých válců –
+                             přesnost určení osy válce je tím zvýšena.
+                       7 Potvrďte zadání tlačítkem OK.
+
+
+
+
+1-24                   61212-2791512             CALYPSO 2018
+                                                                                Zaoblení rohů
+
+
+
+
+Zaoblení rohů
+                       Základní údaje o zaoblení rohů
+                       S opcí VAST Navigator můžete aktivovat zaoblení rohů – jak pro pojezdy
+                       při měření elementu, tak i pro pojezdy mezi měřenými elementy.
+                       Zaoblení rohů se vždy aplikuje na celý plán měření, nikoli jen na
+                       jednotlivé elementy.
+
+                       Oznámení
+                       Zaoblení rohů se označuje také jako zaoblení objezdu (objezdové
+                       dráhy).
+
+Co je zaoblení rohů?   Bez aktivovaného zaoblení rohů jede snímací hlava přímo do
+                       definovaných mezilehlých bodů, tam se zastaví a potom jede dále novým
+                       směrem.
+                       Jestliže je zaoblení rohů aktivováno, nenajíždí se do těchto mezilehlých
+                       bodů. Místo toho najíždí snímací hlava ještě před mezibodem do
+                       oblouku daného poloměru a potom se vychýlí do nového směru.
+Výhoda                 Díky zaoblení rohů pojezdu je pohyb snímací hlavy plynulejší a sníží se
+                       doba pojezdu mezi měřenými elementy.
+                       Pomocí opce VAST Navigator aktivujete požadovaný typ zaoblení rohů
+                       pro celý plán měření:
+                       – Zaoblení rohů v elementech: Každý měřený element má jeden
+                         mezibod (bod objezdu) před elementem a jeden takový bod po
+                         elementu. Tyto mezibody jsou „zaobleny“.
+                       – Zaoblení rohů mezi elementy: Mezi jednotlivými měřenými
+                         elementy se mohou nacházet další mezibody objezdu. Tyto mezibody
+                         jsou „zaobleny“.
+                       Zadejte poloměr zaoblení. Pokud je příliš velký, VAST Navigator ho
+                       automaticky omezí: Poloměr zaoblení nesmí činit více než 25% nejkratší
+                       pojezdové dráhy (mezi dvěma následnými mezilehlými body).
+                       Příklad: Zadáte poloměr 500 a nejkratší pojezdová dráha je 20 mm.
+                       Výsledek: Pro zaoblení rohů se použije hodnota „5“.
+
+
+
+
+                       61212-2791512           CALYPSO 2018                           1-25
+Zaoblení rohů
+
+
+
+
+            rmax = 20x25/100 = 5 mm                                rmax = 50x25/100 = 12,5 mm
+                  Imax = 20 mm                                              Imax = 60 mm
+                          a
+
+
+
+
+                                                                                           a
+                  a
+
+
+
+
+                                                                        a
+   Imax = 50 mm
+
+
+
+
+                                                         Imax = 50 mm
+                                 mezilehlý bod
+
+
+
+                                                                                  a = vzdálenost od součásti
+
+
+                                 V případě dlouhých pojezdových drah existuje nebezpečí kolize. Kolizi
+                                 zabráníte tím, že zvětšíte vzdálenost a v bezpečnostním kvádru resp.
+                                 přednastavené oblasti.
+
+
+                                 Aktivovat zaoblení rohů
+                                 S opcí VAST Navigator můžete pro určitý plán měření aktivovat zaoblení
+                                 rohů – jak pro pojezdy při měření elementu, tak i pro pojezdy mezi
+                                 měřenými elementy.
+
+                                 Aktivovat zaoblení rohů v editoru elementů
+                                 1 Zvolte menu Příprava " Editor plánu měření pro elementy.
+                                   Otevře se dialogové okno Editor plánu měření Elementy. Další
+                                   informace viz Editor pro elementy plánu měření v přehledu dialogů v
+                                   online nápovědě programu CALYPSO.
+                                 2 Pro aktivaci zaoblení rohů mezi elementy zvolte v rozevíracím
+                                   seznamu VAST Navigator " Zaoblení rohů mezi elementy.
+                                   - nebo -
+                                   Pro aktivaci zaoblení rohů v elementech zvolte v rozevíracím seznamu
+                                   VAST Navigator " Zaoblení rohů v elementech.
+                                   Automaticky je vybrána možnost pro plán měření.
+                                 3 V sekci Nastavit na vyberte požadovaný poloměr (1 až 500 mm)
+                                   resp. „** Default“ a potvrďte tlačítkem OK.
+                                   Volbou „** Default“ převezmete standardní nastavení programu
+                                   CALYPSO.
+                                   Při příštím průběhu plánu měření se projeví nastavené zaoblení rohů.
+
+
+
+
+1-26                             61212-2791512          CALYPSO 2018
+Rejstřík
+                                                          VAST parametry 1-4
+           D
+                                                          Virtuální kalibrační koule
+           Dynamická kalibrace snímačů 1-14
+                                                              definovat 1-13
+                                                              Základní údaje 1-12
+           G                                              Výsledky kalibrace snímačů 1-15
+           Generování dráhy
+               spirála 1-22                               Z
+                                                          Zaoblení objezdů 1-25
+           K                                              Zaoblení rohů
+           Kalibrace snímačů                                  aktivovat 1-26
+               dynamická 1-11                                 základní údaje 1-25
+               dynamická, provést 1-14
+               Pojezdy 1-16
+               Výsledky 1-15
+           Kalibrační koule
+               Virtuální 1-12
+
+
+           P
+           Parametry
+               pro VAST 1-4
+
+
+           S
+           Scanning
+               optimální rychlost 1-7
+               Spirála (variabilní) 1-22
+           Skenování po šroubovici 1-22
+           Snímání
+               tangenciální 1-18
+           Šroubovice 1-22
+
+
+           T
+           Tangenciální snímání
+               aktivovat 1-19
+               základní údaje 1-18
+
+
+           V
+           VAST Navigator
+               Stupeň 1 1-3
+               Stupeň 2 1-4
+           VAST Navigator, funkce 1-3
+
+
+
+
+           61212-2791512                   CALYPSO 2018                                Rejstřík   11
+22 Rejstřík   61212-2791512   CALYPSO 2018
+

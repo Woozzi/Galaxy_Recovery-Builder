@@ -1,0 +1,4107 @@
+CALYPSO
+
+   Opce 3
+   Simulace
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2731512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 Simulace (opce)
+
+               Prvky opce Simulace ...................................................... 1-2
+
+               Simulace snímačů........................................................... 1-3
+                  Kontrola průběhu pomocí simulace snímačů ..................................... 1-3
+                  Řídit simulaci snímačů ....................................................................... 1-4
+                  Umístit CAD model ........................................................................... 1-5
+
+               Modul snímačů ................................................................ 1-6
+                  Základní údaje o modulu snímačů ..................................................... 1-6
+                  Pracovat s modulem snímačů ............................................................ 1-7
+                  Snímací systém načíst, editovat a uložit ............................................. 1-8
+                  Počáteční komponenty...................................................................... 1-9
+                  Připojit komponentu ....................................................................... 1-10
+                  Stromová struktura komponent....................................................... 1-11
+                  Importovat snímací systémy do programu CALYPSO........................ 1-15
+                  Exportovat data snímacího systému................................................. 1-18
+                  Výstup dalších dat snímacího systému ............................................. 1-18
+                  Skladová data ................................................................................. 1-20
+                  Aktualizovat databázi snímačů ........................................................ 1-22
+                  Komponenty snímacích systémů na internetu.................................. 1-23
+                  Dokumentace snímačů ve formátu PDF ........................................... 1-25
+                  Příklad: Sestavit a editovat model snímacího systému ...................... 1-28
+                  Reference: Modul snímačů .............................................................. 1-43
+
+               Modul výměnného zásobníku ...................................... 1-73
+
+
+             61212-2731512                   CALYPSO 2018                                             Obsah    11
+                Modul výměnného zásobníku.......................................................... 1-73
+                Modelovat zásobníky na výměnu snímačů a používat tyto modely ... 1-73
+                Vytvořit zásobník na výměnu snímačů ............................................. 1-74
+                Umístit úložná místa........................................................................ 1-77
+                Přiřadit snímače úložným místům .................................................... 1-79
+                Pracovat s modely zásobníku........................................................... 1-80
+
+
+
+           Rejstřík
+
+
+
+
+22 Obsah   61212-2731512                  CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2731512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2731512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2731512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2731512          CALYPSO 2018
+Simulace (opce)
+
+
+
+
+                  Kapitola
+
+                  1    Simulace (opce)
+
+                     Tato kapitola obsahuje:
+                     Prvky opce Simulace................................................................................... 1-2
+                     Simulace snímačů ...................................................................................... 1-3
+                     Modul snímačů .......................................................................................... 1-6
+                     Modul výměnného zásobníku .................................................................. 1-73
+
+
+
+
+                    61212-2731512                      CALYPSO 2018                                                 1-1
+Prvky opce Simulace
+
+
+
+
+Prvky opce Simulace
+Simulace snímačů      Opce Simulace umožňuje, aby program CALYPSO zobrazil během CNC
+                      průběhu v okně CAD umístění a pozici aktuálně použitého snímače. Na
+                      obrazovce můžete sledovat, jak se snímač při CNC průběhu pohybuje.
+                      Pokud CALYPSO zná příslušné rozměry nebo modely, lze zobrazit také
+                      snímací hlavu, základní desku, otočný stůl, měřicí rozsah stroje nebo celý
+                      souřadnicový měřicí stroj.
+Modul snímačů         Aby mohl být simulován pohyb snímačů, potřebuje CALYPSO kompletní
+                      geometrický model snímacího systému i jednotlivých snímačů. Pomocí
+                      stavebnicového modulu můžete konstruovat snímače a konfigurace
+                      snímačů určitých výrobců a doplnit je základními elementy kužel, válec,
+                      koule a kvádr.
+                      Simulace snímačů a modul snímačů jsou také předpokladem pro to, aby
+                      bylo možné plány měření spouštět a provádět bez připojeného měřicího
+                      stroje.
+Modul výměnného       Se stavebnicí výměnného zásobníku snímačů můžete vytvořit, umístit,
+zásobníku             konfigurovat a osadit modely výměnných zásobníků.
+                      To je předpokladem pro to, aby software CALYPSO simuloval také
+                      automatickou výměnu snímacího systému.
+
+
+
+
+1-2                   61212-2731512           CALYPSO 2018
+                                                                           Simulace snímačů
+
+
+
+
+Simulace snímačů
+                       Kontrola průběhu pomocí simulace
+                       snímačů
+                       Když aktivujete simulaci snímačů, je při CNC průběhu zobrazena v okně
+                       CAD nejen součást, nýbrž také aktuálně použitá konfigurace snímačů
+                       v pohybu.
+                       Snímací systém (konfiguraci snímačů) můžete při CNC průběhu sledovat
+                       na obrazovce. Přesně vidíte, který snímač se používá a jaké pohyby a
+                       otáčení provádí snímač relativně k součásti.
+Další prvky simulace   Pokud CALYPSO zná příslušné rozměry nebo modely, lze zobrazit také
+                       snímací hlavu, základní desku, otočný stůl, měřicí rozsah stroje nebo celý
+                       souřadnicový měřicí stroj.
+                       Tímto způsobem získáte zcela novou možnost kontroly průběhu. Jsou
+                       tak vidět eventuální kritická místa plánu měření (nebezpečí kolize) a
+                       mohou být opravena.
+
+                       Oznámení
+                       Velmi důležitá je tato možnost pro testování např. plánu měření
+                       vytvořeného mimo měřicí stroj pomocí CALYPSO Generátor (Planner).
+
+                       Vlastnosti simulace
+                       CALYPSO se snaží zobrazit konfiguraci snímačů vždy ve středu okna
+                       CAD. Směr pohledu je nastaven v úhlu 40° ke směru dříku snímače.
+                       Volbou režimu provádění (jednotlivé kroky, celý průběh), pozastavením a
+                       pokračováním simulace řídíte simultánně zobrazení snímačů a CNC
+                       průběh.
+                       Navíc můžete nastavit různé parametry simulace jako počet kontrol,
+                       zobrazení dráhy a automatickou identifikaci kolize.
+
+                       Předpoklady pro simulaci snímačů
+Snímací systém         Simulace snímačů je možná jen, když program CALYPSO zná snímací
+                       systém použitý v plánu měření (rozměry, uspořádání konfigurace
+                       snímačů). Za tím účelem musíte do programu CALYPSO importovat
+                       vhodný SSC soubor.
+                       Pro načtení, editaci a uložení SSC souborů slouží Modul
+                       snímačů,samostatný program dodávaný s programem CALYPSO (➤
+                       Modul snímačů [⇨ 1-6]).
+
+
+
+
+                       61212-2731512           CALYPSO 2018                              1-3
+Simulace snímačů
+
+
+
+Rozměry měřicího     Předpoklady pro zobrazení dalších elementů vytvoříte zadáními pomocí
+stroje               menu Doplňky " Nastavení " Stroj:
+                     – Snímací hlava: výběr na stránce Sním.hlava.
+                     – Základní deska a měřicí rozsah: zadání rozměrů na stránce
+                       Měř.stroj.
+                     – Otočný stůl: zadání na stránce Otočný stůl.
+
+
+                     Řídit simulaci snímačů
+                     Pokud jste v modulu snímačů správně sestavili konfiguraci použitou
+                     v plánu měření, můžete v okně CAD simulovat pohyby této konfigurace
+                     na součásti.
+                     Přitom máte různé možnosti ovládání průběhu a zobrazení.
+Aktivovat simulaci   Simulaci snímačů aktivujete pomocí menu Planner " Simulace plánu
+snímačů              měření. Ukáže se okno Simulace plánu měření:
+
+                         Simulace plánu měření
+
+
+
+
+                     Ikonky mají tento význam:
+
+Symbol               Funkce
+                     Tlačítky pro záznam Pauza, Start a Krok můžete CNC průběh a
+                     tím simulaci snímačů pozastavit, znovu spustit nebo nechat
+                     proběhnout v režimu po krocích.
+                     Pomocí ikon snímače a konfigurace snímačů ovládáte rozsah
+                     zobrazení: Pomocí ikony Zobrazit snímač je zobrazen pouze
+                     aktuálně použitý snímač.
+                     Ikonami pro zobrazení ovládáte zobrazení snímací hlavy, základní
+                     desky, otočného stolu a měřicího stroje.
+                     Dále můžete na obrazovce zobrazit bezpečnostní kvádr a měřicí
+                     rozsah souřadnicového měřicího stroje.
+                     Pomocí posuvníku ovládáte rychlost CAD simulace a přesnost
+                     sledování možných kolizí.
+
+
+
+
+1-4                  61212-2731512           CALYPSO 2018
+                                                           Simulace snímačů
+
+
+
+Symbol   Funkce
+         Aktivujete-li ikonu Sledování kolize, okno se rozšíří. CALYPSO
+         registruje každou kolizi a zaznamená ji ve výpisu kolizí.
+         Registruje překročení měřicího rozsahu a zaznamená je ve výpisu.
+
+         Když snímáte velkou součást, je možné pomocí ikony Sledování
+         snímače stále sledovat ve výřezu pohyby snímače. Součást je
+         v okně CAD automaticky natočena vždy tak, že vidíte konfiguraci
+         snímačů před součástí.
+         Otevře okno Ovládání stroje, ve kterém v okně CAD ovládáte
+         simulovaný měřicí stroj jako ručně pomocí ovládacího panelu.
+         Když je aktivována ikona Zobrazení objezdových drah, je dráha
+         pohybu snímače označena v okně CAD jako svítící stopa.
+         Otevře okno Nastavení simulace, ve kterém nastavujete
+         průhlednost pro snímací hlavu, snímače, měřicí stroj a základovou
+         desku a aktivujete osový kříž.
+         Otevře okno Modifikovat CAD model s kartou Polohování,
+         pomocí které můžete libovolně umístit objekty v okně CAD.
+
+
+         Umístit CAD model
+         Při nastavení polohy CAD modelu můžete v programu CALYPSO
+         simulovat posunutí nebo natočení součásti na základní desce. Na rozdíl
+         od otáčení pohledu CAD modelu ovládacími tlačítky v okně CAD je zde
+         CAD model otáčen početně.
+
+         Oznámení
+         V okně CAD musí být ukázána základní deska nebo otočný stůl
+         (Generátor " Zobrazit pracovní plochu).
+         1 V okně CAD natočte CAD model tak, abyste mohli myší kliknout na
+           požadovanou plochu.
+         2 Zvolte menu CAD " Modifikovat CAD elementy.
+           Otevře se okno Modifikovat CAD model.
+         3 Klikněte na kartu Polohování.
+         4 Případně určete parametry pro přesunutí a otáčení CAD modelu.
+         5 Zvolte postup pro polohování ovládané myší a na CAD modelu
+           potom klikněte na počáteční a koncový bod.
+           CAD model je podle toho nově umístěn.
+           Aby se polohování zrušilo, klikněte opět na tlačítko Polohovat.
+
+
+
+
+         61212-2731512          CALYPSO 2018                              1-5
+Modul snímačů
+
+
+
+
+Modul snímačů
+                      Základní údaje o modulu snímačů
+                      Aby bylo možné simulovat průběh měření, potřebuje CALYPSO
+                      kompletní geometrický model snímacího systému (konfigurace snímačů)
+                      a příslušných snímačů. K tomu je určen Modul snímačů.
+                      Modul snímačů umožňuje tvorbu, úpravu a správu modelů snímacích
+                      systémů ve formě souborů SSC. K těmto souborům přistupuje CALYPSO
+                      a simuluje používané snímače.
+
+
+
+                             Modul                             Import
+                                                    SSC                         CALYPSO
+                        snímacího systému
+                                                   soubory
+
+
+
+
+                      Oznámení
+                      Od verze 4.6 je Modul snímačů samostatný program, který otevíráte z
+                      programu CALYPSO. V budoucnu bude k dispozici i pro jiné programy
+                      firmy ZEISS.
+                      Až do verze 4.4 obsahoval program CALYPSO interní modul snímačů,
+                      pomocí kterého se sestavovaly konfigurace snímačů z prefabrikovaných
+                      dílů a z vlastních doplňků.
+                      Tyto „staré“ modely snímačů můžete s novým stavebnicovým modulem
+                      snímačů načíst, editovat a dále používat v programu CALYPSO.
+
+                      Pro sestavení modelů snímacího systému poskytuje modul snímačů dva
+                      typy komponent:
+                      – Komponenty snímačů a snímačových konfigurací podle
+                        produktových katalogů ZEISS a jiných výrobců
+                      – Generické komponenty. To jsou snímací doteky s proměnnými
+                        rozměry a pravidelné geometrické objekty, jako jsou kužel, válec,
+                        koule a kvádr.
+
+                      Oznámení
+                      Generické snímače jsou v modulu snímačů obsaženy teprve od verze 5.2
+                      programu CALYPSO. SSC soubory s generickými snímači nemohou být
+                      tudíž načteny do starších verzí modulu snímačů. Můžete je však do
+                      starších verzí simulace snímačů importovat a tím zobrazit.
+
+Pojmenovat a uložit   Poté co jste sestavili nebo modifikovali snímací systém (konfiguraci
+snímací systém        snímačů) podle svých potřeb, uložte ho jako soubor SSC pod vhodným
+                      názvem.
+
+
+1-6                   61212-2731512          CALYPSO 2018
+                                                                                                                                   Modul snímačů
+
+
+
+Exportovat snímací     Soubor SSC není vhodný pro vývoj a konstruování, protože neobsahuje
+systém                 informace CAD souboru. Můžete však exportovat soubor bodů
+                       sním.systému a podle něho provést konstrukci.
+Dokumentovat snímací   Pro dokumentaci snímacích systémů, které používáte, můžete nechat
+systém                 vytvořit PDF soubor se seznamem všech komponent daného snímacího
+                       systému.
+
+
+                       Pracovat s modulem snímačů
+                       S modulem snímačů můžete na obrazovce „zkonstruovat“ jakýkoli
+                       snímací systém používaný na vašem měřicím stroji a uložit ho jako
+                       soubor SSC. Po importu příslušného souboru SSC má CALYPSO k
+                       dispozici potřebná data, aby bylo možné simulovat snímání a zobrazit je
+                       pomocí snímače v okně CAD. Uložené snímací systémy můžete načíst a
+                       dále upravovat.
+
+                       Vyvolat modul snímačů
+                       Modul snímačů spustíte pomocí menu Generátor " Modul snímacího
+                       systému. Načítání programu a databáze snímačů je zobrazeno pomocí
+                       indikátoru průběhu.
+                       Potom se při prvním spuštění programu ukáže okno Výběr webshopu
+                       s dotazem na požadovaný webshop. Zvolte webshop, ve kterém jste se
+                       již zaregistrovali, nebo není-li ještě žádný zaregistrován, zvolte webshop
+                       pro Váš region
+                       Má-li se tento dialog v budoucnu přeskakovat, aktivujte možnost Tento
+                       dialog již nezobrazovat.
+                       Poté se otevře programové okno Modul snímačů s hlavním menu a
+                       pracovní plochou.
+
+                                                                                              sestavení modelu                             zobrazení modelu
+                                                                                              snímacího systému                            snímacího systému
+
+                                           Carl Zeiss - Baukasten Tastersystem
+
+                       hlavní menu        Datei Bearbeiten Eigenschaften Bestellen Extras
+                                         Komponentenansicht                          Tastersystem                                Ansicht Tastersystem
+
+
+                                                                                         Startpunkt
+
+                       náhled
+                       komponenty
+
+                                         Hersteller
+                                         Zeiss
+
+                                         Komponenten                                 Komponenteneigenschaften
+
+                                                                                            Carl Zeiss Webshop: Bestellen
+                       výběr                 Zeiss Komponenten
+                       komponenty                Generisch
+                                                                                       Beschreibung
+                                                                                       Bestellnummer      626107-2000-963
+                                                 Referenztaster
+                                                                                       Gruppenname        VAST Messkopl
+                                                 Sensoren
+                                                                                       Hersteller         Zeiss
+                                                 SSP Microtaster
+                       vlastnosti                Taster
+                                                                                       Kategorie          Tasterteller
+                                                                                      Name                M5 TF Pro Bohrung fü
+                       komponenty                Tasterhalter
+                                                 Tasterteller
+                                                                                      Namensde nition     Teller
+                                                                                      Vendor Auttragsnumm Unknown
+                                                       [MT/VAST] M5 TF Pro Bohrung
+                                                       [MT/VAST] Tasterteller
+                                                                                      Funktionale Eigenschaften
+                                                                                      Gewicht             181
+                                         Beschreibung                                Name
+                                                                                     Name der Komponente
+
+                       ovládací lišta                                                                                                                     Beenden
+
+                                        Gewicht: 0 g
+
+
+
+
+                       61212-2731512                            CALYPSO 2018                                                                            1-7
+Modul snímačů
+
+
+
+                        Pracovní plocha obsahuje několik oken:
+
+Sekce                 Funkce
+Vlevo                 Dostupné komponenty
+  Zobrazení           Ukáže komponentu vybranou v sekci Komponenty.
+  komponenty
+  Výrobce             Výběr výrobce snímačových komponent
+  Komponenty          Dostupné konstrukční prvky
+  Popis               Popis vybraného konstrukčního prvku
+  Vlastnosti               Vlastnosti komponenty vybrané v sekci Komponenty s
+  komponenty               odkazem na ZEISS Webshop
+Vpravo                Sestavení aktuálního snímacího systému
+  Snímací systém      Stromové zobrazení snímacího systému
+  Vlastnosti               Vlastnosti komponenty vybrané v sekci Snímací systém
+  komponenty
+  Snímací elementy         Po kliknutí na ikonu Editovat snímací elementy ukáže
+                           všechny snímací elementy daného snímacího systému.
+  Zobrazení           Ukáže snímací systém v prostorovém zobrazení.
+  snímacího systému
+  Ovládací lišta      Dialogové prvky pro ovládání zobrazení
+
+                        V těchto oknech vybíráte komponenty, ze kterých se má skládat model
+                        snímacího systému, a po jednotlivých částech je sestavujete. Aktuální
+                        stav je vidět v Zobrazení snímacího systému.
+                        Pro lepší vyhledávání potřebných komponent můžete vymezit obsah
+                        stromu komponent a upravit jeho zobrazení.
+
+
+                        Snímací systém načíst, editovat a uložit
+                        Existující modely snímacího systému můžete načíst do modulu, editovat
+                        a změněné znovu uložit.
+
+                        Načíst snímací systém
+                        1 V modulu snímačů zvolte menu Soubor " Načíst.
+                        2 V okně Načíst snímací systém otevřete požadovaný SSC soubor.
+                          Snímací systém je ukázán v Zobrazení snímacího systému.
+                          Můžete ho levým tlačítkem myši posouvat a pravým tlačítkem myši
+                          otáčet. Prostředním tlačítkem myši se provádí zoomování zobrazení a
+                          pomocí kombinace Shift + levé tlačítko myši určíte zoomovaný výřez.
+
+
+1-8                     61212-2731512           CALYPSO 2018
+                                                                               Modul snímačů
+
+
+
+Editovat snímací systém Ještě nehotový snímací systém můžete dále upravovat a doplňovat.
+                        Nasazené komponenty je možné odebrat nebo vyměnit za jiné.
+                           – Na volných místech napojení je možné připojit další komponenty.
+                           – U generických elementů (generické snímací doteky nebo
+                             geometrická tělesa) můžete změnit rozměry a materiál.
+                           – Namontovanou komponentu můžete vyměnit za jinou se stejným
+                             počtem bodů napojení.
+                           – Určitou komponentu a všechny na ní připojené komponenty můžete
+                             odstranit.
+                           – Ve volném místě napojení můžete připojit jiný snímací systém
+                             (konfiguraci snímačů).
+
+                           Uložit upravený snímací systém
+                           1 Zvolte menu Soubor " Uložit jako a zadejte název souboru.
+                             Snímací systém se uloží jako soubor SSC.
+
+
+                           Počáteční komponenty
+                           Když s modulem snímačů vytváříte nový snímací systém, pomůže vám
+                           „startovní asistent“. Stačí zvolit technologii resp. konstrukci a
+                           automaticky je předvolena správná počáteční komponenta.
+                           Počáteční komponenty jsou takové komponenty, se kterými můžete začít
+                           sestavování modelu snímacího systému. Jsou specifické pro určitou
+                           technologii a pro vyvolávající program, tedy CALYPSO. Příklady:
+
+                           Technologie                        Komponenta
+                           ZEISS VAST                         VAST talířek
+                           ZEISS RDS/XXT                      RDS XXT
+
+                           Když tvoříte nový model, zvolte v okně Vytvořit nový snímací systém
+                           jednu z technologií ze snímačové databáze.
+                           – Pokud je pro ni v databázi k dispozici pouze jedna počáteční
+                             komponenta, je tato komponenta ihned vložena do modelu
+                             snímacího systému.
+                           – Jestliže je v databázi více možných počátečních komponent, jsou ve
+                             stromové struktuře zobrazeny jen komponenty vybrané technologie.
+                           Poloha zvolená pro počáteční komponentu odpovídá nulové poloze u
+                           portálového stroje – jak to bylo běžné u modulu snímačů do verze 4.4.
+                           Tuto nulovou polohu nelze manuálně změnit.
+
+
+
+                           61212-2731512          CALYPSO 2018                              1-9
+Modul snímačů
+
+
+
+                             V návaznosti na počáteční komponentu sestavuje CALYPSO snímač dále
+                             ve směru -Z. Je-li počáteční komponenta součástí otočné hlavy (např.
+                             RDS), je automaticky natočena tímto směrem.
+
+
+                             Připojit komponentu
+                             Jestliže snímací systém používaný na vašem měřicím stroji pochází od
+                             výrobce, který je modulem podporován, můžete ho sestavit z
+                             jednotlivých komponent a uložit.
+                             Komponenty mají místa napojení, na která se mohou připojit další
+                             komponenty, a přípojky, pomocí kterých je můžete připojit na místo
+                             napojení daného modelu. Modul snímačů sleduje, aby místo napojení a
+                             přípojka vzájemně pasovaly.
+Základní princip             Při sestavování postupujte v krocích. Komponentu za komponentou
+                             nasazujte na model, až je snímací systém kompletně modelován. Pro
+                             každý krok jsou potřebné dvě informace:
+                             – Která komponenta snímače má být napojena?
+                             – Ve kterém místě modelu má být připojena?
+                             Pořadí zpracování těchto informací nehraje roli. Jakmile provedete první
+                             výběr, můžete druhý výběr provést dvojklikem a připojení je provedeno.
+                             Pro připojení máte dvě možnosti:
+
+Nejprve komponenta                             Nejprve místo napojení
+1Vybrat požadovanou komponentu.                1Vybrat volné místo napojení.
+2Dvojkliknout na volné místo napojení.         2Dvojkliknout na požadovanou komponentu.
+
+                             Doporučujeme následující jednoduchý postup.
+                             1 Vybrat komponentu ve stromové struktuře komponent.
+                             2 V zobrazení snímacího systému klikněte na požadované volné
+                               místo napojení, které bude zobrazeno průhlednou kuličkou.
+
+                             Oznámení
+                             Připevnitelné komponenty s kolíky se dají připojit jen na komponenty s
+                             otvory a po připojení se už nedají otáčet.
+
+
+
+
+1-10                         61212-2731512           CALYPSO 2018
+                                                      Modul snímačů
+
+
+
+
+Stromová struktura komponent
+Upravit stromovou strukturu komponent
+Aby se potřebné prvky lépe vyhledávaly ve stromové struktuře
+komponent, můžete stromovou strukturu různým způsobem přizpůsobit
+vašim potřebám:
+– ➤ Filtrovat [⇨ 1-11]
+– ➤ Změnit schéma názvu [⇨ 1-12]
+– ➤ Nastavit hloubku stromové struktury [⇨ 1-13]
+– ➤ Upravit generické komponenty [⇨ 1-14]
+
+Filtrování
+Filtrováním omezíte zobrazení komponent, které jsou k dispozici.
+Všechny komponenty, které kritéria filtru nesplňují, budou skryty a
+nejsou už na výběr.
+
+Definovat filtr
+Nastavený filtr aktivujete a deaktivujete ikonou Aktivovat /
+deaktivovat filtr.
+Druh filtrování stanovíte po kliknutí na ikonu Změnit filtr komponent
+v okně Nastavení filtru.
+
+
+
+
+61212-2731512            CALYPSO 2018                          1-11
+Modul snímačů
+
+
+
+                  Nastavení ﬁltru
+                  Deﬁnice ﬁltru
+
+                                                      Interval (v mm)
+                                                            od:            do:
+                       Průměr sním.elementu
+
+                       Délka
+
+                       Průměr dříku
+
+                       Materiál komponenty
+
+                       Materiál sním.elementu
+
+                       Zeiss objednací číslo                             Start s
+
+                       Číslo artiklu                                     Start s
+
+                       Typ napojení                       Autojoint
+                                                          CSC
+                                                          CSC-A
+                                                          CSC-B intern
+                                                          DSE
+
+                       Počáteční komponenty               CSC
+                                                          DSE-RST
+                                                          Nic
+                                                          Ph10
+
+                       Skladem                          Dostupné
+
+                  Optionen
+
+                        Skrýt prázdné kategorie
+
+
+
+
+                                                                          Aktivovat
+
+
+
+                Má-li se zohlednit určité kritérium filtrování, musí být aktivováno
+                příslušné zaškrtávací políčko.
+
+                Oznámení
+                Modul snímačů standardně filtruje zobrazované komponenty podle
+                vhodného typu připojení.
+
+                Názvy ve stromové struktuře komponent
+                Názvy ve stromové struktuře komponent
+
+                Jak se skládá schéma názvu?
+                Názvy komponent slouží pro rychlé nalezení hledaných komponent.
+                Názvy musí být jednoznačné a obsahovat relevantní identifikační čísla.
+                Dosáhne se toho použitím proměnných.
+
+
+
+
+1-12            61212-2731512                   CALYPSO 2018
+                                                                                Modul snímačů
+
+
+
+                           Pro schémata názvů můžete použít všechny znaky klávesnice. Následující
+                           znaky se ve schématu používají jako metaznaky (znaky se speciálním
+                           významem):
+
+Znak                       Funkce
+<                          Uvozuje název proměnné. Pomocí „<<“ zobrazíte znak „<“.
+>                          Zakončuje název proměnné. Pomocí „>>“ zobrazíte znak „>“.
+@                          Otevře výběr speciálních znaků.
+                           Aby se zobrazil sám znak „@“, nevolte žádný ze speciálních znaků.
+
+                           K dispozici jsou následující proměnné:
+
+Datum                         Proměnná          Význam
+Katalogová data
+Length                        <L>               Celková délka
+Measure Length                <ML>              Měřicí délka
+Measure Extension Length      <MLE>             Prodloužená měřicí délka
+Shaft Diameter                <DS>              Průměr dříku
+Shaft Extension Diameter      <DSE>             Průměr prodlouženého dříku
+Sphere Diameter               <DK>              Průměr snímací kuličky
+Diameter                      <DG>              Průměr v bodě připojení
+Width                         <B>               Délka hrany
+Data materiálu
+Materiál                      <Mat>             Hlavní materiál komponenty
+Probe Tip Material            <TipMat>          Materiál snímacího elementu
+Další
+Connection Type               <ConType>         Typ bodu připojení
+
+                           Při tvoření názvů se použije příslušná hodnota vlastnosti komponenty
+                           jako proměnná. Není-li daná hodnota definována,do názvu:
+                           – se pro položku katalogu dosadí – číslice „0“
+                           – se pro vlastnost materiálu nedosadí – nic
+
+                           Podkategorie
+                           Komponenty jsou systematicky a hierarchicky uspořádány ve stromu
+                           komponent. K tomu slouží podkategorie, které jsou dány vlastnostmi
+                           komponent.
+
+
+
+                           61212-2731512           CALYPSO 2018                         1-13
+Modul snímačů
+
+
+
+Příklad         Komponenty typu „Snímač“ mají např. následující podkomponenty:
+                – Úroveň 1 : typ připojení komponenty
+                – Úroveň 2 : materiál snímacího elementu
+                – Úroveň 3 : katalogová hodnota ML
+                – Úroveň 4 : katalogová hodnota MLE
+                – Úroveň 5 : název komponenty
+                Počet, typ a uspořádání podkategorií jsou specifikovány výrobcem.
+                Můžete ale určovat hloubku hierarchického členění (úroveň detailu). Čím
+                větší je hloubka členění stromu komponent, tím méně komponent je
+                vypsáno na „koncích“ stromu, tedy na špičkách větví.
+
+                Definovat hloubku členění (úroveň detailu)
+                Nastavenou hloubku členění aktivujete a deaktivujete ikonou
+                Uspořádat komponenty do podkategorií.
+                Hloubku členění zvolíte pomocí symbolu šipky vedle tlačítka. Nastavte
+                jednu z pěti hloubek členění (úroveň 1 až 5).
+                Když kliknete pravým tlačítkem myši na určitou oblast stromu, vidíte
+                platné podkategorie pro příslušné komponenty:
+
+                  Úroveň 1 (Typ připojení)
+                  Úroveň 2 (Název)
+                  Úroveň 3 (Délka)
+                  Úroveň 4 (Materiál)
+                  Úroveň 5 (Průměr snímacího elementu)
+
+
+                Upravit generické komponenty
+                Generické komponenty slouží pro náhradní vytváření komponent, které
+                nejsou v modulu snímačů k dispozici.
+                Až do verze 5.2 programu CALYPSO to byly jen základní elementy: válec,
+                kvádr, koule, otočný kloub a naklápěcí kloub. Od verze 5.2 obsahují
+                generické komponenty také generické snímací doteky, jejichž
+                modifikovatelné hodnoty odpovídají katalogovým datům.
+                Pro úpravu generických komponent máte různé možnosti:
+                – U všech generických komponent můžete požadovaný materiál vybrat
+                  ze seznamu v sekci Funkční vlastnosti.
+                – U geometrických objektů můžete geometrické rozměry v sekci
+                  Modifikovatelné vlastnosti změnit.
+                – U generických snímacích doteků můžete změnit údaje odpovídající
+                  katalogovým datům v sekci Modifikovatelné vlastnosti.
+
+
+
+1-14            61212-2731512             CALYPSO 2018
+                                                        Modul snímačů
+
+
+
+   – Přímé zadání: Zadáte požadovanou hodnotu.
+   – Výběrový rámeček: Klikněte na ikonu a vyberte některou z
+     přípustných hodnot.
+   – Posuvník: Kliknete na ikonu a zadáte zvolenou hodnotu buď do
+
+       pole nebo ji nastavíte posuvníkem.
+       Kliknutím na zatržítko ji převezmete.
+
+
+Importovat snímací systémy do
+programu CALYPSO
+Aby mohla v okně CAD proběhnout simulace snímačů podle skutečnosti
+a se smysluplnými výsledky, musí dostat CALYPSO informaci o
+„napodobeném“ snímacím systému s názvem použitým na měřicím
+stroji.
+V modulu snímačů vytvoříte jak importovaný snímací systém, tak i vámi
+použitý referenční snímač.
+
+Uplatnit snímací systém pro měřicí stroj
+1 V programu CALYPSO zvolte menu Generátor " Importovat
+  soubor SSC.
+
+        Importovat SSC data
+
+      Refer. snímač
+                      Importovat SSC refer.snímač
+
+                Pokud referenční snímač nebyl importován
+                ve formátu SSC, nelze vytvořit platná data
+                při importování snímacího systému.
+
+
+      Importovat sním.systém
+
+                              Načíst systém
+
+                c:\Programme\Zeiss\CalypsoBeta\home\es\*.ssc
+
+
+                       Převzít načtený systém
+
+
+
+                                                               Zavřít
+
+
+
+
+61212-2731512           CALYPSO 2018                              1-15
+Modul snímačů
+
+
+
+                2 V sekci Referenční snímač klikněte na Importovat SSC
+                  referenční snímač a v okně Otevřít soubor vyberte SSC soubor
+                  referenčního snímače.
+                  V okně Importovat SSC data se objeví symbol pro OK a v okně
+                  CAD je ukázán referenční snímač.
+                3 Klikněte na Načíst systém a vyberte soubor SSC, který má být
+                  importován, nebo zadejte cestu a název souboru SSC do vstupního
+                  pole.
+                  V okně CAD se ukáže příslušný snímací systém.
+                4 Je-li to požadovaný snímací systém, klikněte na tlačítko Vytvořit
+                  sním.systém.
+                  Tím iniciujete dva postupy:
+                    Snímací systém je definován v programu CALYPSO.
+                    Model snímacího systému je připraven pro simulaci v programu
+                       CALYPSO.
+                   Když má měřicí stroj otočnou hlavu (např. RDS), objeví se předtím
+                   ještě okno Definovat nový snímací systém pro výběr modulů a
+                   pro vytvoření různých úhlových nastavení.
+
+
+
+
+1-16            61212-2731512          CALYPSO 2018
+                                                             Modul snímačů
+
+
+
+      Deﬁnovat nový snímací systém
+
+     Snímací hlava
+
+     XXT
+
+
+        Zeiss polohovací hlava
+
+                                 XXT_Carrier
+
+
+                                                                 Přidat
+
+
+
+
+      Modul
+
+
+
+
+                                                                 Přidat
+
+
+
+
+      Sním.systém
+
+                                 Nový sním.systém
+
+                                 Snímač                       Snímač č.
+
+                                 -z
+
+
+
+                                 OK                 Storno
+
+
+
+5 Pokud snímací systém obsahuje více modulů: Určete, které moduly
+  importovaného snímacího systému se mají použít pro simulaci.
+  Informace: Pro otočnou hlavu jsou definovány snímače jen v úhlové
+  poloze 0/0. Pro definování dalších úhlových poloh otevřete RC výpis
+  a tam zadejte úhlové polohy.
+6 Klikněte na Převzít načtený systém, aby byl v programu CALYPSO
+  definován snímací systém a připraven model snímacího systému pro
+  simulaci.
+  Jako název se použije název specifikovaný v sekci Snímací systém.
+  Informace: Pro úhlovou polohu 0/0 se použijí všechny snímače v
+  daném snímacím systému.
+7 Klikněte na tlačítko Zavřít, aby se okno Importovat soubor SSC
+  zavřelo.
+Snímač z modulu snímačů můžete v programu CALYPSO nyní použít pro
+simulaci snímačů v okně CAD a pro výpočty možných kolizí.
+
+
+
+61212-2731512               CALYPSO 2018                            1-17
+Modul snímačů
+
+
+
+
+                Exportovat data snímacího systému
+                Modul snímačů umožňuje tvorbu, úpravu a správu modelů snímacích
+                systémů ve formě souborů SSC. Soubor SSC není určen pro vývoj a
+                konstrukci, protože neobsahuje informace CAD souboru.
+                Můžete ale exportovat soubor bodů snímacího systému na základě něho
+                provést konstrukci. Výstupní soubor obsahuje všechny body napojení a
+                všechny polohy středů snímací kuličky v souřadném systému modulu
+                snímačů.
+
+                Exportovat soubor bodů
+                1 Načtěte snímací systém, který se má exportovat.
+                2 Zvolte menu Soubor " Exportovat.
+                3 V okně pro výběr souboru zadejte cestu a název pro exportovaný
+                  soubor.
+                  Konstrukční body aktuálního snímacího systému budou zapsány do
+                  ASCII souboru s příponou CSV.
+
+                Formát exportovaného souboru
+                Exportovaný soubor má tolik řádků, kolik je exportováno bodů . V
+                každém řádku jsou uvedeny tři souřadnice X, Y, Z bodu (v souřadném
+                systému modulu snímačů), oddělené oddělovacím znakem hodnot.
+                Oddělovací znak hodnot a desetinný oddělovač nastavíte přes
+                Vlastnosti " Možnosti v okně Možnosti v sekci Nastavení exportu.
+Příklad         Exportovaný soubor může vypadat např. takto:
+
+                0 0 -52
+                0 7.5 -66
+                0 37.57016 -76.94464
+                0 0 -38.5
+                ...
+
+
+
+                Výstup dalších dat snímacího systému
+                Při každém uložení snímacího systému je možný výstup výpisu bodů pro
+                podporu konstrukce (viz ➤ Exportovat data snímacího systému
+                [⇨ 1-18]) i výstup dalších souborů s daty snímačů.
+                Výstup je buď ve stejném adresáři jako výstup snímacího systému (SSC
+                soubor) nebo ve zvláštním adresáři.
+
+
+
+
+1-18            61212-2731512          CALYPSO 2018
+                                                      Modul snímačů
+
+
+
+Provést nastavení pro výstup přídavných souborů
+1 Načtěte snímací systém, který se má uložit.
+2 Zvolte menu Vlastnosti " Možnosti a v dialogovém okně
+  Možnosti zvolte položku Exportovat systémová nastavení.
+
+
+
+
+3 Aktivujte zaškrtávací políčka pro soubory, které chcete uložit.
+    Screenshot (JPG) – Soubor <název snímacího
+     systému>.Image.jpg pro vaši vlastní dokumentaci
+    Vizualizace (STL) – Soubor <název snímacího
+     systému>.Visualization.stl, vhodný pro simulace pojezdů v jiných
+     programech
+    Výpis bodů pro podporu konstrukce – Soubor <název
+     snímacího systému>.Points.csv (CSV soubor, viz ➤ Exportovat
+     data snímacího systému [⇨ 1-18])
+    Souhrn (XML) – Soubor <název snímacího
+     systému>.Summary.xml pro strojové vyhodnocení dat snímacího
+     systému v databázi
+    Souhrn (CSV) – Soubor <název snímacího
+     systému>.Summary.csv pro strojové vyhodnocení dat snímacího
+     systému v databázi
+    Dokumentace (PDF) – Soubor <název snímacího
+     systému>.SystemDocumentation.pdf – viz ➤ Dokumentace
+     snímačů ve formátu PDF [⇨ 1-25])
+4 Aktivujte zaškrtávací políčko pro Cíl, pokud chcete uložit soubory do
+  samostatného podadresáře s názvem snímacího systému.
+
+
+61212-2731512           CALYPSO 2018                          1-19
+Modul snímačů
+
+
+
+                         5 Je-li třeba, definujte oddělovače pro výpis bodů na podporu
+                           konstrukce a zavřete tento dialog.
+                         Při každém uložení budou vybrané soubory uloženy do určeného
+                         adresáře. Již existující soubory budou přepsány.
+
+
+                         Skladová data
+                         Vyhodnocení skladových dat
+Základní údaje           Modul snímačů může vyhodnocovat skladová data. Díky tomu máte
+                         kdykoliv přehled, kolik komponent je skladem, a získáte další důležité
+                         informace. Skladová data přebírá modul snímačů ze souboru XML s
+                         určitou strukturou (viz ➤ Struktura souboru XML se skladovými daty
+                         [⇨ 1-21]). Tyto XML soubory mohou být generovány v systémech pro
+                         stav skladových zásob nebo v systémech pro produktové plánování a
+                         řízení (PPM).
+                         XML soubor obsahuje tyto informace:
+                         – datum, kdy byl XML soubor se skladovými daty generován
+                         – libovolný komentář od tvůrce XML souboru
+                         – ZEISS-ID komponenty
+                         – interní firemní ID komponenty
+                         – skladový počet pro danou komponentu.
+Použití skladových dat   Poté co jste dali Modulu snímačů informaci o adresáři s XML souborem,
+                         máte v okně programu k dispozici údaje o dostupném počtu komponent
+                         skladem. Pokud bylo do XML souboru zadáno interní firemní ID, bude
+                         také uvedeno v okně programu.
+                         Tyto informace jsou při každém spuštění nově načteny a aktualizovány.
+                         Komponenty můžete filtrovat podle kritérií Seznam a Dostupné. Při
+                         volbě filtračního kritéria Seznam jsou vypsány jen komponenty, které
+                         jsou známé systému pro produktové plánování a řízení. Při použití
+                         filtračního kritéria Dostupné jsou vypsány pouze komponenty, které
+                         jsou známé a dostupné skladem.
+
+                         Specifikovat adresář skladových dat
+                         Aby Modul snímačů našel XML soubor, musíte specifikovat adresář s
+                         tímto souborem.
+                         Podmínky
+                            – XML soubor s odpovídající strukturou je umístěn do volné
+                              přístupného adresáře.
+
+
+
+1-20                     61212-2731512           CALYPSO 2018
+                                                                                 Modul snímačů
+
+
+
+                          1 Zvolte menu Vlastnosti " Možnosti a v sekci Možnosti klikněte na
+                            Skladová data.
+                          2 Pro Umístění zadejte adresář s XML souborem.
+                          Jestliže má XML soubor správnou strukturu, je načten do Modulu
+                          snímačů.
+                          V sekci Skladové informace jsou ukázány informace o daném XML
+                          souboru.
+
+                           Oznámení
+                           Modul snímačů načte při každém spuštění XML soubor ve
+                           specifikovaném adresáři.
+
+                          Struktura XML souboru se skladovými daty
+                          XML soubor se skladovými daty musí mít určenou strukturu, aby mohl
+                          být načten v programu CALYPSO.
+Struktura XML souboru XML soubor obsahuje hlavní část "StockInformation", která musí
+                      obsahovat následující tři podsekce:
+                          –   Date s atributy Year, Month, Day
+
+                              Obsahuje informaci, který den byl XML soubor generován. Všechny
+                              atributy musí být platné číselné hodnoty.
+                          –   Comment s atributem Text
+
+                              Můžete uvést libovolný komentář.
+                          –   ComponentsInStock
+
+                              Informace o všech snímačových komponentách, které jsou známy
+                              systému řízení, a jejich skladový počet. Pro každou komponentu je
+                              založena sekce <Component .../>, která obsahuje maximálně tři
+                              atributy:
+                              –   ZeissID
+                                  Zeiss-objednací číslo, které se používá v Modulu snímačů. Toto
+                                  identifikační číslo se používá také pro objednávky ve webshopu a
+                                  pro Zeiss 3D Automation. Modul snímačů potřebuje Zeiss-ID, aby
+                                  identifikoval danou komponentu.
+                              –   StockID
+                                  Volitelný atribut, který může obsahovat libovolný text. Zde
+                                  můžete například zadat interní firemní ID pro danou
+                                  komponentu.
+                              –   SizeInStock
+                                  Počet komponent dostupných skladem Když je počet komponent
+                                  nula, znamená to, že daná komponenta není na skladě, ale je
+                                  známa systému pro produktové plánování a řízení.
+
+
+                          61212-2731512            CALYPSO 2018                          1-21
+Modul snímačů
+
+
+
+Příklad         <StockInformation>
+                   <Date Year="2012" Month="11" Day="28" />
+                        <Comment Text="Libovolný komentář" />
+                   <ComponentsInStock>
+                       <Component ZeissID="626115-0140-033"
+                StockID=8ab8b379-1d71-4301-9471-94cfc0e3708b"
+                SizeInStock="5" />
+                       <Component .../>
+                       <Component .../>
+                   </ComponentsInStock>
+                </StockInformation>
+
+
+
+                Aktualizovat databázi snímačů
+                Databáze modulu snímačů se musí čas od času aktualizovat. Zahrnují se
+                noví výrobci, změny produktů a různá speciální provedení.
+                Při aktualizaci se do stávající databáze komponent přidává určitý počet
+                komponent. Existující komponenty jsou nahrazeny, pokud na nich byly
+                provedeny změny.
+
+                Oznámení
+                Změny se neprojeví na komponentách již zabudovaných do snímacích
+                systémů.
+
+                Databázi snímačů můžete aktualizovat takto:
+                – automaticky po aktualizaci programu CALYPSO (update) nebo po
+                  instalaci service packu
+                   Po aktualizaci programu CALYPSO se aktualizace databáze snímačů
+                   spustí automaticky při prvním vyvolání modulu snímačů. Existující
+                   komponenty budou změněny a nové komponenty budou přidány.
+                – manuálním rozšířením
+                   Můžete také sami přidávat nové komponenty. Obvykle je to
+                   potřebné po objednání speciálního snímače u firmy Carl Zeiss 3D
+                   Automation (➤ Reference: Modul snímačů [⇨ 1-43]).
+Postup          Pro aktualizaci dat snímačů zvolte položku menu Soubor "
+                Importovat a v dialogu pro výběr souboru nastavte filtr názvu souboru
+                na„SSC Update files (*.scl)“.
+                Poté co jste vybrali požadovaný aktualizační soubor, aktualizuje modul
+                snímačů dvou databázi. Dosavadní soubor databáze zůstane zachován a
+                dostane příponu „.bak“. To umožňuje obnovu databáze snímačů v
+                případě, že se aktualizace nezdařila.
+
+
+
+
+1-22            61212-2731512           CALYPSO 2018
+                                                      Modul snímačů
+
+
+
+Oznámení
+Záložní soubor bude při příští aktualizaci přepsán. Pokud po neúspěšné
+aktualizaci spustíte další aktualizaci, nemůže již být obnovena databáze
+snímačů ze zálohy.
+
+
+Komponenty snímacích systémů na
+internetu
+V modulu snímačů máte přímé propojení s internetovým obchodem Carl
+Zeiss 3D Automation Webshop. Zde můžete pohodlně objednat snímací
+systémy a jejich komponenty. Na hlavní stránku webshopu se dostanete
+pomocí menu Objednat " Carl Zeiss 3D Automation Webshop.
+– Přímo z programu můžete objednat komponenty snímacího systému.
+  Vyvolá se katalog webshopu.
+– Můžete objednat aktuálně načtený snímací systém jako celek. Je
+  poslána emailová zpráva na Carl Zeiss 3D Automation.
+
+Objednat komponenty ve webshopu
+1 Ve stromovém zobrazení komponenty nebo v zobrazení snímacího
+  systému vyberte požadovanou komponentu.
+
+        Doporučeno uložit!
+
+      Vlastnosti komponenty
+
+        Carl Zeiss WebShop:     Objedn
+
+      Název skupiny M3 XXT
+      Výrobce       Zeiss
+      Kategorie     Polokoule
+      Název         SnimacPolokoule
+      Deﬁnice názvu Snimac
+
+    Název
+    Název komponenty
+
+
+
+
+2 Nad vlastnostmi komponenty klikněte na odkaz na webshop.
+  Otevře se standardní internetový prohlížeč vašeho operačního
+  systému a zobrazí stránku Carl Zeiss 3D Automation Webshop.
+  Pokud je zobrazená komponenta k dispozici ve webshopu, otevře se
+  příslušná stránka katalogu.
+
+
+
+
+61212-2731512                 CALYPSO 2018                    1-23
+Modul snímačů
+
+
+
+
+                   Jinak se zobrazí stránka pro vyhledávání ve webshopu. Potřebnou
+                   komponentu můžete vyhledat.
+                3 Vložte požadovanou komponentu do košíku.
+                  Informace: Doporučujeme vám přihlásit se do webshopu při jeho
+                  prvním vyvolání, abyste mohli zadávat objednávky.
+                4 Opakujte případně postup pro další komponenty, které chcete
+                  zakoupit.
+                5 Vyplňte objednávkový formulář a pošlete ho do webshopu.
+                Nastavení pro zobrazení webshopu provádíte přes Vlastnosti "
+                Možnosti.
+
+                Objednat emailem aktuální snímací systém
+                Můžete emailem také objednat snímací systém aktuálně načtený
+                v modulu snímačů u firmy Carl Zeiss 3D Automation.
+                Nastavení pro zaslání emailem provádíte přes Vlastnosti " Možnosti.
+                1 Zvolte menu Objednat " Emailová poptávka na aktuální
+                  systém.
+                  Otevře se standardní program elektronické pošty vašeho operačního
+                  systému s vyplněnou emailovou zprávou. Aktuální snímací systém je
+                  obvykle připojen k emailu jako soubor.
+
+
+
+
+1-24            61212-2731512         CALYPSO 2018
+                                                      Modul snímačů
+
+
+
+
+    Informace: Soubor se snímacím systémem jako příloha emailu je
+    důležitý, pokud má váš snímací systém generické komponenty, které
+    mají být nahrazeny standardními komponentami nebo speciálně
+    zhotoveny.
+    Informace: Soubor se snímacím systémem můžete však vložit jako
+    přílohu emailu jen, když váš program elektronické pošty plně
+    podporuje rozhraní MAPI. Jinak musíte přes Vlastnosti " Možnosti
+    zrušit možnost Poslat přílohu emailu.
+2 Přidejte případně do emailu komentáře a pošlete ho zadanému
+  adresátu.
+  Zeiss 3D Automation se vám co nejdříve ozve emailem s nabídkou.
+
+
+Dokumentace snímačů ve formátu PDF
+Obsah dokumentace snímačů
+Modul snímačů umožňuje výstup načteného snímacího systému do PDF
+souboru se všemi důležitými informacemi o komponentách. Může to být
+důležité pro potřeby vaší dokumentace.
+
+Úseky dokumentace snímačů
+Dokumentace obsahuje výpis instalovaných komponent a jejích
+vlastností i grafické zobrazení komponent. Obsahuje následující stránky:
+
+Stránka           Obsah
+Titulní list      Titulní stránka s legendou
+Kusovník          Grafika snímacího systému (nakloněný pohled
+                  shora) Každá komponenta je opatřena označením
+                  (label).
+
+
+
+
+61212-2731512           CALYPSO 2018                          1-25
+Modul snímačů
+
+
+
+                 Stránka             Obsah
+                 Polohy snímací      Grafika snímacího systému (nakloněný pohled
+                 kuličky             shora) Označeny jsou jen snímací kuličky. Číslice
+                                     odpovídají číslům snímačů ve snímacím systému
+                                     (konfiguraci snímačů).
+                                     Tabulka s komponentami a vlastnostmi (Label, typ,
+                                     počet identických komponent daného typu,
+                                     objednací číslo v katalogu Carl Zeiss, katalogová
+                                     data)
+                 Pohled X-Y          Grafika snímacího systému v pohledu Z, Y nebo X.
+                 Pohled X-Z          Tabulka s komponentami a vlastnostmi (Label, typ,
+                                     počet identických komponent daného typu,
+                 Pohled Y-Z          objednací číslo v katalogu Carl Zeiss, katalogová
+                                     data)
+                 Montážní            Grafika snímacího systému (nakloněný pohled
+                 návod               shora)
+                                     Návod pro smontování snímacího systému a pro
+                                     nastavení úhlů kloubů.
+                                     Komponenty jsou označeny labelem, názvem a
+                                     objednacím číslem.
+
+Vzhled stránky   Všechny stránky dokumentace mají stejnou úpravu:
+                 Na každé stránce dokumentace je vlevo nahoře logo Carl Zeiss a název
+                 stránky.
+                 Vpravo nahoře jsou uvedeny údaje pro konfiguraci snímačů:
+
+                 Název *                              povinný údaj
+                 Sériové číslo *
+                 Datum vytvoření *                    povinný údaj
+                 Označení součásti *
+                 Konstruktér *
+                 Měřicí stroj *
+                 Typ snímací hlavy
+                 Firma *
+                 Oddělení *
+                 Firemní logo                         jen, když je aktivováno a načteno
+                 * = převzato z dialogu Vlastnosti snímacího systému
+
+
+
+
+1-26             61212-2731512            CALYPSO 2018
+                                                                         Modul snímačů
+
+
+
+Zápatí obsahuje webovou adresu pro objednání snímačových
+komponent a konfigurací.
+Uprostřed je zadaný komentář a čísla verzí aktuálního modulu snímačů a
+databáze snímačů.
+
+Definice a výstup dokumentace snímačů
+Výstup dokumentace snímačů je možný manuálně nebo automaticky
+jako PDF soubor s názvem <název snímacího
+systému>.SystemDocumentation.pdf. Rozsah výstupu můžete určit.
+
+Určit rozsah dokumentace snímacího systému
+1 Zvolte menu Vlastnosti " Možnosti a v sekci Možnosti klikněte
+  na Dokumentace.
+
+    Možnosti...
+     Možnosti             Dokumentace
+    Zobrazení
+    Uživatelské akce         Hlavní sekce
+    Dokumentace
+    Resetovat nastavení            Kryt
+    Exportovat
+    Komponenty                     Kusovní k
+    Skladová data                   Polohy sní mací kuli
+                                                      čky
+    Jazyk
+    Standard                       Pohled X-Y
+    Webshop
+    Sestavení                      Pohled X-Z
+
+                                   Pohled Y- Z
+
+                                   Montážní návod
+                             Speci cky
+
+                                   Nepouží t logo
+
+                                                            Načí st...
+
+
+
+
+                                                                                 Zavří t
+
+
+
+
+2 Aktivujte v hlavní sekci zaškrtávací políčka pro prvky, které mají být
+  obsaženy v dokumentaci.
+
+Manuální výstup dokumentace snímacího systému
+1 Načtěte požadovaný snímací systém.
+
+2 V panelu nástrojů stromového zobrazení snímacího systému klikněte
+  na ikonu Vytvořit a zobrazit dokumentaci.
+3 V okně Vlastnosti snímacího systému zadejte ještě chybějící
+  údaje.
+4 Klikněte na tlačítko Uložit.
+  Dokumentace bude vytvořena a ihned zobrazena pomocí programu,
+  který je v operačním systému registrován pro PDF soubory.
+
+
+61212-2731512                   CALYPSO 2018                                  1-27
+Modul snímačů
+
+
+
+                   Jestliže jste zvolili Adobe Reader, můžete soubor vytisknout a na
+                   libovolném místě uložit.
+                   Automatický výstup dokumentace snímacího systému
+                1 Zvolte menu Vlastnosti " Možnosti a v sekci Možnosti klikněte
+                  na Exportovat.
+
+
+
+
+                2 V sekci Další exportní soubory aktivujte zaškrtávací políčko
+                  Dokumentace (PDF).
+                3 Pro Cíl vyberte místo uložení PDF souboru:
+                    Když je zaškrtávací políčko Vytvořit podadresář pro přídavné
+                     soubory aktivováno, bude PDF soubor uložen do samostatného
+                     adresáře s názvem tohoto souboru.
+                    Když je zaškrtávací políčko Vytvořit podadresář pro přídavné
+                     soubory deaktivováno, bude PDF soubor uložen do stejného
+                     adresáře jako soubor snímacího systému.
+                Při každém uložení snímacího systému bude automaticky vytvořena a
+                uložena dokumentace snímacího systému.
+
+
+                Příklad: Sestavit a editovat model
+                snímacího systému
+                Rozsah příkladu
+                Nejlépe se seznámíte s možnostmi modulu snímačů na konkrétním
+                příkladu. Tento příklad vás vede vytvořením modelu sním.systému pro
+                simulaci - od zahájení až k uložení.
+
+
+1-28            61212-2731512           CALYPSO 2018
+                                                      Modul snímačů
+
+
+
+Přitom je uvedeno co nejvíce funkcí – později v praxi je budete používat
+jen podle potřeby.
+
+Příklad: Vytvořit nový model snímacího systému
+Na začátku definujete nový snímací systém (konfiguraci snímačů).
+1 Klikněte na ikonu Vytvořit nový snímací systém.
+  - nebo -
+  Zvolte menu Soubor " Nový.
+  Otevře se okno Vytvořit nový snímací systém.
+
+     Vytvořit nový snímací systém
+     Technologie
+
+     Vyberte prosím technologii, na které má být
+     založena vaše konﬁgurace snímačů.
+
+
+      CSC
+      DSE-RST
+      None
+      Ph10
+      RDS RST
+      RDS TP200
+      RDS XXT
+      VAST
+
+
+
+
+     Zvolená technologie: None
+
+
+                                              Start
+
+
+   V tomto okně zvolíte, pro kterou technologii chcete sestavit snímací
+   systém. Může to být například ZEISS VAST nebo ZEISS RDS. Po
+   kliknutí na Start použije program první komponentu – počáteční
+   komponentu – nebo zobrazí možné komponenty.
+2 Zvolte VAST a klikněte na tlačítko Start.
+  Strom komponent je filtrován:
+    V sekci „Generické“ jsou ukázány geometrické komponenty.
+    V sekci „Senzory“ jsou ukázány jen senzory VAST.
+    V sekci „Talíř.adaptéry“ jsou ukázány jen komponenty s typem
+     napojení„[MT/VAST] MT/VAST“. Na příkladu zbývají dvě
+     komponenty.
+
+
+
+
+61212-2731512              CALYPSO 2018                       1-29
+Modul snímačů
+
+
+
+                      Komponenty
+
+
+                       Zeiss Komponenty
+                          Generické
+                             Otočný kloub
+                             Kloub
+                             Kužel [2P]
+                             Koule [6P]
+                             Kvádr [6P]
+                             Válec [6P]
+                          Senzory
+                             \/AST
+                             VAST Gold hlava
+                             VAST XT hlava
+                          Talířek snímače
+                             [MT/VAST] MT/Vast Talířek
+                             [MT/VAST] MT/VAST Talířek bez kostky
+
+
+
+
+                3 Klikněte na položku „[MT/VAST] MT/VAST talířek bez kostky“.
+                  V zobrazení komponent vidíte VAST talířek a v zobrazení
+                  snímacího systému se objeví průsvitný náhled.
+                4 Dvojklikněte na „Počáteční bod“ ve stromové struktuře
+                  sním.systému.
+                  Talířek změní barvu: Nyní je pevnou součástí tohoto modelu.
+                  Strom komponent se změní. Ukáže teď větev „Prodloužení“.
+
+
+
+
+1-30            61212-2731512             CALYPSO 2018
+                                                                                                                                  Modul snímačů
+
+
+
+   Carl Zeiss - Modul snímacího systému
+Soubor     Úpravy   Vlastnosti   Objednat        Info
+ Zobrazení komponenty                       Konﬁg.snímačů                                                Zobrazení konf.snímačů
+
+
+
+                                                [MT /VAST] MT Talířek bez kostky
+                                                      (VAST talířek) [-Z]
+
+
+ Výrobce
+ Zeiss                                      Úhel hlavní osy:         0.00
+ Komponenten
+                                               Doporučeno uložit!
+
+                                             Vlastnosti komponenty
+     Zeiss Komponenty
+         Generické                              CarlZeiss WebShop:          Objednat
+         Prodloužení
+                                              Popis
+             ThermoFit stříbro
+                                              Objednací číslo                600667-9671-000
+                                              Název skupiny                  VAST hlava
+                                              Výrobce                       Zeiss
+                                              Kategorie                     Talířek snímače
+                                              Název                         MT/VAST Talířek bez kostky
+                                              Deﬁnice názvu                 Talířek
+                                              Obj. číslo výrobce            Neznámé
+                                              Funkční vlastnosti
+                                              Hmotnost                      112
+                                              Materiál                      Hliník
+                                              Mezní zatížení                 0
+
+
+
+
+ Popis                                    Název
+                                          Název komponenty
+                                                                                                           Přizpůsobit pohled     Rychlá nastavení   Uk
+
+
+Hmotnost 112 g
+
+
+
+
+                                               Příklad: Připojit prodloužení
+                                               Na počáteční komponentu se má připojit prodlužovací nástavec s
+                                               kostkou.
+                                               1 Ve stromové struktuře komponent vyberte v sekci „Prodloužení“ /
+                                                 „ThermoFit stříbro“ prodloužení „[VAST talířek] prodloužení L25 Ø20
+                                                 B20 ThermoFit stříbro“.
+                                               2 Kliknutím vyberte volné místo napojení „(VAST talířek) [-Z]“ ve
+                                                 stromové struktuře snímacího systému.
+                                                 Průhledný náhled je připojen k počáteční komponentě.
+                                               3 Dvojklikněte na místo napojení ve stromovém zobrazení snímacího
+                                                 systému.
+                                                 Prodloužení je pevně napojeno.
+
+
+
+
+                                               61212-2731512                            CALYPSO 2018                                         1-31
+Modul snímačů
+
+
+
+    Carl Zeiss - Modul snímacího systému
+Soubor     Úpravy    Vlastnosti   Objednat      Info
+ Zobrazení komponenty                    Konﬁg.snímačů                                               Zobrazení konf.snímačů
+
+
+                                                  [VAST talířek] Prodloužení talířku 25 020 R20 Th
+                                                     (M5) [-Z]
+                                                     (M5) [-X]
+
+ Výrobce
+ Zeiss                                   Úhel hlavní osy:         0.00
+ Komponenty ____
+                                              Doporučeno uložit!
+                                             Vlastnosti komponenty
+     DK 5,0 - 5,9
+      DK 6,0 - 7,9                             CarlZeiss WebShop:        Objednat
+     DK 8,0 - 9,8
+     DK 9,9 -                                Popis
+  Disk                                       Objednací číslo             626107-2025-110
+  Hvězda                                     Název skupiny               VAST talířek
+ jovací prvky                                Výrobce                     Zeiss
+                                             Kategorie                   ThermoFit stříbro
+  Adaptér
+                                             Název                       Prodloužení talířku
+  Nastavitelné
+  Držák                                      Deﬁnice názvu               Prodloužení talířku
+  Šrouby                                     Obj. číslo výrobce          Neznámé
+ Úhel                                        Funkční vlastnosti
+                                             Hmotnost                    74                          r
+ Kostka
+ sloužení                                    Materiál                    ThermoFit stříbro
+  Hliník                                     Mezní zatížení              0
+  Ocel                                       Katalogová data
+                                              B                           20
+
+  Popis                                  Název
+                                         Název komponenty
+                                                                                                         Přizpůsobit pohled   Rychlá nastavení   Uk
+
+
+Hmotnost 186 g
+
+
+Výsledky                                      Výsledkem jsou tyto změny:
+                                              – Připojená komponenta je v grafice barevně zvýrazněná a její volné
+                                                body napojení jsou zobrazeny jako kuličky.
+                                              – Ve stromu sním.systému jsou uvedeny všechny body napojení
+                                                přidaného prodloužení s typem („M5“).
+                                              – Stromová struktura komponent je nově filtrována a ukazuje nyní jen
+                                                komponenty typu připojení „M5“.
+
+                                              Příklad: Nastavit hloubku stromové struktury
+                                              Dalším krokem je připojit na místo napojení prodloužení o průměru 11
+                                              mm a délce 40 mm.
+                                              1 Ve stromové struktuře komponent rozbalte větev „Prodloužení“ /
+                                                „ThermoFit stříbro“.
+                                                Na našem příkladu je vidět celý výběr prodloužení. Je-li výběr větší,
+                                                lze ho omezit dvěma opatřeními:
+                                              2 Vedle ikony Uspořádat komponenty do podkategorií zvolte
+                                                úroveň 2 (Průměr).
+                                                Prodloužení jsou zařazena do podkategorií.
+
+
+1-32                                          61212-2731512                          CALYPSO 2018
+                                                                                                                                   Modul snímačů
+
+
+
+                                                3 V sekci „ThermoFit stříbro“ / „M5“ navigujte k prodloužením s
+                                                  průměrem (DG) 11.
+                                                4 Klikněte na „[M5] Prodloužení L40 Ø11“.
+                                                  Prodloužení se ukáže v zobrazení komponent.
+
+    Carl Zeiss - Modul snímacího systému
+Soubor     Úpravy   Vlastnosti    Objednat       Info
+ Zobrazení komponenty                       Konﬁg.snímačů                                                Zobrazení konf.snímačů
+
+
+
+                                                    [VAST talířek] Prodloužení talířku L25 020 R20 The
+                                                          (M5) [-Z]
+                                                          (M5) [-X]
+
+ Výrobce
+ Zeiss                                     Úhel hlavní osy            0.00
+ Komponenty
+                                                Doporučeno uložit!
+
+                                            Vlastnosti komponenty
+  Dg11
+     [M5] Prodloužení L1 00 011                  CarlZeiss WebShop:          Objednat
+     [M5] Prodloužení L1 20 011
+                                              Popis
+     [M5] Prodloužení L1 50 011
+                                              Objednací číslo                 626107-1040-100
+     [M5] Prodloužení L1 80 011
+                                              Název skupiny                  M5
+     [M5] Prodloužení L200 011
+                                               Výrobce                       Zeiss
+     [M5] Prodloužení L220 011
+                                               Kategorie                     ThermoFit stříbro
+     [M5] Prodloužení L250 011
+                                               Název                         Prodloužení
+     [M5] Prodloužení L300 011
+                                               Deﬁnice názvu                 Prodloužení
+     [M5] Prodloužení L40 011
+                                               Obj. číslo výrobce             Neznámé
+     [M5] Prodloužení L400 011
+                                              Funkční vlastnosti
+     [M5] Prodloužení L50 011
+                                               Hmotnost                      9
+     [M5] Prodloužení L60 011
+                                               Materiál                      ThermoFit stříbro
+     [M5] Prodloužení L70 011
+                                               Mezní zatížení                0
+     [M5] Prodloužení L15 011
+     [M5] Prodloužení L80 011                 Katalogová data
+                                               DG                            11
+
+ Popis                                      Název
+                                            Název komponenty
+                                                                                                           Přizpůsobit pohled     Rychlá nastavení   B
+
+
+Gewicht: 186 g
+
+
+
+                                                Nevkládejte ještě prodloužení do snímacího systému. Dále se seznámíte s
+                                                druhou metodou, jak můžete vyhledat požadované prodloužení.
+
+                                                Příklad: Nastavit filtr
+                                                Druhá cesta pro rychlé nalezení určité komponenty je filtrování. Filtr je již
+                                                automaticky aktivní: podle typu volných míst napojení. Nyní můžete určit
+                                                další kritéria.
+                                                1 Klikněte na ikonu Editovat filtr komponent.
+                                                2 V okně Nastavení filtru v sekci Délka nastavte od 40 do 40 a
+                                                  aktivujte toto kritérium filtrování.
+                                                  Informace: Při opuštění vstupního pole se toto kritérium v případě
+                                                  změn aktivuje automaticky.
+                                                3 Klikněte na tlačítko Aktivovat.
+                                                  Strom komponent se takto změní:
+
+
+                                                61212-2731512                             CALYPSO 2018                                        1-33
+Modul snímačů
+
+
+
+                     Komponenty
+
+
+                        Zeiss Komponenty
+                            Generické
+                            Snímač
+                               Disk
+                            Prodloužení
+                                Hliník
+                                Ocel
+                                ThermoFit stříbro
+                                EFM5
+                                        DG 11
+                                          [M5] Prodloužení L 40 011
+                                        DG 20
+                                Titan
+
+
+
+
+                4 Vyberte hledanou komponentu.
+                  Nyní se má požadovaný bod napojení místo ve stromovém zobrazení
+                  vybrat v grafickém zobrazení snímacího systému.
+                5 Klikněte na kostce již vloženého prodloužení na průhlednou kuličku,
+                  která symbolizuje volný bod napojení v kladném směru X.
+                  Prodloužení je vloženo do modelu snímacího systému.
+
+
+
+
+1-34            61212-2731512              CALYPSO 2018
+                                                                                                                         Modul snímačů
+
+
+
+  Carl Zeiss - Modul snímacího systému
+Soubor     Úpravy   Vlastnosti     Objednat     Info
+ Zobrazení komponenty                Konﬁg.snímačů                                              Zobrazení konf.snímačů
+
+
+                                                (M5)[-Z]
+                                                (M5)[-X]
+                                                (M5)[-Y]
+
+ Výrobce
+ Zeiss                               Úhel hlavní osy:       10.00
+ Komponenty
+                                        Doporučeno uložit!
+                                     Vlastnosti komponenty
+    Zeiss Komponenty
+       Generické                         CarlZeiss WebShop: Objednat
+       Snímač
+           Disk                        Popis
+       Prodloužení                     Objednací číslo              62610-1040-100
+           Hliník                      Název skupiny                M5
+           Ocel                        Výrobce                      Zeiss
+           ThermoFit stříbro           Kategorie                    ThermoFit stříbro
+                                                                                    r
+                                       Název                        Prodloužení
+           BM5
+                  DG 11                Deﬁnice názvu                Prodloužení
+                                       Obj. číslo výrobce           Neznámé
+                     [M5] Prodlo
+                  DG 20                Funkční vlastnosti
+                                        Hmotnost                    9
+           Titan
+                                        Materiál                    ThermoFit stříbro
+                                                                                    r
+                                       Mezní zatížení
+                                       Katalogová data
+                                        DG                          11
+
+ Popis                               Název
+                                     Název komponenty
+                                                                                                 Přizpůsobit pohled   Rychlá nastavení   Uk
+
+
+Hmotnost:195 g
+
+                                               Uvědomte si, že změněný filtr je stále ještě aktivní, tj. zobrazeny jsou
+                                               jen komponenty, které mají katalogovou hodnotu L (pro délku) 40.
+                                               Protože teď má být zabudován kloub, deaktivujte filtr pro délku.
+                                          6 Otevřete dialog filtrování, deaktivujte Délka a klikněte na
+                                            Aktivovat.
+                                            Klouby najdete ve stromu komponent v sekci „Spojovací prvky“ /
+                                            „Nastavitelné“. Na prodloužení se má připojit kloub s délkou 30 mm
+                                            a průměrem 11 mm.
+                                          7 Klikněte v sekci „M5“ / „Titan“ na „[M5] Kloub L 30 Ø11“.
+                                            Kloub se ukáže v zobrazení komponenty.
+                                          8 V zobrazení snímacího systému klikněte na jediné místo napojení
+                                            druhého prodloužení.
+                                            Kloub je vložen do modelu snímacího systému.
+                                            Osa otáčení má být natočena o 10° a celý kloub otočen o 90°
+                                            „dolů“.
+                                          9 Do pole Úhel hlavní osy zadejte hodnotu 90˚ a do pole Úhel osy
+                                            otáčení 1 hodnotu 10˚.
+                                            Model snímacího systému vypadá nyní takto:
+
+
+
+
+                                          61212-2731512                          CALYPSO 2018                                    1-35
+Modul snímačů
+
+
+
+   Carl Zeiss - Modul snímacího systému
+Soubor     Úpravy    Vlastnosti    Objednat   Info
+ Zobrazení komponenty                 Konﬁg.snímačů                                            Zobrazení konf.snímačů
+
+
+                                                 (M5)[-X]
+                                                 (M5)[-Y]
+
+
+                                     Úhel hlavní osy:         90.00
+ Výrobce
+Zeiss                                 Úhel osy 1:             0.00
+ Komponenty
+                                          Doporučeno uložit!
+                                      Vlastnosti komponenty
+                DK 8,0-9,8
+                DK 9,9 -                  CarlZeiss WebShop: Objednat
+            Disk
+            Hvězda                      Popis
+         Spojovací prvky                Objednací číslo              600342-9002-000
+            Adaptér                     Název skupiny                M5
+            Nastavitelné                Výrobce                      Zeiss
+               M5                       Kategorie                    Nastavitelné
+                    Ocel                Název                        Kloub
+                    Titan               Deﬁnice názvu                Prodloužení
+                        [M5] Oto
+                                         Obj. číslo výrobce          Neznámé
+                                        Funkční vlastnosti
+                        [M5] Oto
+                                         Hmotnost                    11
+                        [M5] Klo
+                                         Materiál                    Titan
+                        [M5] Klo
+                                         Mezní zatížení              0
+            Držák
+            Šrouby                      Katalogová data
+                                         DG                           11
+
+ Popis                                Název
+                                       a
+                                      Název komponenty
+                                                                                                Přizpůsobit pohled   Rychlá nastavení   Uk
+
+
+Hmotnost 206 g
+
+
+
+                                           Příklad: Editovat schéma názvu
+                                           V dalším kroku se má na kloub připojit snímací dotek s rubínovou
+                                           kuličkou (jako snímacím elementem) o průměru 3 mm, přičemž ještě
+                                           není známo, jaké měřicí délky jsou k dispozici. Komponenta musí být
+                                           vyhledána ve stromu komponent.
+                                           Metoda „Podkategorie“ odpadá, když pevné dělení nevyhovuje vašemu
+                                           hledání. Zde by bylo opět optimální použít filtr, ale na tomto místě
+                                           vysvětlíme ještě třetí pomocnou funkci: Zadání vlastního názvu.
+                                           1 Deaktivujte ikonu Uspořádat komponenty do podkategorií.
+                                           2 V liště nad stromem komponent klikněte na Změnit pojmenování
+                                             komponent.
+                                             Všechny snímače mají být pojmenovány tak, aby byl v jejich názvu
+                                             uveden poloměr kuličky před údajem délky. Vzhledem k tomu, že
+                                             strom komponent třídí komponenty abecedně, usnadní se tím
+                                             vyhledání správného snímače.
+                                           3 Zvolte schéma Snímač a editujte položku v poli Definice.
+
+
+
+
+1-36                                       61212-2731512                        CALYPSO 2018
+                                                                               Modul snímačů
+
+
+
+   Definice je sled znaků a proměnných. Proměnné jsou označeny
+   úhlovými závorkami. Jakmile zadáte levou úhlovou závorku, modul
+   snímačů ukáže výběr možných proměnných.
+4 Vymažte nejprve celou položku v řádku definice. (Pomocí Default
+  obnovíte bez problému výchozí předdefinovaná nastavení).
+  Typ připojení má být uveden na začátku, pro rozeznání v kulatých
+  závorkách:
+5 Zadejte znaky „(“ a „<“, potom vyberte v menu Typ připojení
+  <ConType> a ukončete pomocí „)“.
+
+      Typ připojení <ConType>
+      Délka <L>
+      Materiál <Mat>
+      Rozšířená měř. délka <MLE>
+      Měřicí délka <ML>
+      Název <Name>
+      Materiál snímacího elementu <TipMat>
+      Průměr dříku <DS>
+      Průměr prodloužení dříku <DSE>
+      Průměr snímacího elementu <DK>
+      Průměr <DG>
+      Šířka <B>
+
+   Pravá úhlová závorka je již automaticky vložena. V sekci Příklad
+   vidíte, jak bude později název uveden ve stromu komponent: „(M5)“.
+6 Zadejte mezeru (prázdný znak) a slovo „Průměr kuličky“ a po další
+  mezeře (v úhlové závorce) proměnnou Průměr sním.kuličky<DK>.
+  Vaše definice je nyní „(<ConType>) Průměr sním.kuličky <DK>“.
+  V poli Příklad je uvedeno: „(M5) Průměr sním.kuličky 0,8“.
+7 Přidejte tyto další texty a proměnné: „Materiál sním.elementu:
+  <TipMat> ML <ML> <Name>“.
+  V poli Příklad je nyní uvedeno: „(M5) Průměr sním.kuličky 0,8
+  Materiál sním.elementu: Rubín ML 12 Snímač“.
+
+    Deﬁnice názvů komponent
+     Schémata                   Deﬁnice schématu
+    Adaptér
+    Šroub                       Název:     Snímač
+    Senzory
+    Snímač                      Příklad:
+    Snímač bez závitu                      [M5] Průměr kuličky 0,8 Materiál sním.elem: Rubín ML 12 Sním
+    Název snímače
+    Talířek                     Deﬁnice:   DK > Mat.sním.: <TipMat> ML <ML> <Name         Výchozí
+    Prodloužení talířku
+    Prodloužení
+    Kostka                                 Komentář:    ‘<‘ ‘>‘ uzavírají proměnné
+
+                                                       @ pro speciální znaky
+
+
+                                                                                            Zavřít
+
+
+
+
+8 Klikněte na tlačítko Zavřít.
+
+
+
+61212-2731512                 CALYPSO 2018                                            1-37
+Modul snímačů
+
+
+
+                9 Ve stromu komponent zvolte „Snímač“ / „Koule“.
+                  Ve stromu komponent vidíte nyní výsledek svých zadání:
+
+                    Komponenty
+
+
+                       Zeiss Komponenty
+                           Generické
+                           Snímač
+                              Sním.hrot
+                              Kužel
+                              Koule
+                                  DK 0,0 - 0,3
+                                     (M5) Průměr kuličky 0.3 Mat.sním.elem: Rubín ML 12.8 Stupňovitý snímač
+                                  DK 0,4 - 0,5
+                                     (M5) Průměr kuličky 0.5 Mat.sním.elem: Rubín ML 13 Stupňovitý snímač
+                                  DK 0,6 - 0,8
+                                     (M5) Průměr kuličky 0.6 Mat.sním.elem: Rubín ML 13.1 Stupňovitý snímač
+                                     (M5) Průměr kuličky 0.8 Mat.sním.elem: Rubín ML 12 Stupňovitý snímač
+                                     (M5) Průměr kuličky 0.8 Mat.sním.elem: Rubín ML 13.3 Stupňovitý snímač
+                                     (M5) Průměr kuličky 0.8 Mat.sním.elem: Rubín ML 9 Stupňovitý snímač
+                                  DK 0,9 - 1,0
+                                     (M5) Průměr kuličky 1 Mat.sním.elem: Diamant ML 12 Stupňovitý snímač
+
+                   Zobrazení jednotlivých komponent je příliš dlouhé.
+                10 Otevřete dialog pro názvy komponent.
+                11 Zde zkrátíte definici názvu pro Snímač. Použijte přitom symbol
+                   průměru „Ø“, který můžete vybrat, když zadáte znak @.
+                   Definice: „(<ConType>) KØ <DK> <TipMat> ML <ML> <Name>“
+                   Výsledek: Nyní můžete postupně vybrat všechny komponenty s
+                   rubínovou kuličkou o průměru 3 (jsou uvedeny pod sebou) a vždy
+                   uvidíte příslušný náhled:
+
+
+
+
+1-38            61212-2731512                    CALYPSO 2018
+                                                                  Modul snímačů
+
+
+
+     Zobrazení komponenty
+
+
+
+
+     Výrobce
+    Zeiss
+
+     Komponenty
+
+
+
+                Koule
+                   DK 0,0 - 0,3
+                   DK 0,4 - 0,5
+                   DK 0,6 - 0,8
+                   DK 0,9 - 1,0
+                   DK 1,1 - 1,9
+                   DK 2,0 - 2,4
+                   DK 2,5 - 2,9
+                   DK 3,0 - 3,2
+                        (M5)K0 3 F3-Hvězdný safír ML 12 Snímač
+                        (M5)K0 3 Diamant ML 15 Snímač
+                        (M5) K0 3 Rubín ML 15 Snímač
+                        (M5) K0 3 Rubín ML 15 Snímač
+                        (M5) K0 3 Nitrid křemičitý ML 15 Snímač
+                        (M5) K0 3 F3-Hvězdný safír ML 20 Snímač
+                        (M5) K0 3 F3-Hvězdný safír ML 21 Snímač
+                        (M5) K0 3 Diamant ML 23 Snímač
+
+
+12 Ve stromu snímacího systému označte volné místo napojení na
+   kloubu.
+   V zobrazení snímacího systému je ukázán průhledný náhled
+   aktuálně vybrané komponenty.
+13 Ve stromu komponent dvojklikněte na komponentu s ML 23,5.
+
+
+
+
+61212-2731512               CALYPSO 2018                               1-39
+Modul snímačů
+
+
+
+   Carl Zeiss - Modul snímacího systému
+Soubor      Úpravy      Vlastnosti   Objednat    Info
+ Zobrazení komponenty                    Konﬁg.snímačů                                       Zobrazení konf.snímačů
+
+
+
+                                                        [M5] Prodloužení     4 0 011
+                                                            [M5] Kloub L30 011
+                                                               (M5) K0 3 Rubín ML 23.5 Sní
+
+ Výrobce
+ Zeiss                                   Úhel hlavní osy:         10.00
+ Komponenty
+                                             Doporučeno uložit!
+
+                                          Vlastnosti komponenty
+         DK 2,5 - 2,9
+         DK 3,0 - 3,2                           CarlZeiss WebShop:         Objednat
+            (M5) K0 3 F3-Hvězd
+                                           Popis
+            (M5) K0 3 Diamant
+                                            Objednací číslo          600342-8020-000
+            (M5) K0 3 Rubín M
+                                            Název skupiny            M5
+            (M5) K0 3 Rubín M
+            (M5) K0 3 Nitrid křem           Výrobce                  Zeiss
+                                            Kategorie                DK 3,0 - 3,2
+            (M5) K0 3 F3-Hvězd
+            (M5) K0 3 F3-Hvězd              Název                    Snímač
+            (M5) K0 3 Diamant               Deﬁnice názvu           Snímač
+                                            Obj. číslo výrobce    . Neznámé
+            (M5) K0 3 Rubín M
+            (M5) K0 3 Nitrid křem          Funkční vlastnosti
+            (M5) K0 3 Nitrid křem          Hmotnost                  4                       r
+                                            Materiál                 Tvrdokov
+            (M5) K0 3 Rubín M
+            (M5) K0 3 F3-Hvězd              Mezní zatížení           0
+                                           Katalogová data
+            (M5) K0 3 F3-Hvězd
+                                           DG                        11
+
+ Popis                                   Název
+                                         Název komponenty
+                                                                                                 Přizpůsobit pohled   Rychlá nastavení   Ukončit
+
+
+Hmotnosti 210 g
+
+
+                                                         Snímač je připojen v požadovaném místě napojení.
+
+                                                  Příklad: Geometrické komponenty
+                                                  Teď se má na kostku připojit prodloužení s délkou 70 v záporném směru
+                                                  Z. Toto prodloužení není v databázi komponent momentálně k dispozici.
+                                                  Můžete pro ně ale použít geometrickou komponentu: válec.
+                                                  Délku válce můžete změnit.
+                                                  – Když změníte délku před zabudováním do modelu sním.systému,
+                                                    způsobí to současně změnu standardní délky válce.
+                                                  – Když změníte délku po zabudování, znamená to, že se změna délky
+                                                    vztahuje jen na zabudovaný válec.
+                                                  1 Otevřete větev „Generické“.
+                                                  2 Klikněte na „Válec (6P)“.
+                                                  3 Ve stromu snímacího systému dvojklikněte na požadovaný bod
+                                                    napojení „(M5) [-Z]“.
+                                                    Válec je připojen. Editujte nyní v sekci Vlastnosti komponenty
+                                                    parametry válce.
+                                                  4 Ve vlastnostech komponenty nastavte Materiál na „Tvrdokov“.
+
+
+1-40                                              61212-2731512                         CALYPSO 2018
+                                                                                                                          Modul snímačů
+
+
+
+                                                  Válec změní svou barvu. To můžete vidět ale až po připojení.
+                                             5 Nastavte průměr válce na „11“.
+                                             6 Nastavte délku válce na „70“.
+
+Carl Zeiss - Modul snímacího systému
+Soubor     Úpravy    Vlastnosti   Objednat    Info
+ Zobrazení komponenty               Konﬁg.snímačů                                       Zobrazení konf.snímačů
+
+
+
+                                        [MT/VAST] MT/VAST talířek bez kostky
+                                           [VAST talířek] Prodloužení talířku L25 020
+                                               Válec (6P)
+
+ Výrobce
+ Zeiss                             Úhel hlavní osy:        0.00
+ Komponenty
+                                       Doporučeno uložit!
+                                    Vlastnosti komponenty
+             Otočný kloub
+             Kloub                      CarlZeiss WebShop:        Objednat
+             Kužel (2P)
+             Koule (6P)               Název skupiny                Generické
+             Kvádr (6P)               Výrobce                      Zeiss
+                                      Kategorie                    Generické
+             Válec (6P)
+                                      Název                        Válec (6P)
+         Referenční snímače
+                                      Deﬁnice názvu
+             (M2) KØ 3 Rubín
+                                      Obj. číslo výrobce           Neznámé
+             (M2) KØ 3 Rubín
+                                     Funkční vlastnosti
+             (M3) KØ 3 Rubín
+                                      Hmotnost                     0
+             (M3) KØ 3 Rubín
+                                      Materiál                     Tvrdokov
+             (M3) KØ 3 Rubín
+             Refer.snímačMT           Mezní zatížení               0
+             Refer.snímačRD          Modiﬁkovatelné vlastnosti
+             Refer.snímačXX          Průměr válce                  11
+             Refer.snímačXX           Délka válce                  70
+
+
+ Popis                              Název
+                                    Název komponenty
+                                                                                          Přizpůsobit pohled Rychlá nastavení   Ukončit
+
+
+Hmotnost: 210 g
+
+
+                                             Na válec můžete napojit další snímačové komponenty.
+
+                                             Příklad: Uložit model snímacího systému
+                                             Na závěr model snímacího systému uložte.
+                                             1 Klikněte na ikonu Uložit snímací systém nad stromovou strukturou
+                                               snímacího systému.
+
+
+
+
+                                             61212-2731512                         CALYPSO 2018                                 1-41
+Modul snímačů
+
+
+
+                    Vlastnosti konﬁgurace snímačů
+                     Vlastnosti                               Náhled
+                    Název:
+
+                    Sériové číslo:
+
+                    Konstruktér:
+
+                    Datum:              02/25/2011    Dnes
+
+                    Součást:
+
+                    Stroj:
+
+                    Firma:
+
+                    Oddělení:
+                    Komentáře:
+
+
+
+
+                    Kompatibilní s verzí 2.0
+
+
+                         Nový náhled                                   Uložit   Storno
+
+
+                2 Vyplňte údaje o snímacím systému.
+                  Informace: Pro další průběh je nutný jen název.
+                3 Klikněte na tlačítko Uložit jako.
+                4 V okně Uložit aktuální snímací systém vyberte požadovaný
+                  adresář.
+                  Navrhovaný název souboru se vytvoří z názvu snímacího systému.
+                  Tento název můžete libovolně změnit.
+                5 Klikněte na tlačítko Uložit.
+                  Soubor SSC se uloží do paměti.
+
+                Příklad: Vyměnit komponentu
+                Po uložení se má model snímacího systému změnit: Prodloužení L40 se
+                má vyměnit za prodloužení s délkou 60 mm.
+                1 Označte novou komponentu ve stromové struktuře komponent.
+                2 Dvojklikněte tam na komponentu, která má být vyměněna.
+                  Informace: Tato operace funguje pouze ve stromové struktuře
+                  snímacího systému.
+
+
+
+
+1-42            61212-2731512                  CALYPSO 2018
+                                                                                                                                Modul snímačů
+
+
+
+   Carl Zeiss - Modul snímacího systému
+Soubor     Úpravy Vlastnosti   Objednat      Info
+ Zobrazení komponenty                Konﬁg.snímačů                                           Zobrazení konf.snímačů VAST-11-5-Rubin
+
+
+
+                                                     [M5] Prodloužení 4 0 011
+                                                         [M5] Kloub    L 30 011
+                                                             (M5) K 03 Rubín ML 23.5 Sní
+
+ Výrobce
+ Zeiss                               Úhel hlavní osy:           0.00
+ Komponenten
+                                           Doporučeno uložit!
+
+                                      Vlastnosti komponenty
+ Prodloužení L 250 020
+ Prodloužení L 300 011                      CarlZeiss WebShop:         Objednat
+ Prodloužení L 300 020
+ Prodloužení L 40 011                     Popis
+ Prodloužení L 40 020                     Objednací číslo               626107-1040-10
+ Prodloužení L 400 011                    Název skupiny                 M5
+ Prodloužení L 400 020                    Výrobce                       Zeiss
+ Prodloužení L 50 011                     Kategorie                     ThermoFit stříbro
+                                          Název                         Prodloužení                0
+ Prodloužení L 50 020
+ Prodloužení L 500 020                    Deﬁnice názvu                 Prodloužení
+ Prodloužení L 60 011                     Obj. číslo výrobce            Neznámé
+ Prodloužení L 60 020                     Funkční vlastnosti
+ Prodloužení L 600 020                    Hmotnost                      9
+ Prodloužení L 70 011                     Materiál                      ThermoFit stříbro
+ Prodloužení L 15 011                     Mezní zatížení                0
+ Prodloužení L 80 011                     Katalogová data
+                                          DG                            11
+
+  Popis                              Název
+                                     Název komponenty
+                                                                                               Přizpůsobit pohled   Rychlá nastavení   Ukončit
+
+
+Hmotnost 212 g
+
+
+                                               3 Uložte změněný model pomocí menu Soubor " Uložit.
+                                                 Dříve uložený model snímacího systému bude přepsán.
+
+                                                Oznámení
+                                                Chcete-li dosavadní model zachovat, zvolte položku menu Uložit
+                                                jako...
+
+                                               Pro výměnu komponent platí následující:
+                                               – Komponenty musí mít stejný počet bodů napojení.
+                                               – Po výměně se může orientace následné komponenty změnit
+                                                 nežádoucím způsobem, když např. vyměníte kloub. V takovém
+                                                 případě musíte model manuálně upravit.
+
+
+                                               Reference: Modul snímačů
+                                               Reference: Modul snímačů
+                                               Od verze CALYPSO 4.6 je do programu integrován nový stavebnicový
+                                               modul snímačů. Jedná se o samostatný program, který se otevírá z
+                                               programu CALYPSO.
+
+
+                                               61212-2731512                            CALYPSO 2018                                   1-43
+Modul snímačů
+
+
+
+Databáze snímačů    V modulu snímačů sestavujete komponenty do modelu snímacího
+                    systému (tj. konfigurace snímačů), který poté uložíte jako soubor
+                    snímacího systému. Modul má dva typy komponent:
+                    – Komponenty, které odpovídají reálným částem snímačů určitých
+                      výrobců.
+                    – „Generické“ komponenty ve formě pravidelných geometrických těles,
+                      jejich velikost se dá změnit.
+                       S nimi jsou mj. modelovány importované snímací systémy z modulu
+                       snímačů programu CALYPSO.
+                    Komponenty snímačů jsou obsaženy v databázi snímačů, která se
+                    nainstaluje společně s programem CALYPSO a modulem snímačů.
+                    Databázi snímačů můžete aktualizovat také nezávisle na aktualizacích
+                    softwaru CALYPSO a můžete a dokonce doinstalovat jednotlivé
+                    komponenty.
+Model <-> realita   – S modulem snímačů můžete imitovat své existující snímače a
+                      konfigurace, použijete k tomu komponenty a geometrické elementy
+                      nabízené v programu.
+                    – Můžete ale také sestavit model sním.systému podle svých přání a
+                      objednat si potom vzory použitých komponent.
+
+                    Možnosti objednání
+                    Všechny komponenty pro modul snímačů jsou k dispozici ze skladu na
+                    této adrese:
+
+                    Carl Zeiss 3D Automation GmbH
+                    Schnaitbergstraße 3
+                    73457 Essingen
+                    Tel. +49-(0)7365-9208-210
+
+                    Své poptávky nebo objednávky posílejte na centrální příjem zakázek na
+                    emailovou adresu: orders@3d-net.de
+                    nebo na faxové číslo: +49-(0)7365-9208-29.
+
+                    Webshop na internetu
+                    Můžete rovněž navštívit náš mezinárodní internetový obchod na adrese
+                    www.probes.zeiss.com (v Německu také na www.taster.zeiss.de). Zde
+                    najdete přehled aktuálního programu snímačů ZEISS i příslušenství pro
+                    váš souřadnicový měřicí stroj. Jako registrovaný uživatel si zde můžete
+                    snadno a rychle přímo objednávat, sledovat své objednávky a dostávat
+                    informace o speciálních akcích.
+
+
+
+1-44                61212-2731512           CALYPSO 2018
+                                                                        Modul snímačů
+
+
+
+                  Speciální snímače, zalomené části
+                  Pokud jste si z generických elementů sestavili speciální snímače nebo
+                  zalomené části, můžete si je rovněž vyžádat a objednat u firmy Carl Zeiss
+                  s 3D Automation GmbH (adresa viz výše). S dodávkou snímačových
+                  komponent obdržíte na vyžádání SCL data jako doplněk vaší databáze
+                  komponent snímačů.
+
+                  Kompletní snímací systémy (soubor SSC)
+                  Celé snímačové konfigurace, které jste v modulu sestavili, si rovněž
+                  můžete objednat ve firmě Carl Zeiss 3D Automation GmbH. Pošlete svůj
+                  soubor SSC na emailovou adresu orders@3d-net.de a obratem obdržíte
+                  kompletní nabídku.
+
+                  Konvertování CAD dat pro speciální zalomené prvky
+                  Pokud jste v CAD systému zkonstruovali vlastní speciální zalomené prvky,
+                  vytvoří vám z nich firma Carl Zeiss 3D Automation GmbH vaše
+                  individuální data komponent modulu snímačů. Zašlete soubor CAD (ve
+                  formátu SAT, STEP, ProE nebo IGES) na adresu orders@3d-net.de, na
+                  základě toho obdržíte rozšíření své databáze modulu snímačů ve formě
+                  souboru SCL. Ceny na vyžádání
+
+                  Základní stavební jednotky modulu snímačů
+                  Snímačové komponenty a modely systémů snímačů
+                  S modulem snímačů sestavíte systémy snímačů (konfigurace snímačů)
+                  skutečně existující na vašem měřicím stroji. Modul snímačů vám k tomu
+                  poskytuje potřebné snímačové komponenty. Stačí je jen vybrat a správně
+                  pospojovat.
+                  – ➤ Komponenta snímače [⇨ 1-45]
+                  – ➤ Model snímacího systému [⇨ 1-47]
+
+                  Popis snímačové komponenty
+                  Komponenta je zde chápána jako část modelu konfigurace snímačů
+                  (např. snímač, kloub, ale také válec, koule, ...).
+                  Komponenta má následující vlastnosti:
+
+Vlastnost         Popis
+Popis
+Objednací číslo   ZEISS-objednací číslo (u generických komponent „Neznámé“)
+Název skupiny     Rozdělení komponent podle technologie, pro kterou se daná
+                  komponenta použije.
+
+
+
+                  61212-2731512           CALYPSO 2018                          1-45
+Modul snímačů
+
+
+
+Vlastnost                    Popis
+Výrobce                      Výrobce reálné konstrukční části snímače
+Kategorie                    Kategorie komponenty ve stromové struktuře
+Název                        Název komponenty, který se skládá z fixní části a z vlastností
+                             komponenty, podle přiřazeného definičního schématu
+Definice názvu               Schéma sestavení názvu komponenty Definice můžete individuálně
+                             libovolně měnit v dialogu pro definice názvu.
+Výrobce č.zakázky            Identifikační číslo originálního výrobce (např. Renishaw). Pro
+                             generické komponenty „Neznámé“
+Kolekce                      Kolekce výrobce
+Funkční vlastnosti
+Hmotnost                     Hmotnost komponenty
+Materiál                     Hlavní materiál reálné části snímače; definuje u geometrických
+                             komponent barvu
+Limit hmotnosti              Maximální zatížení reálné části snímače
+Katalogová data
+Katalogová data              Podle schématu ZEISS pro data v katalogu snímačů.
+                             U generických komponent vlastnosti, které nelze změnit (viz níže).
+Modifikovatelné vlastnosti (jen u generických komponent)
+Katalogová data a            Modifikovatelné vlastnosti generických komponent (viz níže).
+geometrické parametry
+Další vlastnosti
+Místo připojení              Montážní rozhraní, slouží pro připojení komponenty na volné místo
+                             napojení na existujícím modelu sním.systému.
+Volná místa napojení         Tato místa slouží pro připojení dalších komponent poté, co je určitá
+                             komponenta zabudována do modelu. Prodloužení má jedno volné
+                             místo napojení, kostka obvykle pět a snímač nemá žádné.
+                             Informace: Každé místo napojení je určitého definovaného typu
+                             (např. M5 nebo VAST talířek).
+Dotykové plochy              Plochy, kterými se reálný snímač dotýká měřené součásti.
+                             Konfigurace s jedním snímačem má jednu, prvek hvězdicové
+                             konfigurace pět, prodloužení nemá žádnou dotykovou plochu.
+                             Každá dotyková plocha je určitého geometrického typu (kulová,
+                             válcová atd.) a z jednoho materiálu.
+                             Pro každou dotykovou plochu lze číslo snímače a název zadat nebo
+                             nechat automaticky přidělit.
+Stručný popis                Popis komponenty
+Grafické zobrazení           Ukáže se v okně náhledu.
+
+
+1-46                         61212-2731512           CALYPSO 2018
+                                                                                   Modul snímačů
+
+
+
+                              Je-li určitá komponenta zabudována do modelu sním.systému, má ještě
+                              další vlastnosti:
+                              – Úhel, o který byla daná komponenta natočena v místě připojení
+                              – Další úhly. Jedná-li se o vícedílnou komponentu (např. kloub), může
+                                mít další úhlové vlastnosti.
+                              Generické komponenty mají následující modifikovatelné vlastnosti:
+
+Typ                       Modifikovatelné vlastnosti                                   Místa
+                                                                                       napojení
+Generické snímače,        DK, DS, případně L, ML                                       0
+pevný průměr závitu DG
+Generické snímače, DG,    DK, DSE, případně ML, MLE                                    0
+DS pevné
+Generické prodloužení     L                                                            1
+Otočný kloub              průměr válce, průměr válce, délka válce, délka válce         1
+Generický snímač, volný   DG, DK, DS, L, ML                                            0
+Kloub                     vzdálenost v kouli, průměr válce, průměr válce, průměr       1
+                          kuličky, délka válce, délka válce
+Kužel (2P)                průměr 1 kužele, průměr 2 kužele, výška kužele               1
+Koule (6 P)               průměr                                                       5
+Kvádr (6P)                šířka, výška, délka kvádru                                   5
+Válec (6P)                průměr válce, délka válce                                    5
+
+                              Oznámení
+                              Koule je jediná generická komponenta, kterou můžete definovat jako
+                              snímací element.
+
+                              Popis modelu snímacího systému
+                              Model snímacího systému (tj. konfigurace snímačů) představuje několik
+                              vzájemně spojených dílčích komponent. Je tu jedna počáteční
+                              komponenta, na kterou jsou připojovány další.
+                              Modul snímačů ukládá model sním.systému jako soubor s příponou
+                              „.ssc“. Každý soubor SSC vytvořený v modulu snímačů je možné načíst.
+                              Model snímacího systému má několik vlastností:
+                              – Název (povinný)
+                              – Sériové číslo
+                              – Konstruktér
+
+
+
+                              61212-2731512            CALYPSO 2018                        1-47
+Modul snímačů
+
+
+
+                – Datum vytvoření
+                – Součást
+                – Stroj
+                – Firma
+                – Oddělení
+                – Komentář
+                Kromě názvu není zadání těchto údajů povinné. Zadané údaje zůstávají
+                uloženy a jsou navrhovány jako přednastavení.
+
+                Okno programu
+                Sekce okna programu mají pevnou pozici. Můžete ale měnit jejich
+                velikost tím, že myší přesunete hranice mezi dílčími okny.
+
+                Hlavní menu
+                Hlavní menu obsahuje následující položky:
+
+Hlavní menu     Položka menu
+Soubor          – Nový: Otevře okno Definovat nový snímací systém.
+                – Načíst...: Otevře dialog pro načtení souboru SSC.
+                – Uložit: Uloží aktuální model sním.systému, poprvé k tomu otevře
+                  dialog pro uložení.
+                – Uložit jako...: Otevře dialog pro uložení.
+                – Importovat...: Otevře dialog pro import, kde můžete importovat
+                  dva formáty souboru:
+                   „scl“ – soubory knihovny s novými nebo aktualizovanými
+                   komponentami
+                   „prb“ – soubory sním.systémů programu CALYPSO do verze 4.4
+                – Export...: Exportuje konstrukční body aktuálního snímacího
+                  systému do ASCII souboru.
+                – Konec: Ukončí modul snímačů.
+Úpravy          – Vymazat (Aktuální komponenta ve sním.systému):
+                  Odebere komponentu, jejíž místo napojení je vybráno, jakož i
+                  všechny na ni připojené komponenty.
+                   (Kliknutí na obsazené místo napojení):
+                – Vložit (Stávající sním.systém): Po výběru vloží existující
+                  snímací systém.
+
+
+
+
+1-48            61212-2731512          CALYPSO 2018
+                                                                    Modul snímačů
+
+
+
+Hlavní menu       Položka menu
+Vlastnosti        – Vlastnosti snímacího systému...: Otevře okno Vlastnosti
+                    snímacího systému s přídavnými informacemi o modelu
+                    sním.systému.
+                  – Možnosti...: Otevře okno Možnosti, ve kterém se provádějí
+                    obecná programová nastavení.
+Objednat          – Emailová poptávka na aktuální systém: Otevře standardní
+                    emailový program vašeho operačního systému s již vyplněnou
+                    emailovou poptávkou na aktuálně načtený snímací systém
+                    adresovanou na Carl Zeiss 3D Automation.
+                  – Carl Zeiss 3D Automation Webshop: Otevře výchozí
+                    internetový prohlížeč vašeho operačního systému se stránkou
+                    Carl Zeiss 3D Automation Webshop.
+Doplňky           – O aplikaci...: Otevře okno O aplikaci... s informacemi o
+                    aktuální verzi programu.
+
+                  Pracovní plocha
+                  Pracovní plocha má dvě sekce s několika částmi:
+
+Sekce             Funkce
+Sekce komponent
+
+
+
+
+                  61212-2731512          CALYPSO 2018                      1-49
+Modul snímačů
+
+
+
+Sekce                     Funkce
+  Zobrazení komponenty    Prostorové zobrazení vybrané komponenty, které se může otáčet a
+                          zvětšit.
+  Výrobce                 Rozevírací seznam pro výrobce komponent
+  Komponenty              Všechny komponenty zvoleného výrobce ve stromové struktuře
+                          Pravým tlačítkem myši můžete pro určitý uzel nastavit hloubku
+                          členění a zobrazit podkategorie.
+  Panel nástrojů                     Otevře okno Nastavení pro materiál s materiály,
+                                     které se používají v databázi snímačů.
+                                     Otevře okno Definice názvů komponent, ve kterém
+                                     můžete změnit schémata zadávání názvů komponent.
+                                     Otevře okno Nastavení filtru, ve kterém definujete
+                                     filtr pro zobrazení stromové struktury komponent.
+                                     Aktivuje resp. deaktivuje filtr.
+                                     Informace: Standardně je po vložení komponenty do
+                                     aktuálního modelu sním.systému automaticky
+                                     aktivován filtr, který ve stromové struktuře zobrazí jen
+                                     komponenty, jejichž typ připojení se hodí na místo
+                                     napojení na modelu.
+                                     Aktivuje resp. deaktivuje třídění do podkategorií.
+                                     Otevře menu pro výběr hloubky vkládání podkategorií.
+  Stavové pole            Ukáže vlastnosti aktuálně vybrané komponenty / kategorie.
+                          Ukáže např. aktuální celkovou hmotnost dosud vytvořeného
+                          modelu snímacího systému resp. varování, jakmile je dosaženo
+                          přípustné zatížení první zabudované komponenty nebo když se v
+                          konfiguraci snímačů nacházejí komponenty bez údaje hmotnosti. U
+                          komponent bez údaje hmotnosti je před hodnotou celkové
+                          hmotnosti v dokumentaci snímačů uvedeno ">".
+  Vlastnosti komponenty   V několika sekcích ukáže vlastnosti aktuálně vybrané komponenty.
+                          U generických komponent můžete změnit specifické geometrické
+                          vlastnosti a vlastnosti materiálu.
+                                     Ukáže vlastnosti komponenty označené ve stromové
+                                     struktuře komponent.
+                                     Ukáže vlastnosti komponenty označené ve stromové
+                                     struktuře modelu snímacího systému.
+Sekce konfigurace
+
+
+
+
+1-50                      61212-2731512          CALYPSO 2018
+                                                                             Modul snímačů
+
+
+
+Sekce                Funkce
+  Snímací systém     V tomto stromovém zobrazení jsou ukázány zabudované
+                     komponenty resp. typy volných míst napojení.
+                     V kontextovém menu pro prvky stromové struktury máte tyto
+                     možnosti:
+                     (Kliknutí na libovolnou komponentu): Vymazání komponenty
+                     (Kliknutí na libovolnou komponentu): Výměna označené
+                     komponenty za zobrazenou komponentu
+                     (Kliknutí na volné místo napojení): Vložit existující snímací systém.
+                     (Kliknutí na obsazené místo napojení): Odebrat komponentu a
+                     všechny na ní připojené komponenty.
+                     (Kliknutí na komponentu kulové geometrie): Kouli jako snímací
+                     element definovat / zrušit definici.
+  Panel nástrojů                 Vymaže aktuální model sním.systému a otevře okno
+                                 pro výběr určité technologie (VAST, RDS) pro počáteční
+                                 komponentu.
+                                 Vymaže aktuální model sním.systému a otevře okno
+                                 pro výběr SSC souborů. Vybraný soubor bude načten.
+                                 Komponenty tohoto modelu nemusí být obsaženy v
+                                 seznamu komponent.
+                                 Otevře okno Vlastnosti snímacího systému pro
+                                 další informace o modelu snímacího systému jako
+                                 modální okno, tj. další práce je možná teprve po
+                                 zavření tohoto okna.
+                                 Otevře okno Vlastnosti snímacího systému s
+                                 přídavnými informacemi o modelu snímacího systému.
+                                 Přepíná mezi oknem Vlastnosti komponenty a
+                                 seznamem snímacích elementů aktuálního modelu.
+                                 Vytvoří PDF soubor s dokumentací snímacího systému
+                                 podle vašich požadavků pomocí Vlastnosti "
+                                 Možnosti " Dokumentace snímačů.
+  Zadání úhlu        Slouží pro změnu úhlů aktuálně vybrané komponenty. Každá
+                     komponenta se dá otáčet ve svém bodě napojení kolem podélné
+                     osy, klouby mají ještě další osy otáčení.
+  Snímací elementy   Editovatelný seznam všech snímacích elementů vyskytujících se v
+                     aktuálním modelu snímacího systému. Pro každý z těchto elementů
+                     je v zobrazení ukázán praporek s číslem a názvem snímače.
+                     Dvojklikněte na příslušný řádek, má-li se změnit číslo a název
+                     snímače.
+                     Je-li v možnostech aktivováno ZEISS-schéma zadávání názvů, použijí
+                     se pevná čísla pro první výskyt příslušného standardního směru.
+                     Zadáním se tento automatismus opět zruší. Také název je vytvořen
+                     automaticky.
+                     Praporky v zobrazení se CALYPSO
+                     61212-2731512            při aktivování
+                                                        2018 funkce sním.elementů    1-51
+                     automaticky uspořádají. Aby byly znovu automaticky uspořádány,
+                     vypněte a zase zapněte zobrazení.
+Modul snímačů
+
+
+
+Sekce                     Funkce
+  Zobrazení snímacího     Ukáže aktuální podobu modelu sním.systému.
+  systému                 Kliknutím na určitou komponentu vyberete tuto komponentu v
+                          zobrazení (barevně zvýrazněna) a automaticky také ve stromové
+                          struktuře sním.systému.
+                          Další komponenty připojujete na zobrazené připojovací kuličky.
+                          V kontextovém menu máte tyto možnosti:
+                          Upravit pohled: Napasuje zobrazení do okna.
+                          Nastavit bod otáčení: Změní ukazatel myši. Další kliknutí do
+                          zobrazení definuje nový bod otáčení (standardně je počáteční bod
+                          pod pomyslnou pinolou).
+                          Použít jako sním.element: Definuje geometrickou kouli jako
+                          snímací element.
+                          Vymazat definici sním.elementu: Zruší definici geometrické
+                          koule jako sním. elementu.
+  Ovládací lišta          Často používané funkce pro úpravu zobrazení:
+                          Přizpůsobit zoom: Optimalizuje velikost a pozici zobrazení
+                          snímacího systému.
+                          Změnit pohled: Změní pohled, ve kterém je daný snímací systém
+                          zobrazen.
+                          K dispozici jsou tyto pohledy:
+                          – Izometrický
+                          – +X
+                          – -X
+                          – +Y
+                          – -Y
+                          – +Z
+                          – -Z
+                          Rychlá nastavení:
+                          Automaticky upravit zobrazení: Automaticky optimalizuje
+                          velikost a pozici zobrazení snímacího systému po každém přidání
+                          resp. vymazání komponenty.
+                          Ukázat body napojení: Zvýrazní body napojení zelenou barvou.
+                          Typové smontování: Povolí jen napojení se dvěma typově
+                          shodnými přípojkami (standardně aktivováno). Když toto nastavení
+                          deaktivujete, není vlastně možné připojit komponenty hodící se k
+                          sobě.
+                          Benchmark:
+  Konec: Zavře modul snímačů
+
+
+
+1-52                     61212-2731512           CALYPSO 2018
+                                                                                               Modul snímačů
+
+
+
+                         Definice názvů komponent
+                         Názvy komponent ve stromové struktuře komponent jsou tvořeny podle
+                         pevného schématu. Schéma názvů definuje název komponenty na
+                         základě jejích vlastností. Díky tomu je daná komponenta jednoznačně
+                         pojmenována a může být rychle vyhledána.
+
+                          Deﬁnice názvů komponent
+                          Schémata                   Deﬁnice schématu
+                          Adaptér
+                          Šroub                      Název:     Adaptér
+                          Senzory
+                          Snímač                     Příklad:
+                          Snímač bez závitu                     [M5] Snímač L32
+                          Název snímače
+                          Talířek                    Deﬁnice:   [<ConType>] <Name> L <L>               Výchozí
+                          Prodloužení talířku
+                          Prodloužení
+                          Kostka                                Komentář: ‘<‘ ‘>‘ uzavírají proměnné
+
+                                                                          @ pro speciální znaky
+
+                                                                                                       Zavřít
+
+
+
+
+                         V tomto okně změníte podle svých vlastních kritérií schéma názvů
+                         aplikované ve stromové struktuře.
+                         Klikněte na ikonu Změnit pojmenování komponent nad stromem
+                         komponent, aby se otevřelo příslušné okno.
+                         Dialog pro editaci schémat názvů obsahuje tyto dialogové prvky:
+
+Dialogový prvek          Funkce
+Schémata
+  Seznam schémat názvů   Vypíše typy komponent zastoupené ve stromu komponent.
+Definice schématu        Ukáže aktuální schéma názvu a umožní jeho editaci.
+  Název                  Název vybraného typu komponent
+  Příklad                Ukáže příklad pro název komponenty podle aktuálního schématu.
+  Definice               Definujte zde nové schéma názvů pomocí proměnných a znaků.
+  Standard               Aktivuje pro vybraný typ komponent schéma názvů od výrobce.
+Zavřít                   Zavře okno a převezme změny.
+
+                         Nastavení filtru
+                         Viditelný výběr ve stromové struktuře komponent můžete filtrovat.
+
+
+
+
+                         61212-2731512              CALYPSO 2018                                       1-53
+Modul snímačů
+
+
+
+                           Nastavení ﬁltru
+                           Deﬁnice ﬁltru
+
+                                                               Interval (v mm)
+                                                                     od:            do:
+                                Průměr sním.elementu
+
+                                Délka
+
+                                Průměr dříku
+
+                                Materiál komponenty
+
+                                Materiál sním.elementu
+
+                                Zeiss objednací číslo                             Start s
+
+                                Číslo artiklu                                     Start s
+
+                                Typ napojení                       Autojoint
+                                                                   CSC
+                                                                   CSC-A
+                                                                   CSC-B intern
+                                                                   DSE
+
+                                Počáteční komponenty               CSC
+                                                                   DSE-RST
+                                                                   Nic
+                                                                   Ph10
+
+                                Skladem                          Dostupné
+
+                           Optionen
+
+                                 Skrýt prázdné kategorie
+
+
+
+
+                                                                                   Aktivovat
+
+
+
+                         V okně Nastavení filtru aktivujte požadovaná kritéria filtrování a
+                         nastavte požadované rozsahy hodnot.
+                         Okno má tyto dialogové prvky:
+
+Dialogový prvek          Funkce
+Definování filtru
+   Průměr                Zadejte minimální a maximální průměr snímacího elementu v mm.
+   sním.elementu
+   Délka                 Zadejte minimální a maximální délku snímače v mm.
+   Průměr dříku          Zadejte minimální a maximální průměr dříku v mm.
+                         Informace: Zkratky v katalogu (DK, L, DS) se neshodují vždy s
+                         příslušným označením.
+   Materiál komponenty   Vyberte požadovaný materiál, ze kterého je daná komponenta
+                         vytvořena.
+
+
+1-54                     61212-2731512                   CALYPSO 2018
+                                                                        Modul snímačů
+
+
+
+Dialogový prvek   Funkce
+  Materiál        Vyberte požadovaný materiál snímacího elementu.
+  sním.elementu
+  ZEISS číslo     Vyberte požadované ZEISS-číslo objednávky.
+  objednávky
+  Číslo artiklu   Vyberte požadované číslo artiklu.
+  Typ připojení   Aktivujte typy napojení, které mají být obsaženy ve stromu
+                  komponent.
+                  Informace: Při napojení komponenty na model sním.systému je
+                  tento filtr automaticky přizpůsoben typům volných bodů napojení a
+                  aktivován.
+  Počáteční       Aktivujte zde komponenty, které jsou počátečními komponentami
+  komponenty      pro příslušné technologie.
+                  Informace: Modul snímačů zohledňuje specifikace simulace v
+                  programu CALYPSO. Příklad: počáteční komponenta pro
+                  technologii VAST z pohledu simulace v programu CALYPSO není
+                  snímací hlava VAST, nýbrž VAST talířek pod snímací hlavou.
+  Skladem         Můžete se rozhodnout, zda mají být ve stromové struktuře
+                  zobrazeny jen komponenty obsažené v XML souboru (Seznam)
+                  nebo jen komponenty, které jsou dostupné skladem (Dostupné).
+                  Informace: Při volbě možnosti Seznam se filtruje podle
+                  komponent, které mají skladová data. Při volbě Dostupné se
+                  filtruje podle komponent, které jsou alespoň v jednom exempláři
+                  na skladě.
+Možnosti
+  Skrýt prázdné   Skryje všechny adresáře ve stromu komponent, pokud po
+  kategorie       aktivování filtru neobsahují žádné položky (standardně: aktivováno).
+Aktivovat         Zavře toto okno a aplikuje filtr na stromovou strukturu komponent.
+
+                  Nastavení pro materiál
+                  Materiály, které jsou k dispozici pro komponenty, je možné pro
+                  informaci ukázat s jejich vlastnostmi (barva a hustota).
+                  Nad stromem komponent klikněte na ikonu Vlastnosti materiálu.
+
+
+
+
+                  61212-2731512           CALYPSO 2018                         1-55
+Modul snímačů
+
+
+
+                      Deﬁnice názvů komponent
+                      Schémata                   Deﬁnice schématu
+                      Adaptér
+                      Šroub                      Název:     Adaptér
+                      Senzory
+                      Snímač                     Příklad:
+                      Snímač bez závitu                     [M5] Snímač L32
+                      Název snímače
+                      Talířek                    Deﬁnice:   [<ConType>] <Name> L <L>               Výchozí
+                      Prodloužení talířku
+                      Prodloužení
+                      Kostka                                Komentář: ‘<‘ ‘>‘ uzavírají proměnné
+
+                                                                      @ pro speciální znaky
+
+                                                                                                   Zavřít
+
+
+
+
+                     V tomto okně jsou ukázány vlastnosti materiálu.
+
+Dialogový prvek      Funkce
+Materiály
+  Seznam materiálů   Ukáže názvy již definovaných materiálů.
+Data materiálu       Ukáže data pro materiál vybraný v levém seznamu.
+  Název              Uvádí název daného materiálu.
+  Barva              Uvádí, kterou barvou je daný materiál zobrazen.
+  Hustota            Uvádí hustotu materiálu v g/cm3.
+Zavřít               Zavře toto okno.
+
+                     Vytvořit nový snímací systém
+                     V tomto okně zvolíte technologii nebo konstrukci nového snímacího
+                     systému (konfigurace snímačů) a zahájíte jeho sestavení.
+
+
+
+
+1-56                 61212-2731512              CALYPSO 2018
+                                                                          Modul snímačů
+
+
+
+                        Vytvořit nový snímací systém
+                        Technologie
+
+                         Vyberte prosím technologii, na které má být
+                         založena vaše konﬁgurace snímačů.
+
+
+                         CSC
+                         DSE-RST
+                         None
+                         Ph10
+                         RDS RST
+                         RDS TP200
+                         RDS XXT
+                         VAST
+
+
+
+
+                         Zvolená technologie: None
+
+
+                                                                  Start
+
+
+
+                       Toto okno vyvoláte kliknutím na ikonu Vytvořit nový snímací systém
+                       nad stromovou strukturou snímačů.
+
+                       Oznámení
+                       Tím se dosud otevřený snímací systém bez uložení vymaže.
+
+                       Okno obsahuje tyto dialogové prvky:
+
+Dialogový prvek        Funkce
+Technologie
+  Seznam technologií   Vyberte požadovanou technologii nového snímacího systému.
+Start                  Zavře okno a podle zvolené technologie nastaví filtr a strom
+                       komponent.
+                       Existuje-li jediná vhodná počáteční komponenta, je hned zahrnuta
+                       do modelu sním.systému.
+                       Když zvolíte „None“ nebo ukončíte dialog ikonkou , není vybrána
+                       žádná počáteční komponenta.
+
+                       Možnosti
+                       Vyvolání okna
+                       V okně Možnosti nastavíte předvolby pro různé sekce programu. Okno
+                       obsahuje samostatnou stránku pro každou sekci programu.
+                       Toto okno vyvoláte pomocí menu Vlastnosti " Možnosti.
+
+
+                       61212-2731512               CALYPSO 2018                   1-57
+Modul snímačů
+
+
+
+                           Možnosti – Zobrazení
+                            Možnosti...
+                             Možnosti             Zobrazení
+                            Zobrazení
+                            Uživatelské akce          Zobrazení
+                            Dokumentace
+                            Resetovat nastavení               Automaticky upravit zobrazení
+                            Exportovat
+                            Komponenty
+                            Skladová data             Sní mací systém
+                            Jazyk
+                            Standard                   Ukázat body napojení pro...
+                            Webshop
+                            Sestavení                         všechny komponenty
+
+                                                              vybranou a všechny následné
+                                                              komponenty
+
+
+                                                              pouze vybranou komponentu
+
+
+                                                              žádnou komponentu
+
+                                                          Průhlednost náhledu (0-100%):
+
+
+
+
+                                                                                              Zavří t
+
+
+
+
+                           Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový        Funkce
+prvek
+Pohled                   Možnosti, které souvisejí se zobrazením.
+  Zobrazení
+              Automa     Zobrazí vždy kompletní model sním.systému.
+              ticky      Pracujete-li s rozměrnými modely, doporučujeme tuto možnost
+              upravit    deaktivovat.
+              zobraze    V ovládací liště se k ní dostanete přes Rychlá nastavení (standardně:
+              ní         aktivováno).
+  Snímací systém
+              Ukázat     Určí, která místa napojení budou ukázána v zobrazení snímacího
+              body       systému – buď pro všechny komponenty, jen pro vybranou
+              napojení   komponentu a následné komponenty resp. pro vybranou
+               ...       komponentu nebo nikdy (standardně: všechny komponenty).
+              Průhled Průhlednost náhledu komponent v zobrazení snímacího systému
+              nost    (standardně: 80 %)
+              náhledu
+              (0-100%
+              )
+
+
+
+
+1-58                       61212-2731512                      CALYPSO 2018
+                                                                           Modul snímačů
+
+
+
+                        Možnosti – Uživatelské akce
+
+
+
+
+                        Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový       Funkce
+prvek
+Uživatelské akce        Nastavení obsazení tlačítek pro určité funkce
+   Myš a nastavení      V seznamu vyberte některou z funkcí:
+   klávesnice           Odstranit komponentu - Odebere vybranou komponentu z
+                        aktuálního modelu.
+                        Přesunout zobrazení - Přesune objekt v zobrazení snímacího
+                        systému.
+                        Zoomovat oblast - Definuje zoomovanou oblast v zobrazení
+                        snímacího systému.
+                        Zoomovat zobrazení - Změní měřítko zobrazení snímacího
+                        systému.
+                        Otočit zobrazení - Natočí objekt v zobrazení snímacího systému.
+   Tlačítka myši        V rozevíracích seznamech vpravo nastavte přiřazení požadované
+   Tlačítko             akce pro dané tlačítko.
+   Speciální tlačítko
+   Default              Obnoví opět standardní obsazení tlačítek.
+
+
+
+
+                        61212-2731512           CALYPSO 2018                      1-59
+Modul snímačů
+
+
+
+                    Možnosti – Dokumentace
+                     Možnosti...
+                      Možnosti             Dokumentace
+                     Zobrazení
+                     Uživatelské akce         Hlavní sekce
+                     Dokumentace
+                     Resetovat nastavení            Kryt
+                     Exportovat
+                     Komponenty                     Kusovní k
+                     Skladová data                   Polohy sní mací kuli
+                                                                       čky
+                     Jazyk
+                     Standard                       Pohled X-Y
+                     Webshop
+                     Sestavení                      Pohled X-Z
+
+                                                    Pohled Y- Z
+
+                                                    Montážní návod
+                                              Speci cky
+
+                                                    Nepouží t logo
+
+                                                                             Načí st...
+
+
+
+
+                                                                                          Zavří t
+
+
+
+
+                    Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový   Funkce
+prvek
+Dokumentace         Definuje, co má patřit do dokumentace snímacího systému.
+  Hlavní sekce      Aktivujte zaškrtávací políčka pro prvky, které mají být obsaženy v
+                    dokumentaci:
+                    – Titulní list: Přidá titulní list.
+                    – Seznam materiálů: je zobrazen vždy
+                    – Polohy snímací kuličky: Přidá zobrazení snímacího systému.
+                    – Pohled X-Y: Přidá zobrazení sním.systému ze směru Z.
+                    – Pohled X-Z: Přidá zobrazení sním.systému ze směru Y.
+                    – Pohled Y-Z: Přidá zobrazení sním.systému ze směru X.
+                    – Popis smontování: Přidá montážní instrukce.
+  Specificky        Aktivujte použití loga v dokumentaci snímačů, pokud bylo předtím
+                    logo načteno pomocí tlačítka Načíst....
+                    Možné jsou následující formáty souborů:
+                    – BMP
+                    – PNG
+                    – JPG
+
+
+
+
+1-60                61212-2731512                   CALYPSO 2018
+                                                                           Modul snímačů
+
+
+
+                      Možnosti – Resetovat nastavení
+
+
+
+
+                      Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový     Funkce
+prvek
+Resetovat nastavení
+  Všeobecné           Všechny možnosti nastavit na standardní hodnoty: Klikněte
+                      na Reset, aby byly obnoveny výchozí hodnoty všech možností.
+                      Okno s informacemi: Nastaví opět aktivní poptávku podle
+                      lokality webshopu při vyvolání modulu snímačů.
+                      Rychlý start (načíst grafiky z pevného disku): Grafické
+                      soubory zůstávají stále na pevném disku, což zkracuje dobu
+                      načítání modulu snímačů. Po ukončení modulu snímačů je tím
+                      obsazeno asi 100 MB paměti. Deaktivujte tuto možnost, pokud
+                      máte malou kapacitu volné paměti na pevném disku.
+  Vlastnosti          Vymazat uživatelsky definované vlastnosti sním.systému
+  sním.systému        Klikněte na tlačítko Vymazat, aby se vymazala zadání, která jste
+                      provedli.
+
+
+
+
+                      61212-2731512          CALYPSO 2018                          1-61
+Modul snímačů
+
+
+
+                    Možnosti – Export
+
+
+
+
+                    Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový   Funkce
+prvek
+Exportovat          Určuje rozsah, vlastnosti a umístění pro další data při uložení
+                    snímacího systému.
+                    Definuje formát souboru CSV, do kterého se pomocí menu Soubor
+                    " Export... nebo – při příslušném nastavení – při každém uložení
+                    snímacího systému zapisují konstrukční body aktuálního snímacího
+                    systému.
+
+
+
+
+1-62                61212-2731512          CALYPSO 2018
+                                                                           Modul snímačů
+
+
+
+Možnost/Dialogový      Funkce
+prvek
+  Další exportní       Aktivujte zde typy souborů pro přídavný výstup při každém uložení
+  soubory              snímacího systému:
+                       – Screenshoot (JPG): Soubor <název snímacího
+                         systému>.Image.jpg pro vaši vlastní dokumentaci
+                       – Vizualizace (STL): Soubor <název snímacího
+                         systému>.Visualization.stl, vhodný pro simulace pojezdů v jiných
+                         programech
+                       – Výpis bodů pro podporu konstrukce: Soubor <název
+                         snímacího systému>.Points.csv (viz ➤ Exportovat data snímacího
+                         systému [⇨ 1-18])
+                       – Soubor Souhrn (XML):
+                          Soubor <název snímacího systému>.Summary.xml pro strojové
+                          vyhodnocení dat snímacího systému v databázi
+                       – Souhrn (CSV): Soubor <název snímacího
+                         systému>.Summary.csv pro strojové vyhodnocení dat snímacího
+                         systému v databázi
+                       – Dokumentace (PDF): Soubor <název snímacího
+                         systému>.SystemDocumentation.pdf (viz ➤ Dokumentace
+                         snímačů ve formátu PDF [⇨ 1-25])
+  Cíl                  Generuje vlastní podadresář pro přídavné soubory při ukládání
+                       snímacího systému.
+  Výpis bodů pro       Definuje oddělovače pro seznam bodů pro podporu konstrukce,
+  podporu konstrukce   který je vydáván pomocí menu Soubor " Export... a – při
+                       příslušném nastavení – při každém uložení snímacího systému:
+                       – Oddělovač souřadnic: Odděluje souřadnice bodu (mezera,
+                         čárka, středník nebo tabulátor)
+                       – Čísla: desetinný oddělovač: Označuje hranici mezi
+                         celočíselným údajem a desetinným zlomkem (tečka nebo čárka).
+
+
+
+
+                       61212-2731512          CALYPSO 2018                         1-63
+Modul snímačů
+
+
+
+                       Možnosti – Komponenty
+
+
+
+
+                       Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový      Funkce
+prvek
+Komponenty             Definuje, které vlastnosti katalogu mají být vidět v okně pro
+                       vlastnosti komponent.
+  Ukázaná katalogová   Jen zde aktivované údaje z katalogu budou ukázány v okně
+  data                 Vlastnosti komponenty v sekci „Katalogová data“.
+                       Automaticky (ukázat data, je-li definována
+                       katalog.hodnota): Jen položky obsazené nějakými hodnotami
+                       budou ukázány v okně Vlastnosti komponenty.
+
+
+
+
+1-64                   61212-2731512           CALYPSO 2018
+                                                                                                                      Modul snímačů
+
+
+
+                           Možnosti – Skladová data
+                            Možnosti...
+                             Možnosti                Skladová data
+                            Zobrazení
+                            Uživatelské akce           Soubor
+                            Dokumentace
+                            Resetovat nastavení           Umí stění     C:\Documents and Settings\dommea\My Documents\Stylus
+                            Exportovat
+                            Komponenty
+                            Skladová data              Skladové informace
+                            Jazyk
+                            Standard                       Stav                    Soubor nebyl nalezen
+                            Webshop                        Čí tač komponent        0
+                            Sestavení
+                                                           Data-datum              Neznámé
+                                                           Komentář
+
+
+
+
+                                                                                                                                Zavří t
+
+
+
+
+                           Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový prvek         Funkce
+Skladová data
+  Soubor
+     Umístění                   Načte XML soubor se skladovými informacemi,který byl
+                                generován v systému pro stav skladových zásob nebo v
+                                systému pro produktové plánování a řízení (PPM).
+  Informace o skladových        Jestliže byl XML soubor s kompatibilní formou (viz
+  datech                        Struktura XML souboru se skladovými daty) úspěšně
+                                načten, budou uvedeny skladové informace z tohoto XML
+                                souboru. Jsou ukázány následující informace:
+                                – Stav:
+                                          Uvádí, zda mohl být soubor načten.
+                                – Čítač komponent:
+                                          Počet komponent, které jsou obsaženy v XML souboru.
+                                – Data-datum:
+                                          Uvádí, který den byl daný XML soubor generován.
+                                – Komentář:
+                                          Můžete uvést komentář. Tento komentář je zde ukázán.
+
+
+
+
+                           61212-2731512                        CALYPSO 2018                                                   1-65
+Modul snímačů
+
+
+
+                          Možnosti – Jazyk
+
+
+
+
+                          Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový         Funkce
+prvek
+Jazyk                     Definuje jazyk pro aplikaci resp. pro data snímačů.
+  Jazyk ovládací plochy   Carl Zeiss software - standardní nastavení: Aktivuje jazyk
+                          nastavený pro CALYPSO.
+                          Nastavení programu: Aktivuje separátní nastavení jazyka pro
+                          modul snímačů.
+                          Informace: Projeví se až po restartu.
+  Jazyk pro data          Jazyk pro databázi snímačů: Definuje jazyk databáze snímačů.
+  snímačů                 Informace: Projeví se až po restartu.
+
+
+
+
+1-66                      61212-2731512           CALYPSO 2018
+                                                                   Modul snímačů
+
+
+
+                    Možnosti – Standard
+
+
+
+
+                    Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový   Funkce
+prvek
+Standard            Definuje strukturu názvů snímacích elementů.
+                    Informace: Projeví se až po restartu.
+  Název snímacího   Pro každý nový snímací element ve stromu komponent se
+  elementu          automaticky zadá název, který se skládá z pevného znakového
+                    řetězce a průběžného čísla.
+                    Automaticky zadaný název můžete dodatečně změnit.
+                    Pevná část názvu: Pevný znakový řetězec na začátku názvu
+                    Počet míst číslování: Čísla jsou až do určeného počtu míst
+                    vyplněna nulami.
+                    Použít směr (příklad “1_Z_Name”): V názvu se použije směr
+                    snímacího elementu.
+                    Použít schéma ovládacího panelu Carl Zeiss: Pro osové směry
+                    se použijí číslice:
+                    1: -Z
+                    2: +Y
+                    3: +X
+                    4: -Y
+                    5: -X
+  Body napojení     (pouze pro konstruktéra databáze snímačů)
+
+
+
+
+                    61212-2731512          CALYPSO 2018                   1-67
+Modul snímačů
+
+
+
+                      Možnosti – Webshop
+
+
+
+
+                      Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový     Funkce
+prvek
+Webshop
+  Lokalita            Webshop pro region: Určí aktuální lokalitu webshopu. Vyberte
+                      lokalitu pro váš region.
+                      Vždy zobrazit výběrový dialog: Při každém spuštění programu
+                      zobrazí dialog pro výběr webshopu.
+  Nastavení pro       Použít tabulátory v emailové poptávce: Pro lepší rozčlenění
+  emailové poptávky   vloží tabulátory do řádků emailové zprávy.
+                      Poslat přílohu emailu: Odešle aktuální snímací systém jako
+                      soubor SSC v příloze emailové zprávy. Informace: Nevybírejte toto
+                      nastavení, pokud váš mailový program nepodporuje plně rozhraní
+                      MAPI.
+
+
+
+
+1-68                  61212-2731512          CALYPSO 2018
+                                                                               Modul snímačů
+
+
+
+                          Možnosti – Sestavení
+
+
+
+
+                          Okno obsahuje tyto dialogové prvky:
+
+Možnost/Dialogový         Funkce
+prvek
+Sestavení                 Možnosti pro sestavení modelu sním.systému
+  Konstrukce snímacího Automaticky filtrovat komponenty podle dostupných typů
+  systému              napojení: Určuje, že strom komponent je filtrován podle typů
+                       napojení, které jsou v aktuálním modelu sním.systému ještě volné
+                       (standardně: aktivováno).
+  Kontrola hmotnosti      Při chybějícím údaji hmotnosti použít hodnotu vypočtenou
+                          z objemu a hustoty: (aktivní pouze při vytváření dílů pro databázi
+                          snímačů)
+
+                          Vlastnosti snímacího systému
+                          Toto okno otevřete kliknutím na ikonu Editovat vlastnosti snímacího
+                          systému.
+
+
+
+
+                          61212-2731512          CALYPSO 2018                         1-69
+Modul snímačů
+
+
+
+                   Vlastnosti konﬁgurace snímačů
+                   Vlastnosti                                    Náhled
+                   Název:
+
+                   Sériové číslo:
+
+                   Konstruktér:
+
+                   Datum:                 02/14/2011      Dnes
+
+                   Součást:
+
+                   Stroj:
+
+                   Firma:
+
+                   Oddělení:
+
+                   Komentáře
+
+
+
+
+                   Kompatibilní s verzí 1 .0
+
+
+
+                            Nový náhled                                   Uložit   Storno
+
+
+
+                  V tomto okně umístíte přídavné informace o aktuálním modelu
+                  sním.systému. Tyto informace budou ukázány v Průzkumníku Windows
+                  jako popisek (tooltip) a v přidávaných sloupcích.
+                  Kromě toho definujete ikonu uloženého modelu pro Průzkumník
+                  Windows.
+                  Pro uložení modelu snímacího systému musíte dát modelu alespoň
+                  název.
+                  Zápisy v políčkách se uloží a při příštím vyvolání se nabídnou na výběr. V
+                  okně Možnosti můžete tato uložená zadání přes Resetovat
+                  nastavení/ Uživatelská zadání opět vymazat.
+                  Při otevření okna se automaticky ukáže obsah obrazovky Zobrazení
+                  snímacího systému jako náhled. Ten můžete změnit pouze v případě,
+                  že jste toto okno vyvolali separátně. Když se toto okno objeví při
+                  ukládání, musíte je před dalšími akcemi nejprve zavřít.
+                  Okno obsahuje tyto dialogové prvky:
+
+Dialogový prvek   Funkce
+Vlastnosti
+
+
+
+
+1-70              61212-2731512                        CALYPSO 2018
+                                                                                                               Modul snímačů
+
+
+
+Dialogový prvek        Funkce
+  Název                Název modelu snímacího systému.
+                       Pozor! Tento název se musí shodovat s názvem, se kterým
+                       CALYPSO používá daný model při simulaci.
+  Sériové číslo        (volitelně) Vaše vlastní označení pro model snímacího systému
+  Konstruktér          (volitelně) Vaše jméno
+  Datum                Uvádí datum prvního uložení tohoto modelu sním.systému.
+                       Volba Dnes nastaví datum na aktuální datum.
+  Součást              (volitelně) Název součásti, kterou měříte touto konfigurací snímačů.
+  Stroj                (volitelně) Měřicí stroj, na kterém je namontována tato konfigurace
+                       snímačů.
+  Firma                (volitelně) Název vaší firmy
+  Oddělení             (volitelně) Název vašeho oddělení ve firmě
+  Komentáře            (volitelně) Další údaje
+Náhled                 Ukáže kopii obrazovky Zobrazení snímacího systému.
+Nový náhled            Uloží aktuální pohled v Zobrazení snímacího systému jako
+                       náhled.
+Uložit / Uložit jako   Převezme nastavení a zavře toto okno.
+Storno                 Zavře okno bez převzetí údajů.
+
+                       O aplikaci...
+                       Okno O aplikaci... obsahuje odkaz na internetový obchod ZEISS 3D
+                       Automation Webshop (www.taster.zeiss.de) a údaje o stavu aplikace.
+
+                        O aplikaci ...
+
+
+                                         Modul snímacího systému
+
+
+                                         © 2006, 2010, CarI Zeiss IMT GmbH
+                                         Verze: 1.4.4064
+                                         Komponenty a konﬁgurace snímačů se mohou objednat ve Carl Zeiss 3D Automation Webshop
+
+
+
+                                           Databáze
+                                          Původní aplikace Calypso
+                                          Verze                      2.160
+
+                                            Test integrity           Databáze nebyla ještě testována.
+
+                                                                     Registrováno:
+                                                                     Databáze snímačů je platná pro tuto instalaci.
+
+
+
+
+                                                                                                                         Zavřít
+
+
+
+
+                       61212-2731512                           CALYPSO 2018                                           1-71
+Modul snímačů
+
+
+
+                     Okno obsahuje tyto dialogové prvky:
+
+Dialogový prvek      Funkce
+Databáze
+  Původní aplikace   Program, ze kterého byl vyvolán Modul snímačů.
+  Verze              Aktuální verze programu Modul snímačů.
+  Test integrity     Vyvolá jednoduchou kontrolu databáze komponent. Proběhnou při
+                     ní tři testy:
+                     Existuje databáze snímačů?
+                     Dá se databáze snímačů otevřít?
+                     Je databáze snímačů poškozená?
+                     V testovacím řádku je poté uveden výsledek.
+  Registrováno       Modul snímačů dodávaný s programem CALYPSO s opcí Simulace
+                     je automaticky licencován.
+                     S nelicencovanou verzí v jiných aplikacích již není možné manuálně
+                     přidávat komponenty pomocí importu.
+  Informace          Uvádí, zda je aktuální databáze snímačů platná s touto instalací.
+                     Databáze snímačů je platná pouze na počítači, na kterém byl
+                     instalován Modul snímačů. Databázi snímačů nelze používat s
+                     nelicencovanou verzí modulu snímačů.
+Zavřít               Zavře toto okno.
+
+
+
+
+1-72                 61212-2731512           CALYPSO 2018
+                                                    Modul výměnného zásobníku
+
+
+
+
+Modul výměnného zásobníku
+               Modul výměnného zásobníku
+               Se stavebnicovým modulem výměnného zásobníku můžete vytvořit
+               realistické a rozměrově věrné modely zásobníků, osadit je snímači
+               a zahrnout do pracovní plochy.
+               Takto můžete napodobit své existující výměnné zásobníky a snímací
+               systémy (konfigurace snímačů) na souřadnicovém měřicím stroji a také
+               simulovat výměnu snímacího systému.
+
+               Oznámení
+               Modul výměnného zásobníku není samostatný program, nýbrž součást
+               softwaru CALYPSO. Klávesou F1 v dialogovém okně modulu zásobníku
+               otevřete kontextovou online nápovědu pro CALYPSO.
+
+               Oznámení
+               Modul výměnného zásobníku patří k opci 3 „Simulace“ softwaru
+               CALYPSO.
+
+
+               Modelovat zásobníky na výměnu
+               snímačů a používat tyto modely
+               Se stavebnicovým modulem výměnného zásobníku vytváříte a upravujete
+               své modely zásobníků na pracovní ploše.
+               Na obrazovce můžete sestavit a uložit do paměti zásobníky na vašem
+               měřicím stroji. Díky tomu může CALYPSO simulovat automatickou a
+               manuální výměnu snímacích systémů a zobrazit ji v okně CAD.
+               Uložené výměnné zásobníky můžete načíst a dále upravovat.
+Průběh práce   Při modelování výměnného zásobníku postupujte takto:
+               – Vytvoříte a umístíte požadovaný výměnný zásobník.
+               – Vytvoříte úložná místa a umístíte je na zásobníku.
+               – Přiřadíte snímací systémy (konfigurace snímačů) úložným místům.
+               – Uložíte výměnný zásobník jako pracovní plochu.
+               Modely zásobníků můžete kdykoliv opět načíst a upravit.
+
+               Oznámení
+               Abyste mohli vytvořit a upravit výměnné zásobníky, musíte otevřít nový,
+               prázdný plán měření.
+
+
+
+               61212-2731512          CALYPSO 2018                          1-73
+Modul výměnného zásobníku
+
+
+
+
+                     Vytvořit zásobník na výměnu snímačů
+                     S modulem pro výměnný zásobník zobrazíte svůj zásobník jako model
+                     v okně CAD.
+                     Podmínky
+                       – CALYPSO běží v režimu „Planner“ (Generátor).
+                       – CALYPSO je spojeno s měřicím strojem „Simulace“.
+                       – Je otevřen nový plán měření.
+                     1 Zvolte menu Generátor " Modul Výměnný zásobník snímačů.
+                       Otevře se okno Modul Výměnný zásobník snímačů.
+
+
+
+
+1-74                 61212-2731512         CALYPSO 2018
+                                                  Modul výměnného zásobníku
+
+
+
+       Modul Výměnný zásobník snímačů
+
+        Výměnný zásobník                Úložná místa          Přiřazení snímačů
+
+
+     Vytvořit výměnný zásobník snímačů
+
+
+               Typ výměnného zásobníku
+
+
+
+      Správa výměnných zásobníků
+
+
+
+               Vymazat zásobník                          Sériové číslo
+
+
+
+      Umístit výměnný zásobník
+
+
+          Umístit
+
+
+          Natočit a posunout                           Dva otvory
+
+
+
+
+                                                Převzít umístění
+
+
+
+
+    Zobrazit               Stroj                 Sním.hlava                Snímač
+                           Měřicí rozsah         Měřicí deska
+
+
+                                                                         Zavřít
+
+
+
+2 V sekci Vytvořit výměnný zásobník vyberte požadovaný typ
+  zásobníku.
+  Otevře se okno Vytvořit výměnný zásobník. V něm vidíte
+  schematické znázornění zásobníku.
+
+
+
+
+61212-2731512                      CALYPSO 2018                                     1-75
+Modul výměnného zásobníku
+
+
+
+                            Vytvořit výměnný zásobník
+
+
+
+
+                                                              Vytvořit výměnný zásobník   Výchozí   Zavřít
+
+
+
+
+                     3 Zde zadejte skutečné hodnoty pro variabilní vzdálenosti a rozměry
+                       zásobníku a klikněte na Vytvořit výměnný zásobník.
+                       V okně CAD je ukázán model zásobníku.
+                     4 V sekci Ukázat aktivujte Měřicí deska.
+                       Zásobník je zobrazen na měřicím stole.
+                     5 Umístit zásobník na určené místo:
+                         Aktivujte Polohovat.
+                         Natočit a posunout zásobník: Zvolte Natočit a přesunout a do
+                          vstupních polí zadejte parametry transformace: Otočení
+                          o násobek 90° a posunutí o násobky 25 mm.
+                         Zkontrolujte výsledek v okně CAD.
+                        - nebo -
+                     6 Připnout zásobník na rastr:
+                         Zvolte Dva otvory
+                         Na nožce zásobníku klikněte na otvor. V tom místě se objeví žlutá
+                          šipka.
+                         Klikněte na požadovaný otvor na měřicím stole. Zásobník se
+                          přesune na nové místo.
+
+
+
+
+1-76                 61212-2731512                      CALYPSO 2018
+                                   Modul výměnného zásobníku
+
+
+
+7 Klikněte na tlačítko Převzít polohování, aby se zadané parametry
+  použily.
+
+
+Umístit úložná místa
+Podmínky
+  – Modul Výměnný zásobník je otevřen.
+  – Výměnný zásobník je vytvořen a umístěn.
+1 Aktivujte kartu Úložná místa.
+
+
+
+
+61212-2731512         CALYPSO 2018                       1-77
+Modul výměnného zásobníku
+
+
+
+                              Modul Výměnný zásobník snímačů
+
+                               Výměnný zásobník                  Úložná místa          Přiřazení snímačů
+
+
+
+
+                             Správa úložných míst
+
+
+                            Úroveň
+
+                                             Nový              Vymazat          Parametry vjezdu
+
+
+
+                             Umístit úložné místo
+
+
+
+                             Posunout uložení podél úrovně
+
+
+
+
+                                                                                              nahoru
+
+
+
+
+                                                                                               dolů
+
+
+
+
+                         Zobrazit                   Stroj                 Sním.hlava               Snímač
+                                                    Měřicí rozsah         Měřicí deska
+
+
+                                                                                                Zavřít
+
+
+
+                     2 Vytvořit úložné místo pro snímače: Označte požadovaný výměnný
+                       zásobník v okně CAD a klikněte na Nový.
+                       Název úložného místa se ukáže v horním rozevíracím seznamu.
+                     3 Umístit úložné místo pro snímače: Označte dané úložné místo v okně
+                       CAD nebo zvolte jeho název a proveďte polohování:
+
+
+
+
+1-78                 61212-2731512                          CALYPSO 2018
+                                    Modul výměnného zásobníku
+
+
+
+    Posunout úložné místo na profilové liště: Myší nebo posuvníkem
+     posouvejte úložné místo po profilové liště nebo zadejte souřadnici
+     v souřadném systému stroje.
+    Má-li se umístit úložné místo o úroveň výše nebo níže, klikněte na
+      tlačítko nahoru resp. dolů.
+   Úložné místo je v nastaveném umístění.
+4 Odebrat úložné místo: Označte příslušné úložné místo v okně CAD
+  nebo zvolte jeho název a klikněte na tlačítko Vymazat.
+  Úložné místo je odebráno z výměnného zásobníku.
+5 Definovat parametry vjezdu pro úložné místo snímačů: Označte
+  příslušné úložné místo v okně CAD nebo zvolte jeho název a klikněte
+  na tlačítko Parametry vjezdu.
+  Otevře se okno Určit směr vjezdu [název stroje] Zásobník
+  [název úložného místa].
+6 Proveďte příslušná nastavení. Více informací viz Parametry vjezdu pro
+  úložná místa v základním návodu k obsluze a v oddílu Určit směr
+  vjezdu [název stroje] Zásobník [název úložného místa] v online
+  nápovědě.
+
+
+Přiřadit snímače úložným místům
+Podmínky
+  – Modul Výměnný zásobník je otevřen.
+  – Výměnný zásobník je vytvořen a umístěn.
+  – Úložná místa jsou vytvořena a umístěna.
+  – V softwaru CALYPSO jsou definovány snímací systémy
+    (konfigurace snímačů).
+1 Aktivujte kartu Přiřazení snímačů.
+2 Přiřadit snímací systém úložnému místu: V sekci Úložná místa zvolte
+  dané úložné místo a v sekci Snímací systémy příslušný snímací
+  systém a klikněte na Def.sním.sys. pro uložení.
+3 Úložné místo opět vyprázdnit: V sekci Obsazená úložná místa
+  zvolte požadované úložné místo a klikněte na Vyprázdnit vybrané
+  uložení.
+4 Mají-li se vyprázdnit všechna úložná místa zásobníku, klikněte na
+  Vyprázdnit všechna uložení.
+5 Aby se zobrazilo aktuální přiřazení snímačů úložným místům, klikněte
+  na Zobrazit přiřazení snímačů.
+  Otevře se okno Přiřazení snímačů pro výměnný zásobník.
+
+
+
+61212-2731512          CALYPSO 2018                         1-79
+Modul výměnného zásobníku
+
+
+
+
+                     Pracovat s modely zásobníku
+                     Své modely zásobníků můžete uložit jako pracovní plochy, opět načíst a
+                     dále editovat.
+                     1 Uložit výměnný zásobník: Zvolte menu Generátor " Uložit
+                       pracovní plochu a uložte model pod určitým názvem.
+                     2 Načíst uložený výměnný zásobník: Zvolte menu Generátor " Načíst
+                       pracovní plochu a vyberte požadovaný model.
+                     3 Dále upravit načtený výměnný zásobník: Zvolte menu Generátor "
+                       Modul Výměnný zásobník snímačů a označte příslušný zásobník
+                       v okně CAD.
+
+
+
+
+1-80                 61212-2731512          CALYPSO 2018
+Rejstřík
+           C                                             K
+           CAD model                                     Komponenta snímače
+               umístit pro simulaci 1-5                      připojit na model 1-10
+                                                             Stromové zobrazení upravit 1-11
+           D                                                 Vlastnosti 1-45
+           Data snímacího systému                        Komponenty snímacího systému
+               exportovat 1-18                               na internetu 1-23
+               přídavná uložit 1-18
+           Databáze snímačů                              M
+               aktualizovat 1-22                         Model snímacího systému
+           Definice názvů komponent (dialogové               Importovat snímací systémy do
+           okno) 1-53                                        programu CALYPSO 1-15
+           Dokumentace snímačů                               sestavit, příklad 1-28
+               definovat 1-27                                Vlastnosti 1-47
+               Obsah 1-25                                Modely
+               výstup 1-27                                   pro výměnné zásobníky 1-80
+                                                         Modul snímacího systému
+           E                                                 Základní údaje 1-6
+           E-mail                                        Modul snímačů
+               Snímací systém objednat 1-24                  generické komponenty. 1-14
+           Export                                            Okno programu 1-48
+               data snímacího systému 1-18                   Ovládání 1-7
+                                                             příklad 1-28
+           F                                                 základní komponenty 1-45
+                                                             Základní údaje 1-6
+           Filtrování
+                                                         Modul výměnného zásobníku
+               strom snímačových komponent 1-11
+                                                             Základní údaje 1-73
+                                                         Možnosti – Dokumentace (dialogové
+           G                                             okno) 1-60
+           Generické komponenty                          Možnosti – Export (dialogové okno) 1-62
+               upravit 1-14                              Možnosti – Jazyk (dialogové okno) 1-66
+                                                         Možnosti – Komponenty (dialogové
+                                                         okno) 1-64
+           I                                             Možnosti – Resetovat nastavení
+           Import                                        (dialogové okno) 1-61
+               Model snímacího systému 1-15              Možnosti – Sestavení (dialogové
+                                                         okno) 1-69
+                                                         Možnosti – Skladová data (dialogové
+                                                         okno) 1-65
+                                                         Možnosti – Standard (dialogové
+                                                         okno) 1-67
+                                                         Možnosti – Uživatelské akce (dialogové
+                                                         okno) 1-59
+
+
+
+
+           61212-2731512                  CALYPSO 2018                                Rejstřík   11
+              Možnosti – Webshop (dialogové                  Snímačové komponenty
+              okno) 1-68                                         objednat. 1-44
+              Možnosti – Zobrazení (dialogové
+                                                             SSC soubor importovat 1-15
+              okno) 1-58
+                                                             Stavebnicový modul zásobníku 1-73
+              Možnosti (dialogové okno) 1-57
+                                                             Strom snímačových komponent
+                                                                 filtrovat 1-11
+              N
+                                                                 názvy definovat 1-12
+              Načíst
+                                                                 Podkategorie 1-13
+                  Skladová data 1-20
+              Nastavení filtru (dialogové okno) 1-53
+              Nastavení pro materiál (dialogové
+                                                             U
+              okno) 1-55                                     Uložit
+              Názvy                                              přídavná data snímacího
+                  ve stromu snímačových                          systému 1-18
+                  komponent 1-12                             Úložná místa
+                                                                 připevnit na model zásobníku 1-77
+              O                                              Úložná místa pro snímače
+              O aplikaci... (dialogové okno) 1-71                připevnit na model zásobníku 1-77
+              Objednat
+                  Snímačové komponenty 1-44                  V
+                                                             Vlastnosti snímacího systému (dialogové
+              P                                              okno) 1-69
+                                                             Výměnný zásobník, modul
+              Počáteční komponenta 1-9
+                                                                 Základní údaje 1-73
+              Podkategorie
+                                                             Vytvořit nový snímací systém (dialogové
+                  Snímačové komponenty 1-13                  okno) 1-56
+
+              S                                              W
+              Simulace                                       Webshop pro komponenty snímacích
+                  Umístit CAD model 1-5                      systémů 1-23
+              Simulace (opce) 1-2
+              Simulace snímačů                               X
+                  předpoklady 1-3                            XML soubor se skladovými daty
+                  řídit 1-4                                      Struktura 1-21
+                  Základní údaje 1-3
+              Skladová data                                  Z
+                  načíst 1-20
+                                                             Zásobník
+                  Struktura XML souboru 1-21
+                                                                 modelovat 1-73
+                  zohlednit 1-20
+                                                                 pracovat s modely 1-80
+              Snímací systém
+                                                                 přiřadit snímače 1-79
+                  editovat ve stavebnicovém
+                                                                 Úložná místa připevnit na model
+                  modulu 1-8
+                                                                 zásobníku 1-77
+                  načíst ve stavebnicovém modulu 1-8
+                                                                 Vytvořit model 1-74
+                  objednat e-mailem 1-24
+                  uložit ve stavebnicovém modulu 1-8
+              Snímače
+                  přiřadit úložným místům 1-79
+
+
+
+22 Rejstřík   61212-2731512                   CALYPSO 2018
+Zásobník na výměnu snímačů
+   model vytvořit 1-74
+   modelovat 1-73
+   pracovat s modely 1-80
+   přiřazení snímačů modelovat 1-79
+   úložná místa modelovat 1-77
+
+
+
+
+61212-2731512                CALYPSO 2018   Rejstřík   33
+44 Rejstřík   61212-2731512   CALYPSO 2018
+

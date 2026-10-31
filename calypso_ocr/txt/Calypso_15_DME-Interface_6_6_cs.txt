@@ -1,0 +1,801 @@
+CALYPSO
+
+   Opce 15
+   Rozhraní DME
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-06-05
+61212-2851512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 Rozhraní DME (opce)
+
+               Úvod: Rozhraní DME pro CALYPSO (opce).................. 1-2
+
+               CALYPSO a rozhraní DME.............................................. 1-3
+                  Funkce rozhraní DME ........................................................................ 1-3
+                  Kompatibilita plánů měření do verze 4.4 ........................................... 1-3
+                  Nedostupné funkce........................................................................... 1-4
+
+               Použít rozhraní DME ....................................................... 1-5
+                  Postup při použití rozhraní DME ........................................................ 1-5
+                  Nastavení pro DME ........................................................................... 1-5
+                  DME – Definovat měřené elementy ................................................. 1-11
+                  DME – Definovat charakteristiky...................................................... 1-12
+                  Řídit měření přes DME..................................................................... 1-12
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2851512                  CALYPSO 2018                                           Obsah    11
+22 Obsah   61212-2851512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2851512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2851512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2851512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2851512          CALYPSO 2018
+Rozhraní DME (opce)
+
+
+
+
+                      Kapitola
+
+                      1    Rozhraní DME (opce)
+
+                         Tato kapitola obsahuje:
+                         Úvod: Rozhraní DME pro CALYPSO (opce).................................................. 1-2
+                         CALYPSO a rozhraní DME .......................................................................... 1-3
+                         Použít rozhraní DME .................................................................................. 1-5
+
+
+
+
+                        61212-2851512                      CALYPSO 2018                                                1-1
+Úvod: Rozhraní DME pro CALYPSO (opce)
+
+
+
+
+Úvod: Rozhraní DME pro CALYPSO (opce)
+                      S licencí pro rozhraní DME může CALYPSO řídit měřicí stroj přes DME
+                      server. S programem CALYPSO můžete ovládat také souřadnicové měřicí
+                      stroje, které nemají ZEISS-řízení.
+                      Tento návod k obsluze předpokládá, že umíte pracovat s programem
+                      CALYPSO. Jsou v něm vysvětleny pouze odlišnosti pro CALYPSO-DME.
+                      Je třeba si uvědomit, že rozhraní DME nepodporuje všechny funkce
+                      programu CALYPSO.
+
+
+
+
+1-2                   61212-2851512          CALYPSO 2018
+                                                     CALYPSO a rozhraní DME
+
+
+
+
+CALYPSO a rozhraní DME
+            Funkce rozhraní DME
+            CALYPSO se obvykle používá pro ovládání souřadnicových měřicích
+            strojů ZEISS. Program CALYPSO můžete ale použít také pro souřadnicové
+            měřicí stroje jiných výrobců, pokud tyto stroje podporují rozhraní DME.
+            CALYPSO přitom pracuje v režimu „DME“.
+            Program CALYPSO ení přitom spojen s řízením měřicího stroje přímo,
+            nýbrž nepřímo - přes DME server.
+
+
+
+                            CALYPSO
+
+
+
+
+                         DME-server                          Stroj
+
+
+
+            CALYPSO posílá povely na rozhraní DME a dostává zpět informace. DME
+            server provádí vlastní řízení měřicího stroje.
+
+            Oznámení
+            Vzhledem ke specifikaci DME rozhraní nejsou některé známé funkce
+            programu CALYPSO pro DME k dispozici.
+
+            CALYPSO-plány měření vytvořené ve verzích od verze 4.6 jsou vhodné
+            pro ovládání přes DME rozhraní. Pro plány měření vytvořené v některé
+            verzi do 4.4 musíte nejprve vytvořit kompatibilitu.
+
+
+            Kompatibilita plánů měření do verze 4.4
+            Rozhraní DME vyžaduje, aby snímače byly identifikovány pomocí svých
+            názvů. Od verze 4.6 programu CALYPSO se proto název každého
+            snímače ukládá do plánu měření.
+
+
+
+
+            61212-2851512             CALYPSO 2018                         1-3
+CALYPSO a rozhraní DME
+
+
+
+                     – Plány měření, které byly vytvořeny v programu CALYPSO od verze
+                       4.6, jsou tudíž vhodné pro výměnu s rozhraním DME.
+                     – Plány měření, které byly vytvořeny v programu CALYPSO do verze
+                       4.4 včetně, se pro výměnu s rozhraním DME hodí jen s omezením.
+                         V programu CALYPSO do verze 4.4 včetně byly snímače určitého
+                         snímacího systému identifikovány pomocí svého čísla. Do plánu
+                         měření se uložil název snímacího systému a číslo snímače.
+                     Chcete-li přesto pro DME rozhraní použít starší plány měření do verze
+                     4.4 včetně, musíte nejprve zajistit kompatibilitu.
+
+                     Zajistit kompatibilitu plánů měření do verze 4.4
+                     1 Otevřete plán měření v programu CALYPSO 4.6 (opce CNC nebo
+                       PLANNER).
+                     2 Ověřte si, že je k dispozici konfigurace snímačů použitá pro daný
+                       plán měření, takže lze pro čísla snímačů najít příslušné názvy.
+                     3 Uložte plán měření.
+                     4 Pokud server podporuje ToolCollections (pro CALYPSO: snímací
+                       systémy): Na serveru založte ToolCollections s názvy snímacích
+                       systémů a v nich snímače s příslušnými názvy.
+                     5 Pokud server nepodporuje ToolCollections: Pro celý plán měření
+                       zvolte snímací systém „Root“ a přidělte všem snímačům jednoznačné
+                       názvy.
+                     Bez dalších změn je potom plán měření funkční s DME.
+
+
+                     Nedostupné funkce
+                     Následující funkce a opce programu CALYPSO s rozhranímDME k
+                     dispozici nejsou:
+                     – Ovládací panely
+                     – Zásobníky na výměnu snímačů
+                     – Kalibrace snímačů
+                     – RDS s CAA
+                     – VAST Navigator
+                     – Dvoustojanový provoz
+                     – Simulace snímačů a modul snímačů (opce)
+                     – Automatizace FACS (opce)
+
+
+
+
+1-4                  61212-2851512           CALYPSO 2018
+                                                              Použít rozhraní DME
+
+
+
+
+Použít rozhraní DME
+            Postup při použití rozhraní DME
+            Když používáte CALYPSO s rozhraním DME, postupujete stejně jako
+            jindy:
+            1 Definujete systémová nastavení
+            2 Vytvoříte a editujete plán měření
+            3 Spustíte plán měření
+            4 Vyhodnotíte výsledky
+            Je třeba respektovat určité zvláštnosti, které jsou vysvětleny v dalších
+            tématech.
+
+
+            Nastavení pro DME
+            Aktivovat licenci
+            Aby program CALYPSO mohl komunikovat s rozhraním DME, musíte
+            provést následující systémová nastavení:
+            – Pomocí menu Doplňky " Nastavení " Různé aktivujte na stránce
+              Licence licenci „Calypso DME“.
+               Jestliže je aktivována licence „Calypso DME“, jsou automaticky
+               deaktivovány licence „Calypso CNC“, „Calypso MAN“, „CMM-OS“ a
+               „Planner (Genrátor)“.
+            Při dalších startech programu CALYPSO nemusíte již tato nastavení
+            provádět.
+
+            Připojit měřicí stroj a najet do referenčního bodu
+            Má-li proběhnout aktuální plán měření, musíte provést najetí do
+            referenčního bodu a propojit CALYPSO s měřicím strojem.
+            1 Zvolte menu Doplňky " Nastavení " Stroj nebo v sekci plánu
+              měření na kartě Stroj klikněte na ikonu Nastavení stroje.
+              Místo okna Měřicí stroj se otevře okno Rozhraní DME.
+
+
+
+
+            61212-2851512            CALYPSO 2018                               1-5
+Použít rozhraní DME
+
+
+
+                               Rozhraní DME
+
+                          Soubor Zobrazit           Spojení   Doplňky
+
+
+
+
+                                  Stroj-spojení :        localhost
+
+                                  Konec
+
+                           Není spojení s m
+                                          ěř.strojem
+
+
+
+                                      Storno
+
+
+                                      Stop
+
+
+                                      Dále
+
+
+
+                           Aktivní sní ma
+                                        č:
+
+
+
+                          X:                   Y:                    Z:
+
+
+
+
+                         V tomto okně budete ovládat spojení s měřicím strojem přes DME
+                         server.
+                      2 Do pole Stroj-spojení zadejte:
+
+                      localhost                                  když DME server běží na stejném
+                                                                 počítači
+                      název počítače v síti nebo jeho            v opačném případě
+                      IP adresu
+
+                      3 Klikněte na tlačítko Stroj-spojení.
+                        Vytvoří se spojení. Pokud se to nepodaří, rozsvítí se po několika
+                        sekundách červená na semaforu.
+                        Během startovní fáze se kontroluje, zda je referenční bod měřicího
+                        stroje platný. Pokud není, musí se provést najetí do referenčního
+                        bodu.
+                        Jakmile je měřicí stroj připraven, dostane ikona Nastavení stroje
+                        obvyklou zelenou barvu.
+
+
+
+1-6                   61212-2851512                 CALYPSO 2018
+                                                Použít rozhraní DME
+
+
+
+Ve startovní fázi si také server vyžádá seznam všech použitelných
+snímačů.
+
+DME – nasadit a kalibrovat snímací systém
+V CALYPSO-DME nemůžete definovat snímací systémy (konfigurace
+snímačů) a snímače. Snímače musí být pojmenovány a kalibrovány na
+straně serveru.
+
+Oznámení
+Pokud server podporuje „Tool Collections“, znamená to pro CALYPSO,
+že v plánu měření můžete používat snímací systémy i snímače. V
+opačném případě můžete v programu CALYPSO použít jen jeden
+snímací systém („Root“) a všechny snímače musí být odlišné.
+
+CALYPSO nedostává ze serveru informace o snímacích systémech s
+příslušnými snímači. Proto funguje používání snímačů v CALYPSO-DME
+jinak:
+– Povely Manuální výměna snímačů a Automatická výměna
+  snímačů nejsou k dispozici ani v menu Příprava ani v panelu
+  nástrojů.
+– Místo okna Kalibrace snímacího systému se ukáže seznam
+  snímačů poskytnutých serverem.
+– Stejné okno se ukáže místo správy snímacích systémů:
+
+        Seznam sní mačů
+      Soubor
+     Aktivní sní ma
+                  č:
+          Root.TactScanPrb1
+                       Sní m.systém:
+                        Root
+
+         TactScanPrb1
+         TactScanPrb2
+         TactScanPrb3
+
+
+
+
+61212-2851512             CALYPSO 2018                              1-7
+Použít rozhraní DME
+
+
+
+Aktualizovat snímače    Serverem dodaný seznam snímačů obsahuje všechny aktuálně dostupné
+                        snímače. Poté co byly definovány nové snímače, musíte v programu
+                        CALYPSO v okně Seznam snímačů aktualizovat dostupné snímače.
+Kalibrovat snímač       V menu tabulky můžete iniciovat výměnu a příkaz Kalibrovat. Dáte tak
+                        pokyn serveru, aby byl znovu kalibrován aktuální snímač. Použije se
+                        metoda z předcházející kalibrace.
+                        Snímače mohou být rozděleny do skupin a podskupin podle libovolných
+                        třídících kritérií. CALYPSO dostane cestu (složenou z názvů) pro každý
+                        snímač, který je uveden v sekci Snímací systém.
+
+                        Oznámení
+                        Snímače, které nejsou přiřazeny žádné skupině, budou mít jako snímací
+                        systém „Root“. Jestliže se nepoužijí žádné skupiny, jedná se o všechny
+                        snímače.
+
+    #1   TactScanPrb1
+                        V panelu nástrojů můžete ve výběru snímače otevřít seznam snímačů
+   #1    TactScanPrb1   patřících k aktuálnímu sním.systému a nastavit požadovaný snímač.
+   #2    TactScanPrb2
+                        Jestliže je potřebné natočení otočné hlavy nebo pojezd do zásobníku
+                        snímačů, objeví se předem příslušné varování.
+
+                        Oznámení
+                        Zda je snímač kalibrovaný, nemůže CALYPSO kontrolovat. Musíte sami
+                        dbát na to, aby byly všechny používané snímače kalibrovány.
+
+                        DME – Přípravy pro otočný stůl
+                        Když ve svém plánu měření potřebujete otočný stůl, musíte ho aktivovat
+                        a kalibrovat osu otočného stolu.
+                        1 Otočný stůl aktivujete v okně Rozhraní DME pomocí menu Soubor
+                          " Nastavení.
+                        Po zavření a novém spuštění programu se ikona otočného stolu ukáže
+                        jak v sekci plánu měření, tak na kartě Plán měření.
+                        Když je přes menu Soubor " Nastavení aktivována položka Načíst
+                        osu otočného stolu, přebírá server určení osy otočného stolu. V okně
+                        Otočný stůl je proto automaticky navoleno Načíst osu RT ze
+                        serveru.
+                        Jestliže toto nastavení není aktivováno, jsou v okně Otočný stůl jako
+                        obvykle uvedeny volitelné možnosti Načíst osu RT a Měřit osu RT.
+
+                        DME – Teplotní kompenzace
+                        Kompenzace tepelné roztažnosti měřítek X, Y, Z a korekce tepelného
+                        průhybu desky se týkají konfigurace měřicího stroje a jsou tudíž úlohou
+                        pro DME server.
+
+
+1-8                     61212-2851512           CALYPSO 2018
+                                                Použít rozhraní DME
+
+
+
+V programu CALYPSO s rozhraním DME nejsou možné tyto funkce
+teplotní kompenzace:
+– Zjištění teploty součásti snímáním teplotním senzorem
+– Varovné hlášení, jestliže rozdíl mezi teplotou součásti a teplotou při
+  kalibraci aktuálního snímače překračuje určenou hodnotu
+Když chcete ve svém plánu měření použít teplotní kompenzaci,musíte ji
+aktivovat v programu CALYPSO.
+
+Aktivovat teplotní kompenzaci
+1 V seznamu příprav klikněte na tlačítko Teplotní kompenzace.
+2 Aktivujte Teplotní kompenzace.
+
+
+
+
+61212-2851512           CALYPSO 2018                              1-9
+Použít rozhraní DME
+
+
+
+                             Teplotní kompenzace
+
+                             Tepl. kompenzace zapnout/vypnout
+
+
+
+
+                             Teplota               Koeﬁcient     Kor.f. <µ/m>
+                           Součást
+
+                               20.0000             7.80         0.000000
+
+
+                             Varování, když teplota součásti
+
+                              nad        25.0000     nebo pod     15,0000
+
+
+
+
+                               OK          Reset
+
+
+
+                      Nastavit změření a předání teploty součásti přes DME
+                      server
+                      1 Zvolte menu Doplňky " Nastavení " Stroj nebo klikněte na
+                        tlačítko Najetí do referenčního bodu, stav semaforu.
+                        Místo okna Měřicí stroj se otevře okno Rozhraní DME.
+                      2 Zvolte menu Soubor " Nastavení.
+
+
+
+
+1-10                  61212-2851512          CALYPSO 2018
+                                                                        Použít rozhraní DME
+
+
+
+                                Nastavení
+                           Soubor
+                            Vytvořit spojení při startu programu
+                            Okno měřicí ho stroje vždy v popředí
+                            Aktivovat otočný stůl
+                            Načí st osu otoč.stolu
+                            Načí st teplotu součásti
+
+
+
+
+                          Měřicí rozsah stroje                                Rozšířený...
+                          X:            Y:               Z:
+                           0.00             0.00          0.00
+                           Směr pinoly měř.stroje:
+                           -Z
+
+
+                                                                   OK          Storno
+
+
+
+                      3 Aktivujte Načíst teplotu součásti.
+                      4 Aktivujte případně zobrazení hlášení o překročení/podkročení určité
+                        absolutní teplotní hodnoty.
+                        DME server automaticky načte a aktualizuje hodnoty teploty.
+                      Když Načíst teplotu součásti deaktivujete, ukáže při startu CNC
+                      průběhu okno Teplotní kompenzace, abyste mohli hodnoty
+                      zkontrolovat a případně změnit.
+
+
+                      DME – Definovat měřené elementy
+                      V CALYPSO-DME definujete měřené elementy stejným způsobem jako
+                      jinde.
+                      DME server informuje CALYPSO o následujících událostech:
+                      – když se provedlo snímání
+                      – když je naprogramována mezipoloha
+                      – když se stiskne tlačítko HOTOVO
+                      – když je vymazán poslední snímaný bod
+                      – když se vyskytla chyba
+                      Tímto způsobem mohou být měřené elementy v CALYPSO-DME
+                      definovány také pomocí automatické identifikace elementů.
+Nedefinované měřené   Do plánu měření CALYPSO-DME nemůžete zahrnout tyto elementy:
+elementy
+
+
+                      61212-2851512                CALYPSO 2018                    1-11
+Použít rozhraní DME
+
+
+
+                      – Speciální elementy HOLOS a GEAR PRO. Tyto elementy vyžadují
+                        přímé spojení s řízením měřicího stroje.
+
+                      Definovat strategii měření
+                      Při definování strategie měření existují tyto zvláštnosti:
+                      – Strategie „Samostředicí snímání“ pro jednotlivé body není do
+                        CALYPSO-DME implementována.
+                      – Funkci „Automatické vyhledání snímače“ není možné v CALYPSO-
+                        DME provést.
+
+                      Generování dráhy
+                      Při měření povrchových přímek a při měření kruhového segmentu
+                      několika liniemi je zajištěno automatické objetí elementu, aby se přešlo
+                      od koncového bodu jedné linie k počátečnímu bodu další linie.
+                      K dispozici nejsou tyto metody generování dráhy:
+                      – Makro kružnice
+                      – Makro koule
+                      – Určení polohy koule.
+
+
+                      DME – Definovat charakteristiky
+                      V CALYPSO-DME nejsou k dispozici tyto charakteristiky a příbuzné
+                      elementy:
+                      – Pomůcka Kalibrace snímacího systému
+                         Data snímačů nemohou být v CALYPSO-DME změněna.
+                      – Kalibr-kalibrace
+                         Není možné zahrnout parametry průhybu snímače.
+
+
+                      Řídit měření přes DME
+Rozhraní DME          Při průběhu plánu měření okno Rozhraní DME nahrazuje známé okno
+                      se semaforem programu CALYPSO. Zde řídíte CNC průběh nepřímo, přes
+                      DME server. Okno Rozhraní DME funguje velmi podobně jako semafor
+                      CALYPSO.
+
+
+
+
+1-12                  61212-2851512             CALYPSO 2018
+                                                                     Použít rozhraní DME
+
+
+
+                           Rozhraní DME
+
+                       Soubor      Zobrazit      Spojení   Doplňky
+
+
+
+
+                               Stroj-spojení :       Simulace
+
+                               Konec
+
+                           Stroj připraven
+
+
+
+                                   Storno
+
+
+                                   Stop
+
+
+                                   Dále
+
+
+
+                       Aktivní sní ma
+                                    č:
+                       TactScanPrb1 (R=2.00)
+
+                      X:                    Y:               Z:
+
+
+
+
+                     Semafor ukazuje aktuální stav spojení.
+Indikace souřadnic   Údaj souřadnic v okně Rozhraní DME uvádí jmenovité hodnoty, které
+                     CALYPSO posílá na server za účelem polohování nebo měření. Pomocí
+                     Zobrazit " Souřadnice stroje můžete otevřít kontinuální zobrazení
+                     souřadnic. V obou indikacích jsou souřadnice uváděny v aktuálním
+                     základním souřadném systému.
+
+                     Oznámení
+                     Podle parametrů v nastaveních je kontinuální indikace průběžně
+                     serverem aktualizována. Může to být užitečné v manuálním provozu, v
+                     CNC průběhu to ale vede ke zvýšenému přenosu dat.
+
+                     Řídit měření přes rozhraní DME
+Zrušit CNC průběh    Pro zrušení CNC průběhu klikněte na tlačítko s červenou lampou
+                     semaforu.
+                     DME dostane pokyn zrušit všechny prováděné příkazy a neprovádět ještě
+                     čekající příkazy.
+
+
+
+                     61212-2851512                 CALYPSO 2018                 1-13
+Použít rozhraní DME
+
+
+
+Před další prací         Aby bylo potom možné znovu spustit nějaký plán měření, přepněte
+resetovat chybový stav   tlačítkem Dále semafor na zelenou. Tím je chybový stav v DME serveru
+                         resetován, takže server může opět provádět příkazy.
+Automatické přerušení    Když server pošle chybové hlášení během CNC průběhu, průběh se
+                         automaticky zruší.
+                         Pro analýzu chyby můžete v okně Rozhraní DME pomocí menu
+                         Doplňky " Log soubor zobrazit celý dialog mezi programem CALYPSO
+                         a serverem od posledního vytvoření spojení. Pomocí menu Soubor "
+                         Uložit můžete tento log soubor uložit do libovolného adresáře.
+
+
+
+
+1-14                     61212-2851512          CALYPSO 2018
+Rejstřík
+           H
+           Charakteristiky
+               nikoli pro DME 1-12
+
+
+           M
+           měřené elementy
+               s DME 1-11
+
+
+           O
+           Otočný stůl
+               připravit pro DME 1-8
+
+
+           R
+           Rozhraní DME
+               měřené elementy 1-11
+               nedostupné funkce 1-4
+               nedostupné charakteristiky 1-12
+               otočný stůl připravit 1-8
+               Plány měření do verze 4.4 1-3
+               použít 1-5
+               řídit měření 1-12
+               Snímací systém 1-7
+               Stroj-spojení 1-5
+               Systémová nastavení 1-5
+               teplotní kompenzace 1-8
+               Základní údaje 1-3
+           Řídit měření
+               přes DME 1-12
+
+
+           S
+           Snímací systém
+               pro DME 1-7
+           Stroj-spojení
+               přes DME 1-5
+
+
+           T
+           Teplotní kompenzace
+               DME 1-8
+
+
+
+
+           61212-2851512                   CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2851512   CALYPSO 2018
+

@@ -1,0 +1,901 @@
+CALYPSO
+
+   Opce 20
+   VAST Performance
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-06-05
+61212-2901512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 VAST Performance (opce)
+
+               Úvod: VAST Performance (opce)................................... 1-2
+
+               Základní údaje o funkci FlyScan.................................... 1-3
+                  Výhody funkce FlyScan...................................................................... 1-3
+                  Jak funguje FlyScan?.......................................................................... 1-3
+                  Vlastní nastavení pro funkci FlyScan .................................................. 1-5
+                  Podmínky pro použití funkce FlyScan................................................. 1-5
+
+               Měřit s funkcí FlyScan .................................................... 1-8
+                  Průběh měření s funkcí FlyScan ......................................................... 1-8
+                  Aktivovat a nastavit FlyScan............................................................... 1-8
+                  Definovat vyhodnocení pro FlyScan ................................................. 1-10
+                  Zobrazit maskované body drážky na grafice..................................... 1-12
+
+               Rychlá výměna konfigurací snímačů (QuickChange) ........
+               1-13
+                  Výhody rychlé výměny konfigurací snímačů ..................................... 1-13
+                  Podmínky pro rychlou výměnu konfigurací snímačů......................... 1-13
+                  Aktivovat rychlou výměnu konfigurací snímačů................................ 1-14
+                  Deaktivovat rychlou výměnu konfigurací snímačů pro jednotlivá úložná
+                  místa .............................................................................................. 1-15
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2901512                    CALYPSO 2018                                                Obsah     11
+22 Obsah   61212-2901512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2901512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2901512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2901512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2901512          CALYPSO 2018
+VAST Performance (opce)
+
+
+
+
+                          Kapitola
+
+                          1    VAST Performance (opce)
+
+                             Tato kapitola obsahuje:
+                             Úvod: VAST Performance (opce)................................................................. 1-2
+                             Základní údaje o funkci FlyScan .................................................................. 1-3
+                             Měřit s funkcí FlyScan ................................................................................ 1-8
+                             Rychlá výměna konfigurací snímačů (QuickChange).................................. 1-13
+
+
+
+
+                            61212-2901512                      CALYPSO 2018                                                1-1
+Úvod: VAST Performance (opce)
+
+
+
+
+Úvod: VAST Performance (opce)
+                      S doplňkovou opcí VAST Performance programu CALYPSO můžete
+                      používat funkci FlyScan a rychlou výměnu konfigurací snímačů.
+                      – Funkce FlyScan umožňuje skenovat po dráze přerušené drážkami -
+                        plynule bez zdvižení snímače.
+                      – Při rychlé výměně konfigurací snímačů použije CALYPSO maximální
+                        rychlost pojezdu. Tím se zkrátí doba měření - zejména u plánů
+                        měření s častou výměnou konfigurací snímačů.
+
+                       Oznámení
+                       Abyste mohli používat opci VAST Performance, musí být na vašem
+                       systému nainstalovány a aktivovány licence Navigator, VAST-
+                       PERFORMANCE.
+
+
+
+
+1-2                   61212-2901512          CALYPSO 2018
+                                                Základní údaje o funkci FlyScan
+
+
+
+
+Základní údaje o funkci FlyScan
+             Výhody funkce FlyScan
+             Pokud máte kromě opce VAST Navigator také opci VAST Performance,
+             můžete plynule bez nadzdvižení snímače měřit dráhy skenování
+             přerušené drážkami. Umožňuje to funkce FlyScan.
+             Přerušení skenovací dráhy není třeba zvlášt zadávat. S funkcí FlyScan
+             rozpoznáCALYPSO automaticky toto přerušení. Funkce FlyScan
+             usnadňuje tvorbu plánů měření a zkracuje měřicí časy.
+
+
+             Jak funguje FlyScan?
+             Pro měření přerušené skenovací dráhy definuje CALYPSO „virtuální
+             rovinu“. Jakmile je skenovací dráha přerušena, sjede snímač do výšky
+             této virtuální roviny (hloubka zanoření) a zůstane tam až do opětovného
+             kontaktu s materiálem. Změřené „body ve vzduchu“ budou automaticky
+             zamaskovány a vyjmuty z vyhodnocení.
+
+                 směr skenování
+
+
+
+
+             hloubka zanoření
+
+
+
+
+Příklad:     Praktickým příkladem je skenování obvodu ozubeného kola: S funkcí
+             FlyScan stačí jediná dráha skenování ve výšce hlavové kružnice.
+             Pro vyhodnocení se použijí pouze měřené body na hlavách zubů (na
+             grafice zobrazeny zelenou barvou). Ostatní body jsou automaticky
+             zamaskovány (na grafice zobrazeny červenou barvou).
+
+
+
+
+             61212-2901512           CALYPSO 2018                             1-3
+Základní údaje o funkci FlyScan
+
+
+
+                                                                směr skenování
+
+
+
+
+                                                          hloubka zanoření
+
+
+                                                                   maskování konce drážky
+
+                                                                     maskování začátku drážky
+
+
+
+
+                        Maskovány jsou zde jak body ve vzduchu v úrovni hloubky zanoření, tak
+                        i části evolventy a body na začátku a na konci drážky, které by vzhledem
+                        k rozkmitání a dokmitání snímače zkreslovaly výsledek měření.
+                        Bez funkce FlyScan by bylo třeba pro každou hlavu zubu definovat
+                        zvláštní dráhu skenování nebo provádět snímání jednotlivých bodů.
+Přizpůsobení            Při skenování s funkcí FlyScan je standardně aktivováno Přizpůsobení.
+                        – Bez něho se při velké odchylce jmenovitých a měřených hodnot
+                          dosáhne hloubky zanoření i bez drážky. Snímač se zdvihne od
+                          materiálu a FlyScan generuje nežádoucí „body ve vzduchu“, které
+                          nejsou zahrnovány do vyhodnocení.
+                        – S aktivovaným přizpůsobením je hloubka zanoření automaticky
+                          přizpůsobena měřené ploše.
+
+                                         směr scanování                      směr scanování
+
+
+
+
+                                                                                              jmen
+
+                              hloubka zanoření                         hloubka zanoření
+
+                                                                                              měř
+
+                             FlyScan bez přizpůsobení hloubky     FlyScan s přizpůsobením hloubky
+
+                        Omezení: Skenování s tímto přizpůsobením funguje jen do určité
+                        odchylky resp. sklonu plochy 3 %. V případě odchylek > 3 % musíte pro
+                        měřený element použít vlastní upravený souřadný systém.
+                        Například odvalovací frézy a obrobky, při jejichž měření se měří
+                        podstatně více bodů ve vzduchu než na materiálu (např. je-li drážka >
+                        materiál), nemohou být skenovány s přizpůsobením hloubky. U takových
+                        měřicích úloh je třeba přizpůsobení deaktivovat.
+
+
+1-4                     61212-2901512            CALYPSO 2018
+                                                      Základní údaje o funkci FlyScan
+
+
+
+
+                   Vlastní nastavení pro funkci FlyScan
+                   Pro FlyScan je možné provádět následující vlastní nastavení a změny:
+Hloubka zanoření   CALYPSO přizpůsobí automaticky hloubku zanoření měřicí síle. Při měřicí
+                   síle 200 mN je hloubka zanoření např. 0,15 mm. Je-li třeba, můžete
+                   hloubku zanoření zvýšit nad minimální hloubku o přídavnou hodnotu v
+                   % poloměru snímacího elementu.
+                   V editoru elementů plánu měření provádíte toto nastavení pro různé
+                   plány měření nebo diferencovaně pro určitý měřený element. V okně
+                   technologie můžete přepsat přednastavenou hodnotu v nastaveních pro
+                   FlyScan.
+Přizpůsobení       Můžete přizpůsobení aktivovat resp. deaktivovat. Toto nastavení
+                   provádíte v okně technologie příslušného měřeného elementu.
+Maskovat odlehlé   Kromě toho můžete na začátku a na konci drážky takové body maskovat
+hodnoty            jako odlehlé hodnoty, které by vzhledem k rozkmitání a dokmitání
+                   snímače zkreslily výsledek.
+                   Máte pro to dvě různé možnosti:
+                   – Zadání pevných délek na začátku a na konci drážky (ve vyhodnocení
+                     příslušného měřeného elementu).
+                   – Manuální maskování nevhodných bodů v okně CAD. V okně CAD
+                     můžete maskovat další body navíc k červeně označeným
+                     maskovaným bodům.
+
+
+                   Podmínky pro použití funkce FlyScan
+                   Abyste mohli měřit s funkcí FlyScan, musí být splněny určité
+                   předpoklady.
+Stroj              – Snímací hlava je typu VAST gold, VAST XT gold nebo VAST XTR gold.
+                   – Řízení měřicího stroje typu C99, verze firmware 24.0 nebo vyšší.
+
+
+
+
+                   61212-2901512           CALYPSO 2018                              1-5
+Základní údaje o funkci FlyScan
+
+
+
+                        – Používají se výhradně originální ZEISS upínací talířky s maticovým
+                          kódem (viz foto).
+
+                                                                            logo ZEISS
+
+
+
+
+                                                                            maticový kód
+
+
+                           Jinak není možné přizpůsobení výšky měření. CNC průběh se zruší.
+Součást                 – Drážky nejsou mělčí než 0,3 mm.
+                        – Šířka drážky je větší než průměr snímacího elementu. Jinak nemůže
+                          být drážka identifikována.
+                        – Úhel mezi dráhou pojezdu a hranou drážky je 90 ˚ ± 20˚. Pokud
+                          dráha pojezdu probíhá v příliš malém úhlu k hraně, vzhledem k
+                          poloměru snímacího elementu není až do dosažení hloubky zanoření
+                          možná automatická kontrola dat.
+
+
+
+
+                                   20°
+
+                                   20°
+
+
+
+
+1-6                     61212-2901512           CALYPSO 2018
+                                                        Základní údaje o funkci FlyScan
+
+
+
+Dráha skenování     – Měření začíná na materiálu, nikoli v drážce.
+                    – Při měření ve směru dříku se kvůli hloubce zanoření zvyšuje riziko
+                      případného snímání dříkem. V takovém případě použijte pro měření
+                      snímač s větším poloměrem snímacího elementu.
+                                                 směr scanování
+
+
+
+
+                                                          hloubka zanoření
+
+
+
+
+Měřené elementy a   Funkci „FlyScan“ můžete použít pro tyto měřené elementy a technologie:
+technologie
+                    Měřený element              Technologie
+                    Kružnice                    Kruhová dráha
+                                                Spirála
+                    Rovina                      Rastr
+                                                Polylinie
+                                                Kruhová dráha na rovině
+                    2D přímka                   Přímka
+                    Válec                       Kruhová dráha
+                                                Povrchová přímka
+                                                Spirála
+                                                VAST spirála (variabilní)
+                    Kužel                       Kruhová dráha
+                                                Spirála
+
+
+
+
+                    61212-2901512          CALYPSO 2018                           1-7
+Měřit s funkcí FlyScan
+
+
+
+
+Měřit s funkcí FlyScan
+                         Průběh měření s funkcí FlyScan
+                         FlyScan je specifická metoda snímání, se kterou můžete měřit jen při
+                         těchto nastaveních:
+                         – Samostředicí skenování je deaktivováno.
+                         – Tangenciální snímání je deaktivováno.
+Postup                   Pro měření s funkcí FlyScan aktivujte FlyScan v okně příslušné
+                         technologie. V případě potřeby změňte předvolená nastavení pro
+                         FlyScan (hloubka zanoření, přizpůsobení).
+                         V okně Vyhodnocení měřeného elementu specifikujte přídavné
+                         vzdálenosti na začátku a na konci drážky pro zamaskování dalších bodů.
+                         Po CNC průběhu zkontrolujete v okně CAD změřené a maskované body
+                         a zamaskujte případně další body.
+                         Nevyhodnocené, zamaskované body mohou být také zobrazeny v
+                         diagramu (zakreslení).
+
+
+                         Aktivovat a nastavit FlyScan
+                         1 Otevřete předlohu pro definici měřeného elementu.
+                         2 Na kartě Speciální nastavení aktivujte zaškrtávací políčko FlyScan.
+
+
+
+
+1-8                      61212-2901512           CALYPSO 2018
+                                                    Měřit s funkcí FlyScan
+
+
+
+       Kruhová dráha
+
+
+
+
+        Přednastavení              Výpočet              Reference
+
+
+                                                  Automatický
+                                                  výpočet
+     Rychlost
+
+        Krok
+
+        Počet bodů
+
+      Snímač                                       #1 hvezda_1
+
+
+
+     Body
+
+
+     Základní nastavení    Speciální nastavení
+
+       Měření
+
+            Otočný stůl (RT)
+
+            Samostředicí                         Nastavení
+
+
+            FlyScan                              Nastavení
+
+
+       Vyhodnocení
+
+            Rozsah vyhodnocení                   Nastavení
+
+
+
+
+            OK             Reset
+
+
+
+3 Pro provedení dalších nastavení klikněte na tlačítko Nastavení.
+    Je-li třeba, zadejte přídavnou hloubku zanoření k minim.
+      hloubce zanoření v % poloměru sním.elementu.
+   V případě větší odchylky jmen-měř se může s větší hloubkou zanoření
+   dosáhnout lepší výsledek.
+    Deaktivujte zaškrtávací políčko Přizpůsobení, pokud se toto
+     přizpůsobení nehodí pro vaši měřicí úlohu. Například, když je podíl
+     bodů snímaných ve vzduchu velmi velký vzhledem k bodům
+     snímaným na materiálu (drážka > materiál).
+4 Potvrďte tlačítkem OK.
+
+
+
+
+61212-2901512                  CALYPSO 2018                         1-9
+Měřit s funkcí FlyScan
+
+
+
+                         K automaticky maskovaným „bodům ve vzduchu“ můžete navíc na
+                         začátku a na konci drážky vyjmout další úseky z vyhodnocení (➤
+                         Definovat vyhodnocení pro FlyScan [⇨ 1-10]).
+                         V CNC průběhu jede CALYPSO metodou FlyScan přes drážky a přerušení
+                         a maskuje „body ve vzduchu“ a vyjmuté měřené body.
+                         V okně CAD můžete v případě potřeby ještě také po skenování vyjmout
+                         další body z vyhodnocení (Manuální maskování bodů).
+
+
+                         Definovat vyhodnocení pro FlyScan
+                         K automaticky maskovaným „bodům ve vzduchu“ můžete navíc na
+                         začátku a na konci drážky vyjmout další úseky z vyhodnocení.
+
+                         Vyjmout z vyhodnocení úseky na začátku a na konci
+                         drážky:
+                         1 V předloze pro definování měřeného elementu klikněte na tlačítko
+                           Vyhodnocení.
+
+
+
+
+1-10                     61212-2901512          CALYPSO 2018
+                                                               Měřit s funkcí FlyScan
+
+
+
+       Vyhodnocení... - CircTopBALe
+
+    Předvolba pro metodu vyhodnocení
+
+                     Gauss-element
+
+
+     Omezit stupně volnosti
+        X                 Y            Z              Vektor normály
+
+
+                                       Radius
+
+     Modifikovat body
+
+         Poloměr sním.-korekce
+
+
+     Maskování bodů
+
+                 FlyScan                                      Manuálně
+
+
+    Filtr/Eliminace odl. hod.
+        Filtr                                   Eliminace odl. hodnot
+
+     Spline, Nízkopásm.                     Faktor: 3,00 / 3,00
+    v/ot: 50                                Lc: 0,0 - 1000,0 mm
+                                            Jen odlehlé hodnoty
+                                            Iterace: 1
+
+    Kalibr-korekce
+         Kalibr-korekce
+         Kalibr-kalibrace
+
+
+
+
+                                  OK                 Storno              Použít
+
+
+2 V sekci Maskování bodů klikněte na FlyScan a zadejte
+  požadované vzdálenosti v mm pro začátek drážky a konec
+  drážky v mm.
+
+        Maskování bodů pro FlyScan
+
+       Změnit rozsah platnosti
+      Začátek drážky                             1,0000
+
+      Konec drážky                               2,0000
+
+
+
+                                                OK                Storno
+
+
+3 Zavřete tlačítkem OK.
+V CNC průběhu jede CALYPSO metodou FlyScan přes drážky a přerušení
+a maskuje „body ve vzduchu“ a vyjmuté měřené body.
+
+
+
+61212-2901512                   CALYPSO 2018                                      1-11
+Měřit s funkcí FlyScan
+
+
+
+                         V okně CAD můžete v případě potřeby ještě také po skenování vyjmout
+                         další body z vyhodnocení.
+
+
+                         Zobrazit maskované body drážky na
+                         grafice
+                         S programem CALYPSO můžete na grafickém zobrazení zobrazit také
+                         zamaskované, nevyhodnocované body drážky. Nastavuje se to v
+                         grafickém elementu.
+                         V grafickém elementu klikněte na Definovat výstup grafiky a v okně
+                         Definovat výstup grafiky nastavte zobrazení bodů drážky.
+                         V rozšířeném režimu v sekci „Data“ zvolte filtr a deaktivujte maskování
+                         drážky.
+
+                             Odlehlá hod.            Překrývající
+
+                             Šikmá síla              Nevyhodnoceno
+
+                             Šikmé zrychlení         Zdvojené
+
+                             Ignorovat drážku
+
+
+                         Body drážky zjištěné řízením měřicího stroje nebudou na grafice
+                         odfiltrovány, nýbrž budou také zobrazeny.
+
+
+
+
+1-12                     61212-2901512           CALYPSO 2018
+                        Rychlá výměna konfigurací snímačů (QuickChange)
+
+
+
+
+Rychlá výměna konfigurací snímačů
+(QuickChange)
+            Výhody rychlé výměny konfigurací
+            snímačů
+            S opcí VAST Performance můžete v softwaru CALYPSO aktivovat a
+            používat rychlou výměnu konfigurací snímačů. Při rychlé výměně
+            konfigurací snímačů použije CALYPSO maximální rychlost pojezdu. Tím
+            se zkrátí doba měření - zejména u plánů měření s častou výměnou
+            konfigurací snímačů.
+            Pro VAST XTR gold není potřebná opce VAST Performance pro rychlou
+            výměnu konfigurací snímačů.
+
+             Oznámení
+             Rychlou výměnu konfigurací snímačů můžete použít jen, když jsou pro
+             všechny vaše konfigurace snímačů a zásobníky dodrženy příslušné
+             platné specifikace (viz ➤ Podmínky pro rychlou výměnu konfigurací
+             snímačů [⇨ 1-13]).
+             U extrémně dlouhých nebo těžkých konfigurací snímačů může být
+             v jednotlivých případech vhodná výměna se sníženou rychlostí. Rychlou
+             výměnu konfigurací snímačů můžete pro příslušné úložné místo
+             deaktivovat (viz ➤ Deaktivovat rychlou výměnu konfigurací snímačů
+             pro jednotlivá úložná místa [⇨ 1-15]).
+
+
+            Podmínky pro rychlou výměnu
+            konfigurací snímačů
+            Pro rychlou výměnu konfigurací snímačů musí být splněny tyto
+            předpoklady:
+
+
+
+
+            61212-2901512           CALYPSO 2018                        1-13
+Rychlá výměna konfigurací snímačů (QuickChange)
+
+
+
+                       – Snímací hlava je typu VAST, VAST gold, VAST XXT, VAST XT gold
+                         nebo VAST XTR gold.
+                       – Používají se výhradně originální ZEISS upínací talířky s maticovým
+                         kódem (viz foto).
+
+                                                                           logo ZEISS
+
+
+
+
+                                                                           maticový kód
+
+
+                       – Řízení měřicího stroje typu C99, verze firmware 24.0 nebo vyšší.
+                       – Řízení je podle typu vašeho souřadnicového měřicího stroje
+                         konfigurováno pro rychlou výměnu konfigurací snímačů.
+                       – Máte platnou licenci pro opci VAST-Performance (není potřebná pro
+                         senzor VAST XTR gold).
+                       – Je aktivováno automatické rozpoznání snímače a CALYPSO zná ID
+                         snímače.
+
+                       Oznámení
+                       Jestliže používáte také jiné snímací systémy, musíte v nastavení
+                       výměnného zásobníku pro úložná místa těchto snímacích systémů
+                       deaktivovat rychlou výměnu (viz ➤ Deaktivovat rychlou výměnu
+                       konfigurací snímačů pro jednotlivá úložná místa [⇨ 1-15]).
+
+
+                       Aktivovat rychlou výměnu konfigurací
+                       snímačů
+                       1 Zvolte menu Doplňky " Nastavení " Stroj a otevřete stránku
+                         Pojezdy.
+
+
+
+
+1-14                   61212-2901512           CALYPSO 2018
+              Rychlá výměna konfigurací snímačů (QuickChange)
+
+
+
+       Systémová nastavení
+     Soubor Stránky
+
+                                Měřicí stroj
+
+
+                                                                  Řízení
+                Zkrácené pojezdy během kalibrace
+                                                                  Měř.přístroj
+                QuickChange                                       Dvoustojan
+                                                                  Sním.hlava
+                                                                  Sním.systém
+                                                                  Otočný stůl
+                                                                  Ovlád.panel
+                                                                  Teplota
+                                                                  Interface
+                                                                  Světel.signál
+                                                                  AAl
+                                                                  Měř.systémy
+                                                                 Pojezdy
+
+
+
+
+       1
+                    Simulace
+            RTP20
+
+
+                                                   OK   Storno          Převzít
+
+
+2 Aktivujte QuickChange.
+  Je to možné pouze v případě, že je řízení podle typu vašeho
+  souřadnicového měřicího stroje konfigurováno pro rychlou výměnu
+  konfigurací snímačů.
+3 Potvrďte následný dotaz, jestliže si jste jisti, že mají být všechny
+  konfigurace snímačů vyměněny pomocí rychlé výměny.
+Rychlá výměna konfigurací snímačů je aktivována.
+Pro jednotlivá úložná místa výměnného zásobníku můžete rychlou
+výměnu deaktivovat. Další informace viz ➤ Deaktivovat rychlou výměnu
+konfigurací snímačů pro jednotlivá úložná místa [⇨ 1-15].
+
+
+Deaktivovat rychlou výměnu konfigurací
+snímačů pro jednotlivá úložná místa
+Rychlou výměnu konfigurací snímačů můžete použít jen, když jsou pro
+všechny vaše konfigurace snímačů a zásobníky dodrženy příslušné platné
+specifikace (viz ➤ Podmínky pro rychlou výměnu konfigurací snímačů
+[⇨ 1-13]).
+
+
+
+61212-2901512                  CALYPSO 2018                         1-15
+Rychlá výměna konfigurací snímačů (QuickChange)
+
+
+
+                       Aby byla pro určité úložné místo k dispozici rychlá výměna konfigurací
+                       snímačů, musí být rychlá výměna aktivována v systémových nastaveních.
+                       Další informace viz ➤ Aktivovat rychlou výměnu konfigurací snímačů
+                       [⇨ 1-14].
+                       U extrémně dlouhých nebo těžkých konfigurací snímačů může být
+                       v jednotlivých případech vhodná výměna se sníženou rychlostí. Pro tento
+                       případ můžete rychlou výměnu pro příslušné úložné místo deaktivovat.
+                       1 Zvolte menu Příprava " Snímač " Automatická výměna
+                         snímacího systému.
+                         - nebo -
+                         V nástrojové liště klikněte na Automatická výměna snímacího
+                         systému.
+                         Otevře se okno Automatická výměna snímacího systému.
+                       2 Vyberte úložné místo, pro které chcete deaktivovat rychlou výměnu
+                         konfigurací snímačů.
+                         Vybrané úložné místo je barevně zvýrazněno. Informace o barevném
+                         kódování viz Barevné kódování úložných míst.
+                       3 Z rozevíracího seznamu Zásobník zvolte položku Určit směr
+                         vjezdu.
+                         Otevře se dialogové okno Určit směr vjezdu [název stroje]
+                         [název zásobníku].
+                       4 Klikněte na Rozšířená nastavení.
+                         Otevře se dialogové okno Rozšířená nastavení.
+                       5 V sekci Pojezdy deaktivujte zaškrtávací rámeček Rychlá výměna
+                         snímače pro toto úložné místo (v závislosti na obsazení).
+
+
+
+
+1-16                   61212-2901512          CALYPSO 2018
+Rejstřík
+           D
+           Definovat vyhodnocení pro FlyScan 1-10
+
+
+           F
+           FlyScan
+               aktivovat a nastavit 1-8
+               definovat vyhodnocení 1-10
+               Měření s funkcí Flyscan 1-8
+               Požadavky 1-5
+               základní údaje 1-3
+               zobrazit maskované body drážky na
+               grafice 1-12
+
+
+           G
+           Grafiky
+               zobrazit maskované body drážky
+               (FlyScan) 1-12
+
+
+           M
+           Maticový kód na otočném talířku 1-13
+
+
+           Q
+           QuickChange 1-13
+
+
+           R
+           Rychlá výměna konfigurací snímačů
+               aktivovat 1-14
+               deaktivovat pro jednotlivá úložná
+               místa 1-15
+               Předpoklady 1-13
+               Základní údaje 1-13
+
+
+           V
+           VAST Performance
+               FlyScan 1-3
+               Opce 1-2
+               rychlá výměna konfigurací
+               snímačů 1-13
+
+
+
+
+           61212-2901512                   CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2901512   CALYPSO 2018
+

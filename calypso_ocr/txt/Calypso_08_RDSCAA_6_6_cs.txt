@@ -1,0 +1,877 @@
+CALYPSO
+
+   Opce 8
+   RDS-CAA
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2781512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 RDS-CAA (opce)
+
+               Kalibrace otočné hlavy RDS s CAA............................... 1-2
+                  Úvod: Kalibrace otočné hlavy RDS s CAA (opce) ................................ 1-2
+                  Základní údaje o kalibraci RC-CAA..................................................... 1-3
+                  Kalibrace polohy po namontování RDS na měřicím stroji.................... 1-4
+                  Kalibrace s RDS-CAA ......................................................................... 1-7
+
+               Použít funkce RDS-CAA ............................................... 1-14
+                  ....................................................................................................... 1-14
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2781512                     CALYPSO 2018                                                  Obsah    11
+22 Obsah   61212-2781512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2781512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2781512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2781512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2781512          CALYPSO 2018
+RDS-CAA (opce)
+
+
+
+
+                 Kapitola
+
+                 1    RDS-CAA (opce)
+                    S opcí RDS-CAA můžete rychle a efektivně kalibrovat RDS-snímače ve všech
+                    potřebných úhlových polohách.
+
+
+                    Tato kapitola obsahuje:
+                    Kalibrace otočné hlavy RDS s CAA.............................................................. 1-2
+                    Použít funkce RDS-CAA............................................................................ 1-14
+
+
+
+
+                   61212-2781512                    CALYPSO 2018                                              1-1
+Kalibrace otočné hlavy RDS s CAA
+
+
+
+
+Kalibrace otočné hlavy RDS s CAA
+                       Úvod: Kalibrace otočné hlavy RDS s CAA
+                       (opce)
+                       Jestliže máte k dispozici opci RDS-CAA (Computer Aided Accuracy –
+                       počítačem podporovaná přesnost), můžete pomocí několika málo
+                       snímání určit najednou data snímačů pro všechny úhlové polohy otočné
+                       polohovací hlavy. Jen několik úhlových poloh je přitom skutečně fyzicky
+                       kalibrováno, pro ostatní polohy jsou data určována pomocí
+                       matematického modelu (početní kalibrace).
+                       Tímto způsobem probíhá kalibrace podstatně rychleji, po jejím provedení
+                       jsou pro snímání součásti k dispozici všechny fyzicky možné úhlové
+                       polohy RDS. Případné opakované kalibrace probíhají rovněž rychleji.
+
+                       Oznámení
+                       Opce RDS-CAA je k dispozici pro CALYPSO, tak i pro CMM-OS. V této
+                       dokumentaci je popsán postup pro oba programy.
+
+                       Vhodné snímače a snímací hlavy
+                       Jako snímací hlavy na RDS jsou vhodné senzory RST, TP2, TP20, TP200,
+                       XXT-TL3 a XXT-TL4.
+                       Pro použití opce RDS-CAA s pasivními senzory potřebujete navíc opci
+                       „CAA Einmessmodul PS“.
+
+
+                       Nepoužívejte v bočním směru snímače delší než 40 mm.
+
+                       Opce RDS-CAA nefunguje s diskovými snímači, vícenásobnými
+                       prodlouženími snímačů a s konfiguracemi snímačů ve tvaru U.
+
+
+
+                                                                !
+
+
+
+
+                                   LS < 40mm             LS > 40mm
+
+
+
+
+1-2                    61212-2781512           CALYPSO 2018
+                                                        Kalibrace otočné hlavy RDS s CAA
+
+
+
+
+                        Základní údaje o kalibraci RC-CAA
+                        Snímač na hlavě RDS může postupným přestavováním po 2,5 stupních
+                        zaujmout teoreticky celkem 20 736 poloh, ne všechny jsou však
+                        vzhledem ke geometrii stroje fyzicky možné. Bez RDS-CAA se každá
+                        poloha považuje za samostatný snímač, který musí být také kalibrován.
+                        Tradiční kalibrace se většinou omezovala jen na kalibraci určité
+                        podmnožiny poloh RDS. CALYPSO/CMM-OS podporuje kalibrační postup
+                        pomocí seznamu snímačů pro RDS, do kterého se každá potřebná
+                        poloha zapíše jako snímač s vlastním názvem.
+Výhoda opce RDS-CAA     Když se použije opce RDS-CAA, můžete pomocí několika snímání určit
+                        data snímačů pro všechny možné úhlové polohy hlavy RDS. Přitom je jen
+                        několik úhlových poloh skutečně fyzicky zaměřeno, hodnoty pro zbývající
+                        polohy jsou určovány pomocí matematického modelu.
+                        Tímto způsobem probíhá kalibrace podstatně rychleji, po jejím provedení
+                        jsou pro snímání součásti k dispozici všechny fyzicky možné úhlové
+                        polohy RDS. Případné opakované kalibrace probíhají rovněž rychleji.
+
+                        Oznámení
+                        Jako snímací hlavy na RDS jsou vhodné RST, TP2, TP20, TP200, XXT-TL3
+                        a XXT-TL4. Pro použití opce RDS-CAA s pasivními senzory potřebujete
+                        navíc opci „CAA Einmessmodul PS“.
+                        I když používáte pasivní senzor pouze jako referenční snímač,
+                        potřebujete opci „CAA Einmessmodul PS“, abyste mohli provádět
+                        kalibraci RDS-CAA.
+
+Průběh ve třech resp.   Kalibrace probíhá ve třech popř. ve čtyřech krocích:
+čtyřech krocích         – Kalibrace hlavy RDS ve firmě ZEISS (tovární kalibrace)
+                           Při tovární kalibraci jsou pro každou hlavu RDS vytvořeny individuální
+                           korekční soubory, které jsou nutné pro pozdější početní kalibraci.
+                           Tyto korekční soubory jsou na váš systém nainstalovány společně s
+                           opcí RDS-CAA.
+                        – Kalibrace po namontování RDS na měřicí stroj
+                           Při této kalibraci se po namontování hlavy RDS na měřicí stroj zjišťuje
+                           a ukládá poloha RDS v souřadném systému stroje.
+                        – Kalibrace snímače ve dvanácti polohách pro hlavní snímač (to je
+                          snímač ve směru pinoly)
+                           Nakonec se potřebný snímací systém se snímačem nasadí do RDS a
+                           je kalibrován v několika málo polohách. Poté vypočte CALYPSO/
+                           CMM-OS korekční hodnoty pro všechny další polohy.
+
+
+
+
+                        61212-2781512           CALYPSO 2018                              1-3
+Kalibrace otočné hlavy RDS s CAA
+
+
+
+                          Jestliže má snímací systém (konfigurace snímačů) jen jeden snímač, je
+                          hlava RDS zkalibrována.
+                       – Kalibrace dalších snímačů snímacího systému (hvězdicová
+                         konfigurace snímačů)
+                          Pokud má snímací systém více snímačů (hvězdicová konfigurace),
+                          jsou poté kalibrovány další snímače vždy ve čtyřech polohách.
+                          CALYPSO/CMM-OS vypočte korekční hodnoty pro všechny další
+                          polohy dalších snímačů a hlava RDS je kompletně zkalibrována.
+
+
+                       Kalibrace polohy po namontování RDS
+                       na měřicím stroji
+                       Jednorázová kalibrace po namontování
+                       Touto kalibrací je po namontování RDS na měřicí stroj zjištěna její poloha
+                       v souřadném systému stroje. To je předpokladem pro to, aby mohly být
+                       kalibrovány snímací systémy a snímače na hlavě RDS.
+                       Kalibraci po namontování pro RDS stačí provést jen jednou. Snímací
+                       systémy a snímače použité na RDS můžete potom kalibrovat separátně a
+                       není třeba provádět novou kalibraci po namontování.
+
+                       Předpoklady pro kalibraci
+                       Vaše otočná hlava RDS byla již kalibrována ve výrobním závodě.
+                       Potřebné korekční soubory pro RDS jsou tedy už k dispozici.
+Kalibrační koule je    Dalším předpokladem je, že musí být kalibrována kalibrační koule.
+kalibrována.           Zajistěte, aby program CALYPSO/CMM-OS znal polohu kalibrační koule a
+                       aby tato koule svým dříkem směřovala do směru úhlové polohy 45/45:
+                       – U portálových strojů je to poloha s úhlem naklopení 135˚ a s úhlem
+                         natočení 315˚.
+                       – U stojanových strojů s horizontálním ramenem je to
+                          – pro rameno 1 poloha s úhlem naklopení 135˚ a s úhlem natočení
+                            45˚,
+                          – pro rameno 2 poloha s úhlem naklopení 135˚ a s úhlem natočení
+                            315˚.
+
+
+
+
+1-4                    61212-2781512           CALYPSO 2018
+                                                        Kalibrace otočné hlavy RDS s CAA
+
+
+
+                       Pokud jedna z těchto dvou podmínek není splněna (tj. dřík kalibrační
+                       koule ukazuje jiným směrem nebo není známa poloha koule), musíte
+                       kouli nově kalibrovat (viz v základním návodu oddíl Kalibrovat kalibrační
+                       kouli).
+                       Nikdy nenastavujte dřík kalibrační koule na 45˚/45˚. Při automatické
+                       kalibraci hrozí v tomto případě nebezpečí kolize.
+
+Referenční snímač je   Kalibrace po namontování musí být provedena referenčním snímačem.
+nasazen.               Je nutné použít pouze referenční snímač určený pro tento stroj!
+                       CALYPSO zjistí pomocí měření s otočením potřebná nastavení; můžete si
+                       je prohlédnout pomocí menu Doplňky " Nastavení " Stroj na
+                       stránce Referenční snímač.
+                       Jak instalujete referenční snímač měřicího stroje do hlavy RDS, viz v
+                       základním návodu oddíl Instalovat snímací systém.
+
+                       Provést kalibraci polohy po namontování
+                       Podmínky
+                          – Je otevřen plán měření.
+                       1 V programu CALYPSO v sekci plánu měření na kartě Stroj klikněte
+                         na tlačítko Snímací systém.
+                         - nebo -
+                         V programu CMM-OS zvolte menu Snímač " Kalibrace.
+                         Otevře se okno Kalibrace snímacího systému. Bližší informace
+                         o tomto okně najdete v oddílu Kalibrace snímacího systému
+                         v přehledu dialogů v online nápovědě programu CALYPSO.
+                       2 Vyberte název referenčního snímače v rozevíracím seznamu
+                         Sním.systém, pokud ještě není v poli uveden.
+                         V rozevíracím seznamu Snímač: název/č. se ukáže název a číslo
+                         snímače (referenční snímač má jen jeden snímač). Jako Úhel
+                         otevření je nastaveno 180˚.
+                       3 V rozevíracím seznamu Režim zvolte položku RC-CAA.
+
+
+
+
+                       61212-2781512            CALYPSO 2018                              1-5
+Kalibrace otočné hlavy RDS s CAA
+
+
+
+                               Kalibrace snímacího systému
+                           Snímací systém        Snímač    Správa
+
+
+
+
+                            Sním.systém                      Režim                             Parametr
+
+                            Refer.snímač                      6 bodů                           Standard
+
+                            Snímač-název ./ č.               Geometrie                         Úhel otevření
+
+                                                              Koule
+
+
+                                 Namont.poloha                        Změnit polohu                  Poloha kal.koule
+
+
+                              Nastavit mezní hodnoty
+
+
+                            Snímač                                                    Kalibrační koule
+                             Název                    Datum                            Č.
+
+                                                                                       Tepl.
+
+
+                                                                                       S.č.
+
+                                                                                       Datum
+
+                                                                                       R:
+
+                                                                                       S:
+
+                                                                                       X:
+
+                                                                                       Y:
+
+                                                                                       Z:
+                                                             Typ:                      Nakl:
+
+                                                                                       Otáč:
+
+
+
+                                        OK
+
+
+
+
+                       4 Klikněte na tlačítko Mont.poloha.
+                         Označení tohoto tlačítka se mění podle konkrétní situace: standardně
+                         má označení Kalibrovat.
+                       5 Podle pokynu pohybujte snímačem směrem ke kalibrační kouli a
+                         snímejte ve směru snímače. (Váš snímač musí být vyrovnán na
+                         úhlovou polohu 0/0. Jeďte nyní ve směru pinoly ke kouli a proveďte
+                         na ní jedno snímání. V případě portálového měřicího stroje snímejte
+                         severní pól koule, na stojanovém stroji snímejte na rovníku.)
+                         CALYPSO/CMM-OS pokračuje podle zvoleného režimu automaticky
+                         dále v kalibraci, snímáními ve 12 polohách zjistí velice přesně
+                         montážní polohu RDS a uloží ji do paměti.
+
+
+
+1-6                    61212-2781512                      CALYPSO 2018
+                                Kalibrace otočné hlavy RDS s CAA
+
+
+
+   Výsledky jsou uvedeny v polích R (Radius), S (Sigma) a X, Y, Z
+   (geometrie snímače).
+6 Klikněte na tlačítko OK, přejde se zpět na pracovní plochu.
+Poloha otočné hlavy RDS je nyní úspěšně určena, dále můžete přejít ke
+kalibraci jednotlivých snímačů.
+
+
+Kalibrace s RDS-CAA
+Obecně o kalibraci
+Kalibraci snímačů je třeba provést v následujících případech:
+– Instalovali jste nový snímací systém, který ještě není kalibrován.
+– Chcete provést opětovnou kalibraci snímacího systému např.po kolizi
+  nebo po tepelných změnách.
+Snímač je kalibrován, když je v programu CALYPSO/CMM-OS tímto
+snímačem určitým způsobem snímána kalibrační koule připevněná na
+měřicím stole. S opcí RDS-CAA jsou tak automaticky určena data
+snímačů pro všechny úhlové polohy otočné hlavy RDS.
+
+Postup při kalibraci s RDS-CAA
+Také při použití opce RDS-CAA je základní postup pro snímací systémy
+(konfigurace snímačů) stejný: Při sestavování plánu měření je třeba vždy
+zajistit, aby byl instalován a kalibrován správný snímací systém
+(konfigurace snímačů).
+Při kalibraci nejprve určete, který snímač použijete, a s tímto snímačem
+se potom provede měření kalibrační koule. (V programu CALYPSO je
+tlačítko Snímací systém zobrazeno zeleně, jestliže již bylo toto měření
+provedeno uvedenou konfigurací snímačů.)
+S RDS-CAA jsou však skutečně fyzicky kalibrovány jen některé úhlové
+polohy, všechny další se podle nich vypočtou a jsou k dispozici pro
+měření.
+
+Definovat snímače a snímací systémy
+Názvy a čísla pro snímače a snímací systémy
+V programu CALYPSO/CMM-OS dostává každý snímací systém
+(konfigurace snímačů) a každý snímač vlastní název. Jednotlivé snímače
+mají navíc ještě čísla. Pomocí názvů a čísel identifikuje CALYPSO/CMM-
+OS snímací systémy a snímače a ukládá jejich data.
+Každý snímač musí být proto nejprve definován. Teprve po definování
+snímačů můžete kalibrovat jejich úhlové polohy s RDS-CAA.
+
+
+61212-2781512           CALYPSO 2018                              1-7
+Kalibrace otočné hlavy RDS s CAA
+
+
+
+                       Ve většině případů má snímací systém jen jeden snímač. Hvězdicově
+                       uspořádaná konfigurace má více snímačů.
+
+                       Definovat nový snímací systém pro RDS-CAA
+                       1 V programu CALYPSO v sekci plánu měření na kartě Plán měření
+                         klikněte na tlačítko Snímací systém.
+                         - nebo -
+                         V programu CMM-OS zvolte menu Snímač " Kalibrace.
+                         Otevře se okno Kalibrace snímacího systému. Bližší informace o
+                         tomto okně najdete v oddílu Kalibrace snímacího systému v přehledu
+                         dialogů v online nápovědě programu CALYPSO.
+                       2 Klikněte na ikonu Vložit nový snímací systém.
+                         Tím se otevře okno Definovat nový snímací systém.
+
+                             Deﬁnovat nový snímací systém
+
+                            Snímací hlava
+
+                            RST
+
+
+                             Zeiss polohovací hlava
+
+
+
+
+                                                                                       Přidat
+
+
+
+
+                            Modul
+
+
+
+
+                                                                                       Přidat
+
+
+
+
+                             Sním.systém
+
+                                                        Nový sním.systém               RDSCAA
+
+                                                        Snímač                      Snímač č.
+
+
+
+
+                                                        OK                 Storno
+
+
+
+                       3 Zadejte název pro nový snímací systém a pro první snímač.
+                         Nepoužívejte v názvech speciální znaky.
+
+
+
+1-8                    61212-2781512                  CALYPSO 2018
+                               Kalibrace otočné hlavy RDS s CAA
+
+
+
+   CALYPSO nerozlišuje mezi psaním velkými a malými písmeny. Nejsou
+   akceptovány tečky na konci názvu snímače nebo snímacího systému.
+4 Aktivujte zaškrtávací políčko RDSCAA.
+5 Klikněte na tlačítko OK, okno se zavře.
+Názvy snímacího systému a prvního snímače jsou uvedeny v rozevíracích
+seznamech Sním.systém a Snímač: název/č.
+Jestliže jsou v snímacím systému instalovány další snímače, musí
+CALYPSO dostat příslušnou informaci (viz ➤ Přidat další snímače do
+snímacího systému [⇨ 1-9]).
+
+Přidat další snímače do snímacího systému
+V programu CALYPSO/CMM-OS musí být známy všechny snímače
+snímacího systému (konfigurace snímačů). Po definování nového
+snímacího systému a po změnách existujícího snímacího systému musíte
+tudíž případně přidat a kalibrovat další snímače.
+1 V programu CALYPSO v sekci plánu měření na kartě Stroj klikněte
+  na tlačítko Snímací systém.
+  - nebo -
+  V programu CMM-OS zvolte menu Snímač " Kalibrace.
+  Otevře se okno Kalibrace snímacího systému.
+  Bližší informace o tomto okně najdete v oddílu Kalibrace snímacího
+  systému v přehledu dialogů v online nápovědě programu CALYPSO.
+2 Klikněte na tlačítko Vložit nový snímač.
+3 V okně Definovat nový snímač zadejte požadovaný název a zvolte
+  číslo, které má sloužit jako reference daného snímače.
+  CALYPSO nerozlišuje mezi psaním názvů velkými a malými písmeny.
+  Číslo musí být jednoznačné v rámci daného snímacího systému
+  (konfigurace snímačů). Můžete tedy zvolit jen volné číslo nebo zadat
+  číslo vyšší, než je poslední číslo v rozevíracím seznamu.
+
+       Deﬁnovat nový snímač
+      Snímač                                Snímač č.
+                                            2
+
+
+                   OK                  Storno
+
+
+4 Chcete-li přidat další snímače, opakujte kroky 2 až 3.
+Nové snímače se objeví v seznamu Snímač: název/č.
+
+
+
+
+61212-2781512           CALYPSO 2018                          1-9
+Kalibrace otočné hlavy RDS s CAA
+
+
+
+                       Dále kalibrujte postupně hlavní snímače (➤ Kalibrovat snímače a
+                       snímací systémy s RDS-CAA [⇨ 1-10]). Poté kalibrujte ostatní snímače
+                       (hvězdicová konfigurace) na základě dat zjištěných při kalibraci hlavních
+                       snímačů.
+                       Ve správě dat snímačů můžete vymazat chybně definovaný snímač
+                       nebo změnit název nebo číslo snímače.
+                       Pro vymazání označte v navigační sekci Snímač a v kontextovém menu
+                       zvolte položku Vymazat.
+                       Pro změnu označte v navigační sekci Geometrie a v tabulce klikněte do
+                       příslušné buňky.
+
+                       Kalibrovat snímače a snímací systémy s RDS-CAA
+                       Průběh při kalibraci s RDS-CAA
+                       Kalibrace prvního snímače snímacího systému se liší od kalibrace
+                       případných dalších snímačů ve stejném systému.
+                       – První (a případně také jediný) snímač je kalibrován ve 12 fyzických
+                         úhlových polohách.
+
+                       Oznámení
+                       Směr tohoto snímače se musí shodovat se směrem pinoly.
+                       – Každý další snímač ve stejném snímacím systému je kalibrován ve
+                         čtyřech fyzických úhlových polohách.
+
+                       Oznámení
+                       Pro kalibraci snímačů na senzoru XXT s RDS-CAA jsou potřebné jiné
+                       úhlové polohy než pro kalibraci se spínacími senzory. Je to proto, že
+                       kromě kalibrace RC a průhybu snímače jsou určovány parametry
+                       scanování.
+                       Zejména pro kalibraci bočních doteků jsou proto potřebné další úhlové
+                       polohy.
+
+                       Kalibrovat první snímač s RDS-CAA
+                       Předpokládáme, že snímací systém, který se má kalibrovat, je nasazen a
+                       je i se všemi snímači znám programu CALYPSO/CMM-OS.
+
+                       Kalibrovat první snímač snímacího systému (hlavní
+                       snímač v úhlové poloze A = 0˚, B = 0˚) s RDS-CAA
+                       1 V programu CALYPSO v sekci plánu měření na kartě Stroj klikněte
+                         na tlačítko Snímací systém.
+                         - nebo -
+
+
+
+1-10                   61212-2781512           CALYPSO 2018
+                                          Kalibrace otočné hlavy RDS s CAA
+
+
+
+   V programu CMM-OS zvolte menu Snímač " Kalibrace.
+   Otevře se okno Kalibrace snímacího systému. Bližší informace
+   o tomto okně najdete v oddílu Kalibrace snímacího systému
+   v přehledu dialogů v online nápovědě programu CALYPSO.
+
+        Kalibrace sní mací ho systému
+    Sní mací systém Sní mač     Správa
+
+
+
+
+    Sní m.systém                  Režim                             Parametr
+
+     Refer.sní mač                    6 bodů                         Standard
+
+    Sní mač-název/č.              Geometrie                          Úhel otevření
+
+     RDS_hvezda1                      Koule
+
+
+          Kalibrovat snímač                 Změnit polohu                  Poloha kal.koule
+
+
+       Nastavit mezní hodnoty
+
+
+     Sní mač                                                Kalibrační koule
+      Název                   Datum                          Č.
+
+       RDS_hvezda1                                           Tepl.
+
+
+                                                             S.č.
+
+                                                             Datum
+
+                                                             R:
+
+                                                             S:
+
+                                                             X:
+
+                                                             Y:
+
+                                                             Z:
+                                  Typ:                       Nakl.:
+                                      RST                    Otáč.:
+
+
+
+                   OK
+
+
+
+
+2 Vyberte název tohoto snímacího systému v rozevíracím seznamu
+  Sním.systém, pokud ještě není v poli uveden.
+3 Vyberte název snímače, který se musí kalibrovat jako první,
+  v rozevíracím seznamu Snímač: název/č.
+  V rozevíracím seznamu Režim je nastaven režim RC-CAA.
+
+
+
+
+61212-2781512                 CALYPSO 2018                                           1-11
+Kalibrace otočné hlavy RDS s CAA
+
+
+
+                       4 Pokud používáte velmi krátké snímače, měli byste snížit hodnotu pro
+                         Úhel otevření.
+                         Čím menší je úhel otevření, tím menší je výřez povrchu kalibrační
+                         koule, který je snímán při kalibraci.
+                       5 Klikněte na tlačítko Kalibrovat snímač.
+                         Zahájí se kalibrace snímače ve 12 úhlových polohách definovaných
+                         opcí RDS-CAA. První snímání musíte provést manuálně.
+                       6 Podle pokynu jeďte snímačem v poloze RDS 0 / 0 nad pól kalibrační
+                         koule a snímejte ve směru snímače.
+                         CALYPSO přitom ověřuje polohu kalibrační koule a zhruba délku
+                         snímače. Potom je automaticky navoleno a kalibrováno 12 pozic.
+                         K zadanému úhlu otevření se při výběru pozic a snímání přihlíží jako
+                         k maximální hodnotě.
+                         Výsledky jsou uvedeny v polích R, S, X, Y a Z (viz základní návod
+                         oddíl Výsledky kalibrace snímačů).
+                       V sekci Snímač teď vidíte ikonu pro úspěšně provedenou kalibraci
+                       snímače a pod ní označení „RC-CAA“.
+
+                       Kalibrovat další snímače s RDS-CAA
+                       Jestliže chcete na stejném snímacím systému kalibrovat další snímače (v
+                       případě hvězdicové konfigurace), můžete to provést hned v návaznosti
+                       na kalibraci hlavního snímače.
+                       Každý další snímač je změřen poloautomaticky ve čtyřech pozicích RDS,
+                       aby se dosáhlo co nejlepší přesnosti.
+                       Podmínky
+                          – Máte otevřené okno Kalibrace snímacího systému a kalibrovali
+                            jste už první snímač daného snímacího systému.
+                       1 Vyberte název snímače, který chcete kalibrovat jako další, v
+                         rozevíracím seznamu Snímač: název/č.
+                       2 Klikněte na tlačítko Kalibrovat snímač.
+                         Jelikož v tomto případě není navolen hlavní snímač, objeví se okno
+                         CAA: Kalibrace hvězdicové konfigurace snímačů se seznamem poloh.
+
+
+
+
+1-12                   61212-2781512           CALYPSO 2018
+                                            Kalibrace otočné hlavy RDS s CAA
+
+
+
+     CAA: Kalibrace hvězdicové konﬁgurace snímačů
+
+     Sním.systém      Hitzler
+
+     Snímač           2
+
+                                                                         Načíst
+                       Pozice Osa A     Osa B       Režim    Dod.kal.
+                       1        0,00     0,00       normal
+
+         Ukázat       2         90,00 10,00 normal
+
+       Jiná volba
+                      3         90,00 90,00 normal                       OK
+                      4         0,00     80,00 normal
+         Přidat
+                                                                        Storno
+        Vymazat
+
+
+   Pokud jsou pro kalibrovaný snímací systém již uložena data, je už
+   seznam předběžně obsazen.
+3 V seznamu poloh zvolte pro Poloha (1 až 4) kliknutím na Jiná volba
+  jednu ze dvou poloh RDS.
+4 Chcete-li odhadnout, která poloha je vhodnější: Klikněte pro obě
+  polohy na tlačítko Ukázat.
+  Hlava RDS se natočí do příslušné polohy.
+5 Je-li třeba, zadejte pomocí položky Přidat další kalibrační polohy.
+  Obvykle stačí čtyři polohy. Pouze v případě, že by přesnost kalibrace
+  nepostačovala, musíte změřit další polohy.
+6 V sekci Dod.kal. aktivujte nejméně dvě položky v seznamu, do
+  kterých se má najet při dodatečné kalibraci během CNC průběhu.
+7 Klikněte na tlačítko OK, aby se zahájila kalibrace.
+  CALYPSO/CMM-OS vás vede dalším průběhem.
+8 Opakujte případně pro další snímače kroky 1 až 7.
+9 Potvrďte svá zadání a zavřete okno CAA kalibrace tlačítkem OK.
+  Informace: Pokud nepotvrdíte tlačítkem OK, ztratí se všechny dosud
+  neuložené výsledky kalibrace snímačů.
+CALYPSO/CMM-OS se poté vrátí na pracovní plochu. Snímače jsou
+úspěšně kalibrovány.
+V programu CALYPSO se barva ikony Snímací systém změnila na
+zelenou.
+CALYPSO/CMM-OS vytvoří protokol, který můžete buď vytisknout nebo
+uložit jako ASCII soubor.
+Snímací systém kalibrovaný s RDS mohou od této chvíle všichni uživatelé
+používat ve všech polohách RDS.
+
+
+
+
+61212-2781512                   CALYPSO 2018                            1-13
+Použít funkce RDS-CAA
+
+
+
+
+Použít funkce RDS-CAA
+
+
+
+
+1-14                    61212-2781512   CALYPSO 2018
+Rejstřík
+           K
+           Kalibrace po namontování
+               RDS-CAA 1-4
+           Kalibrace snímacího systému
+               RDS-CAA 1-7
+
+
+           R
+           RDS
+               s CAA kalibrovat 1-2
+               Snímače vhodné pro CAA 1-2
+           RDS-CAA
+               kalibrace po namontování 1-4
+               kalibrovat snímací systém 1-7
+               Základní údaje 1-3
+
+
+           S
+           Snímací systém
+               kalibrace s RDS-CAA 1-2
+               vhodné pro RDS-CAA 1-2
+
+
+           V
+           Vhodné snímače
+               pro RDS-CAA 1-2
+
+
+
+
+           61212-2781512                 CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2781512   CALYPSO 2018
+

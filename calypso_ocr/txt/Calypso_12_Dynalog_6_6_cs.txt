@@ -1,0 +1,800 @@
+CALYPSO
+
+   Ovládací panely
+   Dynalog a Dynalog P
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2821512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 Ovládací panely Dynalog a Dynalog P
+
+               Úvod: Ovládací panely Dynalog a Dynalog P............... 1-2
+
+               Dynalog a Dynalog P – přehled ..................................... 1-3
+
+               Pracovat s panelem Dynalog P...................................... 1-4
+                  Ovládání programu CALYPSO panelem Dynalog P ............................. 1-4
+                  Konfigurovat CALYPSO pro panel Dynalog P ..................................... 1-4
+                  Dynalog P – zvláštnosti ovládání........................................................ 1-5
+
+               Pracovat s panelem Dynalog ......................................... 1-7
+                  Ovládat CALYPSO pomocí panelu Dynalog ........................................ 1-7
+                  Konfigurovat CALYPSO pro panel Dynalog ........................................ 1-7
+                  Ovládání touchpadu panelu Dynalog................................................. 1-9
+                  Funkční tlačítka na ovládacím panelu Dynalog................................. 1-10
+                  Ovládání panelů nástrojů s panelem Dynalog .................................. 1-11
+                  Příklad: Pořadí ovládání na panelu Dynalog ..................................... 1-12
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2821512                 CALYPSO 2018                                        Obsah   11
+22 Obsah   61212-2821512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2821512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2821512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2821512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2821512          CALYPSO 2018
+Ovládací panely Dynalog a Dynalog P
+
+
+
+
+                                      Kapitola
+
+                                      1    Ovládací panely Dynalog a
+                                           Dynalog P
+
+                                         Tato kapitola obsahuje:
+                                         Úvod: Ovládací panely Dynalog a Dynalog P............................................... 1-2
+                                         Dynalog a Dynalog P – přehled .................................................................. 1-3
+                                         Pracovat s panelem Dynalog P ................................................................... 1-4
+                                         Pracovat s panelem Dynalog ...................................................................... 1-7
+
+
+
+
+                                        61212-2821512                    CALYPSO 2018                                             1-1
+Úvod: Ovládací panely Dynalog a Dynalog P
+
+
+
+
+Úvod: Ovládací panely Dynalog a Dynalog P
+                       Úlohy měření se obvykle provádějí pomocí dvou fyzicky oddělených
+                       jednotek: ovládacího panelu a počítače. Ovládacím panelem řídíte přímo
+                       souřadnicový měřicí stroj, na počítači vytváříte plány měření v programu
+                       CALYPSO.
+                       Při popisu postupu se v této dokumentaci vychází vždy z ovládání
+                       pomocí standardního ovládacího panelu a počítače. Pokud používáte
+                       ovládací panel Dynalog nebo Dynalog P, máte ještě některé další
+                       možnosti.
+                       Panely Dynalog kombinují klávesnici počítače, funkce myši a ovládací
+                       panel souřadnicového měřicího stroje. Poskytují tedy plnou funkčnost a
+                       maximální uživatelskou přívětivost na jednom místě.
+                       Kompletní popis panelu Dynalog najdete v příručce, která vám byla
+                       dodána spolu s ovládacím panelem. Zde se popisuje, jak konfigurujete
+                       CALYPSO pro použití s panelem Dynalog nebo Dynalog P a jaké jsou
+                       zvláštnosti při ovládání.
+
+
+
+
+1-2                    61212-2821512           CALYPSO 2018
+                                                                          Dynalog a Dynalog P – přehled
+
+
+
+
+Dynalog a Dynalog P – přehled
+                                 Ovládací panely Dynalog a Dynalog P mají stejný vnější vzhled, liší se ale
+                                 svými funkcemi.
+
+                                  vertikální funkční tlačítka L1-L8            vertikální funkční tlačítka R1-R8
+
+
+
+
+                                                                                                     displej
+
+
+
+
+                                                                                                    horizontální
+                                                                                                    funkční tlačítkaF1-F12
+                                                                                                    touchpad
+                                                                                                    klávesnice
+
+
+
+
+                                 Jednotlivé komponenty ovládací plochy mají tyto funkce:
+                                 – Displej: odpovídá obrazovce počítače. Vidíte zde pracovní plochu a
+                                   dialogová okna softwaru CALYPSO.
+                                 – Klávesnice: odpovídá klávesnici počítače se softwarem CALYPSO
+                                   (americké rozmístění kláves).
+                                 – Funkční tlačítka: jsou rozdělena do dvou skupin.
+
+Skupina                          Dynalog                                   Dynalog P
+Horizontální tlačítka F1 až      mají ➤ pevné obsazení [⇨ 1-10]            odpovídají funkčním tlačítkům
+F12                              funkcemi programu CALYPSO.                klávesnice počítače.
+Vertikální tlačítka L1 až L8 a   jsou obsazena teprve, když jste v         generují zčásti přímé povely
+R1 až R8                         programu CALYPSO definovali               pro stroj.
+                                 panel nástrojů.
+
+                                 – Touchpad: Touchpad nahrazuje myš známou z počítače (viz ➤
+                                   Dynalog P - zvláštnosti ovládání [⇨ 1-5] nebo ➤ Ovládání
+                                   touchpadu panelu Dynalog [⇨ 1-9]).
+                                 – Joysticky: Joysticky (pákové ovladače) slouží pro ruční ovládání
+                                   souřadnicového měřicího stroje.
+
+
+
+
+                                 61212-2821512                  CALYPSO 2018                                       1-3
+Pracovat s panelem Dynalog P
+
+
+
+
+Pracovat s panelem Dynalog P
+                       Ovládání programu CALYPSO panelem
+                       Dynalog P
+                       S panelem Dynalog P můžete v blízkosti měřicího stroje ovládat
+                       CALYPSO paralelně s počítačem s nainstalovaným programem CALYPSO.
+                       Až na několik odlišností ovládáte CALYPSO úplně stejně jako na počítači
+                       s programem CALYPSO.
+                       Předtím je třeba dát programu ➤ CALYPSO v systémových nastaveních
+                       jednorázově informaci [⇨ 1-4], že je připojen ovládací panel typu
+                       Dynalog P. Teprve potom je nastavena klávesnice, funkční tlačítka a
+                       touchpad pro CALYPSO.
+                       Pro ➤ ovládání programu CALYPSO panelem Dynalog P [⇨ 1-5] stačí
+                       seznámit se navíc s funkcí touchpadu, vertikálně uspořádaných
+                       funkčních tlačítek a s druhou klávesou Shift.
+
+
+                       Konfigurovat CALYPSO pro panel
+                       Dynalog P
+                       Musíte dát programu CALYPSO v systémových nastaveních jednorázově
+                       informaci, že je připojen ovládací panel typu Dynalog P.
+                       Informace: Uvědomte si, že na počítači s programem CALYPSO musí být
+                       provozována klávesnice s americkým ovladačem, protože Dynalog
+                       používá americké rozmístění kláves (QWERTY).
+                       1 Spustíte CALYPSO na počítači s programem CALYPSO a přihlásíte se.
+                       2 Zvolte menu Doplňky " Nastavení " Stroj a klikněte na záložku
+                         Ovládací panel.
+                         Uvidíte stránku pro výběr ovládacího panelu.
+
+
+
+
+1-4                    61212-2821512          CALYPSO 2018
+                                                                   Pracovat s panelem Dynalog P
+
+
+
+                            Systémová nastavení
+                          Soubor   Stránky         Nápověda
+
+                                                    Měřicí stroj
+
+                               Ovlád.panel
+                                                                                           Řízení
+                                             DYNALOGp                                      Měř.přístroj
+                                                                                           Dvoustojan
+                                                                                           Sním.hlava
+                                                                                           Ref.snímač
+                                                                                           Výměna sním.
+                                                                                           Otočný stůl
+                                                                                     Ovlád.panel
+                                                                                     Teplota
+                                                                                     Interface
+                                                                                      AAI
+                                                                                      Měř.systémy
+
+
+
+
+                              Simulace
+
+
+                                                                           OK     Storno        Převzít
+
+
+                     3 V sekci Ovládací panel zvolte položku DYNALOGp.
+                     4 Klikněte na záložku Řízení a na tlačítko Vytvořit spojení.
+                     5 Klikněte na tlačítko OK, nastavení se uloží a okno se zavře.
+                     Tím je instalace ovládacího panelu Dynalog P na počítači ukončena.
+                     Odteď můžete ovládat CALYPSO paralelně pomocí panelu Dynalog P.
+
+
+                     Dynalog P – zvláštnosti ovládání
+                     Dynalog P pracuje v zásadě jako standardní ovládací panel.
+                     Navíc funguje klávesnice a počítač stejně jako na počítači s programem
+                     CALYPSO. Počítač s programem CALYPSO jakoby dálkově ovládáte
+                     pomocí panelu Dynalog P.
+                     Po seznámení s ovládáním touchpadu můžete bez omezení postupovat
+                     podle všech popisů v této dokumentaci.
+Ovládání touchpadu   Touchpad zcela nahrazuje myš. Místo myší zde pohybujete pouze
+                     pomocí prstu ukazatelem myši po displeji.
+                     Abyste se seznámili s funkcí touchpadu, položte libovolný prst na plošku
+                     touchpadu a sledujte ukazatel na displeji.
+
+
+                     61212-2821512                CALYPSO 2018                                   1-5
+Pracovat s panelem Dynalog P
+
+
+
+                       Když přejíždíte prstem po plošce, sleduje ukazatel myši na displeji pohyb
+                       vašeho prstu.
+                       – Pro provedení jednoduchého kliknutí klepněte krátce na ovládací
+                         plošku.
+                       – Pro provedení dvojkliku klepněte dvakrát krátce na plošku.
+Funkční tlačítka       Horizontálně uspořádaná funkční tlačítka F1 až F12 mají stejnou funkci
+                       jako na počítači.
+                       Vertikálně uspořádaná funkční tlačítka generují některé přímé povely pro
+                       stroj, které jsou uvedeny na masce. Příklady:
+                       – Pomalý pojezd / Rychlý pojezd
+                       – Inverzní pojezd (X<--> -X, Y<--> -Y)
+                       Zvláštností je dvojí klávesa Shift:
+                       – Klávesa Shift na klávesnici má stejnou funkci jako tato klávesa na
+                         počítači.
+                       – Klávesa Shift pro povely pro stroj (vlevo nad klávesnicí) slouží jak pro
+                         uvolnění joysticků, tak i pro přepnutí na režim RDS.
+                           Pro uvolnění joysticků krátce stiskněte tuto klávesu Shift.
+                           Pro přepnutí joysticků na režim RDS musíte stisknout klávesu Shift o
+                           něco déle (cca 3-4 sec.). V režimu RDS můžete pomocí joysticků
+                           manuálně nastavit úhlové polohy RDS.
+
+
+
+
+1-6                    61212-2821512             CALYPSO 2018
+                                                                   Pracovat s panelem Dynalog
+
+
+
+
+Pracovat s panelem Dynalog
+                       Ovládat CALYPSO pomocí panelu
+                       Dynalog
+                       S panelem Dynalog můžete v blízkosti měřicího stroje ovládat CALYPSO
+                       paralelně s počítačem s nainstalovaným programem CALYPSO. Až na
+                       několik odlišností ovládáte CALYPSO úplně stejně jako na počítači s
+                       programem CALYPSO.
+CALYPSO pro Dynalog    Předtím je třeba dát programu CALYPSO v systémových nastaveních
+konfigurovat           jednorázově informaci, že je ➤ připojen ovládací panel typu Dynalog
+                       [⇨ 1-7]. Teprve potom je nastavena klávesnice, funkční tlačítka a
+                       touchpad pro CALYPSO.
+Zvláštnosti ovládání   Pro ovládání programu CALYPSO panelem Dynalog je třeba se seznámit
+                       s funkcí touchpadu (➤ Ovládání touchpadu panelu Dynalog [⇨ 1-9]).
+                       Horizontálně uspořádaná funkční tlačítka mají na panelu Dynalog
+                       obsazení odlišující se od obsazení na počítači (➤ Funkční tlačítka na
+                       ovládacím panelu Dynalog [⇨ 1-10]).
+                       Při práci s panelem nástrojů umožňuje Dynalog vylepšený postup pro
+                       integraci prvků panelu nástrojů do vašeho plánu měření (➤ Ovládání
+                       panelů nástrojů s panelem Dynalog [⇨ 1-11]).
+                       Další zvláštností je dvojí klávesa Shift:
+                       – Klávesa Shift na klávesnici má stejnou funkci jako tato klávesa na
+                         počítači.
+                       – Klávesa Shift pro povely pro stroj (vlevo nad klávesnicí) slouží jak pro
+                         uvolnění joysticků, tak i pro přepnutí na režim RDS.
+                           Pro uvolnění joysticků krátce stiskněte tuto klávesu Shift.
+                           Pro přepnutí joysticků na režim RDS musíte stisknout klávesu Shift o
+                           něco déle (cca 3-4 sec). V režimu RDS můžete pomocí joysticků
+                           manuálně nastavit úhlové polohy RDS.
+                       Na příkladu bude znázorněno pořadí při ovládání pomocí panelu
+                       Dynalog (➤ Příklad: Pořadí ovládání na panelu Dynalog [⇨ 1-12])
+
+
+                       Konfigurovat CALYPSO pro panel
+                       Dynalog
+                       Musíte dát programu CALYPSO v systémových nastaveních jednorázově
+                       informaci, že je připojen ovládací panel typu Dynalog.
+
+
+
+                       61212-2821512              CALYPSO 2018                            1-7
+Pracovat s panelem Dynalog
+
+
+
+                      1 Spustíte CALYPSO na počítači s programem CALYPSO a přihlásíte se.
+                        Nacházíte se nyní na ploše softwaru CALYPSO.
+                      2 Zvolte menu Doplňky " Nastavení " Stroj a klikněte na záložku
+                        Ovládací panel.
+                        Uvidíte stránku pro výběr ovládacího panelu.
+
+                               Systémová nastavení
+                             Soubor Stránky               Nápověda
+
+                                                            Měřicí stroj
+
+
+                                   Ovlád.panel
+                                                                                         Řízení
+                                                 DYNALOG                                 Měř.přístroj
+                                                                                         Dvoustojan
+                                                                                         Sním.hlava
+                                                                                         Ref.snímač
+                                                                                         Výměna sním.
+                                                                                         Otočný stůl
+                                                                                   Ovlád.panel
+                                                                                   Teplota
+                                                                                   Interface
+                                                                                    AAI
+                                                                                     Měř.systémy
+                                                     ..
+
+
+
+
+                                  Simulace
+
+
+
+                                                                           OK   Storno            Převzít
+
+
+
+                      3 V sekci Ovládací panel zvolte položku DYNALOG.
+                      4 Klikněte na záložku Řízení.
+                      5 Klikněte na tlačítko Vytvořit spojení.
+                      6 Klikněte na tlačítko OK, nastavení se uloží a okno se zavře.
+                        Nacházíte se nyní na ploše softwaru CALYPSO.
+                      7 Zvolte menu Doplňky " Nastavení " Prostředí a klikněte na
+                        záložku Dynalog.
+
+
+
+
+1-8                   61212-2821512                  CALYPSO 2018
+                                                   Pracovat s panelem Dynalog
+
+
+
+      Systémová nastavení
+     Soubor    Stránky              Nápověda
+
+                         Prostředí pro uživatele Master
+
+          Dynalog panel
+                                                                                   Start
+                Dynalog tlačítka
+                                                                                   Cesty
+                                                                                   Jazyky
+                                                                                   Barvy
+                                                                                   Dvoustojan
+                                                                                   Písmo
+                                                                              Dynalog
+                                                                              Tiskárna
+                                                                               Export DMIS
+
+
+
+
+              F1 - Spustit nápovědu.
+
+              F2 - Spustit menu aktivované charakteristiky.
+
+              F3, F4 - OK a Storno (v menu aktivované charakteristiky).
+
+              F5 - Uložit plán měření.
+
+
+
+
+                                                              OK          Storno           Převzít
+
+
+
+8 Aktivujte zaškrtávací políčko Dynalog-tlačítka a klikněte na Převzít
+  a OK.
+  Nacházíte se nyní na ploše softwaru CALYPSO.
+Tím je instalace ovládacího panelu Dynalog na počítači ukončena. Odteď
+můžete ovládat CALYPSO na panelu Dynalog.
+
+
+Ovládání touchpadu panelu Dynalog
+Touchpad zcela nahrazuje myš. Místo myší zde pohybujete pouze
+pomocí prstu ukazatelem myši po displeji.
+Abyste se seznámili s funkcí touchpadu, položte libovolný prst na plošku
+touchpadu a sledujte ukazatel na displeji.
+Když přejíždíte prstem po plošce, sleduje ukazatel myši na displeji pohyb
+vašeho prstu.
+– Pro provedení jednoduchého kliknutí klepněte krátce na ovládací
+  plošku.
+– Pro provedení dvojkliku klepněte dvakrát krátce na plošku.
+
+
+
+
+61212-2821512                      CALYPSO 2018                                            1-9
+Pracovat s panelem Dynalog
+
+
+
+
+                             Funkční tlačítka na ovládacím panelu
+                             Dynalog
+                             Na ovládacím panelu Dynalog jsou horizontálně uspořádaným funkčním
+                             tlačítkům F1 až F12 přiřazeny zvláštní funkce, což usnadňuje práci s
+                             programem CALYPSO. Tabulka uvádí pro každé funkční tlačítko jeho
+                             funkci a vyvolávané akce.
+
+Tlačítko   Funkce            Provedená akce
+F1         Nápověda          Spustí systém kontextové nápovědy
+F2         Otevřít menu      Otevře příslušné vstupní okno, jestliže jste označili určitý prvek
+           označeného        (např. charakteristiku). Toto tlačítko tedy odpovídá dvojkliku.
+           prvku
+F3         OK                Uloží nastavení a zavře aktivní okno.
+F4         Storno            Zavře aktivní okno bez uložení nastavení.
+F5         Uložit plán       Uloží aktuální plán měření.
+           měření
+F6         Provést plán      Provede aktuální plán měření. Musíte se přitom nacházet na
+           měření            pracovní ploše programu CALYPSO.
+F7         Otevřít           Pokud se nacházíte na pracovní ploše, vyvoláte workroom.
+           workroom/         Pokud se nacházíte na workroomu, vyvoláte pracovní plochu.
+           pracovní
+           plochu
+F8         Vyvolat           Otevře okno pro zadání nastavení pro plán měření.
+           nastavení plánu
+           měření
+F9         Zobrazit/skrýt    Zobrazí pracovní protokol.
+           pracovní          Přesune pracovní protokol na pozadí.
+           protokol
+F10        Vymazat           Vymaže poslední snímání, pokud právě měříte element.
+           snímání
+F11        Zobrazit panely   Vypíše všechny panely nástrojů, které byly definovány. Jejich názvy
+           nástrojů          jsou uvedeny ve zvláštním okně. Poslední uvedený panel nástrojů je
+                             aktivní.
+F12        Zobrazit          Ukáže praporky vertikálně uspořádaných funkčních tlačítek, jestliže
+           praporky          byl definován vlastní panel nástrojů (viz ➤ Ovládání panelů
+                             nástrojů s panelem Dynalog [⇨ 1-11]).
+                             Skryje praporky vertikálně uspořádaných funkčních tlačítek, pokud
+                             byly předtím ukázány.
+
+
+
+
+1-10                         61212-2821512            CALYPSO 2018
+                                                                                                      Pracovat s panelem Dynalog
+
+
+
+                                                     Oznámení
+                                                     Tuto tabulku si vytiskněte. Budete tak mít kdykoliv po ruce přehled
+                                                     obsazení funkčních tlačítek.
+
+
+                                                     Ovládání panelů nástrojů s panelem
+                                                     Dynalog
+                                                     S instalovaným ovládacím panelem Dynalog se ještě lépe pracuje s
+                                                     panely nástrojů. Když jste definovali panel nástrojů, můžete vertikálně
+                                                     umístěná funkční tlačítka panelu Dynalog použít pro integraci
+                                                     definovaných prvků z panelu nástrojů do plánu měření.
+                                                     CALYPSO automaticky obsadí vertikální tlačítka L1 až L8 (vlevo) a R1 až
+                                                     R8 (vpravo) prvky definovanými v panelu nástrojů.
+                                                     Obsazení vertikálních funkčních tlačítek uvidíte, když na panelu Dynalog
+                                                     stisknete tlačítko F12:
+
+Souř.systém           (C) Carl Zeiss - Testblock                                                                             Rovina
+     Soubor      Úpravy   Pohled Příprava     Elementy Konstrukce Rozměry Tvar-Poloha CNC   CAD Doplňky Okno Nápověda
+
+
+
+    Kolmost                    Vybrat funkci nebo snímat                                                                     2D přímka
+1
+
+
+
+
+    Řez                                                                                                                      X hod.
+                   Najetí do ref.bodu, semafor
+
+                   Snímač
+    Symetrie                                                                                                                 Y hod.
+                      vezda
+
+                   Základní systém
+
+                    Testblok
+    Proj. úhel                                                                                                               Z hod.
+
+                   Bezpečnostní kvádr
+
+
+    Minimum                                                                                                                  Kolmice
+                      Zobrazení měř.elementů
+
+
+
+                      Editor plánu Meßelemente
+                                   měření - Měřené elementy
+Bod                                                                                                                          Tvar
+
+
+                  Teplotní kompenzace
+
+Kružnice                                                                                                                Přímost
+
+
+
+
+                                                     Další informace týkající se definování panelů nástrojů najdete v
+                                                     základním návodu k obsluze v oddílu Panely nástrojů, obsazení funkčních
+                                                     tlačítek panelu Dynalog v oddílu ➤ Funkční tlačítka na ovládacím
+                                                     panelu Dynalog [⇨ 1-10].
+
+
+
+
+                                                     61212-2821512                 CALYPSO 2018                          1-11
+Pracovat s panelem Dynalog
+
+
+
+
+                              Příklad: Pořadí ovládání na panelu
+                              Dynalog
+                              Na uvedeném příkladu bude znázorněno pořadí kroků při ovládání s
+                              panelem Dynalog. Obrázky simulují, jak přenesete charakteristiku
+                              „Poloha“ z vašeho panelu nástrojů do plánu měření a potom otevřete
+                              předlohu pro definici charakteristiky, aby tam byla provedena další
+                              nastavení.
+                              Podmínkou je, aby se charakteristika „Poloha“ nacházela v individuálně
+                              definovaném panelu nástrojů.
+                              1 Stiskněte funkční tlačítko F12, aby byly zobrazeny praporky s
+                                charakteristikami panelu nástrojů.
+                              2 Stiskněte vertikální funkční tlačítko, které obsahuje charakteristiku
+                                „Poloha“, např. L2.
+                                Daná charakteristika je přenesena do plánu měření.
+
+
+
+
+2. funkční tlačítko F12 1. funkční tlačítko L2                  Akce: Daná charakteristika
+                                                                je zapsána do plánu
+                                                                              n     měření
+
+                              3 Stiskněte funkční tlačítko F2, aby se otevřela předloha pro definici.
+                                Otevře se předloha pro definici.
+
+
+
+
+1-12                          61212-2821512           CALYPSO 2018
+                                                                Pracovat s panelem Dynalog
+
+
+
+
+3. funkční tlačítko F2                        Akce: Otevře se předloha pro deﬁnici.
+
+
+                         4 Abyste se dostali k tlačítku Element, stiskněte vícekrát klávesu TAB,
+                           aby byl měřený element definován.
+                         5 Stiskněte funkční tlačítko F2, aby se otevřelo okno pro výběr.
+                           Otevře se okno pro výběr.
+
+
+
+
+       5. funkční tlačítko F2
+4. klávesa Tab                               Akce: Otevře se okno pro výběr.
+
+                         6 Označte měřený element s použitím klávesy TAB a stiskněte funkční
+                           tlačítko F3.
+                           Okno pro výběr se zavře.
+                         7 Stiskněte znovu funkční tlačítko F3, aby se zavřela předloha pro
+                           definici.
+                           Charakteristika je tím definována, vaše nastavení byla uložena. Vidíte
+                           před sebou opět plán měření.
+
+
+
+
+                         61212-2821512           CALYPSO 2018                         1-13
+Pracovat s panelem Dynalog
+
+
+
+
+1-14                  61212-2821512   CALYPSO 2018
+Rejstřík
+           D
+           Dynalog
+               Calypso konfigurovat 1-7
+               Funkční tlačítka 1-10
+               Obecné 1-2
+               Ovládání 1-7
+               panely nástrojů ovládat 1-11
+           Dynalog / Dynalog P
+               Klávesnice 1-3
+               Monitor 1-3
+               přehled 1-3
+               Touchpad 1-3
+           Dynalog P
+               Calypso konfigurovat 1-4
+               Ovládání 1-4
+               Zvláštnosti 1-5
+
+
+           O
+           Ovládací panel Dynalog / Dynalog P 1-2
+
+
+           P
+           Panely nástrojů
+               ovládat s panelem Dynalog 1-11
+
+
+
+
+           61212-2821512                  CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2821512   CALYPSO 2018
+
