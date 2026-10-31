@@ -1,0 +1,2776 @@
+CALYPSO
+
+   Opce 5
+   Postprocesor pro DMIS
+   import
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2751512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 DMIS import V2 (opce)
+
+               Základní údaje o importu DMIS...................................... 1-2
+
+               Konfigurovat DMIS import.............................................. 1-3
+
+               Import plánu měření z DMIS ........................................... 1-4
+                  Importovat plán měření z DMIS......................................................... 1-4
+                  Importovat DMIS program ................................................................ 1-4
+                  Dodatečně upravit importovaný plán měření ..................................... 1-6
+
+               Podporované příkazy...................................................... 1-7
+                  Podporované příkazy z DMIS 3.0 ....................................................... 1-7
+                  Podporované příkazy z DMIS 4.0 ..................................................... 1-19
+                  Podporované příkazy z DMIS 5.0 ..................................................... 1-37
+
+               Reference: DMIS import ............................................... 1-59
+                  Calypso Konvertor........................................................................... 1-59
+                  Možnosti ........................................................................................ 1-59
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2751512                   CALYPSO 2018                                              Obsah     11
+22 Obsah   61212-2751512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2751512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2751512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2751512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2751512          CALYPSO 2018
+DMIS import V2 (opce)
+
+
+
+
+                        Kapitola
+
+                        1    DMIS import V2 (opce)
+
+                           Tato kapitola obsahuje:
+                           Základní údaje o importu DMIS .................................................................. 1-2
+                           Konfigurovat DMIS import ......................................................................... 1-3
+                           Import plánu měření z DMIS ...................................................................... 1-4
+                           Podporované příkazy.................................................................................. 1-7
+                           Reference: DMIS import ........................................................................... 1-59
+
+
+
+
+                          61212-2751512                     CALYPSO 2018                                                1-1
+Základní údaje o importu DMIS
+
+
+
+
+Základní údaje o importu DMIS
+                       CALYPSO může importovat DMIS DMIS program a převést ho na
+                       CALYPSO-plán měření. Za tím účelem funguje DMIS postprocesor, který
+                       zpracovává povely DMIS.
+                       DMIS import je doplňková opce programu CALYPSO. Pokud ji chcete
+                       používat, potřebujete příslušnou licenci. Kontaktujte za tím účelem servis
+                       firmy Carl Zeiss.
+
+                       Oznámení
+                       Opce 5 „DMIS import“ se nesmí zaměňovat s opcí 22 „PC-DMIS-
+                       Import“. S opcí „PC-DMIS import“ můžete program vytvořený s PC-
+                       DMIS – softwarem společnosti Hexagon Metrology – importovat a
+                       konvertovat na CALYPSO-plán měření. Předpokladem je licencovaná a
+                       funkční instalace softwaru PC-DMIS na vašem počítači.
+
+                       Co je DMIS?
+                       DMIS znamená Dimensional Measuring Interface Standard. DMIS je
+                       programovací jazyk pro programování mechanických, laserových,
+                       optických a video měřicích systémů. DMIS poskytuje programovací jazyk
+                       pro velké množství měřicích přístrojů.
+                       Fond DMIS je velmi obsáhlý a podobá se skutečně opravdovému
+                       programovacímu jazyku: Existují zde jazykové prvky pro popisy a
+                       definování proměnných, smyčky, podmíněné skoky, matematické
+                       funkce, souřadnicové transformace a samozřejmě příkazy pro ovládání
+                       měřicího stroje jako najíždění do poloh, snímání, geometrické elementy,
+                       měření, výměna snímačů, teplotní kompenzace atd.
+                       DMISpodporující měřicí stroje přečtou DMIS povely ze souboru ASCII a
+                       provádějí potom průběh měření.
+
+                       DMIS a CALYPSO
+                       Aby se mohl soubor DMIS použít v programu CALYPSO, musí být tento
+                       soubor nejprve importován. Importovací program uzpůsobený pro
+                       příslušný měřicí software se nazývá také „postprocesor“, protože pracuje
+                       v návaznosti na vytvoření souboru DMIS.
+                       Popisovaná opce Postprocesor pro DMIS import je takovým DMIS
+                       postprocesorem pro CALYPSO.
+
+                       UMESS a CALYPSO
+                       UMESS-plány měření nemohou být přímo převedeny na CALYPSO-plány
+                       měření. Můžete ale nejprve plán měření UMESS převést na DMIS-
+                       program a tento DMIS soubor poté importovat do programu CALYPSO.
+
+
+
+1-2                    61212-2751512           CALYPSO 2018
+                                                          Konfigurovat DMIS import
+
+
+
+
+Konfigurovat DMIS import
+            Pro DMIS import můžete nastavit různé předvolby.
+            1 Zvolte menu Soubor " Import " DMIS a v okně Calypso
+              Konvertor klikněte na tlačítko Možnosti.
+              Otevře se okno Možnosti.
+
+                    Možnosti
+
+
+
+
+                      Typ zobrazení               Hell
+
+
+
+
+                      Adresář pro log soubory   C:\Documents and Settings\schmidt\L
+
+                                                         OK                  Storno
+
+
+
+
+            2 Nastavte požadovaný vzhled programu.
+            3 Potvrďte tlačítkem OK.
+            Nové nastavení se ihned projeví.
+
+
+
+
+            61212-2751512             CALYPSO 2018                                    1-3
+Import plánu měření z DMIS
+
+
+
+
+Import plánu měření z DMIS
+                       Importovat plán měření z DMIS
+                       Aby byl importován DMIS program, stačí zvolit položku menu Soubor "
+                       Import " DMIS a specifikovat příslušný soubor.
+                       Po importu byste měli plán měření ihned uložit, protože se nejprve
+                       nachází jen v operační paměti počítače.
+                       Následující prvky plánu měření nemohou být z DMIS programu vytvořeny
+                       a musíte je po importu sami definovat:
+                       – Základní systém
+                       – Bezpečnostní kvádr
+                       – Bezpečnostní roviny
+                       – Přiřazení snímačů
+
+
+                       Importovat DMIS program
+                       1 Zvolte menu Soubor " Import " DMIS.
+                         Otevře se okno Calypso Konvertor.
+
+
+
+
+1-4                    61212-2751512           CALYPSO 2018
+                                                      Import plánu měření z DMIS
+
+
+
+      Calypso Konvertor 1.0
+
+
+     Název programu                                     Název součásti
+
+
+
+     Sériové čí slo                                     Počet instrukcí
+
+
+
+     Plán měření           Zadejte název                Základní systém
+
+
+
+     Process: 0%
+
+
+     Programové pří kazy
+
+
+
+
+         Možnosti                          Otevří t              Start    Storno
+
+
+
+
+2 Klikněte na tlačítko Otevřít a vyberte DMIS program, který má být
+  importován.
+  Daný program je načten a zobrazen.
+  V horní části okna jsou uvedeny tyto údaje: název programu, název
+  součásti, sériové číslo z DMIS a počet příkazů v aktuálním programu.
+3 V sekci Plán měření zadejte název CALYPSO-plánu měření.
+4 V sekci Základní systém vyberte název souřadného systému, který
+  má program CALYPSO použít jako základní systém.
+  Tento základní souřadný systém musíte při dodatečné úpravě plánu
+  měření ještě definovat.
+5 Pro zahájení konverze klikněte na tlačítko Start.
+  DMIS program je konvertován.
+  Po ukončení se ukáže hlášení.
+6 Potvrďte toto hlášení.
+  Ukáže se výsledek konverze.
+
+
+
+
+61212-2751512                         CALYPSO 2018                                 1-5
+Import plánu měření z DMIS
+
+
+
+                          V seznamu Programové příkazy jsou uvedeny všechny příkazy v
+                          DMIS programu. Pokud se při konverzi vyskytl problém, je to
+                          uvedeno u příslušného příkazu. V tom případě je tato větev
+                          zobrazena rozevřená.
+                       7 Uložte nový plán měření v programu CALYPSO.
+                       8 Aby se zavřel DMIS import, klikněte na ikonu Zavřít.
+
+
+                       Dodatečně upravit importovaný plán
+                       měření
+                       Ne všechny prvky DMIS programu mohou být převzaty. Plán měření
+                       musíte po importu do CALYPSO upravit, aby mohl být prováděn.
+                       K tomu jsou potřebné alespoň tyto kroky:
+                       1 Analyzujte hlášení, která se vyskytla při konverzi. Za určitých
+                         okolností budete muset části měřicího programu v programu
+                         CALYPSO přeprogramovat.
+                       2 Upravte v programu CALYPSO tyto prvky plánu měření
+                           Definujte základní systém.
+                           Definujte bezpečnostní kvádr.
+                           Přiřaďte měřeným elementům bezpečnostní roviny.
+                           Přiřaďte měřeným elementům snímače, které se mají použít.
+                       3 Nechte poté plán měření jednou proběhnout v simulaci, aby byly
+                         vyloučeny další chyby.
+
+
+
+
+1-6                    61212-2751512           CALYPSO 2018
+                                                            Podporované příkazy
+
+
+
+
+Podporované příkazy
+            Podporované příkazy z DMIS 3.0
+            Postprocesor pro DMIS import podporuje následující příkazy z DMIS 3.0:
+
+            CONST/var_1,F(label1),BF,FA(label2),var_2 var_3
+
+            Proměnná                           Možné hodnoty
+            VAR_1                              ARC
+                                               CIRCLE
+                                               CONE
+                                               CYLNDR
+                                               CPARLN
+                                               ELLIPS
+                                               LINE
+                                               PATERN
+                                               PLANE
+                                               RCTNGL
+                                               SPHERE
+            VAR_2                              FA(label3)
+                                               F(label3)
+            VAR_3                              ,var_2 var_3
+                                               does not exist
+
+            CONST/LINE,F(label1),var_1
+
+            Proměnná                           Možné hodnoty
+            VAR_1                              MIDLI,FA(label2),var_2
+                                               PROJLI,FA(label2)var_3
+            VAR_2                              FA(label3)
+                                               F(label3)
+            VAR_3                              FA(label3)
+                                               ,F(label3)
+                                               does not exist
+
+
+
+
+            61212-2751512          CALYPSO 2018                           1-7
+Podporované příkazy
+
+
+
+                      CONST/PLANE,F(label1),MIDPL,FA(label2),var_1
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       FA(label3)
+                                                  F(label3)
+
+                      CONST/POINT, F(label1), var_1
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       MIDPT,FA(label2),var_2
+                                                  VERTEX, FA(label2)
+                                                  PROJPT, FA(label2) var_3
+                                                  MOVEPT, FA(label2), var_4
+                                                  CURVE, FA(label2), var_2
+                      VAR_2                       FA(label3)
+                                                  F(label3)
+                      VAR_3                       FA(label3)
+                                                  ,F(label3)
+                      VAR_4                       dx, dy, dz
+                                                  F(label3), dist
+                                                  FA(label3), dist
+
+                      CONST/var_1,F(label1),PROJCT,FA(label2) var_2
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       ARC
+                                                  CIRCLE
+                      VAR_2                       FA(label3)
+                                                  ,F(label3)
+
+                      CONST/var_1,FA(label2),var_3
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       CIRCLE,F(label1),var_2
+                                                  LINE,F(label1),var_2
+                                                  POINT,F(label1),INTOF
+                      VAR_2                       TANTO
+
+
+
+1-8                   61212-2751512    CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+Proměnná                    Možné hodnoty
+                            INTOF
+VAR_3                       FA(label3)
+                            F(label3)
+
+CONST/var_1,var_3
+
+Proměnná                    Možné hodnoty
+VAR_1                       CIRCLE,F(label1),TANTO
+                            LINE,F(label1),var_2
+                            PLANE,F(label1),var_2
+VAR_2                       PERPTO
+                            TANTO
+                            PARTO
+VAR_3                       FA(label2),THRU,var_4
+                            F(label2),THRU,FA(label3)
+VAR_4                       FA(label3)
+                            F(label3)
+
+DATDEF/var_1
+
+Proměnná                    Možné hodnoty
+VAR_1                       FA(label1),DAT(x)
+                            FA(label2),DAT(x-x)
+                            F(label3),DAT(x)
+
+D(label)=DATSET/var_1
+
+Proměnná                    Možné hodnoty
+VAR_1                       MCS
+                            DAT(x),var_3 var_4 var_2 var_2
+VAR_2                       ,DAT(x),var_3 var_4
+                            ,DAT(x) var_4
+                            does not exist
+VAR_3                       XDIR
+                            -XDIR
+
+
+
+61212-2751512    CALYPSO 2018                           1-9
+Podporované příkazy
+
+
+
+                      Proměnná                     Možné hodnoty
+                                                   YDIR
+                                                   -YDIR
+                                                   ZDIR
+                                                   -ZDIR
+                      VAR_4                        ,XORIG var_4
+                                                   ,YORIG var_4
+                                                   ,ZORIG var_4
+                                                   does not exist
+
+                      DMISMN/'text'
+                      ENDMES
+                      EVAL/var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        FA(label) var_2
+                                                   FA(label1),FA(label2),T(label1)
+                      VAR_2                        ,T(label) var_2
+                                                   does not exist
+
+                      F(label)=FEAT/ARC,var_1,var_2,i,j,k,rad,ang1,ang2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      F(label)=FEAT/
+                      ARC,4POINT,var_1,e1x,e1y,e1z,mx,my,mz,e2x,e2y,e2z,c
+                      x,cy,cz
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+
+
+
+
+1-10                  61212-2751512     CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+F(label)=FEAT/CIRCLE,var_1,var_2,i,j,k,diam
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+
+F(label)=FEAT/CONE,var_1,var_2,i,j,k,ang
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+
+F(label)=FEAT/
+CPARLN,var_1,var_2,var_3,i,j,k,i1,j1,k1,len,wid
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        ROUND
+                             FLAT
+VAR_3                        CART,x,y,z
+                             POL,r,a,h
+
+F(label)=FEAT/CYLNDR,var_1,var_2,i,j,k,diam var_3
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+VAR_3                        ,len
+
+
+
+
+61212-2751512     CALYPSO 2018                     1-11
+Podporované příkazy
+
+
+
+                      F(label)=FEAT/ELLIPS,var_1,var_2,var_3,i,j,k,diam
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,f1x,f1y,f1z,f2x,f2y,f2z
+                                                   POL,f1r,f1a,f1h,f2r,f2a,f2h
+                      VAR_3                        MAJOR
+                                                   MINOR
+
+                      F(label)=FEAT/GCURVE,var_1,i,j,k
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      F(label)=FEAT/GSURF
+                      F(label)=FEAT/LINE,var_1,ni,nj,nk
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        UNBND,var_2
+                                                   BND,var_3
+                      VAR_2                        CART,x,y,z,i,j,k
+                                                   POL,r,a,h,i,j,k
+                      VAR_3                        CART,e1x,e1y,e1z,e2x,e2y,e2z
+                                                   POL,e1r,e1a,e1h,e2r,e2a,e2h
+
+                      F(label)=FEAT/PARPLN,var_1,var_2,width
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,x,y,z,px,py,pz,i,j,k,px,py,pz,i
+                                                   ,j,k
+                                                   POL,r,a,h,pr,pa,ph,i,j,k,pr,pa,ph,i,j
+                                                   ,k
+
+
+
+
+1-12                  61212-2751512     CALYPSO 2018
+                                          Podporované příkazy
+
+
+
+F(label)=FEAT/PATERN,F(label1) var_1 var_2
+
+Proměnná                     Možné hodnoty
+VAR_1                        ,F(labeln)
+
+F(label)=FEAT/PLANE,var_1,i,j,k
+
+Proměnná                     Možné hodnoty
+VAR_1                        CART,x,y,z
+                             POL,r,a,h
+
+F(label)=FEAT/POINT,var_1,i,j,k
+
+Proměnná                     Možné hodnoty
+VAR_1                        CART,x,y,z
+                             POL,r,a,h
+
+F(label)=FEAT/SPHERE,var_1,var_2,diam
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+
+MEAS/var_1,F(label),n
+
+Proměnná                     Možné hodnoty
+VAR_1                        ARC
+                             CIRCLE
+                             CONE
+                             CPARLN
+                             CYLNDR
+                             GCURVE
+                             GSURF
+                             ELLIPS
+                             LINE
+                             PARPLN
+
+
+61212-2751512     CALYPSO 2018                      1-13
+Podporované příkazy
+
+
+
+                      Proměnná                    Možné hodnoty
+                                                  PLANE
+                                                  POINT
+                                                  RCTNGL
+                                                  SPHERE
+
+                      MODE/var_1
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       AUTO,var_2
+                                                  PROG,MAN
+                                                  MAN
+
+                      OUTPUT/var_1
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       FA(label) var_2 var_4
+                                                  FA(label1), FA(label2), TA(label1)
+                                                  var_4
+                                                  F(label) var_3 var_4
+                                                  F(label1), F(label2), T(label1) var_4
+                      VAR_2                       ,TA(label) var_2
+                                                  does not exist
+                      VAR_3                       ,T(label) var_3
+                                                  does not exist
+
+                      PTMEAS/var_1 var_2
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       CART,x,y,z
+                                                  POL,r,a,h
+
+                      RECALL/var_1 var_2
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       D(label)
+                                                  DA(label)
+
+
+
+
+1-14                  61212-2751512    CALYPSO 2018
+                                          Podporované příkazy
+
+
+
+RMEAS/var_1,F(label),n,var_2
+RMEAS/var_1,F(label),n,FA(label1)
+RMEAS/CPARLN,F(label),n,var_1 var_2
+RMEAS/var_1,F(label),n,var_2
+RMEAS/var_1,F(label),n,var_2
+RMEAS/POINT,F(label),n,var_1
+D(label)=ROTATE/var_1,var_2
+
+Proměnná                       Možné hodnoty
+VAR_1                          XAXIS
+                               YAXIS
+                               ZAXIS
+VAR_2                          ang
+                               F(label),var_3
+                               FA(label),var_3
+                               DAT(x),var_3
+VAR_3                          XDIR
+                               -XDIR
+                               YDIR
+                               -YDIR
+                               ZDIR
+                               -ZDIR
+
+TEXT/var_1,'text'
+
+Proměnná                       Možné hodnoty
+VAR_1                          OUTFIL
+
+T(label)=TOL/ANGL,lotol,uptol
+T(label)=TOL/ANGLB,ang,lotol,uptol
+T(label)=TOL/ANGLR,ang,tolzon var_2 var_3 var_4
+
+Proměnná                       Možné hodnoty
+VAR_2                          ,MMC
+
+
+
+61212-2751512       CALYPSO 2018                    1-15
+Podporované příkazy
+
+
+
+                      Proměnná                     Možné hodnoty
+                                                   ,LMC
+                                                   ,RFS
+                                                   does not exist
+                      VAR_3                        DAT(x) var_2
+                                                   F(label2)
+                                                   FA(label) var_2
+
+                      T(label)=TOL/CIRLTY,tolzon
+                      T(label)=TOL/CONCEN,tolzon,var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_2                        DAT(x)
+                                                   F(label2)
+                                                   FA(label)
+
+                      T(label)=TOL/CORTOL,var_1,lotol,uptol
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        XAXIS
+                                                   YAXIS
+                                                   ZAXIS
+                                                   RADIUS
+                                                   ANGLE
+
+                      T(label)=TOL/CRNOUT,tolzon,DAT(x) var_2 var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_2                        DAT(x)
+                                                   .F(label)
+                                                   .FA (label)
+
+                      T(label)=TOL/CYLCTY,tolzon
+                      T(label)=TOL/DIAM,lotol,uptol var_2
+
+                      Proměnná                     Možné hodnoty
+                                                   does not exist
+
+
+1-16                  61212-2751512     CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+T(label)=TOL/DISTB,var_2,var_3 var_4
+
+Proměnná                     Možné hodnoty
+VAR_2                        NOMINL,dist,lotol,uptol
+                             LIMIT,lolimt,uplimt
+VAR_3                        XAXIS
+                             YAXIS
+                             ZAXIS
+                             PT2PT
+VAR_4                        does not exist
+
+T(label)=TOL/FLAT,tolzon
+T(label)=TOL/PARLEL,tolzon var_2,var_3 var_4
+
+Proměnná                     Možné hodnoty
+VAR_2                        ,MMC
+                             ,LMC
+                             ,RFS
+VAR_3                        does not exist
+                             DAT(x) var_2
+                             F(label2)
+                             FA(label) var_2
+VAR_4                        does not exist
+
+T(label)=TOL/PERP,tolzon var_2,var_3 var_4
+
+Proměnná                     Možné hodnoty
+VAR_2                        ,MMC
+                             ,LMC
+                             ,RFS
+VAR_3                        does not exist
+                             DAT(x) var_2
+                             F(label2)
+                             FA(label) var_2
+VAR_4                        does not exist
+
+
+
+
+61212-2751512     CALYPSO 2018                         1-17
+Podporované příkazy
+
+
+
+                      T(label)=TOL/POS,var_1,tolzon var_2 var_3 var_3 var_3
+                      var_6
+                      T(label)=TOL/PROFL,lotol,uptol var_2 var_2 var_2
+                      T(label)=TOL/PROFP,lotol,uptol var_2 var_2 var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_2                        ,DAT(x) var_3
+                                                   ,F(label2)
+                                                   ,FA(label) var_3
+                                                   does not exist
+                      VAR_3                        ,MMC
+                                                   ,LMC
+                                                   ,RFS
+                                                   does not exist
+
+                      T(label)=TOL/PROFS,lotol,uptol var_2 var_2 var_2 var_4
+                      T(label)=TOL/RAD,lotol,uptol var_2
+                      T(label)=TOL/STRGHT,tolzon var_2
+                      T(label)=TOL/SYM,tolzon,var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_2                        DAT(x) var_3
+                                                   F(label2)
+                                                   FA(label) var_3
+
+                      T(label)=TOL/TRNOUT,tolzon,DAT(x) var_2 var_2
+                      T(label)=TOL/USETOL,'text'
+                      T(label)=TOL/WIDTH,lotol,uptol var_2
+                      D(label)=TRANS/var_1,var_2 var_5 var_5
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        XORIG
+                                                   YORIG
+                                                   ZORIG
+                      VAR_2                        var_3
+
+
+1-18                  61212-2751512     CALYPSO 2018
+                                               Podporované příkazy
+
+
+
+Proměnná                           Možné hodnoty
+VAR_3                              value
+                                   F(label)
+                                   FA(label)
+                                   DAT(x)
+VAR_5                              ,var_1,var_2
+                                   does not exist
+
+UNITS/var_1,var_2 var_3
+
+Proměnná                           Možné hodnoty
+VAR_1                              MM
+                                   CM
+                                   M
+                                   INCH
+                                   FEET
+VAR_2                              ANGDEC
+                                   ANGDMS
+                                   ANGRAD
+VAR_3                              ,TEMPF
+                                   ,TEMPC
+
+WKPLAN/var_1
+
+
+Proměnná                           Možné hodnoty
+VAR_1                              XYPLAN
+                                   YZPLAN
+                                   ZXPLAN
+
+
+Podporované příkazy z DMIS 4.0
+Postprocesor pro DMIS import podporuje následující příkazy z DMIS 4.0:
+
+
+
+
+61212-2751512          CALYPSO 2018                        1-19
+Podporované příkazy
+
+
+
+                      CONST/var_1,F(label1),BF,FA(label2),var_2 var_3
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ARC
+                                                   CIRCLE
+                                                   CONE
+                                                   CYLNDR
+                                                   CPARLN
+                                                   ELLIPS
+                                                   LINE
+                                                   PATERN
+                                                   PLANE
+                                                   RCTNGL
+                                                   SPHERE
+                                                   TORUS
+                      VAR_2                        FA(label3)
+                                                   F(label4)
+                      VAR_3                        ,var_2 var_3
+                                                   does not exist
+
+                      CONST/LINE,F(label1),var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        MIDLI,FA(label2),var_2
+                                                   PROJLI,FA(label2)var_3
+                      VAR_2                        FA(label3)
+                                                   F(label4)
+                      VAR_3                        FA(label3)
+                                                   ,F(label4)
+                                                   does not exist
+
+                      CONST/PLANE,F(label1),MIDPL,FA(label2),var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        FA(label3)
+                                                   F(label4)
+
+
+
+1-20                  61212-2751512     CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+CONST/POINT, F(label1), var_1
+
+Proměnná                    Možné hodnoty
+VAR_1                       MIDPT,FA(label2),var_2
+                            PIERCE,FA(label2),var_2
+                            VERTEX, FA(label2)
+                            PROJPT, FA(label2) var_3
+                            MOVEPT, FA(label2), var_4
+                            CURVE, FA(label2), var_2
+                            EXTREM,var_5,FA(label2),var_6
+VAR_2                       FA(label4)
+                            F(label5)
+VAR_3                       ,FA(label4)
+                            ,F(label5)
+VAR_4                       dx, dy, dz
+                            F(label5), dist
+                            FA(label4), dist
+VAR_5                       MIN
+                            MAX
+VAR_6                       VEC,i,j,k
+
+CONST/var_1,F(label1),PROJCT,FA(label2) var_2
+
+Proměnná                    Možné hodnoty
+VAR_1                       ARC
+                            CIRCLE
+                            CPARLN
+                            ELLIPS
+VAR_2                       FA(label3)
+                            ,F(label4)
+                            does not exist
+
+CONST/var_1,FA(label2),var_3
+
+Proměnná                    Možné hodnoty
+VAR_1                       CIRCLE,F(label1),var_2
+
+
+
+61212-2751512    CALYPSO 2018                          1-21
+Podporované příkazy
+
+
+
+                      Proměnná                     Možné hodnoty
+                                                   LINE,F(label1),var_2
+                                                   POINT,F(label1),INTOF
+                      VAR_2                        TANTO
+                                                   INTOF
+                      VAR_3                        FA(label3)
+                                                   F(label4)
+
+                      CONST/var_1,var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        CIRCLE,F(label1),TANTO
+                                                   LINE,F(label1),var_3
+                                                   PLANE,F(label1),var_3
+                      VAR_2                        FA(label2),THRU,var_4
+                                                   F(label3),THRU,FA(label4)
+                      VAR_3                        PERPTO
+                                                   TANTO
+                                                   PARTO
+                      VAR_4                        FA(label4)
+                                                   F(label5)
+
+                      CONST/var_1,F(label1),OFFSET,FA(label2) var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        LINE
+                                                   PLANE
+                      VAR_2                        FA(label2) var_2
+                                                   F(label3) var_2
+                                                   does not exist
+
+                      CONST/var_1,F(label1),TR,FA(label2),var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ARC
+                                                   CIRCLE
+
+
+
+1-22                  61212-2751512     CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+Proměnná                    Možné hodnoty
+                            CONE
+                            CYLNDR
+                            CPARLN
+                            ELLIPS
+                            LINE
+                            PATERN
+                            PLANE
+                            POINT
+                            RCTNGL
+                            SPHERE
+                            TORUS
+VAR_2                       ,D(label3)
+                            ,DA(label4)
+                            does not exist
+
+CONST/CIRClE,F(label1),CONE,var_1,FA(label2)
+
+Proměnná                    Možné hodnoty
+VAR_1                       DIAM,diameter
+                            DIST,distance
+
+DATDEF/var_1
+
+Proměnná                    Možné hodnoty
+VAR_1                       FA(label1),DAT(x)
+                            FA(label2),DAT(x-x)
+                            F(label3),DAT(x)
+
+D(label)=DATSET/var_1
+
+Proměnná                    Možné hodnoty
+VAR_1                       MCS
+                            var_2
+VAR_2                       DAT(x),var_3 var_4 var_8
+                            ,DAT(x),var_7 var_9
+
+
+
+61212-2751512    CALYPSO 2018                      1-23
+Podporované příkazy
+
+
+
+                      Proměnná                    Možné hodnoty
+                      VAR_3                       XDIR
+                                                  -XDIR
+                                                  YDIR
+                                                  -YDIR
+                                                  ZDIR
+                                                  -ZDIR
+                      VAR_4                       ,XORIG var_4
+                                                  ,YORIG var_4
+                                                  ,ZORIG var_4
+                                                  does not exist
+                      VAR_5                       ,DAT(x),var_3 var_4
+                                                  ,DAT(x) var_7
+                                                  does not exist
+                      VAR_6                       ,DAT(x) var_7
+                                                  does not exist
+                      VAR_7                       ,XORIG var_4
+                                                  ,YORIG var_4 ,
+                                                  ZORIG var_4
+                      VAR_8                       ,var_5 var_6
+                                                  ,var_6 var_5
+                      VAR_9                       ,DAT(x),var_3 var_4 var_5
+                                                  var_5 ,DAT(x),var_3 var_4
+
+                      DMISMN/'text',version
+                      ENDMES
+                      EVAL/var_1
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       FA(label1),T(label2) var_2
+                                                  FA(label3),var_3,T(label4)
+                                                  var_4,FA(label5),T(label4)
+                      VAR_2                       ,T(label) var_2
+                                                  does not exist
+
+
+
+1-24                  61212-2751512    CALYPSO 2018
+                                          Podporované příkazy
+
+
+
+Proměnná                     Možné hodnoty
+VAR_3                        F(label3)
+                             FA(label5)
+                             DAT(label7)
+VAR_4                        F(label8)
+                             DAT(label7)
+
+F(label)=FEAT/ARC,var_1,var_2,i,j,k,rad,ang1,ang2 var_3
+FA(label)=FEAT/ARC,var_1,var_2,i,j,k,rad,ang1,ang2
+var_3
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+VAR_3                        ,is,js,ks
+
+F(label)=FEAT/
+ARC,4POINT,var_1,e1x,e1y,e1z,mx,my,mz,e2x,e2y,e2z,c
+x,cy,cz
+FA(label)=FEAT/
+ARC,4POINT,var_1,e1x,e1y,e1z,mx,my,mz,e2x,e2y,e2z,c
+x,cy,cz
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+
+F(label)=FEAT/CIRCLE,var_1,var_2,i,j,k,diam
+FA(label)=FEAT/CIRCLE,var_1,var_2,i,j,k,diam
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+
+
+61212-2751512     CALYPSO 2018                      1-25
+Podporované příkazy
+
+
+
+                      F(label)=FEAT/CONE,var_1,var_2,i,j,k,ang
+                      FA(label)=FEAT/CONE,var_1,var_2,i,j,k,ang
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      F(label)=FEAT/
+                      CPARLN,var_1,var_2,var_3,i,j,k,i1,j1,k1,len,width
+                      FA(label)=FEAT/
+                      CPARLN,var_1,var_2,var_3,i,j,k,i1,j1,k1,len,width
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        ROUND
+                                                   FLAT
+                      VAR_3                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      F(label)=FEAT/CYLNDR,var_1,var_2,i,j,k,diam var_3
+                      FA(label)=FEAT/CYLNDR,var_1,var_2,i,j,k,diam var_3
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,x,y,z
+                                                   POL,r,a,h
+                      VAR_3                        ,len
+
+                      F(label)=FEAT/EDGEPT,var_1,i,j,k,i1,j1,k1
+                      FA(label)=FEAT/EDGEPT,var_1,i,j,k,i1,j1,k1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        CART,x,y,z
+
+
+1-26                  61212-2751512     CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+Proměnná                     Možné hodnoty
+                             POL,r,a,h
+
+F(label)=FEAT/ELLIPS,var_1,var_2,var_3,i,j,k,diam
+
+
+FA(label)=FEAT/ELLIPS,var_1,var_2,var_3,i,j,k,diam
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,f1x,f1y,f1z,f2x,f2y,f2z
+                             POL,f1r,f1a,f1h,f2r,f2a,f2h
+VAR_3                        MAJOR
+                             MINOR
+
+F(label)=FEAT/GCURVE,var_1,i,j,k
+
+Proměnná                     Možné hodnoty
+VAR_1                        CART,x,y,z
+                             POL,r,a,h
+
+F(label)=FEAT/GSURF
+F(label)=FEAT/LINE,var_1,ni,nj,nk
+FA(label)=FEAT/LINE,var_1,ni,nj,nk
+
+Proměnná                     Možné hodnoty
+VAR_1                        UNBND,var_2
+                             BND,var_3
+VAR_2                        CART,x,y,z,i,j,k
+                             POL,r,a,h,i,j,k
+VAR_3                        CART,e1x,e1y,e1z,e2x,e2y,e2z
+                             POL,e1r,e1a,e1h,e2r,e2a,e2h
+
+
+
+
+61212-2751512     CALYPSO 2018                        1-27
+Podporované příkazy
+
+
+
+                      F(label)=FEAT/PARPLN,var_1,var_2,width
+                      FA(label)=FEAT/PARPLN,var_1,var_2,width
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,x,y,z,p1x,p1y,p1z,i1,j1,k1,p
+                                                   2x,p2y,p2z,i2,j2,k2
+                                                   POL,r,a,h,p1r,p1a,p1h,i1,j1,k1,p2
+                                                   r,p2a,p2h,i2,j2,k2
+
+                      F(label)=FEAT/PATERN,F(label1) var_1 var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ,F(labeln)
+
+                      F(label)=FEAT/PLANE,var_1,i,j,k
+                      FA(label)=FEAT/PLANE,var_1,i,j,k
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      F(label)=FEAT/POINT,var_1,i,j,k
+                      FA(label)=FEAT/POINT,var_1,i,j,k
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      F(label)=FEAT/SPHERE,var_1,var_2,diam var_3
+                      FA(label)=FEAT/SPHERE,var_1,var_2,diam
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,x,y,z
+                                                   POL,r,a,h
+
+
+1-28                  61212-2751512     CALYPSO 2018
+                                            Podporované příkazy
+
+
+
+Proměnná                     Možné hodnoty
+VAR_3                        ,i,j,k var_8
+
+F(label)=FEAT/TORUS,var_1,var_2,i,j,k,diam1,diam2
+FA(label)=FEAT/TORUS,var_1,var_2,i,j,k,diam1,diam2
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+
+MEAS/var_1,F(label),n
+
+Proměnná                     Možné hodnoty
+VAR_1                        ARC
+                             CIRCLE
+                             CONE
+                             CPARLN
+                             CYLNDR
+                             EDGEPT
+                             ELLIPS
+                             GCURVE
+                             GSURF
+                             LINE
+                             PARPLN
+                             PLANE
+                             POINT
+                             RCTNGL
+                             SPHERE
+                             TORUS
+
+MODE/var_1
+
+Proměnná                     Možné hodnoty
+VAR_1                        AUTO,var_2
+
+
+
+61212-2751512     CALYPSO 2018                        1-29
+Podporované příkazy
+
+
+
+                      Proměnná                    Možné hodnoty
+                                                  PROG,MAN
+                                                  MAN
+
+                      OUTPUT/var_1
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       FA(label) var_2 var_3
+                                                  FA(label2),var_4,TA(label3) var_3
+                                                  var_5,FA(label4),TA(label3) var_3
+                                                  F(label5) var_6 var_3
+                                                  F(label6),F(label7),T(label_8) var_3
+                                                  T(label14)
+                                                  TA(label15)
+                      VAR_2                       ,TA(label15) var_2
+                                                  does not exist
+                      VAR_4                       ,F(label7)
+                                                  ,FA(label4)
+                                                  ,DAT(x)
+                      VAR_5                       F(label3)
+                                                  DAT(x)
+                      VAR_6                       ,T(label16) var_6
+                                                  does not exist
+
+                      PTMEAS/var_1 var_2
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       CART,x,y,z
+                                                  POL,r,a,h
+
+                      RECALL/var_1 var_2
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       D(label2)
+                                                  DA(label1)
+
+
+
+
+1-30                  61212-2751512    CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+RMEAS/var_1,F(label),n,var_2
+RMEAS/var_1,F(label1),n,FA(label2)
+RMEAS/CPARLN,F(label1),n,var_1 var_2
+RMEAS/var_1,F(label1),n,var_2
+RMEAS/var_1,F(label1),n,var_2
+RMEAS/POINT,F(label1),n,var_1
+RMEAS/EDGEPT,F(label1),n,var_1
+D(label)=ROTATE/var_1,var_2
+
+Proměnná                       Možné hodnoty
+VAR_1                          XAXIS
+                               YAXIS
+                               ZAXIS
+VAR_2                          ang
+                               F(label1),var_3
+                               FA(label2),var_3
+                               DAT(x),var_3
+VAR_3                          XDIR
+                               -XDIR
+                               YDIR
+                               -YDIR
+                               ZDIR
+                               -ZDIR
+
+S(label)=SNSDEF/BUILD var_1,var_2
+TEXT/var_1,'text'
+
+Proměnná                       Možné hodnoty
+VAR_1                          OUTFIL
+
+
+
+
+61212-2751512       CALYPSO 2018                   1-31
+Podporované příkazy
+
+
+
+                      T(label)=TOL/ANGL,lotol,uptol
+                      T(label)=TOL/ANGLB,ang,lotol,uptol
+                      T(label)=TOL/ANGLR,ang,tolzon var_1 var_2 var_3 var_4
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ,MMC
+                                                   ,LMC
+                                                   ,RFS
+                                                   does not exist
+                      VAR_2                        ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   ,FA(label2) var_1
+                      VAR_3                        ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   FA(label)2 var_1
+                                                   does not exist
+
+                      T(label)=TOL/CIRLTY,tolzon
+                      T(label)=TOL/CONCEN,tolzon,var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        DAT(x)
+                                                   F(label1)
+                                                   FA(label2)
+
+                      T(label)=TOL/CORTOL,var_1,lotol,uptol
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        XAXIS
+                                                   YAXIS
+                                                   ZAXIS
+                                                   RADIAL
+                                                   RADIUS
+                                                   ANGLE
+
+
+
+
+1-32                  61212-2751512     CALYPSO 2018
+                                          Podporované příkazy
+
+
+
+T(label)=TOL/CRNOUT,tolzon,DAT(x) var_1 var_1
+
+Proměnná                     Možné hodnoty
+VAR_1                        ,DAT(x)
+                             .F(label1)
+                             .FA (label2)
+
+T(label)=TOL/CYLCTY,tolzon
+T(label)=TOL/DIAM,lotol,uptol var_1 var_2
+
+Proměnná                     Možné hodnoty
+VAR_1                        ,MAJOR
+                             does not exist
+                             does not exist
+
+T(label)=TOL/DISTB,var_1,var_2 var_3
+
+Proměnná                     Možné hodnoty
+VAR_1                        NOMINL,dist,lotol,uptol
+                             LIMIT,lolimt,uplimt
+VAR_2                        XAXIS
+                             YAXIS
+                             ZAXIS
+                             PT2PT
+                             does not exist
+
+T(label)=TOL/FLAT,var_1
+
+Proměnná                     Možné hodnoty
+VAR_1                        tolzon
+                             tolzon,tolzon1,unit1,unit2
+                             tolzon1,unit1,unit2
+
+T(label)=TOL/PARLEL,tolzon var_1 var_2 var_3 var_4
+
+Proměnná                     Možné hodnoty
+VAR_1                        ,MMC var_6
+                             ,LMC
+
+
+61212-2751512     CALYPSO 2018                         1-33
+Podporované příkazy
+
+
+
+                      Proměnná                     Možné hodnoty
+                                                   ,RFS
+                                                   does not exist
+                      VAR_2                        ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   ,FA(label2) var_1
+                      VAR_3                        ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   ,FA(label2) var_1
+                                                   does not exist
+                                                   does not exist
+
+                      T(label)=TOL/PERP,tolzon var_1 var_2 var_3 var_4
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ,MMC var_6
+                                                   ,LMC
+                                                   ,RFS
+                      VAR_2                        does not exist
+                                                   ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   ,FA(label2) var_1
+                      VAR_3                        ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   ,FA(label2) var_1
+                                                   does not exist
+                                                   does not exist
+
+                      T(label)=TOL/POS,var_1,tolzon var_2 var_3 var_3 var_3
+                      var_4
+                      T(label)=TOL/PROFL,lotol,uptol var_1 var_1 var_1
+                      T(label)=TOL/PROFP,lotol,uptol var_1 var_1 var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ,DAT(x) var_3
+
+
+
+1-34                  61212-2751512     CALYPSO 2018
+                                          Podporované příkazy
+
+
+
+Proměnná                     Možné hodnoty
+                             ,F(label1)
+                             ,FA(label2) var_3
+                             does not exist
+VAR_3                        ,MMC
+                             ,LMC
+                             ,RFS
+                             does not exist
+
+T(label)=TOL/PROFS,lotol,uptol var_1 var_1 var_1 var_2
+T(label)=TOL/RAD,lotol,uptol var_1 var_2
+T(label)=TOL/STRGHT,var_1
+
+Proměnná                     Možné hodnoty
+VAR_1                        tolzon var_2
+                             tolzon,unit
+
+T(label)=TOL/SYM,tolzon,var_1
+
+Proměnná                     Možné hodnoty
+VAR_1                        DAT(x) var_3
+                             F(label1)
+                             FA(label2) var_3
+
+T(label)=TOL/TRNOUT,tolzon,DAT(x) var_1 var_1
+T(label)=TOL/USETOL,'text'
+T(label)=TOL/USETOL,parm var_1
+T(label)=TOL/WIDTH,lotol,uptol var_1 var_2
+
+Proměnná                     Možné hodnoty
+                             ,SHORT
+                             ,LONG
+
+
+
+
+61212-2751512     CALYPSO 2018                      1-35
+Podporované příkazy
+
+
+
+                      D(label)=TRANS/var_1,var_2 var_3 var_4
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       XORIG
+                                                  YORIG
+                                                  ZORIG
+                      VAR_2                       var_6
+                      VAR_3                       ,var_1,var_2
+                                                  does not exist
+                      VAR_4                       var_6
+                      VAR_6                       value
+                                                  F(label1)
+                                                  FA(label2)
+                                                  DAT(x)
+                      VAR_5                       ,var_1,var_2
+                                                  does not exist
+
+                      UNITS/var_1,var_2 var_3
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       MM
+                                                  CM
+                                                  M
+                                                  INCH
+                                                  FEET
+                      VAR_2                       ANGDEC
+                                                  ANGDMS
+                                                  ANGRAD
+                      VAR_3                       ,TEMPF
+                                                  ,TEMPC
+
+                      WKPLAN/var_1
+
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       XYPLAN
+
+
+
+1-36                  61212-2751512    CALYPSO 2018
+                                                Podporované příkazy
+
+
+
+Proměnná                           Možné hodnoty
+                                   YZPLAN
+                                   ZXPLAN
+
+
+Podporované příkazy z DMIS 5.0
+Postprocesor pro DMIS import podporuje následující příkazy z DMIS 5.0:
+
+CONST/var_1,F(label1),BF,FA(label2),var_2 var_3
+
+Proměnná                           Možné hodnoty
+VAR_1                              ARC
+                                   CIRCLE
+                                   CONE
+                                   CPARLN
+                                   CYLNDR
+                                   ELLIPS
+                                   GCURVE
+                                   GSURF
+                                   LINE
+                                   PARPLN
+                                   PLANE
+                                   RCTNGL
+                                   SPHERE
+                                   SYMPLN
+                                   TORUS
+VAR_2                              FA(label3)
+                                   F(label4)
+VAR_3                              ,var_2 var_3
+                                   does not exist
+
+CONST/LINE,F(label1),var_1
+
+Proměnná                           Možné hodnoty
+VAR_1                              MIDLI,FA(label2),var_2
+                                   PROJLI,FA(label2)var_3
+VAR_2                              FA(label3)
+
+
+61212-2751512          CALYPSO 2018                         1-37
+Podporované příkazy
+
+
+
+                      Proměnná                    Možné hodnoty
+                                                  F(label4)
+                      VAR_3                       FA(label3)
+                                                  ,F(label4)
+                                                  does not exist
+
+                      CONST/PLANE,F(label1),MIDPL,FA(label2),var_1
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       FA(label3)
+                                                  F(label4)
+
+                      CONST/POINT, F(label1), var_1
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       MIDPT,FA(label2),var_2
+                                                  PIERCE,FA(label2),var_2
+                                                  VERTEX, FA(label2)
+                                                  PROJPT, FA(label2) var_3
+                                                  MOVEPT, FA(label2), var_4
+                                                  CURVE, FA(label2), var_2
+                      VAR_2                       FA(label4)
+                                                  F(label5)
+                      VAR_3                       ,FA(label4)
+                                                  ,F(label5)
+                      VAR_4                       dx, dy, dz
+                                                  F(label5), dist
+                                                  FA(label4), dist
+                      VAR_5                       MIN
+                                                  MAX
+                      VAR_6                       VEC,i,j,k
+
+                      CONST/var_1,F(label1),PROJCT,FA(label2) var_2
+
+                      Proměnná                    Možné hodnoty
+                      VAR_1                       ARC
+
+
+
+1-38                  61212-2751512    CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+Proměnná                    Možné hodnoty
+                            CIRCLE
+                            CPARLN
+                            ELLIPS
+VAR_2                       FA(label3)
+                            ,F(label4)
+                            does not exist
+
+CONST/var_1,FA(label1),var_3
+
+Proměnná                    Možné hodnoty
+VAR_1                       CIRCLE,F(label2),var_2
+                            LINE,F(label2),var_2
+                            POINT,F(label2),INTOF
+VAR_2                       TANTO
+                            INTOF
+VAR_3                       FA(label3)
+                            F(label4)
+
+CONST/var_1,var_2
+
+Proměnná                    Možné hodnoty
+VAR_1                       CIRCLE,F(label1),TANTO
+                            LINE,F(label1),var_3
+                            PLANE,F(label1),var_3
+VAR_2                       FA(label2),THRU,var_4
+                            F(label3),THRU,FA(label4)
+VAR_3                       PERPTO
+                            TANTO
+                            PARTO
+VAR_4                       FA(label4)
+                            F(label5)
+
+
+
+
+61212-2751512    CALYPSO 2018                        1-39
+Podporované příkazy
+
+
+
+                      CONST/var_1,F(label1),OFFSET,FA(label2) var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        LINE
+                                                   PLANE
+                      VAR_2                        ,FA(label2) var_2
+                                                   ,F(label3) var_2
+
+                      CONST/var_1,F(label1),TR,FA(label2),var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ARC
+                                                   CIRCLE
+                                                   CONE
+                                                   CPARLN
+                                                   CYLNDR
+                                                   ELLIPS
+                                                   GCURVE
+                                                   GSURF
+                                                   LINE
+                                                   PATERN
+                                                   PLANE
+                                                   POINT
+                                                   RCTNGL
+                                                   SPHERE
+                                                   TORUS
+                      VAR_2                        ,D(label3)
+                                                   ,DA(label4)
+                                                   does not exist
+
+                      CONST/CIRClE,F(label1),CONE,var_1,FA(label2)
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        DIAM,diameter
+                                                   DIST,distance
+
+
+
+
+1-40                  61212-2751512     CALYPSO 2018
+                                      Podporované příkazy
+
+
+
+DATDEF/var_1
+
+Proměnná                    Možné hodnoty
+VAR_1                       FA(label1),DAT(x)
+                            FA(label2),DAT(x-x)
+                            F(label3),DAT(x)
+
+D(label)=DATSET/var_1
+
+Proměnná                    Možné hodnoty
+VAR_1                       MCS
+                            var_2
+VAR_2                       DAT(x),var_3 var_4 var_5 var_6
+                            DAT(x),var_3 var_4 var_6 var_5
+                            DAT(x),var_7 var_5,DAT(X), var_3
+                            var_4
+                            DAT(x),var_7,DAT(x), var_3 var_4
+                            var_5
+VAR_3                       XDIR
+                            -XDIR
+                            YDIR
+                            -YDIR
+                            ZDIR
+                            -ZDIR
+VAR_4                       ,XORIG var_4
+                            ,YORIG var_4
+                            ,ZORIG var_4
+                            does not exist
+VAR_5                       ,DAT(x),var_3 var_4
+                            ,DAT(x) var_7
+                            does not exist
+VAR_6                       ,DAT(x) var_7
+                            does not exist
+VAR_7                       ,XORIG var_4
+                            ,YORIG var_4 ,
+                            ,ZORIG var_4
+
+
+61212-2751512    CALYPSO 2018                       1-41
+Podporované příkazy
+
+
+
+                      DATTRGDEF/var_1
+                      DECL/var_1 var_2 var_3
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        COMMON,
+                                                   GLOBAL,
+                                                   LOCAL,
+                                                   does not exist
+                      VAR_2                        BOOL
+                                                   INTGR
+                                                   LONG
+                                                   REAL
+                                                   DOUBLE
+                                                   CHAR,n
+                                                   VECTOR
+                      VAR_3                        ,varname var_4
+                                                   ,varname[index1 var_5] var_4
+
+                      DMISMN/'text',version
+                      ENDMES
+                      EVAL/var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        FA(label1),T(label2) var_2
+                                                   FA(label3),var_3,T(label4)
+                                                   var_4,FA(label5),T(label4)
+                      VAR_2                        ,T(label) var_2
+                                                   does not exist
+                      VAR_3                        F(label3)
+                                                   FA(label5)
+                                                   DAT(label7)
+                      VAR_4                        F(label8)
+                                                   DAT(label7)
+
+
+
+
+1-42                  61212-2751512     CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+F(label)=FEAT/ARC,var_1,var_2,i,j,k,rad,ang1,ang2 var_3
+FA(label)=FEAT/ARC,var_1,var_2,i,j,k,rad,ang1,ang2
+var_3
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+VAR_3                        ,is,js,ks
+
+F(label)=FEAT/
+ARC,4POINT,var_1,e1x,e1y,e1z,mx,my,mz,e2x,e2y,e2z,c
+x,cy,cz
+FA(label)=FEAT/
+ARC,4POINT,var_1,e1x,e1y,e1z,mx,my,mz,e2x,e2y,e2z,c
+x,cy,cz
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+
+F(label)=FEAT/CIRCLE,var_1,var_2,i,j,k,diam
+FA(label)=FEAT/CIRCLE,var_1,var_2,i,j,k,diam
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+
+F(label)=FEAT/COMPOUND,var_1,F(label1),F(label1)
+var_3
+
+Proměnná                     Možné hodnoty
+VAR_1                        AXIAL,var_2,i,j,k
+                             PLANE,var_2,i,j,k
+                             SPHERE,var2
+
+
+61212-2751512     CALYPSO 2018                     1-43
+Podporované příkazy
+
+
+
+                      Proměnná                     Možné hodnoty
+                      VAR_2                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      F(label)=FEAT/CONE,var_1,var_2,i,j,k,ang
+                      FA(label)=FEAT/CONE,var_1,var_2,i,j,k,ang
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      F(label)=FEAT/
+                      CONRADSEGMNT,var_1,var_2,startrad,endrad,si,sj,sk,ei,
+                      ej,ek
+                      FA(label)=FEAT/
+                      CONRADSEGMNT,var_1,var_2,startrad,endrad,si,sj,sk,ei,
+                      ej,ek
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,sx,sy,sz,ex,ey,ez
+                                                   POL,sr,sa,sh,er,ea,eh
+
+                      F(label)=FEAT/
+                      CPARLN,var_1,var_2,var_3,i,j,k,i1,j1,k1,len,width
+                      FA(label)=FEAT/
+                      CPARLN,var_1,var_2,var_3,i,j,k,i1,j1,k1,len,width
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        ROUND
+                                                   FLAT
+                      VAR_3                        CART,x,y,z
+
+
+
+1-44                  61212-2751512     CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+Proměnná                     Možné hodnoty
+                             POL,r,a,h
+
+F(label)=FEAT/CYLNDR,var_1,var_2,i,j,k,diam var_3
+FA(label)=FEAT/CYLNDR,var_1,var_2,i,j,k,diam var_3
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+VAR_3                        ,len
+
+F(label)=FEAT/
+CYLRADSEGMNT,var_1,var_2,rad,si,sj,sk,ei,ej,ek
+FA(label)=FEAT/
+CYLRADSEGMNT,var_1,var_2,rad,si,sj,sk,ei,ej,ek
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,sx,sy,sz,ex,ey,ez
+                             POL,sr,sa,sh,er,ea,eh
+
+F(label)=FEAT/EDGEPT,var_1,i,j,k,i1,j1,k1
+FA(label)=FEAT/EDGEPT,var_1,i,j,k,i1,j1,k1
+
+Proměnná                     Možné hodnoty
+VAR_1                        CART,x,y,z
+                             POL,r,a,h
+
+F(label)=FEAT/ELLIPS,var_1,var_2,var_3,i,j,k,diam
+FA(label)=FEAT/ELLIPS,var_1,var_2,var_3,i,j,k,diam
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+
+
+61212-2751512     CALYPSO 2018                        1-45
+Podporované příkazy
+
+
+
+                      Proměnná                     Možné hodnoty
+                      VAR_2                        CART,f1x,f1y,f1z,f2x,f2y,f2z
+                                                   POL,f1r,f1a,f1h,f2r,f2a,f2h
+                      VAR_3                        MAJOR
+                                                   MINOR
+
+                      F(label)=FEAT/ELONGCYL,var_1,var_2,ia,ja,ka,size,radius
+                      var_3
+                      FA(label)=FEAT/
+                      ELONGCYL,var_1,var_2,ia,ja,ka,size,radius var_3
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,x,y,z,i,j,k
+                                                   POL,r,a,h,i,j,k
+                      VAR_3                        len
+
+                      F(label)=FEAT/GCURVE,var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        CART,x,y,z,i,j,k
+                                                   POL,r,a,h,i,j,k
+
+                      F(label)=FEAT/GSURF var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ,CART,PTDATA,x,y,z,i,j,k,x,y,z,i,j,k
+                                                   var_8
+                                                   ,POL,PTDATA,r,a,h,i,j,k,r,a,h,i,j,k
+                                                   var_9
+                      VAR_8                        ,x,y,z,i,j,k var_8
+                                                   ,x,y,z,i,j,k
+
+
+
+
+1-46                  61212-2751512     CALYPSO 2018
+                                          Podporované příkazy
+
+
+
+F(label)=FEAT/LINE,var_1,ni,nj,nk
+FA(label)=FEAT/LINE,var_1,ni,nj,nk
+
+Proměnná                     Možné hodnoty
+VAR_1                        UNBND,var_2
+                             BND,var_3
+VAR_2                        CART,x,y,z,i,j,k
+                             POL,r,a,h,i,j,k
+VAR_3                        CART,e1x,e1y,e1z,e2x,e2y,e2z
+                             POL,e1r,e1a,e1h,e2r,e2a,e2h
+
+F(label)=FEAT/PARPLN,var_1,var_2,width
+FA(label)=FEAT/PARPLN,var_1,var_2,width
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z,p1x,p1y,p1z,i1,j1,k1,p
+                             2x,p2y,p2z,i2,j2,k2
+                             POL,r,a,h,p1r,p1a,p1h,i1,j1,k1,p2
+                             r,p2a,p2h,i2,j2,k2
+                             MIDPL,CART,x,y,z,i,j,k
+                             MIDPL,POL,r,a,h,i,j,k
+
+F(label)=FEAT/PATERN,F(label1) var_1 var_2
+
+Proměnná                     Možné hodnoty
+VAR_1                        ,F(labeln)
+
+F(label)=FEAT/PLANE,var_1,i,j,k
+FA(label)=FEAT/PLANE,var_1,i,j,k
+
+Proměnná                     Možné hodnoty
+VAR_1                        CART,x,y,z
+                             POL,r,a,h
+
+
+
+
+61212-2751512     CALYPSO 2018                        1-47
+Podporované příkazy
+
+
+
+                      F(label)=FEAT/POINT,var_1,i,j,k
+                      FA(label)=FEAT/POINT,var_1,i,j,k
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      F(label)=FEAT/SPHERE,var_1,var_2,diam var_3
+                      FA(label)=FEAT/SPHERE,var_1,var_2,diam
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,x,y,z
+                                                   POL,r,a,h
+                      VAR_3                        ,i,j,k var_8
+
+                      F(label)=FEAT/
+                      SPHRADSEGMNT,var_1,var_2,rad,npi,npj,npk,latstartan
+                      g,latstopang,pmi,pmj,pmk,longstartang,longstopang
+                      FA(label)=FEAT/
+                      SPHRADSEGMNT,var_1,var_2,rad,npi,npj,npk,latstartan
+                      g,latstopang,pmi,pmj,pmk,longstartang,longstopang
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+                      VAR_2                        CART,cx,cy,cz
+                                                   POL,cr,ca,ch
+
+                      F(label)=FEAT/SYMPLN,var_1,var_2,width
+                      FA(label)=FEAT/SYMPLN,var_1,var_2,width
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        INNER
+                                                   OUTER
+
+
+
+
+1-48                  61212-2751512     CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+Proměnná                     Možné hodnoty
+VAR_2                        CART,x,y,z,p1x,p1y,p1z,i1,j1,k1,p
+                             2x,p2y,p2z,i2,j2,k2
+                             POL,a,r,h,p1a,p1rr,p1h,i1,j1,k1,p
+                             2a,p2r,p2h,i2,j2,k2
+
+F(label)=FEAT/
+TORRADSEGMNT,var_1,var_2,majrad,minrad,npi,npj,np
+k,latstartang,latstopang,pmi,pmj,pmk,longstartang,long
+stopang
+FA(label)=FEAT/
+TORRADSEGMNT,var_1,var_2,majrad,minrad,npi,npj,np
+k,latstartang,latstopang,pmi,pmj,pmk,longstartang,long
+stopang
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,cx,cy,cz
+                             POL,cr,ca,ch
+
+F(label)=FEAT/TORUS,var_1,var_2,i,j,k,diam1,diam2
+FA(label)=FEAT/TORUS,var_1,var_2,i,j,k,diam1,diam2
+
+Proměnná                     Možné hodnoty
+VAR_1                        INNER
+                             OUTER
+VAR_2                        CART,x,y,z
+                             POL,r,a,h
+
+MEAS/var_1,F(label1),n
+
+Proměnná                     Možné hodnoty
+VAR_1                        ARC
+                             CIRCLE
+                             CONE
+                             CONRADSEGMNT
+                             CPARLN
+
+
+61212-2751512     CALYPSO 2018                       1-49
+Podporované příkazy
+
+
+
+                      Proměnná                   Možné hodnoty
+                                                 CYLNDR
+                                                 CYLRADSEGMNT
+                                                 EDGEPT
+                                                 ELLIPS
+                                                 GCURVE
+                                                 GSURF
+                                                 LINE
+                                                 PARPLN
+                                                 PLANE
+                                                 POINT var_2
+                                                 RCTNGL
+                                                 SPHERE
+                                                 SPHRADSEGMNT
+                                                 SYMPLN
+                                                 TORUS
+                                                 TORRADSEGMNT
+                                                 does not exist
+
+                      MODE/var_1
+
+                      Proměnná                   Možné hodnoty
+                      VAR_1                      AUTO,var_2
+                                                 PROG,MAN
+                                                 MAN
+
+                      OUTPUT/var_1
+
+                      Proměnná                   Možné hodnoty
+                      VAR_1                      FA(label1) var_2 var_3
+                                                 FA(label2),var_4,TA(label3) var_3
+                                                 var_5,FA(label4),TA(label3) var_3
+                                                 F(label5) var_6 var_3
+                                                 F(label6),F(label7),T(label_8) var_3
+                                                 T(label14)
+
+
+
+1-50                  61212-2751512   CALYPSO 2018
+                                         Podporované příkazy
+
+
+
+Proměnná                    Možné hodnoty
+                            TA(label15)
+VAR_2                       ,TA(label15) var_2
+                            does not exist
+VAR_4                       F(label7)
+                            FA(label4)
+                            DAT(x)
+VAR_5                       F(label3)
+                            DAT(x)
+VAR_6                       ,T(label16) var_6
+                            does not exist
+
+PAMEAS/var_1 var_2 var_3 var_4
+
+Proměnná                    Možné hodnoty
+VAR_1                       P(label)
+
+P(label)=PATH/var_1
+
+Proměnná                    Možné hodnoty
+VAR_1                       POINT,var_2,ip,jp,kp
+                            ARC,var_2,ia,ja,ka,rad,ang1,ang2
+                            var_3
+                            UNKNOWN,xs,ys,zs,xd,yd,zd,xe,y
+                            e,ze,var_4
+                            LINE,BND,var_5,il,jl,kl
+                            CURVE,var_6
+                            HELICAL,var_2,iax,jax,kax,hel_rad
+                            ,hel_ang1,hel_ang2 var_7,pitch
+                            GRID,xg,yg,zg,iu,ju,ku,im,jm,km,l
+                            p,var_9
+VAR_2                       CART,x,y,z
+                            POL,r,a,h
+VAR_3                       ,is,js,ks
+VAR_4                       io,jo,ko
+VAR_5                       CART,e1x,e1y,e1z,e2x,e2y,e2z
+
+
+
+61212-2751512    CALYPSO 2018                         1-51
+Podporované příkazy
+
+
+
+                      Proměnná                     Možné hodnoty
+                                                   POL,e1r,e1a,e1h,e2r,e2a,e2h
+                                                   x1,y1,z1,i,j,k,x2,y2,z2,i,j,k var_10
+                      VAR_7                        ,ih,jh,kh
+                      VAR_9                        b1x,b1y,b1z,b2x,b2y,b2z,b3x,b3y
+                                                   ,b3z var_12
+                                                   ,xn,yn,zn,i,j,k var_14
+                                                   ,bnx,bny,bnz var_16
+
+                      PTMEAS/var_1 var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        CART,x,y,z
+                                                   POL,r,a,h
+
+                      RECALL/var_1 var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        D(label2)
+                                                   DA(label1)
+
+                      RESUME/var_1
+                      RMEAS/var_1,F(label),n,var_2
+                      RMEAS/var_1,F(label1),n,FA(label2)
+                      RMEAS/CPARLN,F(label1),n,var_1 var_2
+                      RMEAS/var_1,F(label1),n,var_2
+                      RMEAS/var_1,F(label1),n,var_2
+                      RMEAS/POINT,F(label1),n,var_1
+                      RMEAS/EDGEPT,F(label1),n,var_1
+                      ROTAB/RT(label1),var_1,var_2,ang var_3
+                      D(label)=ROTATE/var_1,var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        XAXIS
+                                                   YAXIS
+
+
+1-52                  61212-2751512     CALYPSO 2018
+                                            Podporované příkazy
+
+
+
+Proměnná                       Možné hodnoty
+                               ZAXIS
+VAR_2                          ang
+                               F(label1),var_3
+                               FA(label2),var_3
+                               DAT(x),var_3
+VAR_3                          XDIR
+                               -XDIR
+                               YDIR
+                               -YDIR
+                               ZDIR
+                               -ZDIR
+
+TEXT/var_1,'text'
+
+Proměnná                       Možné hodnoty
+VAR_1                          OUTFIL
+
+TH(label)=THLDEF/var_1 var_2
+T(label)=TOL/ANGL,lotol,uptol
+T(label)=TOL/ANGLB,ang,lotol,uptol var_1
+T(label)=TOL/ANGLR,ang,tolzon var_1 var_2 var_3 var_4
+var_5
+
+Proměnná                       Možné hodnoty
+VAR_1                          ,MMC
+                               ,LMC
+                               ,RFS
+                               does not exist
+VAR_2                          ,DAT(x) var_1
+                               ,F(label1)
+                               ,FA(label)2 var_1
+VAR_3                          ,DAT(x) var_1
+                               ,F(label1)
+                               FA(label2) var_1
+
+
+
+61212-2751512       CALYPSO 2018                      1-53
+Podporované příkazy
+
+
+
+                      Proměnná                     Možné hodnoty
+                                                   does not exist
+
+                      T(label)=TOL/ANGLWRT,ang,lotol,uptol,var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        DAT(x)
+                                                   F(label1)
+                                                   FA(label)2
+
+                      T(label)=TOL/CIRLTY,tolzon
+                      T(label)=TOL/CONCEN,tolzon,var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        DAT(x)
+                                                   F(label1)
+                                                   FA(label2)
+
+                      T(label)=TOL/CORTOL,var_1
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        XAXIS,lotol,uptol var_4
+                                                   YAXIS,lotol,uptol var_4
+                                                   ZAXIS,lotol,uptol var_4
+                                                   RADIAL,lotol,uptol
+                                                   ANGLE,lotol,uptol
+
+                      T(label)=TOL/CRNOUT,tolzon,DAT(x) var_1 var_1 var_2
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ,DAT(x)
+                                                   .F(label1)
+                                                   .FA (label2)
+
+
+
+
+1-54                  61212-2751512     CALYPSO 2018
+                                       Podporované příkazy
+
+
+
+T(label)=TOL/CYLCTY,tolzon
+T(label)=TOL/DIAM,lotol,uptol var_1 var_2
+
+Proměnná                     Možné hodnoty
+VAR_1                        ,MAJOR
+                             does not exist
+                             does not exist
+
+T(label)=TOL/DISTB,var_1,var_2 var_3
+
+Proměnná                     Možné hodnoty
+VAR_1                        NOMINL,dist,lotol,uptol
+                             LIMIT,lolimt,uplimt
+VAR_2                        XAXIS
+                             YAXIS
+                             ZAXIS
+                             PT2PT
+                             does not exist
+
+T(label)=TOL/DISTWRT,var_1,var_2,var_3 var_4
+
+Proměnná                     Možné hodnoty
+VAR_1                        NOMINL,dist,lotol,uptol
+                             LIMIT,lolimt,uplimt
+VAR_3                        XAXIS
+                             YAXIS
+                             ZAXIS
+                             PT2PT
+
+T(label)=TOL/FLAT,var_1
+
+Proměnná                     Možné hodnoty
+VAR_1                        tolzon
+                             tolzon,tolzon1,unit1,unit2
+                             tolzon1,unit1,unit2
+
+
+
+
+61212-2751512     CALYPSO 2018                         1-55
+Podporované příkazy
+
+
+
+                      T(label)=TOL/PARLEL,tolzon var_1 var_2 var_3 var_4
+                      var_5
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ,MMC var_7
+                                                   ,LMC var_7
+                                                   ,RFS
+                                                   does not exist
+                      VAR_2                        ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   ,FA(label2) var_1
+                      VAR_3                        ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   ,FA(label2) var_1
+                                                   does not exist
+                                                   does not exist
+                                                   does not exist
+
+                      T(label)=TOL/PERP,tolzon var_1 var_2 var_3 var_4 var_5
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        ,MMC var_7
+                                                   ,LMC var_7
+                                                   ,RFS
+                      VAR_2                        does not exist
+                                                   ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   ,FA(label2) var_1
+                      VAR_3                        ,DAT(x) var_1
+                                                   ,F(label1)
+                                                   ,FA(label2) var_1
+                                                   does not exist
+                                                   does not exist
+
+
+
+
+1-56                  61212-2751512     CALYPSO 2018
+                                          Podporované příkazy
+
+
+
+T(label)=TOL/POS,var_1,tolzon var_2 var_3 var_3 var_3
+var_4
+T(label)=TOL/PROFL,lotol,uptol var_1 var_1 var_1 var_2
+T(label)=TOL/PROFP,lotol,uptol var_1 var_1 var_1
+
+Proměnná                     Možné hodnoty
+VAR_1                        ,DAT(x) var_3
+                             ,F(label1)
+                             ,FA(label2) var_3
+                             does not exist
+VAR_3                        ,MMC
+                             ,LMC
+                             ,RFS
+                             does not exist
+
+T(label)=TOL/PROFS,lotol,uptol var_1 var_1 var_1 var_2
+T(label)=TOL/RAD,lotol,uptol var_1 var_2
+T(label)=TOL/STRGHT,var_1 var_2 var_3
+
+Proměnná                     Možné hodnoty
+VAR_1                        tolzon var_6
+                             tolzon,unit
+
+T(label)=TOL/SYM,tolzon,var_1 var_2
+
+Proměnná                     Možné hodnoty
+VAR_1                        DAT(x) var_4
+                             F(label1)
+                             FA(label2) var_4
+
+T(label)=TOL/TRNOUT,tolzon,DAT(x) var_1 var_1
+T(label)=TOL/WIDTH,lotol,uptol var_1 var_2
+
+Proměnná                     Možné hodnoty
+                             ,SHORT
+                             ,LONG
+
+
+
+61212-2751512     CALYPSO 2018                      1-57
+Podporované příkazy
+
+
+
+                      TL(label)=TOOLDF/MD(label1),'text'
+                      D(label)=TRANS/var_1,var_2 var_3 var_4
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        XORIG
+                                                   YORIG
+                                                   ZORIG
+                      VAR_2                        var_6
+                      VAR_3                        ,var_1,var_2
+                                                   does not exist
+                      VAR_6                        value
+                                                   F(label1)
+                                                   FA(label2)
+                                                   DAT(x)
+
+                      UNITS/var_1,var_2 var_3
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        MM
+                                                   CM
+                                                   M
+                                                   INCH
+                                                   FEET
+                      VAR_2                        ANGDEC
+                                                   ANGDMS
+                                                   ANGRAD
+                      VAR_3                        ,TEMPF
+                                                   ,TEMPC
+
+                      WKPLAN/var_1
+
+
+                      Proměnná                     Možné hodnoty
+                      VAR_1                        XYPLAN
+                                                   YZPLAN
+                                                   ZXPLAN
+
+
+1-58                  61212-2751512     CALYPSO 2018
+                                                                 Reference: DMIS import
+
+
+
+
+Reference: DMIS import
+                     Calypso Konvertor
+                     V tomto dialogovém okně spustíte import DMIS programu.
+
+Dialogový prvek      Funkce
+Název programu       Ukáže při importu název DMIS programu.
+Název součásti       Ukáže při importu název součásti z DMIS programu.
+Sériové číslo        Ukáže při importu sériové číslo z DMIS programu.
+Počet instrukcí      Ukáže při importu počet instrukcí v DMIS programu.
+Plán měření          Zde zadejte název nového CALYPSO-plánu měření.
+Základní systém      Zde vyberte název základního souřadného systému pro nový
+                     CALYPSO-plán měření.
+Indikace průběhu     Zobrazuje průběh konverze.
+Programové příkazy   Zobrazuje zpracované příkazy DMIS ve stromové struktuře.
+                     Problémy, které se vyskytly při konverzi, jsou poznamenány u
+                     příslušného příkazu.
+Možnosti             Otevře okno Možnosti s obecnými předvolbami pro DMIS import.
+Otevřít              Otevře okno pro výběr DMIS programu.
+Start                Spustí konverzi vybraného DMIS programu.
+Storno               Zavře okno a ukončí konverzi bez uložení.
+
+
+                     Možnosti
+                     V tomto dialogovém okně zadáváte předvolby pro DMIS import.
+
+Dialogový prvek      Funkce
+Typ zobrazení        Určuje styl zobrazení oken programu.
+Log soubory          Uvádí adresář s log soubory. Tyto soubory obsahují důležité
+                     informace při výskytu problémů určené pro servis Carl Zeiss.
+OK                   Zavře toto okno, změny se ihned projeví.
+Storno               Zavře okno, změny se neprojeví.
+
+
+
+
+                     61212-2751512           CALYPSO 2018                           1-59
+Reference: DMIS import
+
+
+
+
+1-60                     61212-2751512   CALYPSO 2018
+Rejstřík
+           C
+           Calypso Konvertor (dialogové okno)
+               DMIS import 1-59
+
+
+           D
+           DMIS 3.0
+               Podporované příkazy 1-7
+           DMIS 4.0
+               Podporované příkazy 1-19
+           DMIS 5.0
+               Podporované příkazy 1-37
+           DMIS import
+               konfigurovat 1-3
+               Podporované příkazy z DMIS 3.0 1-7
+               Podporované příkazy z DMIS 5.0 1-37
+               Podporované příkazy z DMIS 4.0 1-19
+               provést 1-4
+               Průběh 1-4
+               Základní údaje 1-2
+               zprávy 1-6
+           DMIS plány měření
+               Základní údaje 1-2
+
+
+           I
+           Import
+               UMESS-plán měření 1-2
+
+
+           K
+           Konfigurace
+               DMIS import 1-3
+
+
+           M
+           Možnosti (dialogové okno)
+               DMIS import 1-59
+
+
+           U
+           UMESS, importovat plán měření 1-2
+
+
+
+
+           61212-2751512                  CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2751512   CALYPSO 2018
+

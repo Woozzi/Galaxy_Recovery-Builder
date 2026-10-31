@@ -1,0 +1,432 @@
+CALYPSO
+
+   Opce 4
+   DMIS CNC DATA OUT
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2741512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 DMIS export (opce)
+
+               Základní údaje o exportu DMIS ...................................... 1-2
+
+               Export plánu měření do DMIS ........................................ 1-3
+                  Průběh exportu do DMIS................................................................... 1-3
+                  Konfigurovat export DMIS................................................................. 1-3
+                  Předpoklady pro DMIS export............................................................ 1-4
+                  Exportovat plán měření do DMIS....................................................... 1-5
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2741512                 CALYPSO 2018                                         Obsah   11
+22 Obsah   61212-2741512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2741512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2741512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2741512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2741512          CALYPSO 2018
+DMIS export (opce)
+
+
+
+
+                     Kapitola
+
+                     1    DMIS export (opce)
+
+                        Tato kapitola obsahuje:
+                        Základní údaje o exportu DMIS .................................................................. 1-2
+                        Export plánu měření do DMIS .................................................................... 1-3
+
+
+
+
+                       61212-2741512                    CALYPSO 2018                                            1-1
+Základní údaje o exportu DMIS
+
+
+
+
+Základní údaje o exportu DMIS
+                       CALYPSO může exportovat plán měření jako DMIS program. Pro export
+                       jsou na výběr formáty DMIS, verze 3.0 a zvláštní formát UMESS s
+                       některými rozšířeními. Za tím účelem funguje integrovaný DMIS
+                       preprocesor, který vytvoří příkazy DMISa správně je sestaví.
+                       PC-DMIS import je doplňková opce programu CALYPSO. Můžete si ji
+                       nechat zpřístupnit, pokud ji chcete používat. Kontaktujte za tím účelem
+                       servis firmy ZEISS.
+
+                       Co je DMIS?
+                       DMIS znamená Dimensional Measuring Interface Standard. DMIS je
+                       programovací jazyk pro programování mechanických, laserových,
+                       optických a video měřicích systémů. DMIS představuje programovací
+                       jazyk pro rozmanité měřicí přístroje.
+                       Fond DMIS je velmi obsáhlý a podobá se skutečně opravdovému
+                       programovacímu jazyku: Existují zde jazykové prvky pro popisy a definice
+                       proměnných, smyčky, podmíněné skoky, matematické funkce a
+                       souřadnicové transformace. Dále příkazy pro ovládání měřicího stroje
+                       jako najetí do poloh, snímání, geometrické elementy, měření, výměna
+                       snímačů, teplotní kompenzace atd.
+                       DMISpodporující měřicí stroje přečtou DMIS povely ze souboru ASCII a
+                       provádějí potom průběh měření.
+
+                       CALYPSO a DMIS
+                       DMISschopné měřicí stroje nemohou rovnou zpracovat plány měření
+                       programu CALYPSO. Aby mohly být plány měření CALYPSO zpracovány
+                       také na měřicích strojích schopných DMIS, musí být tyto plány měření
+                       nejprve převedeny do DMIS.
+                       Vhodný překladač se nazývá preprocesor, protože pracuje před
+                       zpracováním jím vytvořeného souboru DMIS.
+                       Popisovaná opce DMIS CNC DATA OUT je takovým DMIS preprocesorem
+                       pro CALYPSO.
+
+
+
+
+1-2                    61212-2741512           CALYPSO 2018
+                                                                       Export plánu měření do DMIS
+
+
+
+
+Export plánu měření do DMIS
+                       Průběh exportu do DMIS
+                       Aby byl plán měření exportován do DMIS, musíte nejprve konfigurovat
+                       DMIS export. Poté vyvoláte položku menu Export DMIS a zadáte
+                       požadovaný název soubor DMIS.
+                       Podmínkou je, aby byly splněny ➤ předpoklady pro DMIS export
+                       [⇨ 1-4].
+Co dělá preprocesor?   Preprocesor nejprve interně transformuje plán měření CALYPSO na
+                       sekvenční průběh a převede ho potom do DMIS. Takto vytvořený soubor
+                       můžete použít na každém měřicím stroji, který umí pracovat s DMIS.
+
+
+                       Konfigurovat export DMIS
+                       1 Zvolte menu Doplňky " Nastavení " Prostředí a klikněte na
+                         záložku Export DMIS.
+
+                             Systémová nastavení
+                            Soubor    Stránky            Nápověda
+
+                                                 Prostředí pro uživatele Mater
+
+
+                                     DMIS Preprocesor                                            Start
+                                                                                                 Cesty
+                                          DMIS 3                                                 Jazyky
+                                                                                                 Barvy
+                                          Spec.formát:      UMESS                                Dvoustojan
+                                                                                                 Písmo
+                                       Aktivovat rozšířený výstup DMIS                           Dynalog
+
+                                     Vyrovnání                                                   Tiskárna
+                                                                                            Export DMIS
+                                        Vyvolat vyrovnání
+                                                                                            Def.-názvy
+                                             Název           RECALL
+                                                                                             Technologie
+                                      Zákl.systém           Existující vyrovnání
+
+
+
+
+                                                                                   OK   Storno           Převzít
+
+
+                       2 Zvolte výstupní formát pro váš DMIS-soubor:
+
+
+                       61212-2741512                  CALYPSO 2018                                       1-3
+Export plánu měření do DMIS
+
+
+
+                          DMIS 3 pro DMIS verzi 3.0
+                          nějaký speciální formát, například UMESS (se specifickými
+                           rozšířeními)
+                      3 Aktivujte zaškrtávací políčko Aktivovat rozšířený výstup DMIS,
+                        má-li být možné obnovit původní názvy elementů při pozdějším
+                        importu DMIS-programu.
+                      4 Aktivujte zaškrtávací políčko Vyvolat základní systém, jestliže
+                        nechcete v exportovaném DMIS-programu základní systém nově
+                        určovat, ale načíst ho z pevného disku.
+                        Je to vhodné např., když máte pro zaměření základního systému a
+                        pro měření součásti různé plány měření, resp. DMIS-programy.
+                      5 Zadejte název souřadného systému, který má být vyvolán, a zvolte
+                        režim pro vyrovnání v příslušném DMIS-programu:
+                          Manuální vyrovnání: vyrovnání se provádí v manuálním režimu.
+                          CNC vyrovnání: vyrovnání se provádí v CNC režimu.
+                          Existující vyrovnání: v DMIS-průběhu se neprovádí vyrovnání.
+                           Základní systém uvedený v sekci Název se načte do DMIS-
+                           průběhu.
+                      6 Převezměte změny a zavřete tlačítkem OK.
+
+
+                      Předpoklady pro DMIS export
+                      Aby mohl preprocesor převést plán měření na platný DMIS-průběh, musí
+                      být plán měření v programu CALYPSO úplný a bezchybný, tj. musí být
+                      zaručeno, že CALYPSO může provést tento plán měření.
+                      Znamená to hlavně, že plán měření musí obsahovat následující
+                      bezchybně definované komponenty:
+                      – Definice snímačů
+                      – Definice měřených elementů
+                      – Definice charakteristik
+                      – Průběhy měření (technologie)
+                         –    Jednotlivé body
+                         –    Dráhy scanování
+                         –    Mezipolohy
+                         –    Objezdy
+                         –    Bezpečnostní vzdálenost
+                         –    Dráha odjezdu
+                      – Souřadné systémy
+
+
+
+1-4                   61212-2741512           CALYPSO 2018
+                                     Export plánu měření do DMIS
+
+
+
+– Výměna konfigurací snímačů (volitelně)
+– Dělení (volitelně)
+– Nastavení (volitelně)
+– Smyčky (volitelně)
+
+Oznámení
+DMIS zná jen jeden režim tolerancí („Číselný svazek“ v programu
+CALYPSO). Nastavení „Abs.hodnota“ tudíž exportováno není.
+
+
+Exportovat plán měření do DMIS
+Pomocí funkce DMIS export můžete exportovat plán měření do DMIS.
+Podmínkou je, aby byl DMIS export konfigurován a a aby plán měření
+splňoval výše uveden ➤ předpoklady pro DMIS export [⇨ 1-4].
+1 Zvolte menu Soubor " Export " DMIS.
+  Jestliže jsou v plánu měření definovány všechny elementy, ihned se
+  ukáže okno pro výběr souboru.
+  Když se v plánu měření vyskytují neúplně definované elementy, jste
+  předem dotázáni, zda chcete pokračovat.
+2 Zvolte příponu názvu pro vytvářený soubor DMIS (standardní přípona
+  je *.dmi).
+  Informace: Soubor DMIS je textový soubor, který můžete prohlížet a
+  editovat např. pomocí aplikace WordPad.
+3 Klikněte na tlačítko Uložit.
+  Otevře se dialogové okno Přiřazení označení Calypso -> DMIS.
+  Vidíte zde názvy měřených elementů v plánu měření CALYPSO a
+  příslušná automaticky generovaná DMIS označení (maximálně 10
+  znaků).
+  Informace: DMIS nezná na rozdíl od programu CALYPSO snímací
+  systémy (konfigurace snímačů), nýbrž jen snímače. Názvy snímačů
+  jsou navíc automaticky zkráceny na 10 znaků, takže se může ztratit
+  vazba na příslušný snímací systém.
+4 V sekci Pohled zvolte postup, kterým program CALYPSO
+  automaticky generuje DMIS označení z názvů v programu CALYPSO:
+    Normální: Vynechají se všechny speciální znaky.
+    Rozšířené: Vynechají se všechny speciální znaky. Pokud tím
+     vznikne prázdné označení, použijí se anglické standardní názvy.
+5 V případě potřeby změňte DMIS označení požadovaným způsobem.
+  Můžete např. změnit názvy snímačů tak, aby byl opět jasný vztah k
+  příslušné konfiguraci.
+
+
+
+61212-2741512             CALYPSO 2018                            1-5
+Export plánu měření do DMIS
+
+
+
+                      6 Potvrďte tlačítkem OK.
+                        Probíhá export, v okně Postup... Převod na DMIS můžete sledovat
+                        vznik DMIS-programu.
+                        Konec exportu je ohlášen.
+                      7 Po provedeném exportu klikněte na tlačítko Konec.
+                      8 Potvrďte tlačítkem OK.
+
+
+
+
+1-6                   61212-2741512         CALYPSO 2018
+Rejstřík
+           D
+           DMIS export
+               konfigurovat 1-3
+               průběh 1-3
+               předpoklady 1-4
+           DMIS plány měření
+               Základní údaje 1-2
+
+
+           E
+           Export
+               do DMIS konfigurovat 1-3
+
+
+
+
+           61212-2741512                  CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2741512   CALYPSO 2018
+

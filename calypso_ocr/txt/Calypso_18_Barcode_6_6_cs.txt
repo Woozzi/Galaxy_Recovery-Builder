@@ -1,0 +1,982 @@
+CALYPSO
+
+   Opce 18
+   CALYPSO Barcode
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-06-05
+61212-2881512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 Barcode (opce)
+
+               Základní údaje o čárovém kódu..................................... 1-2
+
+               Práce s programem Barcode ......................................... 1-3
+                  Přehled: Postup při práci s programem Barcode................................. 1-3
+                  Spustit Barcode ................................................................................. 1-3
+                  Používat Barcode .............................................................................. 1-4
+                  Ukončit Barcode ............................................................................... 1-6
+
+               Program Barcode pro správce systému ....................... 1-7
+                  Přehled: Program Barcode pro správce systému................................. 1-7
+                  Připravit CALYPSO pro program Barcode ........................................... 1-7
+                  Konfigurovat Barcode ....................................................................... 1-8
+                  Přidělit heslo ................................................................................... 1-10
+                  Řešit problémové případy................................................................ 1-11
+
+               Reference: Barcode ...................................................... 1-13
+                  Výběr verze ..................................................................................... 1-13
+                  Zeiss - Barcode................................................................................ 1-13
+                  Konfigurace parametrů ................................................................... 1-14
+                  Změnit heslo! .................................................................................. 1-16
+                  Bezpečnostní poloha....................................................................... 1-16
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2881512                    CALYPSO 2018                                              Obsah     11
+22 Obsah   61212-2881512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2881512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2881512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2881512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2881512          CALYPSO 2018
+Barcode (opce)
+
+
+
+
+                 Kapitola
+
+                 1    Barcode (opce)
+
+                    Tato kapitola obsahuje:
+                    Základní údaje o čárovém kódu.................................................................. 1-2
+                    Práce s programem Barcode ...................................................................... 1-3
+                    Program Barcode pro správce systému ....................................................... 1-7
+                    Reference: Barcode .................................................................................. 1-13
+
+
+
+
+                   61212-2881512                      CALYPSO 2018                                                1-1
+Základní údaje o čárovém kódu
+
+
+
+
+Základní údaje o čárovém kódu
+                       S opcí CALYPSO Barcode můžete při měření s programem CALYPSO
+                       vyhodnotit informace čárového kódu o měřené součásti. Nemusíte tudíž
+                       již přes klávesnici zadávat parametry hlavičky protokolu.
+Výhody                 Pomocí čtečky čárového kódu můžete volitelně načíst názvy plánů
+                       měření, skupiny charakteristik a parametry hlavičky protokolu. Nedochází
+                       tedy k překlepům při zadávání, vyskytuje se méně chyb. Každá součást
+                       „ví“, jaký má název a které parametry platí pro její měření.
+
+
+                                                   AAI
+                          Barcode                                         CALYPSO
+                                                 rozhraní
+
+
+
+
+                             data
+                                                                          měření
+
+
+
+
+                                                                součást
+
+Omezení                Opce CALYPSO Barcode se nemůže používat společně s následujícími
+                       opcemi a komponentami softwaru CALYPSO:
+                       – Automatizovaný průběh
+                       – Modul Preset (Předvolit)
+                       – FACS Automatizace / FACS ovládací plocha
+Rozhraní AAI           Řízení programu CALYPSO opcí Barcode a zpětná hlášení z programu
+                       CALYPSO do Barcode se realizují přes rozhraní AAI CALYPSO, které
+                       musíte k tomuto účelu konfigurovat.
+                       Po startu rozhraní AAI je CALYPSO v automatickém režimu. To znamená,
+                       že měřicí stroj ovládáte pouze přes Barcode, ovládání programu
+                       CALYPSO samotného je zablokováno.
+                       V případě nutnosti (např. při výskytu problémů) je možné přepnout
+                       rozhraní AAI do manuálního režimu.
+Konfigurace            Před použitím v praxi musí být program Barcode konfigurován. Přitom se
+                       definuje mj. rozsah nasnímaných dat a způsob vyhodnocení čárového
+                       kódu.
+
+
+
+
+1-2                    61212-2881512           CALYPSO 2018
+                                                              Práce s programem Barcode
+
+
+
+
+Práce s programem Barcode
+            Přehled: Postup při práci s programem
+            Barcode
+            Při práci s programem Barcode postupujte v těchto krocích:
+            – Spustit Barcode
+            – Používat Barcode
+            – Ukončit Barcode
+            Předpokladem je, aby správce systému připravil CALYPSO i Barcode pro
+            práci s opcí Barcode.
+
+
+            Spustit Barcode
+            Program Barcode spustíte pomocí ikony na ovládací ploše.
+            1 Poklepejte na ikonu Barcode.
+              Spustí se program Barcode. Pokud ještě neběží CALYPSO, spustí se
+              také CALYPSO.
+              Pokud je na vašem systému instalováno více verzí softwaru
+              CALYPSO, jsou tyto verze nabídnuty na výběr.
+            2 Aktivujte zaškrtávací rámeček pro požadovanou verzi CALYPSO a
+              v okně vpravo nahoře nastavte čas v sekundách, po kterém se má
+              toto okno při příštím spuštění Barcode automaticky zavřít.
+              Při příštím spuštění opce Barcode je naposledy vybraná verze již
+              aktivována, výběr ale můžete změnit. Klávesou ESC nebo kliknutím
+              myši zastavíte odpočítávání času pro zavření okna.
+            3 Potvrďte tlačítkem OK.
+              Nejprve se objeví okno, které ukazuje postup startovací procedury.
+
+                Automatizace
+
+                        Počkejte prosím, program se spouští!
+
+
+
+                      Inicializují se komunikační moduly
+
+
+                                                           Storno
+
+
+               Poté co Barcode navázal spojení s programem CALYPSO, objeví se
+               výzva.
+
+
+
+            61212-2881512               CALYPSO 2018                             1-3
+Práce s programem Barcode
+
+
+
+                             Bezpečnostní poloha
+
+
+
+
+                            Uveďte zakládací systém do základní polohy.
+                                 Vyjeďte snímací hlavou pro najetí
+                                        do bezpečnostní polohy.
+
+
+                                           OK                       Storno
+
+
+                      4 Uveďte zakládací systém do základní polohy, odjeďte se snímací
+                        hlavou a potvrďte tlačítkem OK.
+                        Souřadnicový měřicí stroj jede do konfigurované bezpečnostní
+                        polohy. Pinola jede nejprve ve směru Z.
+                        Startovací procedura pokračuje, ukáže se okno Zeiss - Barcode.
+
+
+                      Používat Barcode
+                      Po startu programu Barcode se otevře hlavní okno programu, ve kterém
+                      budete pracovat a které zůstává až do zavření stále vpředu.
+
+
+
+
+1-4                   61212-2881512           CALYPSO 2018
+                                              Práce s programem Barcode
+
+
+
+ Zeiss - Barcode
+ Soubor   Nastavení
+
+
+ Přípravné místo                                Přípravné místo 1
+
+ Stav                                              Stroj
+
+
+ Plán měření
+
+
+ Měřicí úloha
+ Skupina charakteristik   Kompletní
+ Parametr 1
+ Parametr 2
+ Parametr 3
+ Parametr 4
+ Parametr 5
+ Parametr 6
+ Statistika >> QS-STAT
+ Tisk Ano/Ne
+
+   Stav
+
+
+
+
+   ZEISS                              Start
+
+
+
+
+Toto okno může mít odlišný vzhled podle dané konfigurace: Lze nastavit
+počet parametrů; zaškrtávací políčka pro qs-STAT a tisk je možné skrýt.
+1 Skenujte příslušnou součást čtečkou čárového kódu.
+  V hlavním okně vidíte, jak jsou parametr po parametru vyplňovány
+  správné údaje.
+  Podle dané konfigurace vyplní program Barcode pole Plán měření,
+  Měřicí úloha a Skupina charakteristik, jakož i konfigurovaný
+  počet parametrů hlavičky protokolu.
+2 Zkontrolujte naskenované hodnoty a dosaďte hodnoty pro
+  parametry, pro které není nastaveno skenování.
+3 Aktivujte případně výstup do qs-STAT a tisk protokolu.
+4 Klikněte na tlačítko Start.
+  Když má CALYPSO všechny údaje, začne CNC průběh daného plánu
+  měření.
+  V poli Stav vidíte aktuální stav měření:
+
+
+
+61212-2881512             CALYPSO 2018                              1-5
+Práce s programem Barcode
+
+
+
+Stav                  Význam
+Souřadnicový měřicí   Paleta se nachází na měřicím stroji
+stroj
+Měření                Paleta je měřena
+Stroj - OK            Paleta je změřena: všechny charakteristiky jsou v toleranci
+Stroj - Výstražná     Paleta je změřena; jedna či více výstražných mezí byla překročena
+Stroj - NOK:          Paleta je změřena, jedna či více charakteristik bylo mimo toleranci
+
+                        Pokud jste konfigurovali výstup protokolu, ukáže se po měření protokol
+                        nastavený v programu CALYPSO. Můžete ho vytisknout nebo uložit jako
+                        PDF soubor.
+                        Pokud jste nastavili výstup do qs-STAT, uvádějí se automaticky výsledky
+                        rovněž ve formátu qs-STAT.
+
+
+                        Ukončit Barcode
+                        1 V hlavním okně zvolte menu Soubor " Konec.
+                          Program Barcode se zavře. Projeví se případně provedené změny
+                          konfigurace.
+
+
+
+
+1-6                     61212-2881512            CALYPSO 2018
+                                       Program Barcode pro správce systému
+
+
+
+
+Program Barcode pro správce systému
+            Přehled: Program Barcode pro správce
+            systému
+            Program Barcode musí být před použitím konfigurován. Jako správce
+            systému určujete podobu hlavního okna, ve kterém bude uživatel
+            pracovat.
+            Postupujte v následujících krocích:
+            – CALYPSO Připravit pro program Barcode
+            – Konfigurovat Barcode
+            – Přidělit heslo
+            Při výskytu problémů existují zvláštní možnosti řešení:
+            – Řešit problémové případy
+
+
+            Připravit CALYPSO pro program Barcode
+            Aby bylo možné používat opci Calypso Barcode, musíte CALYPSO
+            připravit pro tuto doplňkovou opci: V systémových nastaveních musí být
+            aktivována možnost AAI.
+            1 Zvolte menu Doplňky " Nastavení " Stroj.
+            2 Vyberte aktuální měřicí systém a klikněte na záložku AAI.
+
+
+
+
+            61212-2881512            CALYPSO 2018                          1-7
+Program Barcode pro správce systému
+
+
+
+                            Systémová nastavení
+                          Soubor   Stránky
+
+
+                                                             Měřicí stroj
+
+
+                                                                                                             Ří zení
+                                                         AAI - start spojení
+                                                                                                             Měř.pří stroj
+                                      Nastavení
+                                                                                                             Dvoustojan
+                                       Režim po startu
+                                                                                                             Sní m.hlava
+                                                         Automatický režim
+                                                                                                             Sní m.systém
+                                                         Manuální režim
+                                                                                                             Otočný stůl
+                                       Režim pro otevření plánů měření přes AAI
+                                                                                                             Ovlád.panel
+                                                         Otevří t na pracovní plo
+                                                                                še Calypso
+                                                                                                             Teplota
+                                                         Otevří t na pozadí
+                                                                                                             Interface
+                                                                Max. počet otevřených plánů
+                                                                                                             Světel.signál
+
+                                                                                                       AAI
+                                       Host-název                     localhost
+                                                                                                           Měř.systémy
+                                       Port-čí slo                    8888                                 Pojezdy
+
+                                       Společná cesta
+
+
+
+
+                                                               Přepnout na Manuálně
+
+
+                                   Prismo    Simulace
+
+
+
+
+                                                                                             OK   Storno             Převzí t
+
+
+
+                      3 Aktivujte zaškrtávací políčko AAI - start spojení.
+                      4 Zavřete CALYPSO.
+
+                       Oznámení
+                       Barcode vyvolá při spuštění zároveň také program CALYPSO, pokud již
+                       není otevřen.
+                       Pokud je program CALYPSO již otevřen, nesmí být otevřen
+                       Automatizovaný průběh, FACS ani modul Preset. Jinak opce CALYPSO
+                       Barcode nemůže komunikovat s programem CALYPSO.
+
+
+                      Konfigurovat Barcode
+                      Konfigurováním určíte obsah a vzhled hlavního okna programu Barcode.
+                      Konfiguraci provádíte v okně Konfigurace parametrů.
+                      1 V hlavním okně zvolte menu Nastavení " Konfigurace.
+
+
+
+
+1-8                   61212-2881512                       CALYPSO 2018
+                                         Program Barcode pro správce systému
+
+
+
+    Konﬁgurace parametrů
+    Parametry
+     Aktiv.        Údaj                Calypso-proměnná   Zadání čár.kódu    Kód-počát.pozice   Kód-délka znaků
+
+              Měřicí úloha
+
+              Skupina charakteris
+
+              Parametr 1             u_Parameter1
+
+              Parametr 2             u_Parameter2
+
+              Parametr 3             u_Parameter3
+
+              Parametr 4             u_Parameter4
+
+              Parametr 5             u_Parameter5
+
+              Parametr 6             u_Parameter6
+
+              Parametr 7             u_Parameter7
+
+              Parametr 8             u_Parameter8
+
+              Parametr 9             u_Parameter9
+
+              Parametr 10            u_Parameterl 0
+
+              Statistika >>QS-STAT
+
+              Tisk Ano/Ne
+
+
+    ‘userﬁelds.txt‘: přidat parametr
+                 Údaj:                         Calypso-proměnná                                 Přidat
+
+    Adresář pro umístění plánů měření/ASCII souborů
+
+          C:\Zeiss\Calypso\home\om\workarea\inspections
+
+    Způsob určení plánu měření
+
+               Přímo přes název plánu měření                    Přípona ASCII souboru *..para
+
+
+
+                                                                            OK                     Storno
+
+
+   V okně Konfigurace parametrů proveďte příslušná nastavení.
+2 Ve sloupci Aktivní určete, které prvky má obsahovat hlavní okno
+  programu Barcode.
+  Můžete načíst až 10 různých parametrů hlavičky protokolu přes
+  Barcode.
+  Informace: Rozevírací seznamy Měřicí úloha a Skupina
+  charakteristik nemůžete deaktivovat.
+3 V sekci Údaj definujte, pod kterými názvy mají být parametry
+  ukázány v hlavním okně programu Barcode.
+4 V sekci Calypso-proměnná, vybíráte, která z proměnných hlavičky
+  protokolu programu CALYPSO má být obsazena daným parametrem
+  s určitou hodnotou.
+5 V sekci Zadání čárového kódu definujete, které z parametrů mají
+  být načteny čtečkou čárového kódu.
+
+
+
+
+61212-2881512                        CALYPSO 2018                                                        1-9
+Program Barcode pro správce systému
+
+
+
+                      6 Pro parametry, které mají být načteny přes čárový kód, definujte
+                        počáteční pozici v čárovém kódu a délku vyhodnocovaného
+                        znakového řetězce.
+                        Příklad: Čárový kód je „192394787Testblok96500“.
+                        Počáteční pozice je 10, délka znaků 9.
+                        Program Barcode čte z čárového kódu „Testblok“ a předá tuto
+                        hodnotu do programu CALYPSO..
+                      7 Do souboru userfields.txt můžete případně přidat další parametry
+                        hlavičky protokolu.
+                        Tyto parametry se ihned objeví v rozevíracích seznamech pro
+                        Calypso-proměnná.
+                      8 Specifikujte adresář pro plány měření nebo názvy souborů, se kterými
+                        má program Barcode pracovat.
+                      9 Určete, jak program Barcode zjistí plány měření, které mají být
+                        vybrány:
+                           Pomocí názvů plánů měření obsažených v adresáři nebo
+                           Pomocí položek v ASCII souboru, který má zadaný název, ve výše
+                            uvedeném adresáři.
+
+                       Oznámení
+                       Aby se provedené změny projevily v programu Barcode, musíte program
+                       Barcode zavřít a znovu vyvolat.
+
+
+                      Přidělit heslo
+                      Aby se zabránilo náhodnému přístupu k oknu Konfigurace
+                      parametrů, můžete si nastavit heslo. Standardně není po instalaci
+                      programu Barcode použito žádné heslo.
+                      1 V hlavním okně programu Barcode zvolte menu Nastavení "
+                        Změnit heslo.
+
+
+
+
+1-10                  61212-2881512           CALYPSO 2018
+                             Program Barcode pro správce systému
+
+
+
+    Změnit heslo
+
+
+
+
+       Staré heslo
+
+
+       Nové heslo
+
+       Potvrdit heslo
+
+
+
+
+                        OK                    Storno
+
+
+
+2 Zadejte své heslo a potvrďte je opakovaným zadáním.
+  Nové heslo ihned funguje.
+Pomocí zadaného hesla se položka menu Nastavení " Konfigurace a
+tím také okno Konfigurace parametrů chrání proti neoprávněným
+zadáním.
+
+
+Řešit problémové případy
+Při výskytu problémů s programem Barcode máte různé možnosti.
+
+Kolize během měření
+Pokud dojde během měření ke kolizi, dozví se to Barcode obvykle z
+programu CALYPSO . Ukáže se okno pro najetí do bezpečnostní polohy,
+joysticky jsou aktivovány.
+1 Odjeďte potom se snímací hlavou, aby mohla bez rizika dosáhnout
+  bezpečnostní polohy.
+Pokud program Barcode po kolizi není informován programem
+CALYPSO, blokuje se měřicí stroj.
+1 Na počítači měřicího stroje potom v okně se semaforem přepněte
+  semafor na červenou.
+
+CALYPSO již nelze ovládat
+Pokud program CALYPSO po ukončení programu Barcode nepřepnul
+řádně na manuální režim, nedá se ovládat ani CALYPSO, ani se nedá
+znovu spustit program Barcode.
+
+
+
+
+61212-2881512            CALYPSO 2018                     1-11
+Program Barcode pro správce systému
+
+
+
+                      1 V okně se semaforem zvolte Interface " Nový, otevřete stránku
+                        AAI a klikněte na tlačítko Přepnout na Manuálně.
+                        Manuální režim je opět aktivován.
+                      2 V krajním případě ukončete aplikaci „vwnt.exe“ ve Správci úloh
+                        systému Windows.
+
+                      Barcode již nelze ovládat
+                      Pokud program Barcode nereaguje:
+                      1 Zkontrolujte nejprve, jestli se program nachází v manuálním režimu.
+                      2 Zvolte menu Soubor " Automatický režim, aby se systém přepnul
+                        na automatiku.
+                        Dávejte pozor, aby tempomat na ovládacím panelu nebyl v pozici 0,
+                        aby tedy mohl měřicí stroj dosáhnout bezpečnostní polohy.
+                      3 V krajním případě ukončete aplikaci „Loader.exe“ ve Správci úloh
+                        systému Windows.
+
+                      Log soubory
+                      Barcode spravuje systém log souborů, ve kterých jsou zaznamenávány
+                      všechny důležité události a hlášení během měření.
+                      Tyto log soubory se standardně ukládají do adresáře C:\temp\. Musíte
+                      mít plná práva přístupu k tomuto adresáři.
+
+                       Oznámení
+                       Při výskytu chyby byste měli příslušné log soubory uložit, aby bylo
+                       možné analyzovat danou chybu.
+
+                      Aktuální soubor se jmenuje „PalletManager.log“. Jakmile tento soubor
+                      překročí po posledním měření určitý počet řádků, je založen nový soubor
+                      PalletManager.log a dosavadní soubor dostane název s indexem:
+                      „PalletManager.000.log“.
+                      Pokud již existuje z dřívějška soubor s názvem „PalletManager.000.log“,
+                      je tento soubor nejprve jako v posuvném registru přejmenován na
+                      „PalletManager.001.log“, aby se aktuální soubor „PalletManager.log“
+                      mohl přesunout za „PalletManager.000.log“ atd.
+                      Tímto způsobem je vytvořen určitý omezený počet souborů. Je-li
+                      dosažen maximální počet těchto souborů, nejstarší soubor už se
+                      nekopíruje a jeho obsah je přepsán.
+
+
+
+
+1-12                  61212-2881512            CALYPSO 2018
+                                                                            Reference: Barcode
+
+
+
+
+Reference: Barcode
+                         Výběr verze
+                         V tomto dialogovém okně vyberete v případě více instalovaných verzí
+                         softwaru CALYPSO požadovanou verzi a nastavíte čas pro odpočítávání
+                         při příštím startu.
+                         Klávesou ESC nebo kliknutím myši v okně zastavíte odpočítávání času.
+
+
+
+Dialogový prvek          Funkce
+Pole pro zadání doby     Zde nastavte dobu, po jejímž uplynutí se má okno při příštím
+                         startu automaticky zavřít.
+Seznam nainstalovaných   Zobrazí verze programu CALYPSO nainstalované na vašem
+verzí                    systému. Aktivujte verzi, která se má spustit pro práci s opcí
+                         Barcode.
+OK                       Zavře ihned toto okno a spustí CALYPSO.
+
+
+                         Zeiss - Barcode
+                         Dialogové okno Zeiss - Barcode je hlavní okno programu pro čárový
+                         kód Barcode. V tomto dialogovém okně ovládáte a řídíte program
+                         Barcode.
+                         Některé prvky obsažené v tomto okně závisejí na zadáních pro
+                         Nastavení " Konfigurace.
+
+Dialogový prvek          Funkce
+Menu Soubor              Automaticky                    Přepíná mezi manuálním režimem
+                                                        a automatickým režimem. Pro
+                                                        automatický režim je tato položka
+                                                        menu opatřena zatržítkem.
+                         Najetí do bezpečnostní         Provádí najetí do bezpečnostní
+                         polohy                         polohy.
+                         Konec                          Ukončí program Barcode.
+Menu Nastavení           Změnit heslo                   Otevře dialog pro změnu hesla.
+                         Konfigurace                    Otevře dialog Konfigurace
+                                                        parametrů.
+Přípravné místo          Ukáže přípravné místo 1. Zde nemůžete nic zadat.
+
+
+
+
+                         61212-2881512            CALYPSO 2018                            1-13
+Reference: Barcode
+
+
+
+Dialogový prvek          Funkce
+Stav                     Indikuje stav aktuální palety:
+                         – Stroj: Paleta se nachází na měřicím stroji
+                         – Měření: Paleta je měřena
+                         – Stroj - OK: Paleta je změřena: všechny charakteristiky jsou v
+                           toleranci
+                         – Stroj - Výstražná: Paleta je změřena; jedna či více
+                           výstražných mezí byla překročena
+                         – Stroj - NOK: Paleta je změřena, jedna či více charakteristik
+                           bylo mimo toleranci
+Plán měření              Ukáže název plánu měření určený měřicí úlohou.
+Měřicí úloha             Vyberte zde jednu z měřicích úloh z rozevíracího seznamu nebo
+                         určete měřicí úlohu pomocí čtečky čárového kódu.
+                         K dispozici jsou všechny plány měření známé programu
+                         CALYPSO.
+                         Tím je plán měření určen.
+Skupina charakteristik   V tomto rozevíracím seznamu vyberte skupinu charakteristik,
+                         která se má změřit. Název skupiny charakteristik je připojen k
+                         názvu plánu měření.
+                         Skupina charakteristik „Kompletní“ obsahuje celý plán měření.
+Parametr 1 ...Parametr   (Počet a názvy parametrů lze konfigurovat)
+10                       Vyberte parametry hlavičky protokolu pro aktuální měření nebo
+                         je načtěte pomocí čtečky čárového kódu.
+Statistika >> QS-STAT    (Konfigurovatelný dialogový prvek)
+                         Definuje výstup naměřených výsledků do souboru qs-STAT.
+                         Toto zaškrtávací políčko je standardně aktivováno.
+Tisk Ano/Ne              (Konfigurovatelný dialogový prvek)
+                         Stanoví, že po měření je vytištěn protokol. Použije se přitom
+                         formát protokolu nastavený v programu CALYPSO.
+                         Toto zaškrtávací políčko je standardně aktivováno.
+Stav                     Řádek 1: Uvádí aktuálně prováděné akce.
+                         Řádek 2: Uvádí chybová a výstražná hlášení.
+Start                    Spustí měření pro vybranou měřicí úlohu.
+
+
+                         Konfigurace parametrů
+                         V tomto dialogovém okně konfigurujete program Barcode a prvky
+                         hlavního okna.
+
+
+
+1-14                     61212-2881512            CALYPSO 2018
+                                                                                Reference: Barcode
+
+
+
+Skupina            Dialogový prvek               Funkce
+Parametr
+                   Aktivní                       Aktivuje volitelně zobrazení parametrů 1 až
+                                                 10.
+                   Zobrazení                     Ukáže text pro příslušný dialogový prvek.
+                   Calypso-proměnná              Zde vyberte, které proměnné hlavičky
+                                                 protokolu je přiřazen který parametr.
+                   Zadání čárového kódu          Aktivujte možnost zadání parametru pomocí
+                                                 čárového kódu.
+                   Kód-počáteční pozice          Udává pozici v čárovém kódu, od které je
+                                                 parametr vyhodnocován.
+                   Kód-délka znaků               Udává délku vyhodnocovaného znakového
+                                                 řetězce.
+’userfields.txt’: Přidat parametr
+                   Zobrazení                     Zadejte název parametru tak, jak má být
+                                                 uveden v seznamu parametrů.
+                   Calypso-proměnná              Specifikujte příslušnou proměnnou hlavičky
+                                                 protokolu v programu CALYPSO.
+                   Přidat                        Vloží vlevo uvedený parametr syntakticky
+                                                 správně do souboru userfields.txt.
+Adresář pro umístění plánů měření / ASCII souborů
+                   Vstupní pole                  Zadejte zde přímo adresář pro umístění plánů
+                                                 měření nebo souborů ASCII s názvem plánu
+                                                 měření nebo po kliknutí na ikonu Vyhledat
+                                                 složku tento název vyberte v dialogu pro
+                                                 výběr cesty.
+Způsob zjištění plánu měření
+                   Přímo přes název plánu        Název plánu měření se zjistí přímo ze zadání.
+                   měření
+                   Název plánu měření je v       Název plánu měření se zjistí z názvu
+                   ASCII souboru                 uvedeného ASCII souboru.
+                   Přípona ASCII souboru         Určete příponu názvu souboru pro ASCII
+                                                 soubory pro názvy plánů měření
+OK                 Zavře toto okno. Provedená nastavení se projeví po restartu programu
+                   Barcode.
+Storno             Zavře okno bez převzetí nastavení.
+
+
+
+
+                                61212-2881512           CALYPSO 2018                           1-15
+Reference: Barcode
+
+
+
+
+                     Změnit heslo!
+                     V tomto dialogovém okně změníte v případě potřeby své heslo pro
+                     přístup do dialogu Konfigurace parametrů.
+
+Dialogový prvek      Funkce
+Staré heslo          Zadejte své aktuální heslo.
+Nové heslo           Zadejte požadované nové heslo.
+Heslopotvrdit        Zadejte ještě jednou požadované nové heslo.
+OK                   Zavře toto okno, nové heslo ihned funguje.
+Storno               Zavře toto okno bez provedení změn.
+
+
+                     Bezpečnostní poloha
+                      tomto dialogovém okně potvrdíte najetí snímací hlavy do bezpečnostní
+                     polohy.
+                     Je-li třeba, uveďte zakládací systém do základní polohy a odjeďte se
+                     snímací hlavou. Jinak hrozí nebezpečí kolize.
+
+Dialogový prvek      Funkce
+                     Uveďte prosím zakládací systém do základní polohy
+                     Vyjeďte snímací hlavou pro najetí do bezpečnostní
+                     polohy
+OK                   Zavře toto okno. Snímací hlava najede do bezpečnostní polohy.
+Storno               Zavře toto okno, snímací hlava nepojede do bezpečnostní
+                     polohy.
+
+
+
+
+1-16                 61212-2881512           CALYPSO 2018
+Rejstřík
+           B                                           P
+           Barcode                                     Problémy řešit
+               CALYPSO nereaguje 1-11                      Barcode 1-11
+               Heslo 1-10
+               hlavní okno 1-4                         V
+               Kolize 1-11                             Výběr verze (dialogové okno) 1-13
+               konfigurovat 1-8
+               Log soubory 1-12                        Z
+               nereaguje 1-12
+                                                       Zeiss - Barcode (dialogové okno) 1-13
+               problémy 1-11
+                                                       Změnit heslo! (dialogové okno) 1-16
+               Přípravy v programu CALYPSO 1-7
+               spustit 1-3
+               ukončit 1-6
+               Základní údaje 1-2
+           Bezpečnostní poloha (dialogové
+           okno) 1-16
+
+
+           C
+           CALYPSO nereaguje
+               Barcode 1-11
+
+
+           H
+           Heslo
+               Barcode 1-10
+           Hlavní okno
+               Barcode 1-4
+
+
+           K
+           Kolize
+               Barcode 1-11
+           Konec
+               Barcode 1-6
+           Konfigurace
+               Barcode 1-8
+           Konfigurace parametrů (dialogové
+           okno) 1-14
+
+
+           L
+           Log soubory
+               Barcode 1-12
+
+
+
+
+           61212-2881512                CALYPSO 2018                              Rejstřík   11
+22 Rejstřík   61212-2881512   CALYPSO 2018
+

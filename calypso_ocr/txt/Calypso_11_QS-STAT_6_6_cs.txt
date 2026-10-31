@@ -1,0 +1,869 @@
+CALYPSO
+
+   Opce 11
+   Rozhraní QS-STAT
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2811512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 Rozhraní QS-STAT (opce)
+
+               Úvod: Rozhraní QS-STAT (opce) ................................... 1-2
+
+               Konverze výsledků měření pro qs-STAT ...................... 1-3
+                  Průběh konverze pro qs-STAT............................................................ 1-3
+                  Soubor popisu Q-DAS ....................................................................... 1-4
+                  Soubor hodnot Q-DAS ...................................................................... 1-5
+                  Konfigurační soubor QDASCONV.CON.............................................. 1-5
+                  Uložit výsledky měření z programu CALYPSO ve formátu Q-DAS........ 1-6
+                  Rozdělit vyhodnocení Q-DAS podle atributu ...................................... 1-6
+
+               Řízení konverze pomocí souboru QDASCONV.CON .........
+               1-9
+                  Upravit soubor QDASCONV.CON ...................................................... 1-9
+                  Úseky konfiguračního souboru QDASCONV.CON .............................. 1-9
+                  Příklad konfiguračního souboru Q-DAS............................................ 1-13
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2811512                 CALYPSO 2018                                           Obsah   11
+22 Obsah   61212-2811512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2811512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2811512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2811512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2811512          CALYPSO 2018
+Rozhraní QS-STAT (opce)
+
+
+
+
+                          Kapitola
+
+                          1    Rozhraní QS-STAT (opce)
+
+                             Tato kapitola obsahuje:
+                             Úvod: Rozhraní QS-STAT (opce).................................................................. 1-2
+                             Konverze výsledků měření pro qs-STAT....................................................... 1-3
+                             Řízení konverze pomocí souboru QDASCONV.CON ................................... 1-9
+
+
+
+
+                            61212-2811512                   CALYPSO 2018                                            1-1
+Úvod: Rozhraní QS-STAT (opce)
+
+
+
+
+Úvod: Rozhraní QS-STAT (opce)
+                       Opce Rozhraní QS-STAT umožňuje výsledky měření, uložené programem
+                       CALYPSO ve formátu Q-DAS, vyhodnocovat ve statistickém programu
+                       qs-STAT.
+                       CALYPSO podporuje katalogovou strukturu programu qs-STAT.
+                       Podkatalogy nejsou podporovány.
+
+
+
+
+1-2                    61212-2811512         CALYPSO 2018
+                                                 Konverze výsledků měření pro qs-STAT
+
+
+
+
+Konverze výsledků měření pro qs-STAT
+                      Průběh konverze pro qs-STAT
+                      Výsledky měření, které byly programem CALYPSO uloženy ve formátu Q-
+                      DAS, můžete vyhodnocovat ve statistickém programu qs-STAT.
+                      CALYPSO podporuje katalogovou strukturu programu qs-STAT.
+
+                      Oznámení
+                      Podkatalogy nejsou podporovány.
+
+                      Jak probíhá konverze do formátu Q-DAS
+                      Po CNC průběhu vznikají automaticky soubory výsledků programu
+                      CALYPSO.
+
+                                      CNC průběh
+                                  CALYPSO plánu měření
+                                     s aktivovaným
+                                    výstupem QDAS
+
+
+
+      CALYPSO                                                        QDASCONV.CON
+   soubory výsledků                                                  konﬁgurační soubor
+
+
+
+
+                                      Konec
+                                         - CNC
+
+
+
+
+                                    QDASCONV.EXE
+                                konverzní program pro
+                                  formát přenosu dat
+
+
+
+        QDAS
+                                                                    QDAS soubory hodnot
+     soubory popisu
+                                                                        (*.DFX)
+        (*.DFD)
+
+
+
+                                  Statistický software
+                                        qs-STAT
+
+
+
+                      Je-li aktivována konverze do formátu Q-DAS, převádí konverzní program
+                      QDASCONV.EXE tyto soubory výsledků na Q-DAS soubor popisu a na
+                      jeden či více Q-DAS souborů hodnot.
+
+
+                      61212-2811512            CALYPSO 2018                          1-3
+Konverze výsledků měření pro qs-STAT
+
+
+
+                       Konverzní program přitom používá datové struktury definované v
+                       konfiguračním souboru QDASCONV.CON.
+
+                       Oznámení
+                       Do souboru Q-DAS se ukládají jen ty výsledky, pro jejichž charakteristiku
+                       je v editoru charakteristik pro položku Charakteristika do
+                       statistiky nastaveno „Zapnout“ nebo „Default“.
+
+                       Kolik souborů na konci získáte, závisí na nastaveních v okně Výsledky do
+                       souboru. Tam můžete v sekci Q-DAS určit počet a typ souborů
+                       předávaných na rozhraní Q-DAS (viz Exportovat výsledky měření do
+                       souboru v základním návodu k obsluze).
+
+
+                       Soubor popisu Q-DAS
+                       Tento soubor dostane jako název prvních 8 znaků názvu plánu měření a
+                       příponu *.DFD.
+                       Soubor popisu obsahuje specifická data pro součást a pro
+                       charakteristiku, která popisují součást a jednotlivé charakteristiky. Obsah
+                       těchto dat je možné převzít z hlavičky protokolu, z protokolu měření
+                       nebo z konfiguračního souboru.
+                       Při každém vyvolání programu QDASCONV.EXE se kontroluje, zda již
+                       existuje soubor popisu. Pokud ještě neexistuje, je vytvořen a zůstává
+                       platný pro všechna další měření.
+                       V modulu pro sběr dat statistického programu qs-STAT je možné
+                       provádět dodatečně změny, např. přidat charakteristiky a zadávat
+                       informace, které nebyly ještě při měření známy. Když má počítač s
+                       programem CALYPSO znovu k dispozici změněný popisný soubor,
+                       rozezná konverzní program QDASCONV.EXE změny (např. nové
+                       charakteristiky) a zohlední je při další konverzi.
+Schéma klíčů           Data popisu začínají v souboru DFD čtyřmístným klíčem, který zajistí
+                       přiřazení obsahu:
+
+                       0 ... 999                     Popis formátů hodnot
+                       1000 ... 1999                 Data dílu
+                       2000 ... 2999                 Data znaků - charakteristik
+                       3000 ... 3999                 Data plánu měření
+
+                       Příklad: K1001 Motorblok
+                       Význam:
+                       K = Key
+
+
+
+1-4                    61212-2811512            CALYPSO 2018
+                          Konverze výsledků měření pro qs-STAT
+
+
+
+1001 = Číslo dílu
+Motorblok = Informační obsah
+
+
+Soubor hodnot Q-DAS
+Tento soubor dostane jako název prvních 8 znaků názvu plánu měření a
+příponu *.DFX.
+V souboru hodnot jsou uloženy naměřené hodnoty společně s
+identifikací pro platnost rozměru a datem uložení v jednou souboru dat
+na jedno měření.
+Při prvním průběhu by se měly poslat všechny charakteristiky do qs-STAT,
+aby v programu qs-STAT mohl být založen kompletní datový model.
+Když se potom posílají do qs-STAT jen některé vybrané elementy, je
+datový model aktualizován; nezměřené elementy zůstávají na stavu
+čítače 1.
+
+Oznámení
+Pokud se při prvním průběhu pošle do programu qs-STAT jen část plánu
+měření, potom ale všechny charakteristiky jako další průběh, není
+předtím založený datový model aktualizován.
+
+Doplňková data jako např. číslo šarže, operátor a číslo stroje se mohou v
+případě potřeby uložit ke každému průběhu měření do přídavných
+datových vět.
+Pořadí charakteristik v datové větě se řídí vždy pořadím v měření, ze
+kterého se nově vytváří popisný soubor. Jestliže oproti tomuto prvnímu
+měření chybí některé charakteristiky, obsadí se naměřený rozměr
+hodnotou nula a rozměr je pomocí identifikace označen jako neplatný.
+
+
+Konfigurační soubor QDASCONV.CON
+Konfigurační soubor QDASCONV.CON řídí konverzi výsledků měření z
+programu CALYPSO na formát Q-DAS.
+QDASCONV.EXE použije pro konverzi nastavení z tohoto souboru.
+QDASCONV.CON se musí nacházet v uživatelském adresáři programu
+CALYPSO (viz Adresářové struktury v programu CALYPSO).
+Soubor QDASCONV.CON můžete změnit a tím ovlivnit konverzi (viz ➤
+Řídit konverzi pomocí souboru QDASCONV.CON [⇨ 1-9]).
+
+
+
+
+61212-2811512           CALYPSO 2018                             1-5
+Konverze výsledků měření pro qs-STAT
+
+
+
+
+                       Uložit výsledky měření z programu
+                       CALYPSO ve formátu Q-DAS
+                       1 Ověřte si, že je nainstalovaná opce Rozhraní QS-STAT.
+                         Program QDASCONV.EXE se v tom případě nachází v adresáři
+                         <adresář programu>\bin.
+                       2 Uložte výsledky měření, jak je popsáno v oddílu Exportovat výsledky
+                         měření do souboru v základním návodu k obsluze. Položku Q-DAS
+                         nastavte na Zapnout (ukládání bez dotazu) nebo Výběr při startu
+                         CNC (ukládání s dotazem).
+                         Informace: Do souboru Q-DAS se ukládají jen ty výsledky, pro jejichž
+                         charakteristiku je v editoru charakteristik pro položku
+                         Charakteristika do statistiky nastaveno „Zapnout“ nebo
+                         „Default“.
+                       Výsledky měření se po CNC průběhu uloží do souboru popisu (*.dfd) a
+                       souboru hodnot (*.dfx) v <uživatelský adresář>\workarea\qdas do
+                       adresáře s názvem příslušného plánu měření.
+                       Informace: Můžete také uložit výsledky měření do několika
+                       samostatných souborů.
+
+
+                       Rozdělit vyhodnocení Q-DAS podle
+                       atributu
+                       CALYPSO umožňuje předání výsledků měření na rozhraní Q-DAS pro
+                       vyhodnocení ve statistických programech, jako je qs-STAT.
+                       Výsledky CNC průběhu je možné předat jako celý soubor nebo je rozdělit
+                       podle stávajících skupin charakteristik – a to volitelně podle skupin
+                       charakteristik nejvyššího stupně hierarchie, nebo nejnižšího stupně
+                       hierarchie.
+                       Jestliže chcete dále rozdělit vyhodnocení Q-DAS podle jiných kritérií,
+                       použijte pro to atributy charakteristik. Určete atribut, podle kterého se
+                       má provést rozdělení, a CALYPSO předá na rozhraní Q-DAS soubory,
+                       které obsahují charakteristiky se stejnou hodnotou příslušného atributu.
+
+                       Oznámení
+                       Při použití identifikace „#all“ se mohou určité charakteristiky objevit ve
+                       všech skupinách.
+
+
+
+
+1-6                    61212-2811512            CALYPSO 2018
+                           Konverze výsledků měření pro qs-STAT
+
+
+
+Nastavit rozdělení podle atributu
+Aby bylo v programu CALYPSO možné aktivovat oddělení charakteristik
+podle určitého atributu, musí být tento atribut definován v souboru INI
+pro uživatelsky definované atributy charakteristik.
+Soubor INI pro uživatelsky definované atributy charakteristik má název
+userattributes.ini a nachází se v adresáři <uživatelský adresář>\data
+\config.
+Příklad pro příslušné úseky souboru INI:
+
+REM userattributes.ini example
+[Fieldnames]
+u_k0053operation
+...
+...
+[u_k0053operation]
+name=K0053 Operation
+selectiveList=true
+selectiveListValues=u_k0053operation_valueList
+editable=false
+...
+[u_k0053operation_valueList]
+10=OP10
+20=OP20
+30=OP30
+40=OP40
+#all=TO_ALL_OPs
+
+
+Provést rozdělení podle atributu
+Je-li příslušný atribut nastaven, připravíte rozdělení tím, že zvolíte menu
+Příprava " Výsledky do souboru, v okně Výsledky do souboru v
+sekci Q-DAS aktivujete výstup do souboru a zvolíte Rozdělení dle ...
+<atribut>.
+Poté už je jen třeba každé charakteristice, která má být zahrnuta do
+vyhodnocení, přiřadit hodnotu atributu požadované skupiny. Nejrychleji
+to lze provést v editoru pro charakteristiky.
+Pro charakteristiky, které se mají objevit ve všech vyhodnocovaných
+skupinách, nastavte (s použitím uvedeného souboru INI) hodnotu
+„TO_ALL_OPs“.
+
+
+
+
+61212-2811512            CALYPSO 2018                               1-7
+Konverze výsledků měření pro qs-STAT
+
+
+
+                       Výsledek
+                       Charakteristiky jsou, podle nastaveného atributu, zapsány do několika
+                       tabulkových souborů a rozdělené předány na rozhraní Q-DAS. Pro Q-
+                       DAS jsou to jakoby různé CNC průběhy.
+                       Pro rozlišení se názvy složek, které obsahují příslušné soubory dfd a dfx,
+                       opatří kromě čísla dílu ještě navíc obsahem atributu (bez mezer a
+                       nepřípustných znaků). Charakteristiky bez přiřazené hodnoty jsou
+                       sdruženy ve složce *_NOGROUP.
+                       Příklad: Plán měření se jmenuje Flansch Hugo, 38 je číslo dílu. Adresáře
+                       mají potom názvy (pro výše uvedený příklad):
+                       – FlanschHugo_38_10
+                       – FlanschHugo_38_20
+                       – FlanschHugo_38_30
+                       – FlanschHugo_38_40
+                       – FlanschHugo_38_NOGROUP
+
+
+
+
+1-8                    61212-2811512            CALYPSO 2018
+                                       Řízení konverze pomocí souboru QDASCONV.CON
+
+
+
+
+Řízení konverze pomocí souboru
+QDASCONV.CON
+                           Upravit soubor QDASCONV.CON
+                           Pro řízení konverze výsledků měření z programu CALYPSO do formátu Q-
+                           DAS stačí pouze upravit konfigurační soubor QDASCONV.CON.
+Formát řádku           Každý relevantní řádek konfiguračního souboru má tento formát řádku:
+konfiguračního souboru KXXXX LLL T H:<Name>
+QDASCONV.CON
+                       Zástupné znaky mají tento význam:
+
+                           K               Key                  XXXX: čtyřmístný klíč pro přiřazení
+                                                                obsahu
+                           LLL             délka pole           1 ... 255
+                           T               typ dat              A = alfanumerická
+                                                                I = číslo
+                                                                F = číslo v pohyblivé řádové čárce
+                                                                D = datum
+                           H:<Name>        původ a název pole P = klíčové slovo ze souboru
+                                                              záhlaví, příklad: P:planid
+                                                              W = přímo z tohoto souboru;
+                                                              příklad: W:Prismo7
+
+                           Oddělovače mezi zástupnými znaky jsou mezery (prázdné znaky) nebo
+                           tabulátory.
+                           Vodicí mezery nejsou přípustné.
+                           Řádky komentáře začínají znakem #.
+
+
+                           Úseky konfiguračního souboru
+                           QDASCONV.CON
+                           Soubor se člení na pět úseků, které jsou označeny písmeny B, C, D, E, F.
+                           Každý úsek začíná oddělovací čarou, např.:
+                           $C------------------------------------
+
+
+
+
+                           61212-2811512             CALYPSO 2018                           1-9
+Řízení konverze pomocí souboru QDASCONV.CON
+
+
+
+                         Úseky B, C a D obsahují klíče požadované zákazníky (včetně jejich
+                         definice) pro popisný soubor, soubor hodnot a popř. popis, jak se mají
+                         vyplnit datová pole daným obsahem. Zde definované obsahy jsou platné
+                         pro všechny součásti. V části protokolu s informacemi Q-DAS se však
+                         mohou upravit pro každou součást individuálně.
+                         Úsek E definuje datová pole, která se vytvářejí navíc v souboru hodnot.
+                         Úsek F obsahuje parametry, které se mohou pro různé charakteristiky a
+                         také při každém CNC průběhu odlišovat.
+Úsek B: Vytvářená data   V tomto úseku konfiguračního souboru je třeba specifikovat všechna
+o součásti               data o součásti vyžádaná zákazníkem v popisném souboru - klíč, délku,
+                         typ a popř. obsah.
+                         Často používané klíče (keys) a jejich označení pro data součásti:
+
+                         K1001           Číslo dílu
+                         K1002           Označení dílu
+                         K1003           Zkrácené označení dílu
+                         K1004           Změnový stav dílu
+                         K1005           Výrobek
+                         K1007           Krátké označení čísla dílu
+                         K1040           Výkres katalog
+                         K1041           Číslo výkresu text
+                         K1042           Změna výkresu
+                         K1043           Výkres index
+                         K1900           Poznámka
+
+                         Není nutné použít zde uvedené klíče. Můžete kdykoliv také přidat nové
+                         klíče.
+Úsek C: Vytvářená        Některé údaje, které jsou potřebné pro popis charakteristik, nezná někdy
+konstantní data          ani uživatel měřicího stroje ani nejsou patrné z protokolu.
+charakteristiky          Část těchto dat je u souřadnicových měřicích strojů stejná pro všechny
+                         charakteristiky (znaky). Tato data jsou proto v tomto úseku
+                         konfiguračního souboru definována pro popisný soubor jako konstantní
+                         data charakteristik.
+                         Často používané klíče (keys) a jejich označení pro data charakteristiky -
+                         znaku:
+
+                         K2004           Druh znaku
+                         K2005           Třída znaku
+
+
+
+1-10                     61212-2811512                CALYPSO 2018
+                                Řízení konverze pomocí souboru QDASCONV.CON
+
+
+
+                    K2007           Druh regulace (kontroly)
+                    K2211           Typ rozdělení
+                    K2212           Číslo normálu text: Porovnávací normál
+                    K2213           Označení normálu
+                    K2214           Teplota normálu
+                    K2215           Číslo normálu
+                    K2220           Počet operátorů
+                    K2221           Počet měření
+                    K2303           Oddělení/Náklad.středisko
+                    K2305           Číslo stroje
+                    K2306           Úsek v závodě
+                    K2307           Číslo PTM
+                    K2342           Název plánu měření
+                    K2343           Datum vytvoření plánu měření
+                    K2344           Autor plánu měření
+                    K2401           Číslo zkušebního zařízení text
+                    K2402           Označení zkušebního zařízení
+                    K2404           Rozlišení zkušebního zařízení
+                    K2405           Číslo zkušebního zařízení
+                    K2406           Výrobce zkušebního zařízení
+                    K2407           Číslo přístroje SPC
+                    K2408           Označení přístroje SPC
+                    K2409           Typ přístroje SPC
+                    K2410           Místo měření
+
+                    V konfiguračním souboru není nutné uvádět hodnoty pro tyto klíče,
+                    protože ve statistickém programu qs-STAT je možné zadat tyto hodnoty
+                    také v modulu pro sběr dat.
+
+Úsek D: Vytvářená   Část těchto dat se může najít přímo v protokolu měření. V tomto úseku
+proměnná data       konfiguračního souboru se nemusejí uvádět hodnoty.
+charakteristiky
+                    Oznámení
+                    Data v úseku D se nesmí měnit.
+
+                    Často používané klíče (keys) a jejich označení pro proměnná data
+                    charakteristiky - znaku:
+
+
+
+                    61212-2811512             CALYPSO 2018                      1-11
+Řízení konverze pomocí souboru QDASCONV.CON
+
+
+
+                        K2001           Číslo znaku
+                        K2002           Označení znaku (přídavný text z konfig.souboru)
+                        K2003           Znak krátký text (CALYPSO typ znaku)
+                        K2100           Cílová hodnota
+                        K2101           Jmen.rozměr
+                        K2110           Dolní mezní hodnota
+                        K2111           Horní mezní hodnota
+                        K2112           Dolní úchylka
+                        K2113           Horní úchylka
+                        K2120           Typ dolní meze
+                        K2121           Typ horní meze
+                        K2142           Označení jednotky
+                        K2151           Tolerance jako text (šířka tolerance)
+
+Úsek E: Dodatečně       Ke každému měření se mohou do souboru hodnot umístit další data v
+vytvářená datová pole   datových větách. Tato data jsou platná jen pro příslušný průběh měření.
+                        Klíče (keys) a jejich označení pro přídavná datová pole:
+
+                        K0005           Události
+                        K0006           Číslo šarže/ident.číslo
+                        K0007           Číslo hnízda
+                        K0008           Operátor (číslo z katalogu)
+                        K0009           Text
+                        K0010           Číslo stroje (číslo z katalogu)
+
+                        Tyto údaje se mohou v různých průbězích měnit. Je tedy vhodné využít
+                        sloupce z hlavičky protokolu.
+                        Klíče v tomto úseku konfiguračního souboru se projevují pouze při
+                        prvním průběhu. Měly by se tedy vyhodnocovat jen, když platí pro
+                        všechna měření, např. když všechny obrobky jsou z určitého stroje.
+                        Aby se ke každému průběhu měření uložila příslušná data, mohou být
+                        tyto klíče uvedeny také v části protokolu s informacemi Q-DAS.
+Úsek F                  Úsek F obsahuje parametry, které se mohou pro různé charakteristiky a
+                        také při každém CNC průběhu odlišovat. Podrobnosti viz příklady ze
+                        souboru QDASCONV.CON.
+
+
+
+
+1-12                    61212-2811512              CALYPSO 2018
+            Řízení konverze pomocí souboru QDASCONV.CON
+
+
+
+
+Příklad konfiguračního souboru Q-DAS
+
+##############################################################
+################
+# Soubor: QDASCONV.CON
+# Konfigurační soubor pro QDASCONV.EXE
+##############################################################
+################
+$B------------------------------------------------------------
+----------------
+##############################################################
+################
+# Úsek B: Vytvářená data o součásti (K1000 - K1099)
+# (viz také datové formáty Q-DAS)
+# Zde se specifikují všechna zákazníkem požadovaná data
+# CALYPSO: Data se berou ze souboru záhlaví
+#-------------------------------------------------------------
+----------------
+K1001 30 A P:planid
+K1002 80 A P:partcomment
+K1004 20 A P:partrv
+K1007 20 A P:partsn
+K1041 30 A P:drawingno
+K1053 20 A P:order
+K1081 20 A P:mfgdev
+K1086 20 A P:tooldf
+K1101 40 A P:vda_departm
+K1201 20 A P:dmesn
+K1202 40 A P:dmeid
+K1900 255 A P:startcomment
+$C------------------------------------------------------------
+----------------
+##############################################################
+################
+# Úsek C: Vytvářená konstantní data charakteristiky stejná pro
+všechny charakteristiky
+# (viz také datové formáty Q-DAS)
+# Zde se specifikují všechna zákazníkem požadovaná data,
+formát je
+# stejný jako v úseku $B
+# POZOR: Zde nejsou přípustné hodnoty ze souboru
+charakteristik.
+#-------------------------------------------------------------
+
+
+
+
+61212-2811512         CALYPSO 2018                    1-13
+Řízení konverze pomocí souboru QDASCONV.CON
+
+
+
+                     ----------------
+                     K2004 1 I W:0
+                     K2005 1 I W:3
+                     K2007 1 I
+                     K2011 4 I
+                     K2013 22 F W:0.0001
+                     K2022 1 I W:4
+                     K2142 40 A W:mm
+                     K2301 20 A P:mfgdev
+                     K2302 40 A P:mfgdev
+                     K2303 40 A P:vda_departm
+                     K2306 40 A P:vda_departm
+                     K2342 40 A P:planid
+                     K2343 20 D P:creationdate
+                     K2344 20 A P:produceoper
+                     K2401 40 A P:dmesn
+                     K2402 80 A P:dmeid
+                     K2406 40 A W:Carl Zeiss Oberkochen
+                     K8500 5 I W:3
+                     $D------------------------------------------------------------
+                     ----------------
+                     ##############################################################
+                     ################
+                     # Úsek D: Vytvářená data charakteristiky specifická pro
+                     všechny charakteristiky
+                     # (viz také datové formáty Q-DAS)
+                     # Zde se specifikují všechna zákazníkem požadovaná data,
+                     formát je
+                     # stejný jako v úseku $B
+                     # Nejsou definovány identifikace pro hodnoty, údaje se berou
+                     # z Characteristicfile.
+                     # Pokud není uveden zdroj, hodnoty se vypočtou.
+                     ##############################################################
+                     ################
+                     K2001 20 A C:
+                     K2002 80 A C:id
+                     K2003 20 A C:type
+                     K2100 22 F
+                     K2101 22 F C:nominal
+                     K2110 22 F C:lowertol
+                     K2111 22 F C:uppertol
+                     K2112 22 F C:lowertol
+                     K2113 22 F C:uppertol
+                     K2120 1 I
+
+
+
+1-14                 61212-2811512          CALYPSO 2018
+             Řízení konverze pomocí souboru QDASCONV.CON
+
+
+
+K2121 1 I
+K2130 22 F
+K2131 22 F
+K2141 5 I
+K2151 20 A
+K2213 22 F C:actual
+$E------------------------------------------------------------
+----------------
+##############################################################
+################
+# Úsek E: Dodatečně vytvářená datová pole v souboru hodnot
+# Zde se specifikují všechna zákazníkem požadovaná data,
+formát je
+# stejný jako v úseku $B
+##############################################################
+################
+#K0001 22 F C:actual
+#K0006 14 A P:lotid
+#K0007 5 I P:tooldf
+#K0008 5 I P:operid
+#K0009 40 A P:startcomment
+
+
+
+
+61212-2811512          CALYPSO 2018                  1-15
+Řízení konverze pomocí souboru QDASCONV.CON
+
+
+
+
+1-16                 61212-2811512     CALYPSO 2018
+Rejstřík
+           K
+           Konfigurační soubor
+               QDASCONV.CON, úseky 1-9
+           Konverze qs-STAT
+               Průběh 1-3
+
+
+           Q
+           Q-DAS formát 1-3
+              uložit výsledky měření 1-6
+               vyhodnotit výsledky 1-2
+           Q-DAS konfigurační soubor
+               Příklad 1-13
+           Q-DAS vyhodnocení
+               rozdělit podle atributu 1-6
+           QDASCONV.CON 1-5
+             upravit 1-9
+               Úseky 1-9
+           QDASCONV.EXE 1-3
+           qs-STAT
+               vyhodnotit výsledky 1-2
+
+
+           S
+           Soubor hodnot Q-DAS 1-5
+           Soubor popisu Q-DAS 1-4
+           Statistický program
+               pro vyhodnocení výsledků 1-2
+
+
+           V
+           Výsledky měření
+               uložit ve formátu Q-DAS 1-6
+
+
+
+
+           61212-2811512                     CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2811512   CALYPSO 2018
+

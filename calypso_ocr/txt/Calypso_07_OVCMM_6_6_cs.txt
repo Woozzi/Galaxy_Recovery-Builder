@@ -1,0 +1,748 @@
+CALYPSO
+
+   Opce 7
+   OVCMM Určení nejistoty
+   měření
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-05-25
+61212-2771512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 OVCMM Určení nejistoty měření (opce)
+
+               Úvod: OVCMM Určení nejistoty měření (opce)............. 1-2
+
+               Základní údaje o OVCMM ............................................... 1-3
+                  Základní princip OVCMM .................................................................. 1-3
+                  Nejistota výsledků měření.................................................................. 1-4
+                  Zohledněné ovlivňující veličiny ........................................................... 1-4
+                  Součinnost při zaznamenání ovlivňujících veličin ................................ 1-5
+
+               Konfigurovat OVCMM ..................................................... 1-6
+                  Kroky konfigurování OVCMM............................................................ 1-6
+                  Určit charakteristiku snímače ............................................................. 1-6
+
+               Použít OVCMM............................................................... 1-10
+                  Průběh použití OVCMM .................................................................. 1-10
+                  Aktivovat OVCMM .......................................................................... 1-10
+                  Výsledky OVCMM ........................................................................... 1-12
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2771512                 CALYPSO 2018                                           Obsah   11
+22 Obsah   61212-2771512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2771512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2771512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2771512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2771512          CALYPSO 2018
+OVCMM Určení nejistoty měření (opce)
+
+
+
+
+                                       Kapitola
+
+                                       1    OVCMM Určení nejistoty
+                                            měření (opce)
+
+                                          Tato kapitola obsahuje:
+                                          Úvod: OVCMM Určení nejistoty měření (opce) ........................................... 1-2
+                                          Základní údaje o OVCMM .......................................................................... 1-3
+                                          Konfigurovat OVCMM ............................................................................... 1-6
+                                          Použít OVCMM........................................................................................ 1-10
+
+
+
+
+                                         61212-2771512                     CALYPSO 2018                                                1-1
+Úvod: OVCMM Určení nejistoty měření (opce)
+
+
+
+
+Úvod: OVCMM Určení nejistoty měření (opce)
+                       Opce OVCMM (Offline Virtual Coordinate Measuring Machine)
+                       umožňuje přesněji určit možné odchylky od skutečné hodnoty a tím
+                       nejistoty měření výsledků plánu měření. Jsou posouzeny významné
+                       zdroje chyb, které mohou výsledek ovlivnit.
+                       Určení nejistoty měření OVCMM je doplňková opce softwaru CALYPSO.
+                       Chcete-li opci využívat, můžete si nechat tuto funkci zpřístupnit.
+                       Kontaktujte za tím účelem servis firmy ZEISS.
+                       OVCMM musí konfigurovat servis firmy ZEISS. Servis ZEISS vám také
+                       poskytne podporu při práci s touto opcí.
+
+
+
+
+1-2                    61212-2771512          CALYPSO 2018
+                                                        Základní údaje o OVCMM
+
+
+
+
+Základní údaje o OVCMM
+               Základní princip OVCMM
+               Pomocí opce OVCMM může CALYPSO zjistit metodou virtuálního
+               souřadnicového měřicího stroje pro všechny charakteristiky plánu měření
+               možné odchylky od skutečné hodnoty, tedy nejistoty měření specifické
+               pro danou charakteristiku, a uvést je v protokolu.
+Výhody OVCMM   Výpočet nejistoty měření pomocí virtuálního souřadnicového měřicího
+               stroje má tyto výhody:
+               – Je v souladu s normou a objektivní.
+               – Provádí se automaticky a nevyžaduje na rozdíl od jiných metod
+                 speciální znalosti uživatele.
+               – Není příliš časově náročný.
+               – Je přizpůsoben komplexnosti souřadnicového měřicího stroje
+                 s různými ovlivňujícími veličinami.
+               – Díky vysokému stupni automatizace je přizpůsoben nejrůznějším
+                 měřicím úlohám.
+
+               Metoda virtuálního souřadnicového měřicího stroje
+               Aby byla zjištěna nejistota, vypočte CALYPSO metodou virtuálního
+               souřadnicového měřicího stroje rozsah nejistoty pro každé jednotlivé
+               měření.
+               U komplexních měřených hodnot (konstrukce, teoretický element) je
+               tento rozsah složen z nejistot celého měřicího řetězce. OVCMM zahrnuje
+               chyby a odchylky všech předchozích úloh patřících do daného měření,
+               tedy také souřadný systém a referenční elementy.
+Průběh         OVCMM určuje nejistotu měření podle GUM, ISO 14253 a ISO 15530.
+               CNC průběh je početně simulován pro všechny charakteristiky plánu
+               měření.
+               Výsledek této simulace odpovídá oblasti rozptylu měření 128 součástí
+               s náhodnou variací známých ovlivňujících veličin.
+               Vypočte se spektrum reprezentativní pro výsledky měření. Nakonec se
+               použije výsledný rozptyl, aby pro každou charakteristiku byla určena
+               nejistota a uvedena v protokolu.
+
+
+
+
+               61212-2771512           CALYPSO 2018                            1-3
+Základní údaje o OVCMM
+
+
+
+
+                        Nejistota výsledků měření
+Nejistota měření        Výsledek měření je vždy zatížen určitou nejistotou, která je dána měřicím
+                        strojem, okolními podmínkami a procesem měření. Je tedy úplný jen,
+                        pokud je doplněn údajem nejistoty měření. Vyjadřuje to tento vzorec:
+                        Y=y±U
+                        Y je měřená veličina, y je naměřený a případně korigovaný výsledek
+                        měření, U je nejistota měření. Pro Y neudává rovnice přesnou hodnotu,
+                        nýbrž rozsah, ve kterém se Y nachází.
+Nejistota               Souřadnicové měřicí přístroje jsou mimořádně univerzální měřicí přístroje
+souřadnicových měření   pro prakticky libovolné součásti. Proto se u souřadnicových měřicích
+                        přístrojů vyskytuje mnoho zdrojů nejistoty, jejichž vzájemné překrývání se
+                        dá obtížně analyzovat.
+                        Nejistota souřadnicového měření závisí na příslušné úloze měření: Kolik
+                        měření a jaká měření jsou zahrnuta do výsledku, jakým způsobem jsou
+                        jednotlivá měření propojena?
+
+
+                        Zohledněné ovlivňující veličiny
+                        OVCMM zohledňuje následující ovlivňující veličiny:
+                        – Systematické zbytkové odchylky geometrie souřadnicového měřicího
+                          stroje
+                        – Kolísání odchylek geometrie na základě časových a prostorových
+                          teplotních gradientů
+                        – Směrově závislé systematické zbytkové odchylky snímacího systému
+                        – Náhodné odchylky snímacího systému
+                        – Nejistota daná teplotní roztažností součásti
+                        – Nejistota kalibrace průměru snímače
+                        – Nejistota ve vzájemné kalibraci snímačů v jednom snímacím systému
+                        – Drsnost povrchu součásti
+                        – Nejistota použitých etalonů pro návaznost na mezinárodní jednotky
+                          SI
+                        Následující ovlivňující veličiny nejsou automaticky zohledněny:
+                        – Odchylky měření dané vlivem operátora
+                        – Deformace součásti způsobená upnutím
+                        – Deformace součásti způsobená snímacími silami
+                        – Teplotní gradienty v součásti
+
+
+
+1-4                     61212-2771512           CALYPSO 2018
+                                                                    Základní údaje o OVCMM
+
+
+
+                         – Vliv tvaru součásti
+                         Tyto ovlivňující veličiny musí být určeny manuálně a přihlíží se k nim
+                         separátně, pokud lze předpokládat, že daný vliv významně přispívá k
+                         nejistotě měření příslušné úlohy.
+
+
+                         Součinnost při zaznamenání ovlivňujících
+                         veličin
+                         Použití metody virtuálního souřadnicového měřicího stroje vyžaduje
+                         součinnost několika míst: výrobce, kalibrační laboratoře a uživatele.
+Carl Zeiss               Nejdůležitější systematické odchylky souřadnicového měřicího stroje
+                         musí být zjištěny předem.
+                         Odchylky specifické pro konkrétní typ souřadnicového měřicího stroje
+                         (geometrie, vliv okolních podmínek na geometrii, dynamické efekty) jsou
+                         firmou Carl Zeiss zjištěny a zaznamenány do souboru zařízení.
+Akreditovaná laboratoř   Akreditovaná laboratoř (např. servis Carl Zeiss) proměří velice přesně váš
+                         souřadnicový měřicí stroj a na základě toho vytvoří databázi pro
+                         OVCMMs. Odchylky geometrie jsou zachyceny v celém měřicím rozsahu
+                         pomocí měření desky s otvory v různých polohách a umístěních.
+                         Podle specifického okolního prostředí vašeho souřadnicového měřicího
+                         stroje a vašich požadavků na užívání generuje laboratoř pro váš měřicí
+                         stroj a jeho cyklus užití jednu nebo několik „okolních podmínek“ jako
+                         základ pro OVCMM.
+Uživatel                 Aby byla zajištěna přesnost měřicího stroje, měřte kalibrované součásti
+                         nebo kalibry v pravidelných (např. týdenních) intervalech.
+                         Aby bylo možné zohlednit vlivy na nejistotu dané používanými snímači,
+                         potřebuje OVCMM charakteristiku snímače. Tu si můžete sami určit
+                         snímáním kalibrační koule.
+                         Když sestavujete nový plán měření a při každé změně ovlivňujících veličin
+                         spustíte simulaci pomocí OVCMM.
+
+
+
+
+                         61212-2771512            CALYPSO 2018                             1-5
+Konfigurovat OVCMM
+
+
+
+
+Konfigurovat OVCMM
+                     Kroky konfigurování OVCMM
+                     Aby se opce OVCMM mohla používat v softwaru CALYPSO, musíte ji
+                     nejprve konfigurovat. Určíte charakteristiku pro používané snímače a
+                     nastavíte případně okolní podmínku.
+
+                     Oznámení
+                     Okolní podmínky vašeho souřadnicového měřicího stroje musí být
+                     servisem ZEISS nebo jinou akreditovanou laboratoří zjištěny a zadány do
+                     OVCMM.
+
+
+                     Určit charakteristiku snímače
+                     Všechny snímače používané při měření musí být kalibrované pomocí
+                     OVCMM, jelikož každý snímač má své vlastní specifické vlivy chyb. Tyto
+                     vlivy jsou zachyceny tím, že snímačem objedete na kalibrační kouli
+                     bodový vzor.
+                     Pro OVCMM můžete specifikovat zjištění charakteristiky snímačů:
+                     Můžete určit, jak má měřicí stroj zaznamenat charakteristiku snímače na
+                     kalibrační kouli (např. počet bodů azimutu).
+                     Každá charakteristika snímače se ukládá pod vlastním názvem do správy
+                     snímačů. Můžete tedy již zjištěnou charakteristiku snímače použít pro
+                     podobnou konfiguraci snímačů tím, že jí přiřadíte název této
+                     konfigurace.
+                     CALYPSO nabízí dvě možnosti pro zjištění charakteristiky snímače:
+                     – Standardní definice: Zadáte jen název charakteristiky snímače.
+                       Specifické hodnoty budou standardně nastaveny.
+                     – Rozšířená definice: Zadáte název charakteristiky snímače a změníte
+                       standardní hodnoty pro snímání kalibrační koule.
+
+                     Standardní definice
+                     Ve většině případů zcela postačuje určení charakteristiky snímače podle
+                     standardní definice.
+
+                     Určit charakteristiku snímačů podle standardní definice
+                     1 Zvolte menu Doplňky " Nastavení " Měření a otevřete v sekci
+                       Metody měření stránku Vstroj.
+                       Otevře se stránka pro nastavení pro údaj nejistoty měření
+                       (virtuální stroj).
+
+
+1-6                  61212-2771512           CALYPSO 2018
+                                                  Konfigurovat OVCMM
+
+
+
+2 V sekci Určení vlivu snímače klikněte na tlačítko Rozšířené
+  nastavení.
+  Otevře se okno Vliv snímače.
+
+      Vliv snímače
+
+
+     Název
+
+
+
+
+                        OK           Storno        Nápověda
+
+
+3 Zadejte název charakteristiky snímače a potvrďte tlačítkem OK.
+  Souřadnicový měřicí stroj nyní spustí kalibraci snímače.
+4 Uložte a zavřete tlačítkem OK.
+
+Rozšířená definice
+Pro účely analýzy použijte rozšířenou definici.
+
+Určit charakteristiku snímače podle rozšířené definice
+1 Zvolte menu Doplňky " Nastavení " Měření a otevřete v sekci
+  Metody měření stránku Vstroj.
+  Otevře se stránka pro nastavení pro údaj nejistoty měření
+  (virtuální stroj).
+2 V sekci Určení vlivu snímače klikněte na tlačítko Rozšířené
+  nastavení.
+  Otevře se okno Vliv snímače:. rozšířená definice.
+
+
+
+
+61212-2771512            CALYPSO 2018                         1-7
+Konfigurovat OVCMM
+
+
+
+Vliv snímače: rozšířená deﬁnice
+
+
+                                                                        Název
+
+                                                                       Počet průsečíků os      24
+                                                       Snímač
+   Podélná rovina řezu
+                                                                       Počet podél.průsečíků   7
+
+
+Osová rovina řezu                                                      Počet opakov.bodů       5
+
+
+
+                                                Kalibrační etalon
+
+
+
+
+                                  Rovník
+
+
+                                     • Měř.body
+                                       Vícenásobná snímání
+
+
+
+
+                                                                                       OK          Storno   Nápověda
+
+
+                                     3 Zadejte název charakteristiky snímače.
+                                     4 Změňte v příslušném vstupním poli předvolená nastavení pro počet
+                                       snímaných bodů.
+                                     5 Potvrďte tlačítkem OK.
+                                       Souřadnicový měřicí stroj nyní spustí kalibraci snímače.
+                                     6 Uložte a zavřete tlačítkem OK.
+
+                                     Přiřadit charakteristiku snímače
+                                     Konfigurace OVCMM je nyní kompletní. Ve správě dat snímačů můžete
+                                     snímači potřebnému pro měření přiřadit příslušnou charakteristiku
+                                     snímače.
+
+
+
+
+1-8                                  61212-2771512                  CALYPSO 2018
+                                                                                                                        Konfigurovat OVCMM
+
+
+
+  Správa dat snímačů
+                       Snímač
+ ct
+   Snímač                Sním.systém        ct
+     Geometrie
+     Kvalita                                     Data snímače
+     Nastavení                                     Geometrie                      Nastavení
+ Refer.snímač                                      X                   0,0000
+   Snímač                                                                         Č.                    1
+                         Dostupné snímače
+     Geometrie            ct                       Y                   0,0000     Typ                   St3
+     Kvalita
+     Nastavení                                     Z                   0,0000     Měřicí síla [mN]      0,0
+ Hvezda
+   Snímač                                          Radius              0,0000     Kalibrováno           Ano
+     Geometrie
+     Kvalita                                       Vektor X            0,0000     Režim                 Simulace
+     Nastavení                                     Vektor Y            0,0000     Kalibrační koule      9999
+                                                   Vektor Z            0,0000     2. kalibrační koule   9999
+                                                   Poloměr dříku       0,0000     CNC povoleno          Ne
+                                                   Úhel A              0,0000     CNC kalibrováno       Ne
+                                                   Úhel B              0,0000     Modiﬁkováno           Ano
+                                                   Úhel C              0,0000     Geometrie             Koule
+                                                   Úhel otevření       180,0000   Char. snímače
+                                                                                        -   .           pro00000
+
+                                                                                  Rozdíl talíř.sním.
+
+
+
+
+                                                  Kvalita
+                                                  Kalibr.-teplota       20,0000   Tuhost                0,0000
+                                                  Kalibr.-datum
+                                                       .                3.3.09    Sigma                 0,0000
+                                                  Kalibr.-čas
+                                                       .               16:40:49   Dyn. sigma            0,0000
+
+
+                                                       Přepočítat data snímače     Reset                      Převzít
+
+                                                                                                                    Zavřít
+
+
+
+
+K tomu jsou určena tato pole ve správě dat snímačů:
+– Zákl.char. v sekci zobrazení <název snímacího systému>
+– Char.sním. v sekci zobrazení Snímač
+Tato dvě přídavná pole lze editovat pouze, je-li aktivována opce
+OVCMM.
+
+
+
+
+61212-2771512                                             CALYPSO 2018                                                              1-9
+Použít OVCMM
+
+
+
+
+Použít OVCMM
+               Průběh použití OVCMM
+               OVCMM se používá pro určení nejistoty výsledků určitého plánu měření.
+               Obvyklý postup:
+               – Aktivujete OVCMM a nastavíte okolní podmínku odpovídající měření.
+               – Spustíte CNC průběh. Po CNC průběhu se automaticky aktivuje
+                 OVCMM a zjistí nejistotu měření.
+                  V protokolu jsou uvedeny zjištěné odchylky pro každou
+                  charakteristiku.
+               – Potom OVCMM opět deaktivujete. Nejistoty měření zjištěné pro
+                 aktuální plán měření se mezi jednotlivými CNC průběhy nemění.
+                  Teprve když chcete provést změněný nebo nový plán měření nebo
+                  když se změnily ovlivňující veličiny (např. místo měření nebo
+                  mechanicky změněný snímač), je důležité opět aktivovat OVCMM,
+                  aby byly zjištěny nyní platné specifické nejistoty měření.
+
+
+               Aktivovat OVCMM
+               Má-li po CNC průběhu fungovat OVCMM, musíte opci aktivovat.
+               Jestliže má OVCMM přihlížet k dalším zdrojům chyb (např. koeficienty
+               roztažnosti součásti nebo teplotní změny s určitým průběhem), je třeba
+               vybrat příslušnou podmínku okolního prostředí.
+               Informace: Okolní podmínky musí být předem konfigurovány
+               akreditovanou laboratoří nebo vaším servisem ZEISS.
+               1 Zvolte menu Doplňky " Nastavení " Měření a otevřete v sekci
+                 Metody měření stránku Vstroj.
+                 Otevře se stránka pro nastavení pro údaj nejistoty měření
+                 (virtuální stroj).
+
+
+
+
+1-10           61212-2771512           CALYPSO 2018
+                                                                      Použít OVCMM
+
+
+
+      Systémová nastavení
+
+    Soubor    Stránky
+
+                                      Metody měření
+
+
+             Nastavení pro nejistotu měření (virtuální stroj)                    Pojezdy
+                                                                                 Elementy
+                OVCMM             VCMM
+                                                                                 Metody
+                                                                                 Hustota bodů
+                Data nejistoty měření aktivní         Kontr. výstup              Maskování bodů
+                                                                                 SCAN rozsahy
+               Podmínky pro prostředí                                            Jmen.hodnota
+
+                  Podmínka aktivní                                               Počát.úhel
+                                                                                 Vytvoř.refer.
+                                                          Podmínka               Optika
+                                                                                 MMC / LMC
+                                                                                 Navigator
+               Určení vlivu snímače                                              Simulace
+                                                                           VCMM
+                   Standardní nastavení                                        Man. průběh
+
+                    Rozšířené nastavení
+
+
+
+
+                                                      Simulace
+             Prismo-Ultra   RDS-CAA RDS-RST Rotos
+
+
+                                                        OK            Storno              Převzít
+
+
+
+2 Aktivujte zaškrtávací políčko Data nejistoty měření aktivní.
+3 Má-li se výsledek OVCMM zaznamenat do log souboru, aktivujte
+  zaškrtávací políčko Kontr.výstup.
+  To se může hodit pro testy a ověřování prováděné servisem firmy
+  ZEISS.
+4 V sekci Podmínky pro prostředí aktivujte zaškrtávací políčko
+  Podmínka aktivní.
+5 V rozevíracím seznamu Podmínka vyberte příslušnou specifickou
+  podmínku prostředí.
+6 Uložte a zavřete tlačítkem OK.
+OVCMM je nyní aktivní. Po příštím CNC průběhu se automaticky spustí a
+při výpočtu nejistoty bude přihlížet k vybraným podmínkám.
+Informace: Nezapomeňte opět deaktivovat opci OVCMM po CNC
+průběhu a výstupu protokolu, protože jinak by byla aktivní po každém
+CNC průběhu a opakovala by své výpočty.
+
+
+
+
+61212-2771512                    CALYPSO 2018                                      1-11
+Použít OVCMM
+
+
+
+
+               Výsledky OVCMM
+               Je-li opce OVCMM aktivována, spustí se automaticky po každém CNC
+               běhu.
+               OVCMM potom celý plán měření 128krát reprodukuje, přičemž výsledky
+               měření jsou pokaždé odlišné, ale systematicky jsou simulovány odchylky.
+               Do posouzení chyb se zahrnují:
+               – Výsledky vysoce přesné kalibrace souřadnicového měřicího stroje
+               – Charakteristika snímače
+               – Případně vámi vybraná okolní podmínka
+               – Další vlivy na nejistotu měření, např. vlivy okolního prostředí
+               Z výsledků měření se sdruženými chybami jsou sloučeny možné odchylky
+               kontrolovaných charakteristik.
+               Potom je uveden protokol CNC průběhu s přídavným sloupcem. V tomto
+               sloupci je uvedena nejistota U každé charakteristiky rozšířená pomocí
+               k=2.
+
+               Oznámení
+               Základní systém nesmí být aktuálně vytvořen na měřicím stroji a s opcí
+               OVCMM. Doporučuje se tento postup:
+               Zaznamenejte měřené hodnoty nejprve bez aktivování opce určení
+               nejistoty měření OVCMM.
+               V opětovném CNC průběhu potom proveďte simulaci bez resetování
+               výsledků.
+
+
+
+
+1-12           61212-2771512           CALYPSO 2018
+Rejstřík
+           H
+           Charakteristika snímače
+               pro OVCMM 1-6
+               pro virtuální měřicí stroj 1-6
+
+
+           N
+           Nejistota výsledků měření 1-4
+
+
+           O
+           OVCMM 1-2
+             aktivovat 1-10
+               charakteristika snímače 1-6
+               konfigurovat 1-6
+               ovlivňující veličiny 1-4
+               použít 1-10
+               Součinnost 1-5
+               Výsledky 1-12
+               Základní údaje 1-3
+
+
+           S
+           Standardní definice
+               charakteristika snímače 1-6
+
+
+           U
+           Určení nejistoty měření
+               OVCMM 1-2
+
+
+           V
+           Virtuální měřicí stroj 1-2
+               aktivovat 1-10
+               charakteristika snímače 1-6
+               Metoda 1-3
+               OVCMM 1-2
+               Výsledky OVCMM 1-12
+           Výsledky měření
+               nejistota 1-4
+
+
+
+
+           61212-2771512                   CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2771512   CALYPSO 2018
+

@@ -1,0 +1,1496 @@
+CALYPSO
+
+   Opce 22
+   PC-DMIS-Import
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-06-05
+61212-2921512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 PC-DMIS import (opce)
+
+               Základní údaje o importu PC-DMIS ............................... 1-2
+
+               Konfigurovat PC-DMIS import ....................................... 1-3
+
+               Import PC-DMIS programu ............................................. 1-4
+                  Průběh importu z PC-DMIS................................................................ 1-4
+                  Importovat PC-DMIS program ........................................................... 1-4
+                  Dodatečně upravit importovaný plán měření ..................................... 1-6
+
+               Reference: PC-DMIS import ........................................... 1-7
+                  Calypso Konvertor............................................................................. 1-7
+                  Hlášení.............................................................................................. 1-7
+                  Možnosti .......................................................................................... 1-8
+                  Podporované příkazy PC-DMIS .......................................................... 1-8
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2921512                    CALYPSO 2018                                                Obsah     11
+22 Obsah   61212-2921512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2921512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2921512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2921512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2921512          CALYPSO 2018
+PC-DMIS import (opce)
+
+
+
+
+                        Kapitola
+
+                        1    PC-DMIS import (opce)
+
+                           Tato kapitola obsahuje:
+                           Základní údaje o importu PC-DMIS............................................................. 1-2
+                           Konfigurovat PC-DMIS import .................................................................... 1-3
+                           Import PC-DMIS programu......................................................................... 1-4
+                           Reference: PC-DMIS import........................................................................ 1-7
+
+
+
+
+                          61212-2921512                    CALYPSO 2018                                             1-1
+Základní údaje o importu PC-DMIS
+
+
+
+
+Základní údaje o importu PC-DMIS
+                       Co je PC-DMIS®?
+                       PC-DMIS® je měřicí program společnosti Hexagon Metrology a
+                       registrovaná obchodní značka společnosti Hexagon Metrology a Wilcox
+                       Associates, Inc.
+
+                       Opce PC-DMIS import
+                       CALYPSO může importovat program vytvořený softwarem PC-DMIS a
+                       převést ho na CALYPSO-plán měření. Předpokladem je licencovaná a
+                       funkční instalace softwaru PC-DMIS na vašem počítači.
+
+                       Oznámení
+                       PC-DMIS import je doplňková opce programu CALYPSO. Pokud ji chcete
+                       používat, potřebujete příslušnou licenci. Kontaktujte za tím účelem
+                       servis firmy ZEISS.
+
+                       Oznámení
+                       Opce 22 „PC-DMIS import“ se nesmí zaměňovat s doplňkovou opcí 5
+                       „DMIS import“. Opce „DMIS import“ umožňuje měřicí plány vytvořené
+                       v DMIS (Dimensional Measuring Interface Standard) konvertovat na
+                       plány měření programu CALYPSO.
+
+                       Podmínky pro import
+                       Při konverzi je PC-DMIS program analyzován a převeden na CALYPSO-
+                       plán měření s měřenými elementy, charakteristikami, strategiemi a
+                       souřadnými systémy.
+                       Zda konvertor podporuje určitý příkaz PC-DMIS, se dozvíte v online
+                       nápovědě v oddílu ➤ Podporované PC-DMIS příkazy [⇨ 1-8].
+                       Chybný plán měření
+                       Import PC-DMIS programů, ve kterých se názvy měřených elementů
+                       nebo charakteristik používají vícekrát, způsobuje závažné chyby.
+
+
+
+
+1-2                    61212-2921512           CALYPSO 2018
+                                                  Konfigurovat PC-DMIS import
+
+
+
+
+Konfigurovat PC-DMIS import
+            Pro PC-DMIS import můžete nastavit různé předvolby.
+            1 Zvolte menu Soubor " Import " PC-DMIS a v okně Calypso
+              Converter klikněte na tlačítko Možnosti.
+              Otevře se okno Možnosti.
+
+                    Možnosti
+
+
+
+                       Jazyk                    Calypso Nastavení
+
+                       Typ zobrazení            Světlé
+
+                       AutoMove importovat
+
+                       Log soubory              C:\Users\ivkarr\AppData\Local\Temp
+
+                                                      OK               Storno
+
+
+
+
+            2 Nastavte požadovaný jazyk plochy programu.
+              Pomocí Calypso Nastavení převezme PC-DMIS import jazyk
+              nastavený v softwaru CALYPSO.
+            3 Nastavte požadovaný vzhled programu.
+            4 Aktivujte AutoMove importovat, pokud chcete jako mezipolohy
+              importovat do strategie automatické pojezdy k elementu a od
+              elementu v PC-DMIS programu.
+            5 Potvrďte tlačítkem OK.
+            Nová nastavení se ihned projeví.
+
+
+
+
+            61212-2921512              CALYPSO 2018                             1-3
+Import PC-DMIS programu
+
+
+
+
+Import PC-DMIS programu
+                     Průběh importu z PC-DMIS
+                     Aby byl importován PC-DMIS program, stačí zvolit položku menu
+                     Soubor " Import " PC-DMIS a specifikovat příslušný soubor.
+
+                     Oznámení
+                     Musí být nainstalována funkční a licencovaná verze softwaru PC-DMIS.
+
+                     Po importu byste měli plán měření ihned uložit, protože se nejprve
+                     nachází jen v operační paměti počítače.
+                     Po importu můžete zobrazit a uložit hlášení týkající se konverze.
+                     Následující prvky plánu měření nemohou být z PC-DMIS programu
+                     vytvořeny a musíte je po importu sami definovat:
+                     – Základní systém
+                     – Bezpečnostní kvádr
+                     – Bezpečnostní roviny
+                     – Přiřazení snímačů
+
+
+                     Importovat PC-DMIS program
+                     Podmínky
+                          – Na vašem počítači je nainstalována funkční a licencovaná verze
+                            softwaru PC-DMIS.
+                     1 Zvolte menu Soubor " Import " PC-DMIS.
+                       Otevře se okno Calypso Konvertor.
+
+
+
+
+1-4                  61212-2921512            CALYPSO 2018
+                                                          Import PC-DMIS programu
+
+
+
+       Calypso Converter 1.0.14
+
+
+    Název programu                                     Název součásti
+
+
+    Sériové č.                                         Počet příkazů
+
+
+    Plán měření       Zadejte název                    Zákl.systém
+
+
+
+
+    Process: 0%
+
+
+            Messages Waiting: 0
+
+
+
+
+       Možnosti                           Otevřít...                   Start   Storno
+
+
+
+
+2 Klikněte na tlačítko Otevřít a vyberte PC-DMIS program, který má
+  být importován.
+  Daný program je načten a zobrazen.
+  V horní části okna jsou uvedeny tyto údaje: název programu, název
+  součásti a sériové číslo z PC-DMIS a počet příkazů v aktuálním
+  programu.
+3 Má-li se v programu vyhledat určitý text, zadejte text do pole a
+  pomocí kurzorových tlačítek procházejte zobrazenými nalezenými
+  výskyty.
+
+
+
+
+4 V sekci Plán měření zadejte název CALYPSO-plánu měření.
+5 V sekci Základní systém vyberte název souřadného systému, který
+  má program CALYPSO použít jako základní systém.
+  Tento základní souřadný systém musíte při dodatečné úpravě plánu
+  měření ještě definovat.
+6 Pro zahájení konverze klikněte na tlačítko Start.
+
+
+61212-2921512                         CALYPSO 2018                                      1-5
+Import PC-DMIS programu
+
+
+
+                          PC-DMIS program je konvertován.
+                          Po ukončení se ukáže hlášení.
+                     7 Potvrďte je.
+                       Ukáže se výsledek konverze.
+                       V seznamu Programové příkazy jsou uvedeny všechny příkazy
+                       v PC-DMIS programu. Pokud se při konverzi vyskytl problém, je to
+                       uvedeno u příslušného příkazu. V tom případě je tato větev
+                       zobrazena rozevřená.
+                     8 Když chcete zobrazit zprávy týkající se konverze, klikněte na ikonu
+                       vedle indikace zpráv.
+                       Otevře se okno s hlášeními.
+                     9 Pomocí ikonek v liště zápatí můžete hlášení zobrazit a uložit.
+                     10 Uložte nový plán měření v programu CALYPSO.
+                     11 Aby se zavřel PC-DMIS import, klikněte na ikonu Zavřít.
+
+
+                     Dodatečně upravit importovaný plán
+                     měření
+                     Ne všechny prvky PC-DMIS programu mohou být převzaty. Plán měření
+                     musíte po importu do CALYPSO upravit, aby mohl být prováděn.
+                     K tomu jsou potřebné alespoň tyto kroky:
+                     1 Analyzujte hlášení, která se vyskytla při konverzi. Za určitých
+                       okolností budete muset části měřicího programu v programu
+                       CALYPSO přeprogramovat.
+                     2 Upravte v programu CALYPSO tyto prvky plánu měření
+                           Definujte základní systém.
+                           Definujte bezpečnostní kvádr.
+                           Přiřaďte měřeným elementům bezpečnostní roviny.
+                           Přiřaďte měřeným elementům snímače, které se mají použít.
+                     3 Nechte poté plán měření jednou proběhnout v simulaci, aby byly
+                       vyloučeny další chyby.
+
+
+
+
+1-6                  61212-2921512           CALYPSO 2018
+                                                            Reference: PC-DMIS import
+
+
+
+
+Reference: PC-DMIS import
+                     Calypso Konvertor
+                     V tomto dialogovém okně spustíte import PC-DMIS programu.
+
+Dialogový prvek      Funkce
+Název programu       Ukáže při importu název PC-DMIS programu.
+Název součásti       Ukáže při importu název součásti z PC-DMIS programu.
+Sériové číslo        Ukáže při importu sériové číslo z PC-DMIS programu.
+Počet instrukcí      Ukáže při importu počet instrukcí v PC-DMIS programu.
+Plán měření          Zde zadejte název nového CALYPSO-plánu měření.
+Základní systém      Zde vyberte název základního souřadného systému pro nový
+                     CALYPSO-plán měření.
+Indikace průběhu     Zobrazuje průběh konverze.
+Indikace zpráv       Zobrazí počet zpráv vytvořených během konverze.
+                     Kliknutím na ikonu zobrazíte zprávy v samostatném okně.
+Najít                Zde zadejte hledaný text a pomocí kurzorových tlačítek procházejte
+                     zobrazenými nalezenými výskyty.
+
+
+Programové příkazy   Zobrazuje zpracované příkazy PC-DMIS ve stromové struktuře.
+                     Problémy, které se vyskytly při konverzi, jsou poznamenány
+                     u příslušného příkazu.
+Možnosti             Otevře okno Možnosti s obecnými předvolbami pro PC-DMIS
+                     import.
+Otevřít              Otevře okno pro výběr PC-DMIS programu.
+Start                Spustí konverzi vybraného PC-DMIS programu.
+Storno               Zavře okno a ukončí konverzi bez uložení.
+
+
+                     Hlášení
+                     V tomto dialogovém okně zobrazíte zprávy, které vznikly během
+                     konverze.
+
+Dialogový prvek      Funkce
+Titulní řádek        Uvádí počet hlášení.
+                     Ikonou opět okno zavřete.
+
+
+
+
+                     61212-2921512          CALYPSO 2018                             1-7
+Reference: PC-DMIS import
+
+
+
+Dialogový prvek        Funkce
+Seznam hlášení         Zobrazí všechny zprávy s příslušným příkazem PC-DMIS programu a
+                       s vytvořeným komentářem.
+                       Uloží hlášení do textového souboru.
+                       Vymaže všechna hlášení.
+
+
+                       Možnosti
+                       V tomto dialogovém okně zadáváte předvolby pro PC-DMIS import.
+
+Dialogový prvek        Funkce
+Jazyk                  Definuje jazyk plochy programu. Pomocí Calypso Nastavení
+                       převezmete jazyk nastavený v softwaru CALYPSO.
+Typ zobrazení          Určuje styl zobrazení oken programu.
+AutoMove importovat    Importuje automatické pojezdy k elementu a od elementu z PC-
+                       DMIS programu jako mezipolohy do strategie.
+Log soubory            Uvádí adresář s log soubory. Tyto soubory obsahují důležité
+                       informace při výskytu problémů určené pro servis Carl Zeiss.
+OK                     Zavře toto okno, změny se ihned projeví.
+Storno                 Zavře okno, změny se neprojeví.
+
+
+                       Podporované příkazy PC-DMIS
+                       Příkazy PC-DMIS jsou při konverzi zpracovány, jak je uvedeno v této
+                       tabulce.
+
+Příkaz PC-DMIS         Podpora Vyhodnocení
+ADJUST_FILTER          Ignored.
+ANALYSIS_VIEW          Ignored.
+ANGLE_HIT              Partially   THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and THEO_K
+                       Supporte    are imported into a hitpoint.
+                       d.
+ANYORDER_EXECUTETOL    Ignored.
+ARRAY_INDEX            Ignored.
+ASSIGNMENT             Ignored.
+ATTACH_PROGRAM         Ignored.
+
+
+
+
+1-8                    61212-2921512           CALYPSO 2018
+                                                                Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS           Podpora Vyhodnocení
+AUTO_ANGLE_FEATURE,   Supporte       Imported as several features and constructions.
+CONTACT_ANGLE_POINT_F d.
+EATURE
+AUTO_BLOB                Ignored.
+AUTO_CIRCLE,             Supporte    ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+MEASURED_CIRCLE,         d.          THEO_DIAM and INOUT_TYPE are imported into a circle.
+CONTACT_CIRCLE_FEATUR                The feature's probing points are imported.
+E, GENERIC_CIRCLE
+AUTO_CONE,            Supporte       ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+MEASURED_CONE,        d.             INOUT_TYPE,THEO_ANGLE and THEO_HEIGHT are
+CONTACT_CONE_FEATURE,                imported into a cone. The feature's probing points are
+GENERIC_CONE                         imported.
+AUTO_CORNER_FEATURE,     Supporte    Imported as several features and constructions.
+CONTACT_CORNER_POINT     d.
+_FEATURE
+AUTO_CYLINDER,           Supporte    ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+MEASURED_CYLINDER,       d.          THEO_DIAM, INOUT_TYPE and THEO_LENGTH are
+CONTACT_CYLINDER_FEAT                imported into a cylinder. The feature's probing points are
+URE, GENERIC_CYLINDER                imported.
+AUTO_EDGE_FEATURE,       Supporte    Imported as several features and constructions.
+CONTACT_EDGE_POINT_FE    d.
+ATURE
+AUTO_ELLIPSE,            Supporte    ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+MEASURED_ELLIPSE,        d.          SLOTVEC_I, SLOTVEC_J, SLOTVEC_K, THEO_WIDTH,
+CONTACT_ELLIPSE_FEATUR               THEO_LENGTH and INOUT_TYPE are imported into an
+E                                    ellipse. The feature's probing points are imported.
+AUTO_FLUSH_GAP           Ignored.
+AUTO_HIGH_POINT_FEATU    Partially   ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and
+RE,                      Supporte    THEO_K are imported into a theoretical point. Must be
+CONTACT_HIGH_POINT_FE    d.          adjusted in Calypso!
+ATURE
+AUTO_LINE,               Supporte    ID, THEO_SX, THEO_SY, THEO_SZ, THEO_I, THEO_J,
+MEASURED_LINE,           d.          THEO_K, SURFVEC_I, SURFVEC_J, SURFVEC_K and
+CONTACT_LINE_FEATURE,                THEO_LENGTH are imported into a line. The feature's
+GENERIC_LINE                         probing points are imported.
+AUTO_NOTCH,              Partially   ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+CONTACT_SLOT_NOTCH_F     Supporte    THEO_WIDTH and THEO_LENGTH are imported into a
+EATURE                   d.          square slot. The feature's probing points are imported.
+
+
+
+
+                         61212-2921512          CALYPSO 2018                             1-9
+Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS            Podpora Vyhodnocení
+AUTO_PLANE,           Supporte        ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and
+MEASURED_PLANE,       d.              THEO_K are imported into a plane. The feature's probing
+CONTACT_PLANE_FEATURE                 points are imported.
+, GENERIC_PLANE
+AUTO_POLYGON              Partially   ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+                          Supporte    THEO_DIAM and INOUT_TYPE are imported into a circle.
+                          d.          The feature's probing points are imported.
+AUTO_PROFILE_2D           Ignored.
+AUTO_ROUND_SLOT,          Supporte    ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+MEASURED_ROUND_SLOT,      d.          SLOTVEC_I, SLOTVEC_J, SLOTVEC_K, THEO_WIDTH,
+CONTACT_SLOT_ROUND_F                  THEO_LENGTH and INOUT_TYPE are imported into a
+EATURE,                               round slot. The feature's probing points are imported.
+GENERIC_ROUND_SLOT
+AUTO_SPHERE,              Supporte    ID, THEO_X, THEO_Y, THEO_Z, INOUT_TYPE and
+MEASURED_SPHERE,          d.          THEO_DIAM are imported into a sphere. The feature's
+CONTACT_SPHERE_FEATUR                 probing points are imported.
+E, GENERIC_SPHERE
+AUTO_SQUARE_SLOT,         Supporte    ID THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+MEASURED_SQUARE_SLOT      d.          THEO_DIAM and INOUT_TYPE are imported into a
+,                                     rectangular slot. The feature's probing points are
+CONTACT_SLOT_SQUARE_                  imported.
+FEATURE,
+GENERIC_SQUARE_SLOT
+AUTO_SURFACE_FEATURE, Supporte        Imported as several features and constructions.
+CONTACT_SURFACE_POINT d.
+_FEATURE
+AUTO_VECTOR_FEATURE,      Supporte    ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and
+MEASURED_POINT,           d.          THEO_K are imported into a point. The feature's probing
+CONTACT_VECTOR_POINT                  points are imported.
+_FEATURE, GENERIC_POINT
+AUTOCALIB_MASTERSLAVE     Ignored.
+_COMMAND
+AUTOCALIB_PROBE_COM       Ignored.
+MAND
+AUTOTRIGGERCOMMAND        Ignored.
+BASIC_HIT                 Supporte    THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and THEO_K
+                          d.          are imported into a hitpoint.
+BASIC_SCAN_OBJECT         Supporte    All scanning parameters must be adjusted in Calypso.
+                          d.
+
+
+1-10                      61212-2921512          CALYPSO 2018
+                                                              Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS          Podpora Vyhodnocení
+DCCSCAN_OBJECT          Supporte   All scanning parameters must be adjusted in Calypso.
+                        d.
+CONST_SET               Ignored.   ID and REF_ID's are converted into a surface features
+                                   using the hitpoint of the REF_ID features.
+FILTER_SET              Ignored.
+BASIC_SCRIPT            Ignored.
+BF2D_ALIGN              Ignored.   ID and the REF_IDs are imported into a 3D Bestfit
+                                   Alignment.
+BF3D_ALIGN              Ignored.   ID and the REF_IDs are imported into a 3D Bestfit
+                                   Alignment.
+BUNDLE_ALIGN            Ignored.
+BFUSER_ALIGN            Ignored.
+CALIB_ASSEMBLY          Ignored.
+CALIB_SPHERE            Ignored.
+CALIBRATEROTAB_COMM     Ignored.
+AND
+CALL_SUBROUTINE         Ignored.
+CASE_COMMAND            Ignored.
+CHECK_DISTANCE          Ignored.
+CLAMP                   Ignored.
+CLEARANCE_PLANE         Ignored.
+CNC_PASS_THRU_COMMA     Ignored.
+ND
+CNC_READ_VARIABLE       Ignored.
+CNC_SELECT_TABLE_COM    Ignored.
+MAND
+CNC_SET_PROTECTION_CO   Ignored.
+MMAND
+CNC_UPDATE_TOOLOFSET    Ignored.
+CNC_USE_WORKOFSET       Ignored.
+CNC_UPDATE_WORKOFSET Ignored.
+CNC_WRITE_VARIABLE      Ignored.
+COLUMN132_DISPLAY       Ignored.
+
+
+
+
+                        61212-2921512         CALYPSO 2018                          1-11
+Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS         Podpora Vyhodnocení
+CONST_ALN_LINE         Supporte    ID, THEO_SX, THEO_SY, THEO_SZ, THEO_I, THEO_J,
+                       d.          THEO_K, SURFVEC_I, SURFVEC_J, SURFVEC_K and
+                                   THEO_LENGTH are imported into a theoretical line.
+CONST_ALN_PLANE        Supporte    ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and
+                       d.          THEO_K are imported into a theoretical plane.
+CONST_BF_CIRCLE,       Supporte    ID and REF_ID are imported into a circle feature. REF_ID
+CONST_BFRE_CIRCLE      d.          features will be treated as points.
+CONST_BF_CONE,         Supporte    ID and REF_ID are imported into a cone feature. REF_ID
+CONST_BFRE_CONE        d.          features will be treated as points.
+CONST_BF_CYLINDER,     Supporte    ID and REF_ID are imported into a cylinder feature. REF_ID
+CONST_BFRE_CYLINDER    d.          features will be treated as points when enough features
+                                   are supplied.
+CONST_BF_LINE,         Supporte    ID and REF_ID are imported into a line feature. REF_ID
+CONST_BFRE_LINE        d.          features will be treated as points.
+CONST_BF_PLANE,        Supporte    ID and REF_ID are imported into a plane feature. REF_ID
+CONST_BFRE_PLANE       d.          features will be treated as points.
+CONST_BF_SPHERE,       Supporte    ID and REF_ID are imported into a sphere feature. REF_ID
+CONST_BFRE_SPHERE      d.          features will be treated as points.
+CONST_CAST_CIRCLE      Supporte    Converted into a theoretical circle with actual values
+                       d.          being used from the REF_ID feature.
+CONST_CAST_CONE        Supporte    Converted into a theoretical cone with actual values being
+                       d.          used from the REF_ID feature.
+CONST_CAST_CYLINDER    Supporte    Converted into a theoretical cylinder with actual values
+                       d.          being used from the REF_ID feature.
+CONST_CAST_LINE        Supporte    Converted into a theoretical line with actual values being
+                       d.          used from the REF_ID feature.
+CONST_CAST_PLANE       Supporte    Converted into a theoretical plane with actual values
+                       d.          being used from the REF_ID feature.
+CONST_CAST_POINT       Supporte    Converted into a theoretical point with actual values
+                       d.          being used from the REF_ID feature.
+CONST_CAST_SPHERE      Supporte    Converted into a theoretical sphere with actual values
+                       d.          being used from the REF_ID feature.
+CONST_CONE_CIRCLE      Partially   ID, CIRC_TYPE and REF_ID Converted into coneAddition,
+                       Supporte    need to be checked in Calypso.
+                       d.
+CONTACT_POLYGON_FEAT   Partially   ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+URE                    Supporte    THEO_DIAM and INOUT_TYPE are imported into a circle.
+                       d.          The feature's probing points are imported.
+
+
+1-12                   61212-2921512           CALYPSO 2018
+                                                               Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS          Podpora Vyhodnocení
+CONST_CORNER_POINT      Ignored.    ID and REF_ID's are imported into an intersection
+                                    element.
+CONST_DROP_POINT        Supporte    ID and REF_ID's imported into a theoretical point with
+                        d.          PCM formula for actuals.
+CONST_HIPNT_PLANE       Partially   ID and REF_ID's imported into an outer tangential plane.
+                        Supporte
+                        d.
+CONST_INT_CIRCLE        Supporte    ID and REF_ID's imported into intersection feature.
+                        d.
+CONST_INT_LINE          Supporte    ID and REF_ID's imported into intersection feature.
+                        d.
+CONST_INT_POINT         Supporte    ID and REF_ID's imported into intersection feature.
+                        d.
+CONST_MID_POINT         Supporte    ID and REF_ID's imported into symmetry feature.
+                        d.
+CONST_MID_LINE          Supporte    ID and REF_ID's imported into symmetry feature.
+                        d.
+CONST_MID_PLANE         Supporte    ID and REF_ID's imported into symmetry feature.
+                        d.
+CONST_MIN_CIRCLE_SCAN   Ignored.
+CONST_OFF_LINE          Partially   ID and REF_ID are imported into a line feature.
+                        Supporte
+                        d.
+CONST_OFF_PLANE         Partially   ID and REF_ID are imported into a plane feature.
+                        Supporte
+                        d.
+CONST_OFF_POINT         Supporte    ID, REF_ID and F_OFFSET are imported into a theoretical
+                        d.          point with PCM.
+CONST_ORIG_POINT        Supporte    ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and
+                        d.          THEO_K are imported into a theoretical point.
+CONST_PIERCE_POINT      Supporte    ID and REF_ID's are imported into an intersection feature.
+                        d.
+CONST_PLTO_LINE         Supporte    ID and REF_ID features are imported into a theoretical line
+                        d.          with PCM. One of the REF_ID features must reduce to a
+                                    line.
+CONST_PLTO_PLANE        Supporte    ID and REF_ID features are imported into a theoretical
+                        d.          plane with PCM. One of the REF_ID features must be a
+                                    plane.
+
+
+                        61212-2921512           CALYPSO 2018                            1-13
+Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS         Podpora Vyhodnocení
+CONST_PROJ_CIRCLE      Supporte    ID and REF_ID's are imported into a projection feature.
+                       d.
+CONST_PROJ_CONE        Partially   ID and REF_ID's are imported into a projection feature.
+                       Supporte
+                       d.
+CONST_PROJ_CYLINDER    Partially   ID and REF_ID's are imported into a projection feature.
+                       Supporte
+                       d.
+CONST_PROJ_LINE        Supporte    ID and REF_ID's are imported into a projection feature.
+                       d.
+CONST_PROJ_POINT       Supporte    ID and REF_ID's are imported into a projection feature.
+                       d.
+CONST_PROJ_SPHERE      Partially   ID and REF_ID's are imported into a projection feature.
+                       Supporte
+                       d.
+CONST_PRTO_LINE        Supporte    ID and REF_ID features are imported into a theoretical line
+                       d.          with PCM. One of the REF_ID features must reduce to a
+                                   line.
+CONST_PRTO_PLANE       Supporte    ID and REF_ID features are imported into a theoretical
+                       d.          plane with PCM. One of the REF_ID features must reduce
+                                   to a line.
+CONST_REV_CIRCLE       Supporte    ID and REF_ID are imported into a theoretical circle with
+                       d.          PCM.
+CONST_REV_CONE         Supporte    ID and REF_ID are imported into a theoretical cone with
+                       d.          PCM.
+CONST_REV_CYLINDER     Supporte    ID and REF_ID are imported into a theoretical cylinder
+                       d.          with PCM.
+CONST_REV_LINE         Supporte    ID and REF_ID are imported into a theoretical line with
+                       d.          PCM.
+CONST_REV_PLANE        Supporte    ID and REF_ID are imported into a theoretical plane with
+                       d.          PCM.
+CONST_REV_SPHERE       Supporte    ID and REF_ID are imported into a theoretical sphere with
+                       d.          PCM.
+CONST_ROUND_SLOT       Supporte    ID and REF_ID are imported into a slot feature. REF_ID
+                       d.          features will be treated as points. With less than 3 REF_ID
+                                   the feature hitpoints are used.
+CONST_SCAN_SEG_ARC     Ignored.
+CONST_SCAN_SEG_LINE    Ignored.
+
+
+1-14                   61212-2921512           CALYPSO 2018
+                                                                  Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS           Podpora Vyhodnocení
+CONST_TANCIRCLES_CIRCL   Ignored.
+E
+CONST_TANLINES_CIRCLE    Ignored.
+CONST_VECT_DIST_POINT    Supporte    ID and REF_ID's are imported into a theoretical point with
+                         d.          PCM.
+CORNER_HIT               Partially   THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and THEO_K
+                         Supporte    are imported into a hitpoint.
+                         d.
+CURVE_FEATURE            Ignored.
+DATDEF_COMMAND           Ignored.    Datums are replaced by the corresponding features when
+                                     needed.
+DB_QUERY                 Ignored.
+DEFAULT_CASE_COMMAN      Ignored.
+D
+DIMENSION_2D_ANGLE       Supporte    ID, F_PLUS_TOL, F_MINUS_TOL and REF_ID's are
+                         d.          imported into an angle between characteristic. Axis
+                                     references are converted into lines.
+DIMENSION_2D_DISTANCE    Supporte    ID, F_PLUS_TOL, F_MINUS_TOL and REF_ID's are
+                         d.          imported into a distance characteristic.
+DIMENSION_3D_DISTANCE    Supporte    ID, F_PLUS_TOL, F_MINUS_TOL and REF_ID's are
+                         d.          imported into a distance characteristic.
+DIMENSION_A_LOCATION     Supporte    ID, F_PLUS_TOL, F_MINUS_TOL and REF_ID are imported
+                         d.          into an angle characteristic. The characteristic is usually
+                                     renamed.
+DIMENSION_ANGULARITY     Supporte    ID, F_PLUS_TOL, ANGULARITY_NOM_ANGLE and
+                         d.          REF_ID's are imported into an angularity characteristic.
+DIMENSION_COAXIALITY     Supporte    ID, F_PLUS_TOL and REF_ID's are imported into an
+                         d.          coaxiality characteristic.
+DIMENSION_CONCENTRICI    Supporte    ID, F_PLUS_TOL and REF_ID's are imported into an
+TY                       d.          concentricity characteristic.
+DIMENSION_D_LOCATION     Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                         d.          into a diameter characteristic. The characteristic is usually
+                                     renamed.
+DIMENSION_END_LOCATIO Ignored.
+N
+DIMENSION_FLATNESS       Supporte    ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+                         d.          a flatness characteristic.
+
+
+
+                         61212-2921512           CALYPSO 2018                            1-15
+Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS           Podpora Vyhodnocení
+DIMENSION_FLATNESS_LO    Partially   ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+CATION                   Supporte    a flatness characteristic. The characteristic is usually
+                         d.          renamed.
+DIMENSION_FORMAT         Ignored.
+DIMENSION_H_LOCATION     Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                         d.          into a second diameter characteristic for ellipses. The
+                                     characteristic is usually renamed.
+DIMENSION_INFORMATIO     Ignored.
+N
+DIMENSION_KEYIN          Ignored.
+DIMENSION_L_LOCATION     Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                         d.          into a size characteristic for ellipses and slots. The
+                                     characteristic is usually renamed.
+DIMENSION_PA_LOCATION Supporte       ID, NOMINAL, F_MINUS_TOL, F_PLUS_TOL and REF_ID
+                      d.             are imported into a polar angle characteristic. The
+                                     characteristic is usually renamed.
+DIMENSION_PARALLELISM    Supporte    ID, F_PLUS_TOL, TP_MODIFIER and REF_ID's are imported
+                         d.          into an parallelism characteristic.
+DIMENSION_PERPENDICUL    Supporte    ID, F_PLUS_TOL, TP_MODIFIER and REF_ID's are imported
+ARITY                    d.          into an perpendicularity characteristic.
+DIMENSION_PR_LOCATION    Supporte    ID, NOMINAL, F_MINUS_TOL, F_PLUS_TOL and REF_ID
+                         d.          are imported into a polar radius characteristic. The
+                                     characteristic is usually renamed.
+DIMENSION_PROFILE        Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                         d.          into a profile of a line characteristic.
+DIMENSION_PROFILE_LINE   Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                         d.          into a profile of a line characteristic.
+DIMENSION_PROFILE_SURF   Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+ACE                      d.          into a profile of a surface characteristic.
+DIMENSION_R_LOCATION     Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                         d.          into a radius characteristic. The characteristic is usually
+                                     renamed.
+DIMENSION_ROUNDNESS      Supporte    ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+                         d.          a circularity characteristic.
+DIMENSION_ROUNDNESS_     Supporte    ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+LOCATION                 d.          a circularity characteristic. The characteristic is usually
+                                     renamed.
+
+
+
+
+1-16                     61212-2921512           CALYPSO 2018
+                                                                Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS          Podpora Vyhodnocení
+DIMENSION_RS_LOCATION   Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                        d.          into a form characteristic. The characteristic is usually
+                                    renamed.
+DIMENSION_RT_LOCATION   Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                        d.          into a form characteristic. The characteristic is usually
+                                    renamed.
+DIMENSION_RUNOUT        Supporte    ID, F_PLUS_TOL and REF_ID are imported into a runout
+                        d.          characteristic.
+DIMENSION_TOTAL_RUNO    Ignored.
+UT
+DIMENSION_CIRCULAR_RU   Supporte    ID, F_PLUS_TOL and REF_ID are imported into a runout
+NOUT                    d.          characteristic.
+DIMENSION_S_LOCATION    Partially   ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                        Supporte    into a form characteristic. The characteristic is usually
+                        d.          renamed.
+DIMENSION_START_LOCAT   Ignored.
+ION
+DIMENSION_STRAIGHTNES   Supporte    ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+S                       d.          a straightness characteristic.
+DIMENSION_STRAIGHTNES   Supporte    ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+S_LOCATION              d.          a straightness characteristic. The characteristic is usually
+                                    renamed.
+DIMENSION_T_LOCATION    Supporte    ID, F_MINUS_TOL, F_PLUS_TOL and REF_ID are imported
+                        d.          into a form characteristic. The characteristic is usually
+                                    renamed.
+DIMENSION_TRUE_D1_LOC Supporte      REF_ID and TP_MODIFIER imported for 1st Datum.
+ATION                 d.
+DIMENSION_TRUE_D2_LOC Supporte      REF_ID and TP_MODIFIER imported for 2nd Datum.
+ATION                 d.
+DIMENSION_TRUE_D3_LOC Supporte      REF_ID and TP_MODIFIER imported for 3rd Datum.
+ATION                 d.
+DIMENSION_TRUE_DD_LO    Ignored.
+CATION
+DIMENSION_TRUE_DF_LOC   Ignored.
+ATION
+DIMENSION_TRUE_DIAM_L   Supporte    ID, NOMINAL, F_PLUS_TOL, TP_MODIFIER and REF_ID are
+OCATION                 d.          imported into a position characteristic. The characteristic
+                                    is usually renamed.
+
+
+                        61212-2921512           CALYPSO 2018                           1-17
+Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS           Podpora Vyhodnocení
+DIMENSION_TRUE_END_P     Ignored.
+OSITION
+DIMENSION_TRUE_FLATNE    Supporte   ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+SS_LOCATION              d.         a flatness characteristic. The characteristic is usually
+                                    renamed.
+DIMENSION_TRUE_LD_LOC    Ignored.
+ATION
+DIMENSION_TRUE_LF_LOC    Ignored.
+ATION
+DIMENSION_TRUE_PA_LOC    Ignored.
+ATION
+DIMENSION_TRUE_PR_LOC    Ignored.
+ATION
+DIMENSION_TRUE_ROUND                ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+NESS_LOCATION                       a circularity characteristic. The characteristic is usually
+                                    renamed.
+DIMENSION_CYLINDRICITY   Supporte   ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+                         d.         a cylindricity characteristic.
+DIMENSION_TRUE_START_    Ignored.
+POSITION
+DIMENSION_TRUE_STRAIG    Supporte   ID, NOMINAL, F_PLUS_TOL and REF_ID are imported into
+HTNESS_LOCATION          d.         a straightness characteristic. The characteristic is usually
+                                    renamed.
+DIMENSION_TRUE_WD_LO     Ignored.
+CATION
+DIMENSION_TRUE_WF_LO     Ignored.
+CATION
+DIMENSION_TRUE_X_LOC     Ignored.   ID, NOMINAL, F_PLUS_TOL, F_MINUS_TOL and REF_ID
+ATION                               are imported into a coordinate tolerance. The
+                                    characteristic is usually renamed.
+DIMENSION_TRUE_Y_LOCA Supporte      ID, NOMINAL, F_PLUS_TOL, F_MINUS_TOL and REF_ID
+TION                  d.            are imported into a coordinate tolerance. The
+                                    characteristic is usually renamed.
+DIMENSION_TRUE_Z_LOCA    Supporte   ID, NOMINAL, F_PLUS_TOL, F_MINUS_TOL and REF_ID
+TION                     d.         are imported into a coordinate tolerance. The
+                                    characteristic is usually renamed.
+DIMENSION_V_LOCATION     Ignored.
+
+
+
+
+1-18                     61212-2921512          CALYPSO 2018
+                                                             Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS         Podpora Vyhodnocení
+DIMENSION_X_LOCATION   Supporte    ID, NOMINAL, F_PLUS_TOL, F_MINUS_TOL and REF_ID
+                       d.          are imported into a X coordinate characteristic. The
+                                   characteristic is usually renamed.
+DIMENSION_Y_LOCATION   Supporte    ID, NOMINAL, F_PLUS_TOL, F_MINUS_TOL and REF_ID
+                       d.          are imported into a Y coordinate characteristic. The
+                                   characteristic is usually renamed.
+DIMENSION_Z_LOCATION   Supporte    ID, NOMINAL, F_PLUS_TOL, F_MINUS_TOL and REF_ID
+                       d.          are imported into a Z coordinate characteristic. The
+                                   characteristic is usually renamed.
+DISPLAY_METAFILE       Ignored.
+DISPLAYPRECISION       Ignored.
+DO_COMMAND             Ignored.
+EDGE_HIT               Partially   THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and THEO_K
+                       Supporte    are imported into a hitpoint.
+                       d.
+ELSE_COMMAND           Ignored.
+ELSE_IF_COMMAND        Ignored.
+END_ALIGN              Ignored.
+END_CASE_COMMAND       Ignored.
+END_DEFAULT_CASE_COM   Ignored.
+MAND
+END_ELSE_COMMAND       Ignored.
+END_ELSE_IF_COMMAND    Ignored.
+END_HYPER_FORM         Ignored.
+END_HYPER_REPORT       Ignored.
+END_IF_COMMAND         Ignored.
+END_MEASURED_FEATURE   Ignored.
+END_MOVE_SWEEP         Ignored.
+END_PROGRAM            Ignored.
+END_SCRIPT             Ignored.
+END_SELECT_COMMAND     Ignored.
+ENDWHILE_COMMAND       Ignored.
+EQUATE_ALIGN           Ignored.
+EW_GROUP_END           Ignored.
+EW_GROUP_START         Ignored.
+
+
+                       61212-2921512          CALYPSO 2018                       1-19
+Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS          Podpora Vyhodnocení
+EXTERNAL_COMMAND        Ignored.
+FEATURE_CONTROL_FRAM    Supporte    Tolerance features, Datums, Size of Tolerancezone and
+E                       d.          material modifiers are imported. The second tier datums
+                                    needs to be adjusted manually in Calypso.
+FILE_IO_OBJECT          Ignored.
+FLY_MODE                Ignored.
+GAP_ONLY                Ignored.
+GENERIC_CONSTRUCTION    Ignored.
+GET_PROBE_DATA          Ignored.
+GOTO_COMMAND            Ignored.
+HYPER_CUSTOM            Ignored.
+HYPER_FORM              Ignored.
+HYPER_LEGACY            Ignored.
+HYPER_REPORT            Ignored.
+HYPER_TEMPLATE          Ignored.
+IF_BLOCK_COMMAND        Ignored.
+IF_GOTO_COMMAND         Ignored.
+IGNOREMOTIONERRORS      Ignored.
+IGNOREROTAB_COMMAN      Ignored.
+D
+INBETWEEN_TOL           Ignored.
+IOCHANNELCOMMAND        Ignored.
+ITER_ALIGN              Supporte
+                        d.
+LABEL_CMD               Ignored.
+LASER_CIRCLE_FEATURE    Partially
+                        Supporte
+                        d.
+LASER_FLUSH_AND_GAP_F   Ignored.
+EATURE
+LASER_PLANE_FEATURE     Partially
+                        Supporte
+                        d.
+
+
+
+
+1-20                    61212-2921512          CALYPSO 2018
+                                                        Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS           Podpora Vyhodnocení
+LASER_SLOT_FEATURE       Partially
+                         Supporte
+                         d.
+LASER_SPHERE_FEATURE     Partially
+                         Supporte
+                         d.
+LASER_SURFACE_POINT_FE   Partially
+ATURE                    Supporte
+                         d.
+LEAPFROG                 Ignored.
+LEVEL_ALIGN              Supporte
+                         d.
+LOAD_COLUMN              Ignored.
+LOAD_FIXTURE             Ignored.
+LOAD_MACHINE             Ignored.
+LOOP_END                 Ignored.
+LOOP_START               Ignored.
+MAN_DCC_MODE             Ignored.
+MANRETRACT               Ignored.
+MANSCAN_OBJECT           Ignored.
+MOVE_ALL                 Ignored.
+MEASURED_SET             Ignored.
+MOVE_CIRCULAR            Ignored.
+MOVE_CLEARP              Ignored.
+MOVE_EXCLUSIVE           Ignored.
+MOVE_INCREMENT           Ignored.
+MOVE_PH9_OFFSET          Ignored.
+MOVE_POINT               Ignored.
+MOVE_ROTAB               Ignored.
+MOVE_SPEED               Ignored.
+MOVE_SWEEP_POINT         Ignored.
+MOVE_SYNC                Ignored.
+ONERROR                  Ignored.
+OPTIONMOTION             Ignored.
+
+
+
+                         61212-2921512   CALYPSO 2018                   1-21
+Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS         Podpora Vyhodnocení
+OPTIONPROBE            Ignored.
+POINT_INFO             Ignored.
+POINTCLOUD             Ignored.
+POINTCLOUD_ALIGN       Ignored.
+POINTCLOUD_OPER        Ignored.
+POLARVECTORCOMP        Ignored.
+POSITIVE_REPORTING     Ignored.
+PREHIT_DISTANCE        Ignored.
+PRINT_FORM_FEED        Ignored.
+PRINT_REPORT           Ignored.
+PROBE_COMPENSATION     Ignored.
+READ_POINT             Partially
+                       Supporte
+                       d.
+RECALL_ALIGN           Supporte
+                       d.
+RECALL_VIEWSET         Ignored.
+RETRACT_DISTANCE       Ignored.
+RETROLINEAR_ONLY       Ignored.
+RMEAS_MODE             Ignored.
+ROTATE_ALIGN           Supporte
+                       d.
+ROTATE_CIRCLE_ALIGN    Supporte
+                       d.
+ROTATEOFF_ALIGN        Supporte
+                       d.
+SAVE_ALIGN             Ignored.
+SCAN_SPEED             Ignored.
+SELECT_COMMAND         Ignored.
+SET_ACTIVE_TIP         Ignored.
+SET_COMMENT            Partially
+                       Supporte
+                       d.
+SET_WORKPLANE          Ignored.
+
+
+
+1-22                   61212-2921512   CALYPSO 2018
+                                                               Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS          Podpora Vyhodnocení
+SIMULTANEOUS_EVALUATI   Ignored.
+ON
+SPC_QUERY               Ignored.
+START_ALIGN             Ignored.    ID is imported to build coordinate systems.
+START_MOVE_SWEEP        Ignored.
+START_SUBROUTINE        Ignored.
+STATISTICS              Ignored.
+SURFACE_FEATURE         Ignored.
+SURFACE_HIT             Partially   THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and THEO_K
+                        Supporte    are imported into a hitpoint.
+                        d.
+TABLE_FORMAT            Ignored.
+TEMP_COMP               Ignored.
+TOUCH_SPEED             Ignored.
+TRACEFIELD              Ignored.
+TRACKER_LEVEL_TO_GRAV   Ignored.
+ITY
+TRANS_ALIGN             Supporte    ID, AXIS and REF_ID are imported. The alignment is
+                        d.          usually renamed.
+TRANSOFF_ALIGN          Supporte    ID, AXIS and F_OFFSET are imported. The alignment is
+                        d.          usually renamed.
+TRIGGER_PLANE_COMMA     Ignored.
+ND
+TRIGGER_TOLERANCE       Ignored.
+UNTIL_COMMAND           Ignored.
+VECTOR_HIT              Partially   THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and THEO_K
+                        Supporte    are imported into a hitpoint.
+                        d.
+VIDEOSETUP              Ignored.
+VIEWSET                 Ignored.
+VISION_BLOB_FEATURE     Ignored.
+VISION_CIRCLE_FEATURE   Partially   ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+                        Supporte    THEO_DIAM and INOUT_TYPE are imported into a circle.
+                        d.          No strategy is imported.
+
+
+
+
+                        61212-2921512          CALYPSO 2018                        1-23
+Reference: PC-DMIS import
+
+
+
+Příkaz PC-DMIS           Podpora Vyhodnocení
+VISION_EDGE_POINT_FEAT   Partially   This is treated as AUTO_EDGE_FEATURE.
+URE                      Supporte
+                         d.
+VISION_LINE_FEATURE      Partially   ID, THEO_SX, THEO_SY, THEO_SZ, THEO_I, THEO_J,
+                         Supporte    THEO_K, SURFVEC_I, SURFVEC_J, SURFVEC_K and
+                         d.          THEO_LENGTH are imported into a line. No strategy is
+                                     imported.
+VISION_PLANE_FEATURE     Partially   ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and
+                         Supporte    THEO_K are imported into a plane. No strategy is
+                         d.          imported.
+VISION_PROFILE_2D_FEAT   Ignored.
+URE
+VISION_SLOT_FEATURE      Partially   ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J, THEO_K,
+                         Supporte    SLOTVEC_I, SLOTVEC_J, SLOTVEC_K, THEO_WIDTH,
+                         d.          THEO_LENGTH and INOUT_TYPE are imported into a
+                                     round slot. No strategy is imported.
+VISION_SURFACE_POINT_F   Partially   ID, THEO_X, THEO_Y, THEO_Z, THEO_I, THEO_J and
+EATURE                   Supporte    THEO_K are imported into a point. No strategy is
+                         d.          imported.
+WHILE_COMMAND            Ignored.
+
+
+
+
+1-24                     61212-2921512          CALYPSO 2018
+Rejstřík
+                                                 AUTO_SQUARE_SLOT,
+           A                                     MEASURED_SQUARE_SLOT,
+           ADJUST_FILTER 1-8                     CONTACT_SLOT_SQUARE_FEATURE,
+                                                 GENERIC_SQUARE_SLOT 1-10
+           ANALYSIS_VIEW 1-8
+                                                 AUTO_SURFACE_FEATURE,
+           ANGLE_HIT 1-8                         CONTACT_SURFACE_POINT_FEATURE 1-10
+           ANYORDER_EXECUTETOL 1-8               AUTO_VECTOR_FEATURE,
+           ARRAY_INDEX 1-8                       MEASURED_POINT,
+           ASSIGNMENT 1-8                        CONTACT_VECTOR_POINT_FEATURE,
+                                                 GENERIC_POINT 1-10
+           ATTACH_PROGRAM 1-8
+                                                 AUTOCALIB_MASTERSLAVE_COMMAND
+           AUTO_ANGLE_FEATURE,                   1-10
+           CONTACT_ANGLE_POINT_FEATURE 1-9
+                                                 AUTOCALIB_PROBE_COMMAND 1-10
+           AUTO_BLOB 1-9
+                                                 AUTOTRIGGERCOMMAND 1-10
+           AUTO_CIRCLE, MEASURED_CIRCLE,
+           CONTACT_CIRCLE_FEATURE,
+           GENERIC_CIRCLE 1-9                    B
+           AUTO_CONE, MEASURED_CONE,             BASIC_HIT 1-10
+           CONTACT_CONE_FEATURE,
+           GENERIC_CONE 1-9                      BASIC_SCAN_OBJECT 1-10
+           AUTO_CORNER_FEATURE,                  BASIC_SCRIPT 1-11
+           CONTACT_CORNER_POINT_FEATURE 1-9      BF2D_ALIGN 1-11
+           AUTO_CYLINDER, MEASURED_CYLINDER,     BF3D_ALIGN 1-11
+           CONTACT_CYLINDER_FEATURE,
+           GENERIC_CYLINDER 1-9                  BFUSER_ALIGN 1-11
+           AUTO_EDGE_FEATURE,                    BUNDLE_ALIGN 1-11
+           CONTACT_EDGE_POINT_FEATURE 1-9
+           AUTO_ELLIPSE, MEASURED_ELLIPSE,       C
+           CONTACT_ELLIPSE_FEATURE 1-9
+                                                 CALIB_ASSEMBLY 1-11
+           AUTO_FLUSH_GAP 1-9
+                                                 CALIB_SPHERE 1-11
+           AUTO_HIGH_POINT_FEATURE,
+           CONTACT_HIGH_POINT_FEATURE 1-9        CALIBRATEROTAB_COMMAND 1-11
+           AUTO_LINE, MEASURED_LINE,             CALL_SUBROUTINE 1-11
+           CONTACT_LINE_FEATURE,                 Calypso Konvertor (dialogové okno)
+           GENERIC_LINE 1-9
+                                                     PC-DMIS import 1-7
+           AUTO_NOTCH,
+           CONTACT_SLOT_NOTCH_FEATURE 1-9        CASE_COMMAND 1-11
+           AUTO_PLANE, MEASURED_PLANE,           CLAMP 1-11
+           CONTACT_PLANE_FEATURE,                CLEARANCE_PLANE 1-11
+           GENERIC_PLANE 1-10                    CNC_PASS_THRU_COMMAND 1-11
+           AUTO_POLYGON 1-10                     CNC_READ_VARIABLE 1-11
+           AUTO_PROFILE_2D 1-10                  CNC_SELECT_TABLE_COMMAND 1-11
+           AUTO_ROUND_SLOT,                      CNC_SET_PROTECTION_COMMAND 1-11
+           MEASURED_ROUND_SLOT,
+           CONTACT_SLOT_ROUND_FEATURE,           CNC_UPDATE_TOOLOFSET 1-11
+           GENERIC_ROUND_SLOT 1-10               CNC_UPDATE_WORKOFSET 1-11
+           AUTO_SPHERE, MEASURED_SPHERE,         CNC_USE_WORKOFSET 1-11
+           CONTACT_SPHERE_FEATURE,               CNC_WRITE_VARIABLE 1-11
+           GENERIC_SPHERE 1-10
+                                                 COLUMN132_DISPLAY 1-11
+                                                 CONST_ALN_LINE 1-12
+
+
+
+
+           61212-2921512          CALYPSO 2018                             Rejstřík   11
+              CONST_ALN_PLANE 1-12                    CONST_REV_PLANE 1-14
+              CONST_BF_CIRCLE,                        CONST_REV_SPHERE 1-14
+              CONST_BFRE_CIRCLE 1-12                  CONST_ROUND_SLOT 1-14
+              CONST_BF_CONE,                          CONST_SCAN_SEG_ARC 1-14
+              CONST_BFRE_CONE 1-12
+                                                      CONST_SCAN_SEG_LINE 1-14
+              CONST_BF_CYLINDER,
+              CONST_BFRE_CYLINDER 1-12                CONST_SET 1-11
+              CONST_BF_LINE, CONST_BFRE_LINE 1-12     CONST_TANCIRCLES_CIRCLE 1-15
+              CONST_BF_PLANE,                         CONST_TANLINES_CIRCLE 1-15
+              CONST_BFRE_PLANE 1-12                   CONST_VECT_DIST_POINT 1-15
+              CONST_BF_SPHERE,                        CONTACT_POLYGON_FEATURE 1-12
+              CONST_BFRE_SPHERE 1-12
+                                                      CORNER_HIT 1-15
+              CONST_CAST_CIRCLE 1-12
+                                                      CURVE_FEATUR 1-15
+              CONST_CAST_CONE 1-12
+              CONST_CAST_CYLINDER 1-12
+              CONST_CAST_LINE 1-12
+                                                      D
+              CONST_CAST_PLANE 1-12                   DATDEF_COMMAND 1-15
+              CONST_CAST_POINT 1-12                   DB_QUERY 1-15
+              CONST_CAST_SPHERE 1-12                  DCCSCAN_OBJECT 1-11
+              CONST_CONE_CIRCLE 1-12                  DEFAULT_CASE_COMMAND 1-15
+              CONST_CORNER_POINT 1-13                 DIMENSION_2D_ANGLE 1-15
+              CONST_DROP_POINT 1-13                   DIMENSION_2D_DISTANCE 1-15
+              CONST_HIPNT_PLANE 1-13                  DIMENSION_3D_DISTANCE 1-15
+              CONST_INT_CIRCLE 1-13                   DIMENSION_A_LOCATION 1-15
+              CONST_INT_LINE 1-13                     DIMENSION_ANGULARITY 1-15
+              CONST_INT_POINT 1-13                    DIMENSION_CIRCULAR_RUNOUT 1-17
+              CONST_MID_LINE 1-13                     DIMENSION_COAXIALITY 1-15
+              CONST_MID_PLANE 1-13                    DIMENSION_CONCENTRICITY 1-15
+              CONST_MID_POINT 1-13                    DIMENSION_CYLINDRICITY 1-18
+              CONST_MIN_CIRCLE_SCAN 1-13              DIMENSION_D_LOCATION 1-15
+              CONST_OFF_LINE 1-13                     DIMENSION_END_LOCATION 1-15
+              CONST_OFF_PLANE 1-13                    DIMENSION_FLATNESS 1-15
+              CONST_OFF_POINT 1-13                    DIMENSION_FLATNESS_LOCATION 1-16
+              CONST_ORIG_POINT 1-13                   DIMENSION_FORMAT 1-16
+              CONST_PIERCE_POINT 1-13                 DIMENSION_H_LOCATION 1-16
+              CONST_PLTO_LINE 1-13                    DIMENSION_INFORMATION 1-16
+              CONST_PLTO_PLANE 1-13                   DIMENSION_KEYIN 1-16
+              CONST_PROJ_CIRCLE 1-14                  DIMENSION_L_LOCATION 1-16
+              CONST_PROJ_CONE 1-14                    DIMENSION_PA_LOCATION 1-16
+              CONST_PROJ_CYLINDER 1-14                DIMENSION_PARALLELISM 1-16
+              CONST_PROJ_LINE 1-14                    DIMENSION_PERPENDICULARITY 1-16
+              CONST_PROJ_POINT 1-14                   DIMENSION_PR_LOCATION 1-16
+              CONST_PROJ_SPHERE 1-14                  DIMENSION_PROFILE 1-16
+              CONST_PRTO_LINE 1-14                    DIMENSION_PROFILE_LINE 1-16
+              CONST_PRTO_PLANE 1-14                   DIMENSION_PROFILE_SURFACE 1-16
+              CONST_REV_CIRCLE 1-14                   DIMENSION_R_LOCATION 1-16
+              CONST_REV_CONE 1-14                     DIMENSION_ROUNDNESS 1-16
+              CONST_REV_CYLINDER 1-14                 DIMENSION_ROUNDNESS_LOCATION 1-16
+              CONST_REV_LINE 1-14                     DIMENSION_RS_LOCATION 1-17
+
+
+22 Rejstřík   61212-2921512            CALYPSO 2018
+DIMENSION_RT_LOCATION 1-17             END_ELSE_IF_COMMAND 1-19
+DIMENSION_RUNOUT 1-17                  END_HYPER_FORM 1-19
+DIMENSION_S_LOCATION 1-17              END_HYPER_REPORT 1-19
+DIMENSION_START_LOCATION 1-17          END_IF_COMMAND 1-19
+DIMENSION_STRAIGHTNESS 1-17            END_MEASURED_FEATURE 1-19
+DIMENSION_STRAIGHTNESS_LOCATION        END_MOVE_SWEEP 1-19
+1-17                                   END_PROGRAM 1-19
+DIMENSION_T_LOCATION 1-17              END_SCRIPT 1-19
+DIMENSION_TOTAL_RUNOUT 1-17            END_SELECT_COMMAND 1-19
+DIMENSION_TRUE_D1_LOCATION 1-17        ENDWHILE_COMMAND 1-19
+DIMENSION_TRUE_D2_LOCATION 1-17        EQUATE_ALIGN 1-19
+DIMENSION_TRUE_D3_LOCATION 1-17        EW_GROUP_END 1-19
+DIMENSION_TRUE_DD_LOCATION 1-17        EW_GROUP_START 1-19
+DIMENSION_TRUE_DF_LOCATION 1-17        EXTERNAL_COMMAND 1-20
+DIMENSION_TRUE_DIAM_LOCATION 1-17
+DIMENSION_TRUE_END_POSITION 1-18
+                                       F
+DIMENSION_TRUE_FLATNESS_LOCATION
+ 1-18                                  FEATURE_CONTROL_FRAME 1-20
+DIMENSION_TRUE_LD_LOCATION 1-18        FILE_IO_OBJECT 1-20
+DIMENSION_TRUE_LF_LOCATION 1-18        FILTER_SET 1-11
+DIMENSION_TRUE_PA_LOCATION 1-18        FLY_MODE 1-20
+DIMENSION_TRUE_PR_LOCATION 1-18
+DIMENSION_TRUE_ROUNDNESS_LOCATI        G
+ON 1-18
+                                       GAP_ONLY 1-20
+DIMENSION_TRUE_START_POSITION 1-18
+                                       GENERIC_CONSTRUCTION 1-20
+DIMENSION_TRUE_STRAIGHTNESS_LOCA
+TION 1-18                              GET_PROBE_DATA 1-20
+DIMENSION_TRUE_WD_LOCATION 1-18        GOTO_COMMAND 1-20
+DIMENSION_TRUE_WF_LOCATION 1-18
+DIMENSION_TRUE_X_LOCATION 1-18         H
+DIMENSION_TRUE_Y_LOCATION 1-18         Hlášení (dialogové okno)
+DIMENSION_TRUE_Z_LOCATION 1-18             PC-DMIS import 1-7
+DIMENSION_V_LOCATION 1-18              HYPER_CUSTOM 1-20
+DIMENSION_X_LOCATION 1-19              HYPER_FORM 1-20
+DIMENSION_Y_LOCATION 1-19              HYPER_LEGACY 1-20
+DIMENSION_Z_LOCATION 1-19              HYPER_REPORT 1-20
+DISPLAY_METAFILE 1-19                  HYPER_TEMPLATE 1-20
+DISPLAYPRECISION 1-19                  CHECK_DISTANCE 1-11
+DO_COMMAND 1-19
+                                       I
+E                                      IF_BLOCK_COMMAND 1-20
+EDGE_HIT 1-19                          IF_GOTO_COMMAND 1-20
+ELSE_COMMAND 1-19                      IGNOREMOTIONERRORS 1-20
+ELSE_IF_COMMAND 1-19                   IGNOREROTAB_COMMAND 1-20
+END_ALIGN 1-19                         INBETWEEN_TOL 1-20
+END_CASE_COMMAND 1-19                  IOCHANNELCOMMAND 1-20
+END_DEFAULT_CASE_COMMAND 1-19          ITER_ALIGN 1-20
+END_ELSE_COMMAND 1-19
+
+
+
+
+61212-2921512           CALYPSO 2018                              Rejstřík   33
+              L                                          P
+              LABEL_CMD 1-20                             PC-DMIS import
+              LASER_CIRCLE_FEATURE 1-20                      konfigurovat 1-3
+              LASER_FLUSH_AND_GAP_FEATURE 1-20               Plán měření dodatečně upravit 1-6
+              LASER_PLANE_FEATURE 1-20                       Podporované příkazy 1-8
+              LASER_SLOT_FEATURE 1-21                        provést 1-4
+              LASER_SPHERE_FEATURE 1-21                      Základní údaje 1-2
+              LASER_SURFACE_POINT_FEATURE 1-21           POINT_INFO 1-22
+              LEAPFROG 1-21                              POINTCLOUD 1-22
+              LEVEL_ALIGN 1-21                           POINTCLOUD_ALIGN 1-22
+              LOAD_COLUMN 1-21                           POINTCLOUD_OPER 1-22
+              LOAD_FIXTURE 1-21                          POLARVECTORCOMP 1-22
+              LOAD_MACHINE 1-21                          POSITIVE_REPORTING 1-22
+              LOOP_END 1-21                              PREHIT_DISTANCE 1-22
+              LOOP_START 1-21                            PRINT_FORM_FEED 1-22
+                                                         PRINT_REPORT 1-22
+              M                                          PROBE_COMPENSATION 1-22
+              MAN_DCC_MODE 1-21
+              MANRETRACT 1-21                            R
+              MANSCAN_OBJECT 1-21                        READ_POINT 1-22
+              MEASURED_SET 1-21                          RECALL_ALIGN 1-22
+              MOVE_ALL 1-21                              RECALL_VIEWSET 1-22
+              MOVE_CIRCULAR 1-21                         RETRACT_DISTANCE 1-22
+              MOVE_CLEARP 1-21                           RETROLINEAR_ONLY 1-22
+              MOVE_EXCLUSIVE 1-21                        RMEAS_MODE 1-22
+              MOVE_INCREMENT 1-21                        ROTATE_ALIGN 1-22
+              MOVE_PH9_OFFSET 1-21                       ROTATE_CIRCLE_ALIGN 1-22
+              MOVE_POINT 1-21                            ROTATEOFF_ALIGN 1-22
+              MOVE_ROTAB 1-21
+              MOVE_SPEED 1-21
+                                                         S
+              MOVE_SWEEP_POINT 1-21
+                                                         SAVE_ALIGN 1-22
+              MOVE_SYNC 1-21
+                                                         SCAN_SPEED 1-22
+              Možnosti (dialogové okno)
+                                                         SELECT_COMMAND 1-22
+                  PC-DMIS import 1-8
+                                                         SET_ACTIVE_TIP 1-22
+                                                         SET_COMMENT 1-22
+              O                                          SET_WORKPLANE 1-22
+              ONERROR 1-21                               SIMULTANEOUS_EVALUATION 1-23
+              OPTIONMOTION 1-21                          SPC_QUERY 1-23
+              OPTIONPROBE 1-22                           START_ALIGN 1-23
+                                                         START_MOVE_SWEEP 1-23
+                                                         START_SUBROUTINE 1-23
+                                                         STATISTICS 1-23
+                                                         SURFACE_FEATURE 1-23
+                                                         SURFACE_HIT 1-23
+
+
+
+
+44 Rejstřík   61212-2921512               CALYPSO 2018
+T
+TABLE_FORMAT 1-23
+TEMP_COMP 1-23
+TOUCH_SPEED 1-23
+TRACEFIELD 1-23
+TRACKER_LEVEL_TO_GRAVITY 1-23
+TRANS_ALIGN 1-23
+TRANSOFF_ALIGN 1-23
+TRIGGER_PLANE_COMMAND 1-23
+TRIGGER_TOLERANCE 1-23
+
+
+U
+UNTIL_COMMAND 1-23
+
+
+V
+VECTOR_HIT 1-23
+VIDEOSETUP 1-23
+VIEWSET 1-23
+VISION_BLOB_FEATURE 1-23
+VISION_CIRCLE_FEATURE 1-23
+VISION_EDGE_POINT_FEATURE 1-24
+VISION_LINE_FEATURE 1-24
+VISION_PLANE_FEATURE 1-24
+VISION_PROFILE_2D_FEATURE 1-24
+VISION_SLOT_FEATURE 1-24
+VISION_SURFACE_POINT_FEATURE 1-24
+
+
+W
+WHILE_COMMAND 1-24
+
+
+
+
+61212-2921512           CALYPSO 2018   Rejstřík   55
+66 Rejstřík   61212-2921512   CALYPSO 2018
+

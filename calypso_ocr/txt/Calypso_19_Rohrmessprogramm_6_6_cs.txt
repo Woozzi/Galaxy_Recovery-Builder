@@ -1,0 +1,784 @@
+CALYPSO
+
+   Opce 19
+   Program na měření
+   trubek
+
+
+
+
+   Návod k obsluze
+Změny provedení a rozsahu dodávky souřadnicového měřicího stroje a
+jeho doplňkového vybavení, programových aplikací a příslušné
+dokumentace jsou vyhrazeny.
+Šíření či rozmnožování této dokumentace ani využívání a sdělování jejího
+obsahu není dovoleno, pokud k tomu není dán výslovný souhlas.
+Porušení tohoto ustanovení zavazuje k náhradě škody.
+Veškerá práva vyhrazena, zejména pro případ udělení patentu nebo
+registrace užitného vzoru.
+Změny v této uživatelské příručce a technické změny souřadnicového
+měřicího stroje a jeho komponent jsou vyhrazeny.
+Všechny názvy produktů jsou registrované ochranné známky nebo
+obchodní značky oprávněných majitelů.
+I přes maximální péči není možné převzít odpovědnost za úplnost a
+správnost informací uvedených v tomto návodu, s výjimkou úmyslu.
+
+
+
+
+CALYPSO
+Verze 2018
+Návod k obsluze
+2018-06-05
+61212-2891512
+Obsah
+             Předmluva
+
+               O tomto návodu k obsluze ............................. Předmluva 1
+
+               Grafická úprava bezpečnostních pokynů ..... Předmluva 3
+
+
+   Kapitola 1 Program na měření trubek (opce)
+
+               Úvod: Program na měření trubek (opce) ...................... 1-2
+
+               Základní údaje o programu na měření trubek .............. 1-3
+                  Měření trubek v programu CALYPSO................................................. 1-3
+                  Definování trubky.............................................................................. 1-3
+                  Výsledky měření a parametry ohnutí.................................................. 1-4
+
+               Definovat trubku.............................................................. 1-6
+
+               Měřit trubku ................................................................... 1-14
+
+
+
+             Rejstřík
+
+
+
+
+             61212-2891512                  CALYPSO 2018                                             Obsah    11
+22 Obsah   61212-2891512   CALYPSO 2018
+Předmluva
+O tomto návodu k obsluze
+                   Program CALYPSO se skládá ze základního modulu a z různých
+                   doplňkových opcí pro speciální účely. Podle svých potřeb si můžete určit
+                   rozsah programového vybavení.
+                   Tento návod k obsluze popisuje doplňkovou opci programu CALYPSO a
+                   předpokládá, že jste již seznámeni s návodem k obsluze pro základní
+                   modul programu CALYPSO.
+
+                   Oznámení
+                   Další opce programu CALYPSO jsou popsány v samostatných
+                   příručkách.
+
+                   Referenční údaje o oknech a dialozích najdete v referenci dialogů v
+                   online nápovědě pro CALYPSO.
+
+                   Einfach messen – und was Sie dazu wissen sollten, Eine Fibel der
+                   Messtechnik
+                   Carl Zeiss, Unternehmensbereich Industrielle Messtechnik,
+                   Objednací číslo: 612302-9002
+
+Textové konvence   V této uživatelské příručce se používají následující textové konvence a
+                   symboly:
+
+                   Příklad                              Popis
+                   Měřené elementy                      Textový prvek grafického
+                                                        zobrazení na obrazovce.
+                   Komentář                             Tlačítko Komentář na
+                                                        obrazovce.
+                   <název přístroje>                    Variabilní text nebo zástupce pro
+                                                        název.
+                   C:\windows\w.ini                     Soubor w.ini v adresáři windows
+                                                        na diskové jednotce C:\.
+                   Pro tento oddíl...                   Zvýrazněný text, jehož obsah je
+                                                        obzvláště důležitý.
+
+
+
+
+                   61212-2891512           CALYPSO 2018                        Předmluva     1
+O tomto návodu k obsluze
+
+
+
+
+                      Příklad                               Popis
+                      ➤ Předmluva [⇨ Předmluva-1]           Toto je křížový odkaz. Pokud
+                                                            sledujete příručku na obrazovce,
+                                                            kliknutím na odkaz přejdete na
+                                                            příslušné místo.
+                      CNC " CNC start " CNC start           Povel CNC start v podmenu
+                                                            CNC start menu CNC.
+                      CTRL+A                                Stiskněte současně klávesu CTRLa
+                                                            písmeno A.
+
+Symboly               V této příručce se používají tři speciální symboly, které vždy upozorňují
+                      na důležité informace. Tyto symboly se nacházejí v postranním sloupci
+                      vedle příslušného textu.
+                      Podrobné vysvětlení bezpečnostních pokynů najdete v oddílu Grafická
+                      úprava bezpečnostních pokynů
+
+
+
+
+22 Předmluva          61212-2891512            CALYPSO 2018
+                                     Grafická úprava bezpečnostních pokynů
+
+
+
+
+Grafická úprava bezpečnostních pokynů
+            Bezpečnostní pokyny upozorňují na nebezpečí pro zdraví. Rozlišují se tři
+            stupně: Nebezpečí, varování a upozornění. Všechny tři bezpečnostní
+            pokyny jsou označeny stejným výstražným symbolem. Vedle tohoto
+            symbolu je uvedeno pojmenování bezpečnostního pokynu - signální
+            slovo. Dále jsou popsány použité bezpečnostní pokyny.
+
+            Struktura bezpečnostního pokynu
+            Bezpečnostní pokyn může obsahovat tyto prvky:
+            – Výstražný symbol a signální slovo: Nebezpečí, varování a upozornění
+            – Zdroj a příčina nebezpečí
+            – Následky pro uživatele při nerespektování bezpečnostního pokynu
+            – Potřebná opatření ze strany uživatele, aby nedošlo k potenciálním
+              následkům
+            – Některé opatření může vést k průběžnému výsledku.
+            – Na konci všech opatření může být uveden konečný výsledek.
+
+            Riziko ohrožení zdraví
+                  Nebezpečí
+             Výstražný symbol »Nebezpečí« upozorňuje na akutní ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             dojde k usmrcení nebo těžkému zranění.
+             Příklad: Zásah elektrickým proudem při vysokém napětí.
+
+                  Varování
+             Výstražný symbol »Varování« upozorňuje na možné ohrožení
+             života a zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k usmrcení nebo těžkému zranění.
+             Příklad: Zhmoždění (rozdrcení) těla způsobené velkými hmotnostmi.
+
+                  Upozornění
+             Výstražný symbol »Upozornění« upozorňuje na ohrožení zdraví.
+             Jestliže není dodržen bezpečnostní pokyn a nastane popsané ohrožení,
+             může dojít k lehkému nebo středně těžkému poranění.
+             Příklad: Lehká pohmoždění končetin způsobená malými hmotnostmi.
+
+
+
+
+            61212-2891512           CALYPSO 2018                       Předmluva   33
+Grafická úprava bezpečnostních pokynů
+
+
+
+
+                       Riziko škod na majetku
+                       Když nehrozí riziko pro zdraví, ale může být poškozen souřadnicový
+                       měřicí stroj nebo jiné komponenty, použije se následující symbol.
+
+                       Tento symbol upozorňuje na možné poškození souřadnicového
+                       měřicího stroje.
+                       Jestliže není dodržen bezpečnostní pokyn a nastane popsaná událost,
+                       může dojít k poškození souřadnicového měřicího stroje nebo některé
+                       jeho komponenty.
+                       Příklad: Kolize pinoly se součástí.
+
+
+
+
+44 Předmluva           61212-2891512          CALYPSO 2018
+Program na měření trubek (opce)
+
+
+
+
+                                  Kapitola
+
+                                  1    Program na měření trubek
+                                       (opce)
+
+                                     Tato kapitola obsahuje:
+                                     Úvod: Program na měření trubek (opce)..................................................... 1-2
+                                     Základní údaje o programu na měření trubek ............................................. 1-3
+                                     Definovat trubku........................................................................................ 1-6
+                                     Měřit trubku ............................................................................................ 1-14
+
+
+
+
+                                    61212-2891512                       CALYPSO 2018                                                  1-1
+Úvod: Program na měření trubek (opce)
+
+
+
+
+Úvod: Program na měření trubek (opce)
+                       S opcí Program na měření trubek softwaru CALYPSO můžete měřit
+                       zahnuté trubky, dráty, kloubová ramena a hadice.
+                       Naměřené výsledky v protokolu můžete obvyklým způsobem vytisknout
+                       nebo uložit do souboru ve formátu PDF.
+
+                       Oznámení
+                       Abyste mohli tuto opci používat, musí být na vašem systému instalována
+                       a aktivována licence Program na měření trubek.
+
+
+
+
+1-2                    61212-2891512          CALYPSO 2018
+                                Základní údaje o programu na měření trubek
+
+
+
+
+Základní údaje o programu na měření trubek
+             Měření trubek v programu CALYPSO
+             S programem na měření trubek softwaru CALYPSO můžete měřit
+             zahnuté trubky, dráty, kloubová ramena, hadice apod. Trubky jsou
+             definovány pomocí měřených elementů, ze kterých jsou speciálním
+             způsobem vytvořeny vzájemné konstrukce.
+             Měřené elementy a jmenovité hodnoty můžete extrahovat z existujícího
+             CAD modelu nebo je zadat ručně podle výkresů. Pomocí automatické
+             identifikace elementů se dají jmenovité hodnoty určit také snímáním
+             vzorového kusu. Je to vhodné např., když chcete zjistit parametry ohybu
+             pro programování automaticky řízené ohýbačky.
+             Které měřené elementy potřebuje program na měření trubek a co je
+             třeba dodržovat, popisuje oddíl ➤ Definování trubky [⇨ 1-3].
+             Přehled o naměřených výsledcích a parametrech ohnutí včetně
+             používaných zkratek přináší oddíl ➤ Výsledky měření a parametry
+             ohnutí [⇨ 1-4].
+
+
+             Definování trubky
+             Trubka je definována řadou válců. Směr trubky je dán pořadím těchto
+             válců. CALYPSO zajišťuje, aby byly osy všech válců, nezávisle na jejich
+             původní definici, stejně orientovány.
+
+
+
+                                                                               R1
+
+
+                                                                     Z3
+
+
+
+                              SP1
+                                               Z2
+                                                               SP2
+
+
+                         Z1
+
+                   R0
+
+
+
+
+             61212-2891512           CALYPSO 2018                              1-3
+Základní údaje o programu na měření trubek
+
+
+
+                       Počátek trubky (R0) a konec trubky (R1) jsou obvykle definovány jako
+                       bod průniku osy prvního resp. posledního válce rovinou. Počátek a
+                       konec trubky můžete ale také určit jako řez válce s 2D nebo 3D přímkou.
+                       Pomocí konstrukcí jsou zjištěny průsečíky os sousedních válců (průsečíky
+                       trubky SP) a segmenty trubky.
+
+
+                       Výsledky měření a parametry ohnutí
+Výsledky měření        Program na měření trubek softwaru CALYPSO poskytuje následující
+                       výsledky měření:
+
+                       Výsledek              Zkratka           Popis
+                       Vnější průměr         D                 Vnější průměr válce
+                       Úhel ohnutí           BW                Úhel mezi osami dvou sousedních
+                                                               válců
+                                                               viz obrázek níže
+                       Průsečíky             X, Y, Z           Průsečíky sousedních měřených
+                                                               elementů jsou uváděny v
+                                                               souřadnicích X, Y a Z.
+                       Délka segmentu        RD                Vzdálenost mezi dvěma
+                                                               sousedními průsečíky trubky (SP)
+                                                               viz obrázek níže
+                       Úhel natočení         V                 Úhel natočení se vypočte ze tří
+                                                               následných segmentů trubky. Osy
+                                                               obou vnějších válců jsou
+                                                               promítnuty do roviny, která je
+                                                               kolmá k prostřednímu válci.
+
+
+
+
+                                                                                 Z3
+
+
+
+
+                        RD1                      BW                         BW
+                                                          Z2                               RD3
+
+
+
+                                       Z1
+
+                                                         RD2
+
+
+
+
+1-4                    61212-2891512             CALYPSO 2018
+                                     Základní údaje o programu na měření trubek
+
+
+
+
+                                            Z1
+
+
+
+
+                                                     Z2
+
+
+                                            V
+
+
+
+
+                                                           Z3
+
+
+
+
+Parametry ohnutí   Kromě úhlu ohybu a úhlu natočení vypočte CALYPSO následující
+                   parametry ze jmenovitých hodnot průsečíků a segmentů:
+
+                   Parametr             Zkratka        Popis
+                   Zbytkové délky       LVB a LNB      Zbytková délka trubky před
+                   trubky                              ohnutím (LVB) a po ohnutí (LNB)
+                   Transportní          T              Posuv trubky mezi jednotlivými
+                   délka                               ohýbáními
+
+                   V protokolech jsou dokumentovány ještě také tyto parametry:
+                   – Faktor roztažení
+                   – Celkové natažení
+                   – Řezaná délka (hrubá délka trubky před ohnutím)
+                   – Rozvinutá délka
+                   – Vzdálenost mezi konci (vzdálenost mezi počátkem trubky R0 a
+                     koncem trubky R1)
+
+
+
+
+                   61212-2891512            CALYPSO 2018                          1-5
+Definovat trubku
+
+
+
+
+Definovat trubku
+                   Dále je popsán doporučený a nejrychlejší postup pro měření trubek.
+                   Předpokládají se základní znalosti práce s programem CALYPSO.
+                   1 Vytvořte měřené elementy, ze kterých chcete složit danou trubku:
+                       např. dvě roviny pro definování počátku a konce trubky
+                       několik válců pro rovné úseky trubky
+                   2 Program na měření trubek spustíte pomocí menu Rozměry "
+                     Speciální rozměry " Vyhodnocení trubky.
+                     Speciální rozměr Trubka je vložen do plánu měření. Je uveden jak v
+                     seznamu charakteristik, tak i v seznamu měřených elementů.
+                   3 Otevřete předlohu pro definici Trubka dvojklikem na ikonu
+                     speciálního rozměru.
+
+
+
+
+1-6                61212-2891512          CALYPSO 2018
+                                                   Definovat trubku
+
+
+
+       Trubka
+
+              Trubka1                        Komentář
+
+     Parametry ohnutí               Vyrovnání
+     Obecná data             Průsečíky          Segmenty
+
+
+                Vybrat elementy
+
+       Rovina1
+       Vál1
+       Vál2
+       Vál3
+       Vál4
+       Vál5
+       Rovina2
+
+
+
+
+         Faktor roztažení                    1,0000
+
+        Výchozí
+
+         Poloměr ohnutí                     30, 0000
+
+         Poloměr toler.koule                0, 0000
+
+
+
+
+         OK          Reset
+
+
+4 Na kartě Obecná data klikněte na tlačítko Vybrat elementy a v
+  okně Výběr vyberte měřené elementy, ze kterých chcete složit
+  danou trubku.
+5 Na kartě Obecná data zadejte Faktor roztažení materiálu trubky
+  a stanovte Poloměr ohnutí, který se převezme jako standardní
+  hodnoty pro všechna ohýbání.
+6 Na kartě Průsečíky definujete řezy trubkou tím, že vytvoříte
+  vzájemné konstrukce měřených elementů.
+
+
+
+
+61212-2891512           CALYPSO 2018                             1-7
+Definovat trubku
+
+
+
+  Trubka
+
+         Trubka1                          Komentář
+
+ Obecná data                 Průsečíky                   Segmenty            Parametry ohnutí             Vyrovnání
+
+
+ Výpis průsečíků
+
+                                                                                      Úhel      Poloměr
+                                       Typ                                                              Poloměr Korekce
+   Název        Element1   Element2                            X        Y        Z    ohnutí    ohnutí
+                                       průsečíku                                                        tol.koule konce tru
+                                                                                      BW        BR
+   Průsečík trub Rovina1   Vál1        Okrajový bod         0,000    0,000    0,000    0,000     0,000      0,000
+   Průsečík trub Vál1      Vál2        Průsečík trubky     -0,000   79,900    0,000   74,600     30,000     0,000
+   Průsečík trub Vál2      Vál3        Průsečík trubky     110,50   110,30    0,000   21,60C     30,000     0,000
+   Průsečík trub Vál3      Vál4        Průsečík trubky     204,40   102,60   14,900   10,200     30,000     0,000
+   Průsečík trub Vál4      Vál5        Průsečík trubky     511,70   111,60   110,60   81,50C     30,000     0,000
+   Průsečík trub Vál5      Rovina2     Průsečík trubky     502,60   47,90C   199,70    0,000     0,000      0,000
+
+
+
+
+    OK          Reset
+
+
+                                          Pokud byly měřené elementy zaznamenány ve správném pořadí,
+                                          nechte automaticky vytvořit řezy tím, že v kontextovém menu
+                                          tabulky zvolíte položku Vytvořit automaticky všechny průsečíky.
+                                          Pokud nikoli, použijte jiné funkce kontextového menu pro ruční
+                                          definování průsečíků. Pro začátek a konec trubky musíte jako typ
+                                          průsečíku zvolit Okrajový bod; pro ohnutí zvolíte typ průsečíku
+                                          Průsečík trubky.
+                                          Informace: Důležité je, abyste konstrukce z elementů vytvořili ve
+                                          správném pořadí: tj. rovina 1 s válcem 1 pro počátek trubky, válec 1
+                                          s válcem 2 atd. pro ohyby trubky a konečně poslední válec s rovinou
+                                          2 pro konec trubky. CALYPSO vypočte pro každý průsečík úhel
+                                          ohnutí BW.
+                                      7 Jestliže chcete pro určitý průsečík editovat jmenovité hodnoty nebo
+                                        zadat tolerance , dvojklikněte na daný průsečík.
+                                        V okně Průřez trubky editujte tento průsečík obvyklým způsobem.
+
+
+
+
+1-8                                   61212-2891512                 CALYPSO 2018
+                                                                                                     Definovat trubku
+
+
+
+  Průřez trubky
+          Průřez trubky2                     Komentář
+
+               Souř.systém        (Zákl.systém)
+
+            Element 1
+
+             Vál1
+
+            Element 2
+
+             Vál2
+
+Typ průsečíku                     Průsečík
+                                       c trubky
+                                                                       Toler.třídy
+    Korekce konce trubky
+                                                                       Jemná
+    Délka trubky
+Tolerance pro:        Jmen.hod.          Měř.hod.            ISO 286   Horní tol.     Dolní tol.        Označení
+   X                         -0,0000                0,1104                   0,0500        -0,0500      X-hod_prureztrubky2
+
+    Y                        79,9000              79,9176                    0,1500        -0,1500      Y-hod_prureztrubky2
+
+    Z                         0.0000              -0,0276                    0,0500        -0,0500      Z-hod_prureztrubky2
+
+    BW                       74.6000              74,4536                    0,0000         0,0000       BW_prureztrubky2
+
+    BR                       30.0000              30,0000
+R                             0.0000
+
+
+
+
+     OK             Reset
+
+
+                                          Informace: Uvědomte si, že se automaticky nepřihlíží ke změně nebo
+                                          vymazání průsečíků u segmentů, které používají daný průsečík.
+                                       8 Pro definování segmentů trubky přejděte na kartu Segmenty a v
+                                         kontextovém menu zvolte položku Vytvořit všechny segmenty.
+                                         CALYPSO vytvoří segmenty ze sousedních průsečíků a vypočte přitom
+                                         mimo jiné jmenovité hodnoty pro délku segmentu (RD) a úhel
+                                         natočení (V).
+
+
+
+
+                                       61212-2891512              CALYPSO 2018                                     1-9
+Definovat trubku
+
+
+
+  Trubka
+
+         Trubka1                          Komentář
+
+ Obecná data                  Průsečíky               Segmenty              Parametry ohnutí         Vyrovnání
+
+
+ Výpis segmentů
+
+                                                       Délka   Průměr       Úhel     Torus-  Úhel      Prů-      Úhel
+    Segmenty       Element1       Element2    Typ     segmentu              natočení poloměr obl.torus měr2      kužele
+                                                       RD      D            V        BR      WB        D2        WK
+   Segmenttrubky1 Průřeztrubky1 Průřeztrubky2 Válec     79,9000    25,000     0,0000
+   Segmenttrubky2 Průřeztrubky2 Průřeztrubky3 Válec     114,605    25,000    24,9000
+   Segmenttrubky3 Průřeztrubky3 Průřeztrubky4 Válec     95,3700    25,000    102,100
+   Segmenttrubky4 Průřeztrubky4 Průřeztrubky5 Válec    321,962     25,000   -72,6000
+   Segmenttrubky5 Průřeztrubky5 Průřeztrubky6 Válec     110,005    25,000     0,0000
+
+
+
+
+    OK         Reset
+
+
+                                    9 Jestliže chcete pro segment změnit jmenovité hodnoty nebo zadat
+                                      tolerance, dvojklikněte na daný segment.
+                                      V okně Segment trubky editujte tento segment obvyklým
+                                      způsobem.
+
+
+
+
+1-10                                61212-2891512                 CALYPSO 2018
+                                                                                                  Definovat trubku
+
+
+
+  Segment trubky
+         Segment trubky2                    Komentář
+
+              Souř.systém       (Zákl.systém)
+
+           Element 1
+
+           Průřez trubky2
+
+           Element 2
+
+           Průřez trubky3
+
+
+                                                                     Toler.třídy
+                                                                       l
+                                                                      Jemná
+
+
+Tolerance pro:     Jmen.hod.             Měř.hod.          ISO 286   Horní tol.     Dolní tol.       Označení
+
+   RD                       114.6055            114,4711                   0,1500       -0,15001     RD_segment trub2
+   D                        25.0000             25,0000
+   V                        249000              24,9353                    0,0000        0,0000       V_segment trub2
+
+
+
+
+    OK           Reset
+
+
+                                       10 Pokud potřebujete další parametry ohybu pro programování
+                                          ohýbacího stroje, můžete tyto parametry nechat vypočítat na kartě
+                                          Parametry ohnutí.
+                                          V kontextovém menu karty zvolte položku Vypočítat parametry
+                                          ohnutí.
+                                          CALYPSO vypočte také transportní délku (T) a délku trubky před
+                                          ohnutím a po ohnutí (LVB a LNB).
+
+
+
+
+                                       61212-2891512            CALYPSO 2018                               1-11
+Definovat trubku
+
+
+
+  Trubka
+
+
+         Trubka1                         Komentář
+
+ Obecná data                Průsečíky                  Segmenty             Parametry ohnutí              Vyrovnání
+
+ Parametry ohnutí
+
+                      Transportní    Úhel           Úhel          Poloměr       Délka před     Délka po
+    Segmenty          délka          natočení       ohnutí        ohnutí        ohnutím        ohnutí
+                      T              V              BW            BR            LVB            LNB
+    Segment_trubky1       57,0461         0,0000        74,6000       30,0000      649,9905       609,9301
+    Segment_trubky2       85,9745        24,9000        21,9000       30,0000      523,9556       512,5411
+    Segment_trubky3       86,9 157      102,1000        10,2000       30,0000      425,6254       420,2947
+    Segment_trubky4      293,4555       -72,6000        81,5000       30,0000      126,9292        84,1559
+    Segment_trubky5       64,1559         0,0000         0,0000        0,0000        0,0000         0,0000
+
+
+
+
+    OK         Reset
+
+
+                                     11 V případě potřeby vyberte na kartě Vyrovnání požadovaný
+                                        souřadný systém.
+                                        Na výběr jsou všechny souřadné systémy vyskytující se v daném plánu
+                                        měření.
+
+
+
+
+1-12                                 61212-2891512                 CALYPSO 2018
+                                                     Definovat trubku
+
+
+
+       Trubka
+
+               Trubka1                        Komentář
+
+      Obecná data             Průsečíky         Segmenty
+           Parametry ohnutí                Vyrovnání
+
+
+            Souř.systém              (Zákl.systém)
+
+      Nastavit nový souřadný systém
+
+
+                 3D připasování
+
+
+                 Metoda RPS
+
+
+                  Metoda P6
+
+
+
+
+          OK         Reset
+
+   Informace: V této verzi programu ještě není možné nastavit souřadný
+   systém.
+Trubka je definována. Plán měření je připraven pro měření.
+
+
+
+
+61212-2891512            CALYPSO 2018                        1-13
+Měřit trubku
+
+
+
+
+Měřit trubku
+               Poté co je trubka definována, neliší se měření trubky od obvyklého
+               měření jiných součástí.
+               Měření můžete spustit například ikonou Start plánu měření.
+               CALYPSO nejprve změří všechny měřené elementy a poté zjišťuje
+               hodnoty pro trubku a parametry ohnutí trubky.
+               Výsledky měření zkontrolujete pomocí příslušného speciálního rozměru
+               Trubka. Ten najdete jak v seznamu charakteristik, tak i v seznamu
+               měřených elementů.
+               Když je tlačítko zelené nebo červené, je měření úspěšně dokončeno. Je-li
+               červené, znamená to, že minimálně jedna charakteristika je mimo
+               přípustnou toleranci.
+               Naměřené výsledky jsou dokumentovány v různých protokolech a
+               můžete je vytisknout nebo uložit do souboru PDF.
+               Více informací viz kapitoly Provést plán měření aZobrazit, prezentovat a
+               editovat výsledky měření v základním návodu k obsluze.
+
+
+
+
+1-14           61212-2891512           CALYPSO 2018
+Rejstřík
+           D
+           Délka segmentu
+               Program na měření trubek 1-4
+
+
+           P
+           Parametry ohnutí
+               Program na měření trubek 1-4
+           Program na měření trubek
+               Definice trubky 1-3
+               Výsledky měření 1-4
+               Základní údaje 1-3
+           Průsečíky
+               Program na měření trubek 1-4
+
+
+           T
+           Trubka
+               definovat 1-6
+               měřit 1-14
+
+
+           U
+           Úhel natočení
+               Program na měření trubek 1-4
+           Úhel ohnutí
+               Program na měření trubek 1-4
+
+
+           V
+           Vnější průměr
+               Program na měření trubek 1-4
+
+
+
+
+           61212-2891512               CALYPSO 2018   Rejstřík   11
+22 Rejstřík   61212-2891512   CALYPSO 2018
+
